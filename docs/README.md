@@ -1,7 +1,7 @@
 ---
 lang: en-US
-title: Title of this page
-description: Description of this page
+title: Home
+description: Home of the FTB docs!
 ---
 
-# Hello VuePress
+Lmao kill me
