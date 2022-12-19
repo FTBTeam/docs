@@ -4,4 +4,4 @@ title: Home
 description: Home of the FTB docs!
 ---
 
-Lmao kill me
+Welcome to FTB Docs
