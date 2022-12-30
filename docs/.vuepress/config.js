@@ -1,67 +1,750 @@
-//Import any needed vuepress libraries here
+/*
+                _   _                  _   _       _            
+     /\        | | | |                | \ | |     | |           
+    /  \  _   _| |_| |__   ___  _ __  |  \| | ___ | |_ ___  ___ 
+   / /\ \| | | | __| '_ \ / _ \| '__| | . ` |/ _ \| __/ _ \/ __|
+  / ____ \ |_| | |_| | | | (_) | |    | |\  | (_) | ||  __/\__ \
+ /_/    \_\__,_|\__|_| |_|\___/|_|    |_| \_|\___/ \__\___||___/
+                                                                
+                                                                
+*/
+//Made between the 22nd-30th of December 2022.
+//Coded by R3GEN, supervised and reviewed by Mikey, for the purposes of the new documentation system for Feed The Beast Ltd.
+//
+//This contains a script for a programmatically generated sidebar and places that sidebar inside the VuePress server configuration.
+//It reads folders and files and is configurable to some extent, see below for options.
+
+/*
+  _    _                  _____             __ _       
+ | |  | |                / ____|           / _(_)      
+ | |  | |___  ___ _ __  | |     ___  _ __ | |_ _  __ _ 
+ | |  | / __|/ _ \ '__| | |    / _ \| '_ \|  _| |/ _` |
+ | |__| \__ \  __/ |    | |___| (_) | | | | | | | (_| |
+  \____/|___/\___|_|     \_____\___/|_| |_|_| |_|\__, |
+                                                  __/ |
+                                                 |___/ 
+*/
+
+//[docsRootFolder]
+//Sets the root directory containing all documentation in the project. Called "docs" in a VuePress server.
+//E.g.: const docsRootFolder = "docs";
+const docsRootFolder = "docs";
+
+//[docsOrderConfigurationFilename]
+//Sets the name of the text file that contains the order of which folders or files show in the sidebar. You can add one of those files per folder.
+//The contents of the file can contain one name per line, either a folder or a file that is in the same folder as this order file.
+//Choosing a .txt extension for the file makes sure it does not get mapped in the server's routes (URL).
+/*E.g. In a folder containing car brands, putting the name of the folder "toyota" as the first line in the order file will ensure that the "toyota"
+folder is placed at the top in the sidebar. Putting "cars.md" as second file would place it right after the "toyota" folder, in the sidebar.*/
+//All subsequent folders will be placed after in alphanumerical order.
+//
+//  --docs/some/folder/order.txt--------------
+//  | toyota                                 |
+//  | cars.md                                |
+//  |                                        |
+//  |                                        |
+//  |                                        |
+//  ------------------------------------------
+//
+//  --Website sidebar-------------------------
+//  | └ toyota                               |
+//  | └ cars (parsed from filename or title) |
+//  | └ audi                                 |
+//  | └ bugatti                              |
+//  | └ ...                                  |
+//  ------------------------------------------
+//
+//E.g.: const docsOrderConfigurationFilename = "order.txt";
+const docsOrderConfigurationFilename = "order.txt";
+
+//Contains the name of the read me files. Read me files are used to add a "front" page for a folder. One per folder.
+//E.g.: const readmeFilename = "README.md";
+const readmeFilename = "README.md";
+
+//Contains the name of the folder that can contain assets such as pictures, videos or even other procedures.
+//The contents of that folder will not be mapped to the sidebar, but is still accessible!
+//This is a great place to put nested mini-procedures for a specific folder or images that you need to use.
+//E.g.: const assetsFolderName = "assets";
+const assetsFolderName = "assets";
+
+//[rootFolderFileBlacklist]
+//Allows blacklisting folders or files in the root folder specified above. Those folders or files will not be put on the sidebar.
+//The "docsOrderConfigurationFilename" needs to be blacklisted here, otherwise it will be mapped to the sidebar.
+//E.g.: let rootFolderFileBlacklist = [".vuepress", readmeFilename, docsOrderConfigurationFilename];
+let rootFolderFileBlacklist = [".vuepress", readmeFilename, docsOrderConfigurationFilename, assetsFolderName];
+
+//[rootFolderFileBlacklist]
+//Allows blacklisting folders or files in the file tree subsequent to the root folder (contents of the subfolders in the root folder).
+//Those folders or files will not be put on the sidebar.
+//The "docsOrderConfigurationFilename" needs to be blacklisted here, otherwise it will be mapped to the sidebar.
+//E.g.: let otherFoldersFileBlacklist = [readmeFilename, docsOrderConfigurationFilename];
+let otherFoldersFileBlacklist = [readmeFilename, docsOrderConfigurationFilename, assetsFolderName];
+
+//[foldersCollapseByDefault]
+/*Decides if the folders in the sidebar will be displayed as collapsible or not. If they are not made collapsible, they will display
+all of their content at once. If they are collapsible (true), their contents will be hidden until the user clicks them once.*/
+//E.g.: const foldersCollapseByDefault = true;
+const foldersCollapseByDefault = true;
+
+//[vuepressFrontmatterHeaderChar]
+//Helps the file reader finding the frontmatter information in the documentation pages. Should always be set to "-".
+//This helps finding the next variable, the titles.
+//E.g.: const vuepressFrontmatterHeaderChar = "-";
+const vuepressFrontmatterHeaderChar = "-";
+
+//[vuepressFrontmatterTitleString]
+//Helps the file reader look for titles inside markdown files. Should always be set to "title:".
+//E.g.: const vuepressFrontmatterTitleString = "title:";
+const vuepressFrontmatterTitleString = "title:";
+
+//[maximumAmountOfLinesReadForTitle]
+/*Determines the maximum amount of lines that the reader will check to find the title of a file. If you know your titles are at the start of
+documents in the frontmatter, set this to a low value. This value is only reached if the reader cannot find the title at all.*/
+//E.g.: const maximumAmountOfLinesReadForTitle = 10;
+const maximumAmountOfLinesReadForTitle = 10;
+
+//[encodingOfDocumentation]
+//Decides the type of encoding files are using so that the reader can appropriately check the text inside files to find the title of files.
+//E.g.: const encodingOfDocumentation = "utf8";
+const encodingOfDocumentation = "utf8";
+
+//[SIDEBAR_CONSTRUCT_ERR]
+//Used for throwing exceptions internally if the sidebar fails to be constructed properly and the program needs to default to one.
+const SIDEBAR_CONSTRUCT_ERR = "ErrorConstructingSidebar";
+
+//[DEFAULT_SIDEBAR]
+/*In the case of an error building the sidebar, this default sidebar will be used instead. It should be minimal and recognizable and allow
+the website to load at least correctly. The search in VuePress can be used to find documents while an error like this persists. */
+const DEFAULT_SIDEBAR = [
+    {
+        text: 'Home',
+        link: '/'
+    }
+]
+
+/*
+  _____                            _       
+ |_   _|                          | |      
+   | |  _ __ ___  _ __   ___  _ __| |_ ___ 
+   | | | '_ ` _ \| '_ \ / _ \| '__| __/ __|
+  _| |_| | | | | | |_) | (_) | |  | |_\__ \
+ |_____|_| |_| |_| .__/ \___/|_|   \__|___/
+                 | |                       
+                 |_|                                                               
+*/
+
+//Import theme and user config from VuePress
 import {
     defaultTheme,
     defineUserConfig
 } from 'vuepress'
 
-//Configure the global sidebar (appears in every document unless overridden with a sidebar frontmatter, a.k.a. per-page sidebar config)
-const sidebar = [
-    {
-        text: 'Home',
-        link: '/'
-    },
-    {
-        text: 'FTB App',
-        collapsible: true,
-        children: [
-            {
-                text: 'What is the app?',
-                link: '/app'
-            },
-            {
-                text: 'Help',
-                link: '/app/app-help'
+//Import filesystem methods to walk the documentation tree and build the sidebar
+import fs from 'fs';
+import path from 'path';
+
+//Custom dependency https://www.npmjs.com/package/n-readlines
+//Allows consuming lines one by one in a buffer
+import nReadlines from 'n-readlines';
+
+/*
+   _____ _                         
+  / ____| |                        
+ | |    | | __ _ ___ ___  ___  ___ 
+ | |    | |/ _` / __/ __|/ _ \/ __|
+ | |____| | (_| \__ \__ \  __/\__ \
+  \_____|_|\__,_|___/___/\___||___/
+                            
+*/
+
+/**
+ * DocumentationObject
+ * @class
+ * @classdesc
+ * Object oriented construct that hold data for a node in a sidebar.
+ * Example:
+ *  Docs
+ *  └ Books
+ *    └ Authors
+ *    └ Pages
+ *  └ History
+ *    └ Middle Ages
+ *    └ Parchment
+ * 
+ * "Docs", "Books", "Authors", "Pages", "History", "Middle Ages", "Parchment", etc. are all valid DocumentationObject objects.
+ * "Docs" is a special DocumentationObject which we call the root and isn't listed in the sidebar.
+ * 
+ * -Data attributes-
+ * String text: Holds the information about the name of this article or folder. For files, this is either the "title:" property in the frontmatter
+ *              (inside the article itself) or its filename put to title case (without the extension). For folders this is always the name of the
+ *              folder put to title case.
+ * String link: This holds the link (URI) for the article for VuePress to be able to correctly redirect to said article when clicking that sidebar object.
+ *              For files this points to their ".md" file. For folders this can point to their "README.md" file if they contain one, or nothing. This is a
+ *              relative link, e.g. in the example from earlier: "/books/authors.md", "/history/middles ages.md", "/books", "/history".
+ * Bool collapsible: For folders, holds if the folder is collapsible in the sidebar, or expanded by default. If this is set to "true", folders will
+ *                   need to be collapsed by clicking on them in the sidebar. If a "README.md" is present in the folder, the folder will have content upon
+ *                   clicking it. Otherwise, a small arrow will appear next to the folder to collapse it.
+ * DocumentationObject children[]: Array of DocumentationObject objects that represent nodes in the sidebar under a specific node. Let me explain.
+ *                                 In the example above, let's say "History" is the node we currently are looking at. "Middle Ages" and "Parchment"
+ *                                 as DocumentationObject will be the children of "History". This is configured in reverse, so children add themselves
+ *                                 to the parent. This way, empty folders don't add themselves as children.
+ */
+class DocumentationObject {
+
+    //Default constructor since we will always set values by data attributes instead
+    constructor() { }
+
+    //Don't make folders collapsible as a fail-safe
+    collapsible = false;
+    //Always initialize the array of children
+    //If there are 1000 nodes of files/folders in the tree, there's 1000 lists
+    children = []
+    //Set default values for init of text and link
+    text = ""
+    link = ""
+
+    /**
+     * Returns a parent node as a DocumentationObject that contains information about the sidebar.
+     * @summary Returns this parent node in a minified notation that's ready for immediate use in the sidebar format of VuePress.
+     * @returns {DocumentationObject} This parent node
+     */
+    get sidebarObject() {
+        //Declare an anonymous object
+        let obj;
+
+        //Folders have children while files do not
+        if (this.children.length >= 1) {
+            //Initialize an array to hold copies of the children, that we will ask to format themselves correctly.
+            //This is recursive.
+            let formattedChildren = []
+            for (const childNode of this.children) {
+                formattedChildren.push(childNode.sidebarObject)
             }
-        ]
-    },
-    {
-        text: 'Support',
-        collapsible: true,
-        children: [
-            {
-                text: 'What is support?',
-                link: '/support'
-            },
-            {
-                text: 'Servers',
-                link: '/support/servers',
-                collapsible: true,
-                children: [
-                    {
-                        text: 'Installing FTB Server',
-                        link: '/support/servers/installing-servers'
+
+            //Folders can have empty links if they don't offer a "README.md" file for VuePress to route (to show in the website).
+            if (this.link === "") {
+                obj = {
+                    text: this.text,
+                    collapsible: this.collapsible,
+                    children: formattedChildren
+                }
+            } else {
+                obj = {
+                    text: this.text,
+                    link: this.link,
+                    collapsible: this.collapsible,
+                    children: formattedChildren
+                }
+            }
+        } else {
+            obj = {
+                text: this.text,
+                link: this.link
+            }
+        }
+
+        return obj;
+    }
+}
+
+/*
+  ______                _   _                 
+ |  ____|              | | (_)                
+ | |__ _   _ _ __   ___| |_ _  ___  _ __  ___ 
+ |  __| | | | '_ \ / __| __| |/ _ \| '_ \/ __|
+ | |  | |_| | | | | (__| |_| | (_) | | | \__ \
+ |_|   \__,_|_| |_|\___|\__|_|\___/|_| |_|___/                                         
+*/
+
+/**
+ * Reads the contents of a folder, and applies recursive actions to specific elements.
+ * @example
+ * //rootNode points to an object on "/"
+ * ReadAndHandleFolderRecursively("docs", true, (DocumentationObject) rootNode)
+ * @example
+ * //parentNode points to an object on "docs/info"
+ * ReadAndHandleFolderRecursively("docs/info/help", false, (DocumentationObject) parentNode)
+ * 
+ * @param {string} folderpath The relative path from the current working directory to reach the file resource to handle.
+ * @param {boolean} isRootFolder If the file resource to handle is actually the first in the arborescence (the root).
+ * @param {DocumentationObject} parentNode The object directly parenting the file resource to reach and handle.
+ * 
+ */
+function ReadAndHandleFolderRecursively(folderpath, isRootFolder, parentNode) {
+    //Read the current folder contents
+    let unfilteredFilenames = undefined;
+    try {
+        unfilteredFilenames = fs.readdirSync(folderpath);
+        stats.foldersListed++;
+    } catch (err) {
+        logError("There has been an error reading the contents of the folder \"%s\".", folderpath);
+        handleSidebarError(err);
+    }
+
+    //Filter the names of the files/folders before use by respecting the blacklists
+    //READMEs are excluded for example!
+    let filenames = undefined;
+    if (isRootFolder) {
+        //Using the root blacklist
+        filenames = unfilteredFilenames.filter(f => !rootFolderFileBlacklist.includes(f));
+    } else {
+        //Using the normal blacklist for sub folders
+        filenames = unfilteredFilenames.filter(f => !otherFoldersFileBlacklist.includes(f));
+    }
+
+    //If the current folder contains something
+    if (filenames.length > 1) {
+        //Check if the order file exists, and apply it
+        let orderFileExists = false;
+        let orderFilepath = path.join(folderpath, docsOrderConfigurationFilename);
+        try {
+            orderFileExists = fs.existsSync(orderFilepath)
+            stats.filesSynced++;
+        } catch (err) {
+            logError("Could not check the existence of the \"%s\" file at \"%s\".", docsOrderConfigurationFilename, orderFilepath);
+            //Can still recover from this. The order of docs will be forced alphanumeric, but at least they'll be accessible.
+            console.error(err);
+            stats.errorsCtr++;
+        }
+
+        if (orderFileExists) {
+            let reader = undefined;
+            try {
+                reader = new nReadlines(orderFilepath);
+                stats.orderFilesRead++;
+                let line;
+
+                while (line = reader.next()) {
+                    //Line is a buffer at first, not a string
+                    line = line.toString(encodingOfDocumentation);
+
+                    let fileTarget = line.trim();
+
+                    //Check if the target file/folder exists within the list and push it on top
+                    let index = filenames.indexOf(fileTarget);
+
+                    //If the target was found
+                    if (index != -1) {
+                        //Cut the file/folder from the array of files left to process after the order file
+                        filenames.splice(index, 1);
+
+                        //Handle it through recursion
+                        handleDocumentationObject(folderpath, fileTarget, parentNode);
+                        stats.filesOrdered++;
+                    } else {
+                        //Else, this is a human error and the file needs maintenance and the unknown entry be corrected or removed
+                        logWarning("Order file at \"%s\" contains unknown \"%s\" entry.", path.join(folderpath, docsOrderConfigurationFilename), fileTarget)
+                        stats.warningsCtr++;
                     }
-                ]
+                }
+            } catch (err) {
+                if (reader !== undefined) {
+                    let line = reader.next();
+                    if (line) {
+                        //If line contains an object that's not "false", that means we didn't hit EOF yet, so we have to close the reader.
+                        //n-readlines closes the reader automatically only if it reaches EOF.
+                        reader.close();
+                    }
+                }
+                logError("Error encountered while reading the lines of the order file at \"%s\".", path.join(folderpath, docsOrderConfigurationFilename));
+                /*Cannot recover from this if an error reaches here. The integrity of the rootNode is compromised and the filenames may be partial
+                because we are using splice to remove processed entries.*/
+                handleSidebarError(err);
             }
-        ]
-    },
+        }
+        //Else we don't need to do anything, the order file is optional to exist.
 
-    // string - page file path
-    '/string/file/path/But_its_broken_404_example.md',
-]
+        //Then handle the remaining sorted files
+        filenames.sort();
+        filenames.forEach(filename => {
+            handleDocumentationObject(folderpath, filename, parentNode);
+        });
+    } else if (filenames.length == 1) {
+        //Just handle that one documentation object then
+        handleDocumentationObject(folderpath, filenames[0], parentNode);
+    }
+    else {
+        //The folder is empty, log a message and do nothing
+        logWarning("The folder at \"%s\" is empty, consider removing it!", folderpath)
+        stats.warningsCtr++;
+    }
+    //Marks the end of checking the contents of a folder and doing some actions with the file structure
+}
 
+/**
+ * Checks the file type at the path specified by the "parentFolder" and "filename", and adds a new children to its parent object.
+ * @example
+ * //rootNode points to the folder at "docs"
+ * handleDocumentationObject("docs", "VuePress is nice.md", (DocumentationObject) rootNode)
+ * @example
+ * //parentNode points to the folder at "docs/info/help"
+ * handleDocumentationObject("docs/info/help", "What is a computer.md", (DocumentationObject) parentNode)
+ * 
+ * @param {string} parentFolder The relative path from the current working directory to reach the parenting folder of this current file resource (immediate parent folder).
+ * @param {string} filename The full name of the file resource (with extension when applicable, such as for files). 
+ * @param {DocumentationObject} parentNode The object directly parenting the file resource to reach and handle.
+ */
+function handleDocumentationObject(parentFolder, filename, parentNode) {
+    //Get some information about which type of file we're dealing with (file or folder)
+    const filepath = path.join(parentFolder, filename);
+    let stat = undefined;
+    try {
+        stat = fs.statSync(filepath);
+        stats.filesSynced++;
+    } catch (err) {
+        logError("Error getting file information about a document at path \"%s\".", filepath);
+        //Can't recover from this, file system might have permission issue.
+        handleSidebarError(err);
+    }
+    const isFile = stat.isFile();
+
+    let dobj = new DocumentationObject();
+    if (isFile) {
+        let reader = undefined;
+        try {
+            reader = new nReadlines(filepath);
+            stats.filesRead++;
+
+            let line;
+
+            //Read the first line of the file
+            if (line = reader.next()) {
+                line = line.toString(encodingOfDocumentation);
+
+                //If the first line is the frontmatter
+                if (isFrontmatterCharLine(line.trimEnd())) {
+                    let ctr = 0;
+                    /*Represents if the text of the DocumentationObject was set correctly. There's a chance it's not if the while
+                    condition is immediately false.*/
+                    let textNotSet = true;
+
+                    //Read subsequent lines in the file up to a threshold (ctr).
+                    //This tries to get the title of the file which is normally written in the frontmatter.
+                    //That title is used for showing the file in the sidebar when present.
+                    while ((line = reader.next()) && ctr < maximumAmountOfLinesReadForTitle) {
+                        line = line.toString(encodingOfDocumentation).trim();
+                        if (line.startsWith(vuepressFrontmatterTitleString)) {
+
+                            //Check if the title is not empty. Line's been trimmed just above, so whitespace don't count as valid title here.
+                            if (line.length > vuepressFrontmatterTitleString.length) {
+
+                                //Trim for spaces at the start of the title in case there was.
+                                //Example: "title: Pretty Title"
+                                //                ^
+                                dobj.text = line.substring(vuepressFrontmatterTitleString.length, line.length).trimStart();
+                                textNotSet = false;
+                            } else {
+                                //Title appears empty, infer from filename instead and log a recommendation.
+                                logWarning("File at \"%s\" has unrecognized title \"%s\".", filepath, line)
+                                stats.warningsCtr++;
+                                dobj.text = toTitleCase(path.parse(filename).name);
+                                textNotSet = false;
+                            }
+                            //Found title, exit the loop.
+                            break;
+
+                        } else if (isFrontmatterCharLine(line.trimEnd())) {
+
+                            //Found the end of the frontmatter without finding a title, infer from filename and log a recommendation.
+                            logWarning("No title found in frontmatter at \"%s\"! Please add a \"%s\" within the first %d lines.", filepath, vuepressFrontmatterTitleString, maximumAmountOfLinesReadForTitle)
+                            stats.warningsCtr++;
+                            dobj.text = toTitleCase(path.parse(filename).name);
+                            textNotSet = false;
+                            break;
+                        } //Else, keep going until ctr reaches the limit of times its permitted to loop.
+
+                        ctr++;
+                    }
+
+                    //In case the loop ends immediately, give it a text and tell maintainers.
+                    if (textNotSet) {
+                        logWarning("File at \"%s\" reached end of frontmatter prematurely. Check the frontmatter and ensure \"%s\" is reachable or raise the line counter threshold \"%s\" (currently: %d).", filepath, vuepressFrontmatterTitleString, varToString({ maximumAmountOfLinesReadForTitle }), maximumAmountOfLinesReadForTitle);
+                        stats.warningsCtr++;
+                        dobj.text = toTitleCase(path.parse(filename).name);
+                    }
+
+                } else {
+                    //Else infer title from the filename and log a warning
+                    logWarning("File at \"%s\" should have a frontmatter written.", filepath)
+                    stats.warningsCtr++;
+                    dobj.text = toTitleCase(path.parse(filename).name);
+                }
+            } else {
+                logWarning("File at \"%s\" is empty and shouldn't be!", filepath);
+                stats.warningsCtr++;
+            }
+        } catch (err) {
+            logError("File error while trying to read the contents of the frontmatter of file at \"%s\".", filepath);
+            //Do not throw here in this case, we can recover from this. Just print the filestream error.
+            console.error(err);
+            stats.errorsCtr++;
+
+            dobj.text = toTitleCase(path.parse(filename).name);
+        } finally {
+            //If reader ain't null and needs closing, close it.
+            if (reader !== undefined) {
+                let line = reader.next();
+                if (line) {
+                    //If line contains an object that's not "false", that means we didn't hit EOF yet, so we have to close the reader.
+                    //n-readlines closes the reader automatically only if it reaches EOF.
+                    reader.close();
+                }
+            }
+        }
+
+        //Pass the filepath as the link and pad appropriately for VuePress sidebar object formats.
+        //replaceAll in case the server is running on Windows, path is different.
+        dobj.link = filepath.substring(docsRootFolder.length, filepath.length).replaceAll("\\", "/");
+
+        //Add the dobj to its parent as children
+        //End of recursion after this line
+        parentNode.children.push(dobj);
+    } else {
+        //Is folder
+        dobj.text = toTitleCase(filename);
+
+
+        let readmeFileExists = false;
+        let readmeFilepath = path.join(filepath, readmeFilename);
+
+        try {
+            readmeFileExists = fs.existsSync(readmeFilepath);
+            stats.filesSynced++;
+        } catch (err) {
+            logError("Could not check the existence of the \"%s\" file at \"%s\".", readmeFilename, orderFilepath);
+            //Can recover from this, just don't assign any link after.
+            console.error(err);
+            stats.errorsCtr++;
+        }
+
+        if (readmeFileExists) {
+            //Pass the filepath as the link and pad appropriately for VuePress sidebar object formats.
+            //replaceAll in case the server is running on Windows, path is different.
+            dobj.link = filepath.substring(docsRootFolder.length, filepath.length).replaceAll("\\", "/");
+            stats.readmesDetected++;
+        }
+        dobj.collapsible = foldersCollapseByDefault;
+
+        //Handle the rest of the folder recursively. This will fill up the "children" array of this current folder node properly.
+        //Empty folder checks happen in the recursion, and they are not added as children and a message is logged.
+        ReadAndHandleFolderRecursively(filepath, false, dobj);
+
+        //Add the dobj to its parent as children since its a valid node (non-empty).
+        parentNode.children.push(dobj);
+    }
+}
+
+/**
+ * Allows checking if a line is composing the heading or ending of the VuePress frontmatter.
+ * @example
+ * isFrontmatterCharLine("---")
+ * @param {string} l The line to verify (can be empty).
+ * @returns {boolean} True if the line is entirely composed of the frontmatter's special character, otherwise false.
+ */
+function isFrontmatterCharLine(l) {
+    if (l === "") {
+        return false;
+    }
+
+    let b = true;
+    for (var i = 0; i < l.length && b; i++) {
+        b = b && (l.charAt(i) === vuepressFrontmatterHeaderChar);
+    }
+    return b;
+}
+
+/**
+ * Elevates the first letters of some words in a string.
+ * Reference: https://stackoverflow.com/a/196991
+ * @example
+ * //returns "Happyhour"
+ * toTitleCase("happyhour")
+ * @example
+ * //returns "Happy Hour"
+ * toTitleCase("happy hour")
+ * @example
+ * //returns "Happy-Hour"
+ * toTitleCase("happy-hour")
+ * @example
+ * //returns "Happy Hour"
+ * toTitleCase("happy_hour")
+ * @param {string} str The string to raise to title case (elevate the first letter of some words to capitals).
+ * @returns {string} The string with uppercased letters on word boundaries or underscore boundaries (which have been replaced to spaces).
+ */
+function toTitleCase(str) {
+    return str.replaceAll("_", " ").replace(
+        /\w*/g,
+        function (txt) {
+            return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();
+        }
+    );
+}
+
+/**
+ * Logs a caught exception on the error channel of the console and throws a managed error.
+ * The thrown error can be caught somewhere else in the program for additional error handling.
+ * @param {*} err Any exception object.
+ * @throws Throws a SIDEBAR_CONSTRUCT_ERR exception.
+ */
+function handleSidebarError(err) {
+    //Log to error channel and throw the error
+    console.error(err);
+    throw SIDEBAR_CONSTRUCT_ERR;
+}
+
+/**
+ * Obtains the name of a variable in the code as a string.
+ * Reference: https://stackoverflow.com/a/42791996
+ * @example
+ * //prints the text "MyVar"
+ * console.log(varToString(MyVar))
+ * @param {*} varObj Any code variable.
+ * @returns {string} The name of the variable itself as a string.
+ */
+const varToString = varObj => Object.keys(varObj)[0]
+
+/**
+ * Logs a message to the console to describe what the program is doing.
+ * @example
+ * //prints "INFO Here's some information.", with "INFO" in cyan.
+ * function logWarning("Here's some information.")
+ * @param {string} msg The information message to write on the console in cyan.
+ * @param  {...any} args The additional arguments for the message such as formatting objects, if applicable.
+ */
+function logInfo(msg, ...args) {
+    console.log("\x1b[36mINFO\x1b[0m " + msg, ...args)
+}
+
+/**
+ * Logs a message to the console to describe a warning that should be looked at.
+ * @example
+ * //prints "WARN Here's a warning.", with "WARN" in yellow.
+ * function logWarning("Here's a warning.")
+ * @param {string} msg The warning message to write on the console in yellow.
+ * @param  {...any} args The additional arguments for the message such as formatting objects, if applicable.
+ */
+function logWarning(msg, ...args) {
+    console.log("\x1b[33mWARN\x1b[0m " + msg, ...args)
+}
+
+/**
+ * Logs a message to the console to describe an error that should be looked at.
+ * @example
+ * //prints "ERR Here's an error.", with "ERR" in red.
+ * function logWarning("Here's an error.")
+ * @param {string} msg The error message to write on the console in red.
+ * @param  {...any} args The additional arguments for the message such as formatting objects, if applicable.
+ */
+function logError(msg, ...args) {
+    console.log("\x1b[31mERR\x1b[0m " + msg, ...args)
+}
+
+/*
+  __  __       _       
+ |  \/  |     (_)      
+ | \  / | __ _ _ _ __  
+ | |\/| |/ _` | | '_ \ 
+ | |  | | (_| | | | | |
+ |_|  |_|\__,_|_|_| |_|                 
+*/
+
+//Global variables for stats at the end of the loading phase.
+let stats = {
+    warningsCtr: 0,
+    errorsCtr: 0,
+    foldersListed: 0,
+    readmesDetected: 0,
+    orderFilesRead: 0,
+    filesRead: 0,
+    filesOrdered: 0,
+    filesSynced: 0
+}
+
+//Initialize a new root node to use for the root folder
+logInfo("Initializing the sidebar root node...")
+let rootNode = new DocumentationObject();
+
+//These lines are not needed, but for comprehension we could do this with no side effects, but only for the Root node
+//rootNode.text = "Root";
+//rootNode.link = "/";
+//rootNode.collapsible = true;
+
+
+logInfo("Searching the file tree...")
+//Start a new stopwatch
+console.time("Completed in")
+
+let sidebarLoadedProperly = false;
+try {
+    //Call the function to populate the root node. Recursive calls begin.
+    await ReadAndHandleFolderRecursively(docsRootFolder, true, rootNode);
+    sidebarLoadedProperly = true;
+} catch (err) {
+    if (err === SIDEBAR_CONSTRUCT_ERR) {
+        //This error is user thrown and already handled in other code.
+        logError("Handled sidebar construction error.")
+        stats.errorsCtr++;
+    } else {
+        //This is where the error fell outside all the safety nets and checks.
+        logError("Unhandled error! Code may need adjusting if this error is repetitive.");
+        console.error(err);
+        stats.errorsCtr++;
+    }
+    logInfo("Defaults will be used to allow the site to load.")
+}
+
+//Stats, can be useful in the case of issues/errors to see if they are significant.
+logInfo("Generating stats...")
+const statsStruct = [
+    { Action: "Sync File", Amount: stats.filesSynced},
+    { Action: "Scan Folder", Amount: stats.foldersListed },
+    { Action: "Detect " + readmeFilename, Amount: stats.readmesDetected },
+    { Action: "Read " + docsOrderConfigurationFilename, Amount: stats.orderFilesRead },
+    { Action: "Apply File Order", Amount: stats.filesOrdered},
+    { Action: "Read Documentation File", Amount: stats.filesRead }
+];
+console.table(statsStruct);
+
+//Flush the stopwatch's time to stdout
+//prints "Completed in: 5.432ms" for example for 5 milliseconds.
+console.timeEnd("Completed in")
+
+//Reference for colors: https://stackoverflow.com/a/41407246
+//Tell the status of loading the documentation.
+if (stats.warningsCtr + stats.errorsCtr == 0) {
+    console.log('\x1b[32m%s\x1b[0m', `0 issues found. All clear!`);
+} else if (stats.errorsCtr > 0) {
+    console.log('\x1b[31m%s\x1b[0m', `${stats.warningsCtr + stats.errorsCtr} issue(s) found. Please verify the errors or warnings.`);
+} else { //stats.warningsCtr is the only one containing a count
+    console.log('\x1b[33m%s\x1b[0m', `${stats.warningsCtr + stats.errorsCtr} issue(s) found. Please verify the warnings.`);
+}
+
+//Set a variable for use in the VuePress configuration.
+let sidebar = undefined;
+if (sidebarLoadedProperly) {
+    //We ask the root node (docs) for its formatted output, then pass the children (folders beneath docs) as the sidebar.
+    sidebar = rootNode.sidebarObject.children;
+} else {
+    //Default value should be minimalistic.
+    sidebar = DEFAULT_SIDEBAR;
+}
+logInfo("Sidebar constructed!")
+
+//Uncomment the next line to print the sidebar to the console if necessary.
+//logInfo(JSON.stringify(sidebar))
+
+//The VuePress configuration, where the sidebar variable is used, along other configuration options.
 export default defineUserConfig({
-    lang: 'en-US',
-    title: 'Feed The Beast Documentation',
-    description: 'Just playing around',
-
     theme: defaultTheme({
+        sidebar: sidebar,
+        lang: 'en-US',
+        title: 'Feed The Beast Docs',
+        description: 'Documentation for content made by Feed The Beast.',
         logo: 'https://vuejs.org/images/logo.png',
         repo: 'https://github.com/ftbteam/docs',
         docsRepo: 'https://github.com/ftbteam/docs/docs',
         docsBranch: 'main',
-        sidebar,
         contributors: false,
         darkMode: true
-    }),
+    })
 })
