@@ -4,7 +4,6 @@
 # But upload these things from the root only
 !/docs
 !/.gitignore
-!/index.md
 !/package.json
 
 # And don't upload that, no matter where they are
