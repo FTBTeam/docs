@@ -151,7 +151,7 @@ class DocumentationObject {
  */
 function readAndHandleFolderRecursively(folderpath, isRoot, parentNode) {
     //Read the current folder contents
-    let unfilteredFilenames = undefined;
+    let unfilteredFilenames;
     try {
         unfilteredFilenames = fs.readdirSync(folderpath);
         stats.foldersListed++;
@@ -161,7 +161,7 @@ function readAndHandleFolderRecursively(folderpath, isRoot, parentNode) {
     }
 
     //Filter the names of the files/folders before use by respecting the blacklists
-    let filenames = undefined;
+    let filenames;
     if (isRoot) {
         filenames = unfilteredFilenames.filter(f => !ROOT_FOLDER_BLACKLIST.includes(f));
     } else {
@@ -184,7 +184,7 @@ function readAndHandleFolderRecursively(folderpath, isRoot, parentNode) {
         }
 
         if (orderFileExists) {
-            let reader = undefined;
+            let reader;
             try {
                 reader = new nReadlines(orderFilepath);
                 stats.orderFilesRead++;
@@ -257,7 +257,7 @@ function readAndHandleFolderRecursively(folderpath, isRoot, parentNode) {
 function handleDocumentationObject(parentFolder, filename, parentNode) {
     //Get some information about which type of file we're dealing with (file or folder)
     const filepath = path.join(parentFolder, filename);
-    let stat = undefined;
+    let stat;
     try {
         stat = fs.statSync(filepath);
         stats.filesSynced++;
@@ -270,7 +270,7 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
 
     let dobj = new DocumentationObject();
     if (isFile) {
-        let reader = undefined;
+        let reader;
         try {
             reader = new nReadlines(filepath);
             stats.filesRead++;
@@ -558,7 +558,7 @@ if (stats.warningsCtr + stats.errorsCtr == 0) {
     console.log('\x1b[33m%s\x1b[0m', `${stats.warningsCtr + stats.errorsCtr} issue(s) found. Please verify the warnings.`);
 }
 
-let sidebar = undefined;
+let sidebar;
 if (sidebarLoadedProperly) {
     sidebar = rootNode.sidebarObject.children;
 } else {
