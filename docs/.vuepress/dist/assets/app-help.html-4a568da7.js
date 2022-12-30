@@ -1,0 +1,1 @@
+const p=JSON.parse('{"key":"v-38170ad5","path":"/app_support/app-help.html","title":"FTB App help","lang":"en-US","frontmatter":{"lang":"en-US","title":"FTB App help","description":"App help"},"headers":[],"git":{"updatedTime":1672385751000},"filePathRelative":"app_support/app-help.md"}');export{p as data};

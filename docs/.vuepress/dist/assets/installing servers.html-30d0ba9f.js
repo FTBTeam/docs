@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-ad933c66","path":"/support/servers/installing%20servers.html","title":"Installing a Feed the Beast Server","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1672385751000},"filePathRelative":"support/servers/installing servers.md"}');export{e as data};
