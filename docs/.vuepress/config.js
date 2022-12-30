@@ -408,7 +408,6 @@ function isFrontmatterCharLine(l) {
 
 /**
  * Elevates the first letters of some words in a string.
- * Reference: https://stackoverflow.com/a/196991
  * @example
  * //returns "Happyhour"
  * toTitleCase("happyhour")
