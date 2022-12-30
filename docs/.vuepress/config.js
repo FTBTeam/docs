@@ -17,45 +17,45 @@ import path from 'path';
 import nReadlines from 'n-readlines';
 
 //Sets the root directory containing all documentation in the project
-const docsRootFolder = "docs";
+const ROOT_FOLDER = "docs";
 
 /* Sets the name of the text file that contains the order of which folders or files show in the sidebar in priority.
 You can add one of those files per folder. The contents of the file can contain one name per line, either a folder
 or a file that is in the same folder as this order file. */
-const docsOrderConfigurationFilename = "order.txt";
+const ORDER_FILENAME = "order.txt";
 
 //Contains the name of the read me files. Read me files are used to add a "front" page for a folder.
-const readmeFilename = "README.md";
+const README_FILENAME = "README.md";
 
 /*Contains the name of the folder that can contain assets such as pictures, videos or even other procedures. The contents
 of that folder will not be mapped to the sidebar, but is still accessible!*/
-const assetsFolderName = "assets";
+const ASSETS_FOLDER = "assets";
 
 //Allows blacklisting folders or files in the root folder specified above. Those folders or files will not be put on the sidebar.
-let rootFolderFileBlacklist = [".vuepress", readmeFilename, docsOrderConfigurationFilename, assetsFolderName];
+const ROOT_FOLDER_BLACKLIST = [".vuepress", README_FILENAME, ORDER_FILENAME, ASSETS_FOLDER];
 
 //Allows blacklisting folders or files in the subfolders under root. Those folders or files will not be put on the sidebar.
-let otherFoldersFileBlacklist = [readmeFilename, docsOrderConfigurationFilename, assetsFolderName];
+const COMMON_FOLDERS_BLACKLIST = [README_FILENAME, ORDER_FILENAME, ASSETS_FOLDER];
 
 /*Decides if the folders in the sidebar will be displayed as collapsible or not. If they are not made collapsible, they will display
 all of their content at once. If they are collapsible (true), their contents will be hidden until the user clicks them once.*/
-const foldersCollapseByDefault = true;
+const COLLAPSE_FOLDERS = true;
 
 //Helps the file reader finding the frontmatter information in the documentation pages. Should always be set to "-".
-const vuepressFrontmatterHeaderChar = "-";
+const FRONTMATTER_LEADING_CHAR = "-";
 
 //Helps the file reader look for titles inside markdown files. Should always be set to "title:".
-const vuepressFrontmatterTitleString = "title:";
+const FRONTMATTER_TITLE_TEXT = "title:";
 
 /*Determines the maximum amount of lines that the reader will check to find the title of a file. If you know your titles are at the start of
 documents in the frontmatter, set this to a low value. This value is only reached if the reader cannot find the title at all.*/
-const maximumAmountOfLinesReadForTitle = 10;
+const MAX_LINES_READ = 10;
 
 //Decides the type of encoding files are using so that the reader can appropriately check the text inside files to find the title of files.
-const encodingOfDocumentation = "utf8";
+const ENCODING = "utf8";
 
 //Used for throwing exceptions internally if the sidebar fails to be constructed properly and the program needs to default to one.
-const SIDEBAR_CONSTRUCT_ERR = "ErrorConstructingSidebar";
+const SIDEBAR_ERR = "ErrorConstructingSidebar";
 
 /*In the case of an error building the sidebar, this default sidebar will be used instead. It should be minimal and recognizable and allow
 the website to load at least correctly. The search in VuePress can be used to find documents while an error like this persists. */
@@ -145,11 +145,11 @@ class DocumentationObject {
  * readAndHandleFolderRecursively("docs/info/help", false, (DocumentationObject) parentNode)
  * 
  * @param {string} folderpath The relative path from the current working directory to reach the file resource to handle.
- * @param {boolean} isRootFolder If the file resource to handle is actually the first in the arborescence (the root).
+ * @param {boolean} isRoot If the file resource to handle is actually the first in the arborescence (the root).
  * @param {DocumentationObject} parentNode The object directly parenting the file resource to reach and handle.
  * 
  */
-function readAndHandleFolderRecursively(folderpath, isRootFolder, parentNode) {
+function readAndHandleFolderRecursively(folderpath, isRoot, parentNode) {
     //Read the current folder contents
     let unfilteredFilenames = undefined;
     try {
@@ -162,22 +162,22 @@ function readAndHandleFolderRecursively(folderpath, isRootFolder, parentNode) {
 
     //Filter the names of the files/folders before use by respecting the blacklists
     let filenames = undefined;
-    if (isRootFolder) {
-        filenames = unfilteredFilenames.filter(f => !rootFolderFileBlacklist.includes(f));
+    if (isRoot) {
+        filenames = unfilteredFilenames.filter(f => !ROOT_FOLDER_BLACKLIST.includes(f));
     } else {
-        filenames = unfilteredFilenames.filter(f => !otherFoldersFileBlacklist.includes(f));
+        filenames = unfilteredFilenames.filter(f => !COMMON_FOLDERS_BLACKLIST.includes(f));
     }
 
     //If the current folder contains something
     if (filenames.length > 1) {
         //Check if the order file exists, and apply it
         let orderFileExists = false;
-        let orderFilepath = path.join(folderpath, docsOrderConfigurationFilename);
+        let orderFilepath = path.join(folderpath, ORDER_FILENAME);
         try {
             orderFileExists = fs.existsSync(orderFilepath)
             stats.filesSynced++;
         } catch (err) {
-            logError("Could not check the existence of the \"%s\" file at \"%s\".", docsOrderConfigurationFilename, orderFilepath);
+            logError("Could not check the existence of the \"%s\" file at \"%s\".", ORDER_FILENAME, orderFilepath);
             //Can still recover from this. The order of docs will be forced alphanumeric, but at least they'll be accessible.
             console.error(err);
             stats.errorsCtr++;
@@ -191,7 +191,7 @@ function readAndHandleFolderRecursively(folderpath, isRootFolder, parentNode) {
                 let line;
 
                 while (line = reader.next()) {
-                    line = line.toString(encodingOfDocumentation);
+                    line = line.toString(ENCODING);
                     let fileTarget = line.trim();
                     let index = filenames.indexOf(fileTarget);
 
@@ -205,7 +205,7 @@ function readAndHandleFolderRecursively(folderpath, isRootFolder, parentNode) {
                         stats.filesOrdered++;
                     } else {
                         //Else, this is a human error and the file needs maintenance and the unknown entry be corrected or removed
-                        logWarning("Order file at \"%s\" contains unknown \"%s\" entry.", path.join(folderpath, docsOrderConfigurationFilename), fileTarget)
+                        logWarning("Order file at \"%s\" contains unknown \"%s\" entry.", path.join(folderpath, ORDER_FILENAME), fileTarget)
                         stats.warningsCtr++;
                     }
                 }
@@ -217,7 +217,7 @@ function readAndHandleFolderRecursively(folderpath, isRootFolder, parentNode) {
                         reader.close();
                     }
                 }
-                logError("Error encountered while reading the lines of the order file at \"%s\".", path.join(folderpath, docsOrderConfigurationFilename));
+                logError("Error encountered while reading the lines of the order file at \"%s\".", path.join(folderpath, ORDER_FILENAME));
                 /*Cannot recover from this if an error reaches here. The integrity of the rootNode is compromised and the filenames may be partial
                 because we are using splice to remove processed entries.*/
                 handleSidebarError(err);
@@ -278,7 +278,7 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
             let line;
 
             if (line = reader.next()) {
-                line = line.toString(encodingOfDocumentation);
+                line = line.toString(ENCODING);
 
                 //If the first line is the frontmatter
                 if (isFrontmatterCharLine(line.trimEnd())) {
@@ -288,13 +288,13 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
                     let textNotSet = true;
 
                     //Read subsequent lines to search for the title in the file up to a threshold (ctr)
-                    while ((line = reader.next()) && ctr < maximumAmountOfLinesReadForTitle) {
-                        line = line.toString(encodingOfDocumentation).trim();
-                        if (line.startsWith(vuepressFrontmatterTitleString)) {
+                    while ((line = reader.next()) && ctr < MAX_LINES_READ) {
+                        line = line.toString(ENCODING).trim();
+                        if (line.startsWith(FRONTMATTER_TITLE_TEXT)) {
 
                             //Check if the title is not empty. Line's been trimmed just above, so whitespace don't count as valid title here.
-                            if (line.length > vuepressFrontmatterTitleString.length) {
-                                dobj.text = line.substring(vuepressFrontmatterTitleString.length, line.length).trimStart();
+                            if (line.length > FRONTMATTER_TITLE_TEXT.length) {
+                                dobj.text = line.substring(FRONTMATTER_TITLE_TEXT.length, line.length).trimStart();
                             } else {
                                 //Title appears empty, infer from filename instead and log a recommendation.
                                 logWarning("File at \"%s\" has unrecognized title \"%s\".", filepath, line)
@@ -308,7 +308,7 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
                         } else if (isFrontmatterCharLine(line.trimEnd())) {
 
                             //Found the end of the frontmatter without finding a title, infer from filename and log a recommendation.
-                            logWarning("No title found in frontmatter at \"%s\"! Please add a \"%s\" within the first %d lines.", filepath, vuepressFrontmatterTitleString, maximumAmountOfLinesReadForTitle)
+                            logWarning("No title found in frontmatter at \"%s\"! Please add a \"%s\" within the first %d lines.", filepath, FRONTMATTER_TITLE_TEXT, MAX_LINES_READ)
                             stats.warningsCtr++;
                             dobj.text = toTitleCase(path.parse(filename).name);
                             textNotSet = false;
@@ -319,7 +319,7 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
 
                     //In case the loop ends immediately, give it a text
                     if (textNotSet) {
-                        logWarning("File at \"%s\" reached end of frontmatter prematurely. Check the frontmatter and ensure \"%s\" is reachable or raise the line counter threshold \"%s\" (currently: %d).", filepath, vuepressFrontmatterTitleString, varToString({ maximumAmountOfLinesReadForTitle }), maximumAmountOfLinesReadForTitle);
+                        logWarning("File at \"%s\" reached end of frontmatter prematurely. Check the frontmatter and ensure \"%s\" is reachable or raise the line counter threshold \"%s\" (currently: %d).", filepath, FRONTMATTER_TITLE_TEXT, varToString({ MAX_LINES_READ }), MAX_LINES_READ);
                         stats.warningsCtr++;
                         dobj.text = toTitleCase(path.parse(filename).name);
                     }
@@ -351,7 +351,7 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
         }
 
         //Pass the filepath as the link and pad appropriately for VuePress sidebar object formats. Backslash to slash for Windows
-        dobj.link = filepath.substring(docsRootFolder.length, filepath.length).replaceAll("\\", "/");
+        dobj.link = filepath.substring(ROOT_FOLDER.length, filepath.length).replaceAll("\\", "/");
 
         //Add the dobj to its parent as children
         //End of recursion after this line
@@ -360,13 +360,13 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
         //It's a folder
         dobj.text = toTitleCase(filename);
         let readmeFileExists = false;
-        let readmeFilepath = path.join(filepath, readmeFilename);
+        let readmeFilepath = path.join(filepath, README_FILENAME);
 
         try {
             readmeFileExists = fs.existsSync(readmeFilepath);
             stats.filesSynced++;
         } catch (err) {
-            logError("Could not check the existence of the \"%s\" file at \"%s\".", readmeFilename, orderFilepath);
+            logError("Could not check the existence of the \"%s\" file at \"%s\".", README_FILENAME, orderFilepath);
             //Can recover from this, just don't assign any link
             console.error(err);
             stats.errorsCtr++;
@@ -374,10 +374,10 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
 
         if (readmeFileExists) {
             //Pass the filepath as the link and pad appropriately for VuePress sidebar object formats. Backslash to slash for Windows
-            dobj.link = filepath.substring(docsRootFolder.length, filepath.length).replaceAll("\\", "/");
+            dobj.link = filepath.substring(ROOT_FOLDER.length, filepath.length).replaceAll("\\", "/");
             stats.readmesDetected++;
         }
-        dobj.collapsible = foldersCollapseByDefault;
+        dobj.collapsible = COLLAPSE_FOLDERS;
 
         //Handle the rest of the folder recursively and also to fill the children property of this current dobj
         readAndHandleFolderRecursively(filepath, false, dobj);
@@ -401,7 +401,7 @@ function isFrontmatterCharLine(l) {
 
     let b = true;
     for (var i = 0; i < l.length && b; i++) {
-        b = b && (l.charAt(i) === vuepressFrontmatterHeaderChar);
+        b = b && (l.charAt(i) === FRONTMATTER_LEADING_CHAR);
     }
     return b;
 }
@@ -437,12 +437,12 @@ function toTitleCase(str) {
  * Logs a caught exception on the error channel of the console and throws a managed error.
  * The thrown error can be caught somewhere else in the program for additional error handling.
  * @param {*} err Any exception object.
- * @throws Throws a SIDEBAR_CONSTRUCT_ERR exception.
+ * @throws Throws a SIDEBAR_ERR exception.
  */
 function handleSidebarError(err) {
     //Log to error channel and throw the error
     console.error(err);
-    throw SIDEBAR_CONSTRUCT_ERR;
+    throw SIDEBAR_ERR;
 }
 
 /**
@@ -519,10 +519,10 @@ let sidebarLoadedProperly = false;
 
 try {
     //Call the function to populate the root node. Recursive calls begin.
-    await readAndHandleFolderRecursively(docsRootFolder, true, rootNode);
+    await readAndHandleFolderRecursively(ROOT_FOLDER, true, rootNode);
     sidebarLoadedProperly = true;
 } catch (err) {
-    if (err === SIDEBAR_CONSTRUCT_ERR) {
+    if (err === SIDEBAR_ERR) {
         //This error is user thrown and already handled in other code
         logError("Handled sidebar construction error.")
         stats.errorsCtr++;
@@ -540,8 +540,8 @@ logInfo("Generating stats...")
 const statsStruct = [
     { Action: "Sync File", Amount: stats.filesSynced},
     { Action: "Scan Folder", Amount: stats.foldersListed },
-    { Action: "Detect " + readmeFilename, Amount: stats.readmesDetected },
-    { Action: "Read " + docsOrderConfigurationFilename, Amount: stats.orderFilesRead },
+    { Action: "Detect " + README_FILENAME, Amount: stats.readmesDetected },
+    { Action: "Read " + ORDER_FILENAME, Amount: stats.orderFilesRead },
     { Action: "Apply File Order", Amount: stats.filesOrdered},
     { Action: "Read Documentation File", Amount: stats.filesRead }
 ];
