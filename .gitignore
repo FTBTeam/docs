@@ -5,6 +5,7 @@
 !/docs
 !/.gitignore
 !/package.json
+!/yarn.lock
 
 # And don't upload that, no matter where they are
 node_modules
@@ -12,6 +13,5 @@ node_modules
 .cache
 .idea
 .DS_Store
-yarn.lock
 package-lock.json
 docs/.vuepress/config.js.bak
