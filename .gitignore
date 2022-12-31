@@ -4,9 +4,10 @@
 # But upload these things from the root only
 !/docs
 !/.gitignore
-!/index.md
-!/package-lock.json
 !/package.json
+!/yarn.lock
+
+docs/.vuepress/dist
 
 # And don't upload that, no matter where they are
 node_modules
@@ -14,4 +15,5 @@ node_modules
 .cache
 .idea
 .DS_Store
-yarn.lock
+package-lock.json
+*.bak
