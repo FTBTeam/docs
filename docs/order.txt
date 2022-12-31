@@ -1,2 +1,5 @@
-test.md
+modpacks
+mods
+app
 support
+faqs

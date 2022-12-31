@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-8daa1a0e","path":"/","title":"Docs","lang":"en-US","frontmatter":{"lang":"en-US","title":"Docs","description":"Home of the FTB docs!"},"headers":[{"level":2,"title":"Test","slug":"test","link":"#test","children":[]}],"git":{"updatedTime":1672385751000},"filePathRelative":"README.md"}');export{e as data};

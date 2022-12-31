@@ -7,6 +7,8 @@
 !/package.json
 !/yarn.lock
 
+docs/.vuepress/dist
+
 # And don't upload that, no matter where they are
 node_modules
 .temp
@@ -14,4 +16,4 @@ node_modules
 .idea
 .DS_Store
 package-lock.json
-docs/.vuepress/config.js.bak
+*.bak

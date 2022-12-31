@@ -3,28 +3,28 @@
   "version": "1.0.0",
   "description": "FTB Docs for our mods, support topics, faq and lots of other useful information ",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
+  },
+  "engines": {
+    "npm": "dont-use-npm",
+    "yarn": "^1.0",
+    "node": "^16.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FTBTeam/docs.git"
   },
-  "keywords": [
-    "docs",
-    "faq",
-    "ftb"
-  ],
   "author": "FTB Team",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/FTBTeam/docs/issues"
   },
-  "homepage": "https://github.com/FTBTeam/docs#readme",
+  "homepage": "https://github.com/FTBTeam/docs",
   "devDependencies": {
     "n-readlines": "^1.0.1",
     "vuepress": "^2.0.0-beta.59"
-  },
-  "type": "module"
+  }
 }
