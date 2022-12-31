@@ -79,7 +79,6 @@ const DEFAULT_SIDEBAR = [
  *  └ History
  *    └ Middle Ages
  *    └ Parchment
- * 
  * @property {string} text Holds the information about the name of this article or folder.
  * @property {string} link This holds the link (URI) for the article for VuePress to be able to correctly redirect to said article when clicking that sidebar object.
  * @property {boolean} collapsible For folders, holds if the folder is collapsible in the sidebar, or expanded by default.
@@ -143,7 +142,6 @@ class DocumentationObject {
  * @example
  * //parentNode points to an object on "docs/info"
  * readAndHandleFolderRecursively("docs/info/help", false, (DocumentationObject) parentNode)
- * 
  * @param {string} folderpath The relative path from the current working directory to reach the file resource to handle.
  * @param {boolean} isRoot If the file resource to handle is actually the first in the arborescence (the root).
  * @param {DocumentationObject} parentNode The object directly parenting the file resource to reach and handle.
@@ -170,7 +168,6 @@ function readAndHandleFolderRecursively(folderpath, isRoot, parentNode) {
 
     //If the current folder contains something
     if (filenames.length > 1) {
-        //Check if the order file exists, and apply it
         let orderFileExists = false;
         let orderFilepath = path.join(folderpath, ORDER_FILENAME);
         try {
@@ -353,8 +350,7 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
         //Pass the filepath as the link and pad appropriately for VuePress sidebar object formats. Backslash to slash for Windows
         dobj.link = filepath.substring(ROOT_FOLDER.length, filepath.length).replaceAll("\\", "/");
 
-        //Add the dobj to its parent as children
-        //End of recursion after this line
+        //Add the dobj to its parent as children. End of recursion after this line
         parentNode.children.push(dobj);
     } else {
         //It's a folder
@@ -439,7 +435,6 @@ function toTitleCase(str) {
  * @throws Throws a SIDEBAR_ERR exception.
  */
 function handleSidebarError(err) {
-    //Log to error channel and throw the error
     console.error(err);
     throw SIDEBAR_ERR;
 }
