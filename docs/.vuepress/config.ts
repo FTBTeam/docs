@@ -10,9 +10,9 @@ import {
 
 import sidebar from "./app/sidebar/SidebarCreator.js";
 
-import {sidebar as sidebar2} from "./app/sidebar/SidebarSimple.js";
+//import {sidebar as sidebar2} from "./app/sidebar/SidebarSimple.js";
 
-sidebar2.then(e => console.log(e));
+//sidebar2.then(e => console.log(e));
 
 //The VuePress configuration, where the sidebar variable is used, along other configuration options.
 export default defineUserConfig({
