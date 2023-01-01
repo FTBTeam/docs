@@ -13,15 +13,19 @@ const ORDER_FILENAME = "order.txt";
 //Contains the name of the read me files. Read me files are used to add a "front" page for a folder.
 const README_FILENAME = "README.md";
 
-/*Contains the name of the folder that can contain assets such as pictures, videos or even other procedures. The contents
-of that folder will not be mapped to the sidebar, but is still accessible!*/
-const ASSETS_FOLDER = "assets";
+/*Contains the name of the folder that can contain assets such as pictures or videos. The contents
+of that folder will not be mapped to the sidebar.*/
+const IMAGES_FOLDER = "images";
+
+/*Contains the name of the folder that can contain documentation files (.md) that will not be mapped to the sidebar
+but need to remain accessible in the website (routed by VuePress).*/
+const REFERENCES_FOLDER = "references";
 
 //Allows blacklisting folders or files in the root folder specified above. Those folders or files will not be put on the sidebar.
-const ROOT_FOLDER_BLACKLIST = [".vuepress", README_FILENAME, ORDER_FILENAME, ASSETS_FOLDER];
+const ROOT_FOLDER_BLACKLIST = [".vuepress", README_FILENAME, ORDER_FILENAME, IMAGES_FOLDER, REFERENCES_FOLDER];
 
 //Allows blacklisting folders or files in the subfolders under root. Those folders or files will not be put on the sidebar.
-const COMMON_FOLDERS_BLACKLIST = [README_FILENAME, ORDER_FILENAME, ASSETS_FOLDER];
+const COMMON_FOLDERS_BLACKLIST = [README_FILENAME, ORDER_FILENAME, IMAGES_FOLDER, REFERENCES_FOLDER];
 
 /*Decides if the folders in the sidebar will be displayed as collapsible or not. If they are not made collapsible, they will display
 all of their content at once. If they are collapsible (true), their contents will be hidden until the user clicks them once.*/
@@ -37,8 +41,8 @@ const FRONTMATTER_TITLE_TEXT = "title:";
 documents in the frontmatter, set this to a low value. This value is only reached if the reader cannot find the title at all.*/
 const MAX_LINES_READ = 10;
 
-//Decides the type of encoding files are using so that the reader can appropriately check the text inside files to find the title of files.
-const ENCODING = "utf8";
+//Sets what the extension of documentation files is expected to be.
+const DOCUMENTATION_EXT = ".md";
 
 //Used for throwing exceptions internally if the sidebar fails to be constructed properly and the program needs to default to one.
 const SIDEBAR_ERR = "ErrorConstructingSidebar";
@@ -131,6 +135,7 @@ class DocumentationObject {
  * @param {string} folderpath The relative path from the current working directory to reach the file resource to handle.
  * @param {boolean} isRoot If the file resource to handle is actually the first in the arborescence (the root).
  * @param {DocumentationObject} parentNode The object directly parenting the file resource to reach and handle.
+ * @returns {boolean} Returns true if the folder contained elements to handle or false if the folder is empty.
  *
  */
 function readAndHandleFolderRecursively(folderpath, isRoot, parentNode) {
@@ -152,8 +157,13 @@ function readAndHandleFolderRecursively(folderpath, isRoot, parentNode) {
         filenames = unfilteredFilenames.filter(f => !COMMON_FOLDERS_BLACKLIST.includes(f));
     }
 
+    //Specify that this is a bool
+    let containedElementsToHandle = false;
+
     //If the current folder contains something
     if (filenames.length > 1) {
+        containedElementsToHandle = true;
+
         let orderFileExists = false;
         let orderFilepath = path.join(folderpath, ORDER_FILENAME);
         try {
@@ -187,9 +197,8 @@ function readAndHandleFolderRecursively(folderpath, isRoot, parentNode) {
                         handleDocumentationObject(folderpath, fileTarget, parentNode);
                         stats.filesOrdered++;
                     } else {
-                        //Else, this is a human error and the file needs maintenance and the unknown entry be corrected or removed
-                        logWarning("Order file at \"%s\" contains unknown \"%s\" entry.", path.join(folderpath, ORDER_FILENAME), fileTarget)
-                        stats.warningsCtr++;
+                        //Else, this could or not be intended for preparing file structure, as it's not majorly important, log as info.
+                        logInfo("Order file at \"%s\" contains unknown \"%s\" entry.", path.join(folderpath, ORDER_FILENAME), fileTarget)
                     }
                 }
             } catch (err) {
@@ -214,14 +223,16 @@ function readAndHandleFolderRecursively(folderpath, isRoot, parentNode) {
             handleDocumentationObject(folderpath, filename, parentNode);
         });
     } else if (filenames.length === 1) {
+        containedElementsToHandle = true;
         //Handle one documentation object
         handleDocumentationObject(folderpath, filenames[0], parentNode);
     }
     else {
         //The folder is empty, log a message and do nothing
-        logWarning("The folder at \"%s\" is empty, consider removing it!", folderpath)
-        stats.warningsCtr++;
+        logInfo("The folder at \"%s\" is empty.", folderpath)
     }
+
+    return containedElementsToHandle;
 }
 
 /**
@@ -253,6 +264,11 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
 
     let dobj = new DocumentationObject();
     if (isFile) {
+        if (path.extname(filename) !== DOCUMENTATION_EXT) {
+            logWarning("File at \"%s\" should be put inside a \"%s\" folder, since it is not a documentation file (%s).", filepath, IMAGES_FOLDER, DOCUMENTATION_EXT);
+            return;
+        }
+
         let reader;
         try {
             reader = new nReadlines(filepath);
@@ -265,13 +281,13 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
 
                 //If the first line is the frontmatter
                 if (isFrontmatterCharLine(line.trimEnd())) {
-                    let ctr = 0;
+                    let ctr = 1;
                     /*Represents if the text of the DocumentationObject was set correctly. There's a chance it's not if the while
                     condition is immediately false.*/
                     let textNotSet = true;
 
                     //Read subsequent lines to search for the title in the file up to a threshold (ctr)
-                    while ((line = reader.next()) && ctr < MAX_LINES_READ) {
+                    while ((line = reader.next()) && ctr++ < MAX_LINES_READ) {
                         line = line.toString().trim();
                         if (line.startsWith(FRONTMATTER_TITLE_TEXT)) {
 
@@ -280,8 +296,7 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
                                 dobj.text = line.substring(FRONTMATTER_TITLE_TEXT.length, line.length).trimStart();
                             } else {
                                 //Title appears empty, infer from filename instead and log a recommendation.
-                                logWarning("File at \"%s\" has unrecognized title \"%s\".", filepath, line)
-                                stats.warningsCtr++;
+                                logWarning("File at \"%s\" has unrecognizable title \"%s\".", filepath, line)
                                 dobj.text = toTitleCase(path.parse(filename).name);
                             }
                             //Assigned title, exit the loop.
@@ -292,36 +307,30 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
 
                             //Found the end of the frontmatter without finding a title, infer from filename and log a recommendation.
                             logWarning("No title found in frontmatter at \"%s\"! Please add a \"%s\" within the first %d lines.", filepath, FRONTMATTER_TITLE_TEXT, MAX_LINES_READ)
-                            stats.warningsCtr++;
                             dobj.text = toTitleCase(path.parse(filename).name);
                             textNotSet = false;
                             break;
                         }
-                        ctr++;
                     }
 
                     //In case the loop ends immediately, give it a text
                     if (textNotSet) {
                         logWarning("File at \"%s\" reached end of frontmatter prematurely. Check the frontmatter and ensure \"%s\" is reachable or raise the line counter threshold \"%s\" (currently: %d).", filepath, FRONTMATTER_TITLE_TEXT, varToString({ MAX_LINES_READ }), MAX_LINES_READ);
-                        stats.warningsCtr++;
                         dobj.text = toTitleCase(path.parse(filename).name);
                     }
 
                 } else {
                     //Infer title from the filename and log a warning
                     logWarning("File at \"%s\" should have a frontmatter written.", filepath)
-                    stats.warningsCtr++;
                     dobj.text = toTitleCase(path.parse(filename).name);
                 }
             } else {
                 logWarning("File at \"%s\" is empty and shouldn't be!", filepath);
-                stats.warningsCtr++;
             }
         } catch (err) {
             logError("File error while trying to read the contents of the frontmatter of file at \"%s\".", filepath);
             //Do not throw here in this case, we can recover from this. Just print the filestream error
             console.error(err);
-            stats.errorsCtr++;
             dobj.text = toTitleCase(path.parse(filename).name);
         } finally {
             //If reader ain't null and needs closing, close it.
@@ -339,7 +348,11 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
         //Add the dobj to its parent as children. End of recursion after this line
         parentNode.children.push(dobj);
     } else {
-        //It's a folder
+        //Handle the contents of the folder recursively. If the folder didn't contain anything to handle, don't continue.
+        if (!readAndHandleFolderRecursively(filepath, false, dobj)) {
+            return;
+        }
+
         dobj.text = toTitleCase(filename);
         let readmeFileExists = false;
         let readmeFilepath = path.join(filepath, README_FILENAME);
@@ -351,7 +364,6 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
             logError("Could not check the existence of the \"%s\" file at \"%s\".", README_FILENAME, orderFilepath);
             //Can recover from this, just don't assign any link
             console.error(err);
-            stats.errorsCtr++;
         }
 
         if (readmeFileExists) {
@@ -361,10 +373,7 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
         }
         dobj.collapsible = COLLAPSE_FOLDERS;
 
-        //Handle the rest of the folder recursively and also to fill the children property of this current dobj
-        readAndHandleFolderRecursively(filepath, false, dobj);
-
-        //Add the dobj to its parent as children since its a valid node (non-empty).
+        //Add the dobj to its parent as children since its a valid node (confirmed non-empty from earlier).
         parentNode.children.push(dobj);
     }
 }
@@ -439,7 +448,7 @@ const varToString = varObj => Object.keys(varObj)[0]
  * Logs a message to the console to describe what the program is doing.
  * @example
  * //prints "INFO Here's some information.", with "INFO" in cyan.
- * function logWarning("Here's some information.")
+ * function logInfo("Here's some information.")
  * @param {string} msg The information message to write on the console in cyan.
  * @param  {...any} args The additional arguments for the message such as formatting objects, if applicable.
  */
@@ -457,18 +466,20 @@ function logInfo(msg, ...args) {
  */
 function logWarning(msg, ...args) {
     console.log("\x1b[33mWARN\x1b[0m " + msg, ...args)
+    stats.warningsCtr++;
 }
 
 /**
  * Logs a message to the console to describe an error that should be looked at.
  * @example
  * //prints "ERR Here's an error.", with "ERR" in red.
- * function logWarning("Here's an error.")
+ * function logError("Here's an error.")
  * @param {string} msg The error message to write on the console in red.
  * @param  {...any} args The additional arguments for the message such as formatting objects, if applicable.
  */
 function logError(msg, ...args) {
     console.log("\x1b[31mERR\x1b[0m " + msg, ...args)
+    stats.errorsCtr++;
 }
 
 //Main program
@@ -499,18 +510,15 @@ let sidebarLoadedProperly = false;
 
 try {
     //Call the function to populate the root node. Recursive calls begin.
-    await readAndHandleFolderRecursively(ROOT_FOLDER, true, rootNode);
-    sidebarLoadedProperly = true;
+    sidebarLoadedProperly = await readAndHandleFolderRecursively(ROOT_FOLDER, true, rootNode);
 } catch (err) {
     if (err === SIDEBAR_ERR) {
         //This error is user thrown and already handled in other code
         logError("Handled sidebar construction error.")
-        stats.errorsCtr++;
     } else {
         //This is where the error fell outside all the safety nets and checks
         logError("Unhandled error! Code may need adjusting if this error is repetitive.");
         console.error(err);
-        stats.errorsCtr++;
     }
     logInfo("Defaults will be used to allow the site to load.")
 }
@@ -518,11 +526,11 @@ try {
 //Stats, can be useful in the case of issues/errors to see if they are significant
 logInfo("Generating stats...")
 const statsStruct = [
-    { Action: "Sync File", Amount: stats.filesSynced},
+    { Action: "Sync File", Amount: stats.filesSynced },
     { Action: "Scan Folder", Amount: stats.foldersListed },
     { Action: "Detect " + README_FILENAME, Amount: stats.readmesDetected },
     { Action: "Read " + ORDER_FILENAME, Amount: stats.orderFilesRead },
-    { Action: "Apply File Order", Amount: stats.filesOrdered},
+    { Action: "Apply File Order", Amount: stats.filesOrdered },
     { Action: "Read Documentation File", Amount: stats.filesRead }
 ];
 
