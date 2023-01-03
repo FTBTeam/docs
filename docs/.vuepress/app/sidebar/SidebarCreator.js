@@ -487,6 +487,7 @@ function obtainFileTitle(filepath, fallbackFilename) {
             }
         } else {
             logWarning("File at \"%s\" is empty and shouldn't be!", filepath);
+            title = toTitleCase(path.parse(fallbackFilename).name);
         }
     } catch (err) {
         logError("File error while trying to read the contents of the frontmatter of file at \"%s\".", filepath);
