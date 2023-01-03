@@ -227,10 +227,6 @@ function readAndHandleFolderRecursively(folderpath, isRoot, parentNode) {
         //Handle one documentation object
         handleDocumentationObject(folderpath, filenames[0], parentNode);
     }
-    else {
-        //The folder is empty, log a message and do nothing
-        logInfo("The folder at \"%s\" is empty.", folderpath)
-    }
 
     return containedElementsToHandle;
 }
@@ -269,78 +265,8 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
             return;
         }
 
-        let reader;
-        try {
-            reader = new nReadlines(filepath);
-            stats.filesRead++;
-
-            let line;
-
-            if (line = reader.next()) {
-                line = line.toString();
-
-                //If the first line is the frontmatter
-                if (isFrontmatterCharLine(line.trimEnd())) {
-                    let ctr = 1;
-                    /*Represents if the text of the DocumentationObject was set correctly. There's a chance it's not if the while
-                    condition is immediately false.*/
-                    let textNotSet = true;
-
-                    //Read subsequent lines to search for the title in the file up to a threshold (ctr)
-                    while ((line = reader.next()) && ctr++ < MAX_LINES_READ) {
-                        line = line.toString().trim();
-                        if (line.startsWith(FRONTMATTER_TITLE_TEXT)) {
-
-                            //Check if the title is not empty. Line's been trimmed just above, so whitespace don't count as valid title here.
-                            if (line.length > FRONTMATTER_TITLE_TEXT.length) {
-                                dobj.text = line.substring(FRONTMATTER_TITLE_TEXT.length, line.length).trimStart();
-                            } else {
-                                //Title appears empty, infer from filename instead and log a recommendation.
-                                logWarning("File at \"%s\" has unrecognizable title \"%s\".", filepath, line)
-                                dobj.text = toTitleCase(path.parse(filename).name);
-                            }
-                            //Assigned title, exit the loop.
-                            textNotSet = false;
-                            break;
-
-                        } else if (isFrontmatterCharLine(line.trimEnd())) {
-
-                            //Found the end of the frontmatter without finding a title, infer from filename and log a recommendation.
-                            logWarning("No title found in frontmatter at \"%s\"! Please add a \"%s\" within the first %d lines.", filepath, FRONTMATTER_TITLE_TEXT, MAX_LINES_READ)
-                            dobj.text = toTitleCase(path.parse(filename).name);
-                            textNotSet = false;
-                            break;
-                        }
-                    }
-
-                    //In case the loop ends immediately, give it a text
-                    if (textNotSet) {
-                        logWarning("File at \"%s\" reached end of frontmatter prematurely. Check the frontmatter and ensure \"%s\" is reachable or raise the line counter threshold \"%s\" (currently: %d).", filepath, FRONTMATTER_TITLE_TEXT, varToString({ MAX_LINES_READ }), MAX_LINES_READ);
-                        dobj.text = toTitleCase(path.parse(filename).name);
-                    }
-
-                } else {
-                    //Infer title from the filename and log a warning
-                    logWarning("File at \"%s\" should have a frontmatter written.", filepath)
-                    dobj.text = toTitleCase(path.parse(filename).name);
-                }
-            } else {
-                logWarning("File at \"%s\" is empty and shouldn't be!", filepath);
-            }
-        } catch (err) {
-            logError("File error while trying to read the contents of the frontmatter of file at \"%s\".", filepath);
-            //Do not throw here in this case, we can recover from this. Just print the filestream error
-            console.error(err);
-            dobj.text = toTitleCase(path.parse(filename).name);
-        } finally {
-            //If reader ain't null and needs closing, close it.
-            if (reader !== undefined) {
-                let line = reader.next();
-                if (line) {
-                    reader.close();
-                }
-            }
-        }
+        //parse title
+        dobj.text = obtainFileTitle(filepath, filename);
 
         //Pass the filepath as the link and pad appropriately for VuePress sidebar object formats. Backslash to slash for Windows
         dobj.link = filepath.substring(ROOT_FOLDER.length, filepath.length).replaceAll("\\", "/");
@@ -348,12 +274,6 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
         //Add the dobj to its parent as children. End of recursion after this line
         parentNode.children.push(dobj);
     } else {
-        //Handle the contents of the folder recursively. If the folder didn't contain anything to handle, don't continue.
-        if (!readAndHandleFolderRecursively(filepath, false, dobj)) {
-            return;
-        }
-
-        dobj.text = toTitleCase(filename);
         let readmeFileExists = false;
         let readmeFilepath = path.join(filepath, README_FILENAME);
 
@@ -366,11 +286,24 @@ function handleDocumentationObject(parentFolder, filename, parentNode) {
             console.error(err);
         }
 
+        //If readme exists, free pass, the folder is handled regardless and valid.
         if (readmeFileExists) {
+            stats.readmesDetected++;
+
+            readAndHandleFolderRecursively(filepath, false, dobj);
+
             //Pass the filepath as the link and pad appropriately for VuePress sidebar object formats. Backslash to slash for Windows
             dobj.link = filepath.substring(ROOT_FOLDER.length, filepath.length).replaceAll("\\", "/");
-            stats.readmesDetected++;
+            dobj.text = obtainFileTitle(readmeFilepath, filename);
+        } else if (!readAndHandleFolderRecursively(filepath, false, dobj)) {
+            //If no content is to be handled at all, it's an empty folder
+            logInfo("The folder at \"%s\" is empty.", filepath)
+            return;
+        } else {
+            //Else it's just a knot within the folder nodes
+            dobj.text = toTitleCase(filename);
         }
+
         dobj.collapsible = COLLAPSE_FOLDERS;
 
         //Add the dobj to its parent as children since its a valid node (confirmed non-empty from earlier).
@@ -448,7 +381,7 @@ const varToString = varObj => Object.keys(varObj)[0]
  * Logs a message to the console to describe what the program is doing.
  * @example
  * //prints "INFO Here's some information.", with "INFO" in cyan.
- * function logInfo("Here's some information.")
+ * logInfo("Here's some information.")
  * @param {string} msg The information message to write on the console in cyan.
  * @param  {...any} args The additional arguments for the message such as formatting objects, if applicable.
  */
@@ -460,7 +393,7 @@ function logInfo(msg, ...args) {
  * Logs a message to the console to describe a warning that should be looked at.
  * @example
  * //prints "WARN Here's a warning.", with "WARN" in yellow.
- * function logWarning("Here's a warning.")
+ * logWarning("Here's a warning.")
  * @param {string} msg The warning message to write on the console in yellow.
  * @param  {...any} args The additional arguments for the message such as formatting objects, if applicable.
  */
@@ -473,13 +406,104 @@ function logWarning(msg, ...args) {
  * Logs a message to the console to describe an error that should be looked at.
  * @example
  * //prints "ERR Here's an error.", with "ERR" in red.
- * function logError("Here's an error.")
+ * logError("Here's an error.")
  * @param {string} msg The error message to write on the console in red.
  * @param  {...any} args The additional arguments for the message such as formatting objects, if applicable.
  */
 function logError(msg, ...args) {
     console.log("\x1b[31mERR\x1b[0m " + msg, ...args)
     stats.errorsCtr++;
+}
+
+/**
+ * Parses the title of a file from the frontmatter content in markdown files.
+ * @example
+ * //Tries to obtain the title from how-create-server.md, or falls back to parsing "how-create-server.md".
+ * obtainFileTitle("docs\\modpacks\\guides\\how-create-server.md", "how-create-server.md")
+ * @example
+ * //Tries to obtain the title from README.md, or falls back to parsing "ftb-chunks".
+ * obtainFileTitle("docs\\mods\\1.16-1.19\\ftb-chunks\\README.md", "ftb-chunks")
+ * @param {string} filepath The filepath to the documentation file, or the filepath to the README.md file inside a folder.
+ * @param {string} fallbackFilename A fallback string to parse in case the title cannot be found. For files, pass the filename with extension, for folders, the name of the folder.
+ * @returns {string} The parsed title, or the formatted filename of the file otherwise.
+ */
+function obtainFileTitle(filepath, fallbackFilename) {
+    let title;
+
+    let reader;
+    try {
+        reader = new nReadlines(filepath);
+        stats.filesRead++;
+
+        let line;
+
+        if (line = reader.next()) {
+            line = line.toString();
+
+            //If the first line is the frontmatter
+            if (isFrontmatterCharLine(line.trimEnd())) {
+                let ctr = 1;
+                /*Represents if the text of the DocumentationObject was set correctly. There's a chance it's not if the while
+                condition is immediately false.*/
+                let textNotSet = true;
+
+                //Read subsequent lines to search for the title in the file up to a threshold (ctr)
+                while ((line = reader.next()) && ctr++ < MAX_LINES_READ) {
+                    line = line.toString().trim();
+                    if (line.startsWith(FRONTMATTER_TITLE_TEXT)) {
+
+                        //Check if the title is not empty. Line's been trimmed just above, so whitespace don't count as valid title here.
+                        if (line.length > FRONTMATTER_TITLE_TEXT.length) {
+                            title = line.substring(FRONTMATTER_TITLE_TEXT.length, line.length).trimStart();
+                        } else {
+                            //Title appears empty, infer from filename instead and log a recommendation.
+                            logWarning("File at \"%s\" has unrecognizable title \"%s\".", filepath, line)
+                            title = toTitleCase(path.parse(fallbackFilename).name);
+                        }
+                        //Assigned title, exit the loop.
+                        textNotSet = false;
+                        break;
+
+                    } else if (isFrontmatterCharLine(line.trimEnd())) {
+
+                        //Found the end of the frontmatter without finding a title, infer from filename and log a recommendation.
+                        logWarning("No title found in frontmatter at \"%s\"! Please add a \"%s\" within the first %d lines.", filepath, FRONTMATTER_TITLE_TEXT, MAX_LINES_READ)
+                        title = toTitleCase(path.parse(fallbackFilename).name);
+                        textNotSet = false;
+                        break;
+                    }
+                }
+
+                //In case the loop ends immediately, give it a text
+                if (textNotSet) {
+                    logWarning("File at \"%s\" reached end of frontmatter prematurely. Check the frontmatter and ensure \"%s\" is reachable or raise the line counter threshold \"%s\" (currently: %d).", filepath, FRONTMATTER_TITLE_TEXT, varToString({ MAX_LINES_READ }), MAX_LINES_READ);
+                    title = toTitleCase(path.parse(fallbackFilename).name);
+                }
+
+            } else {
+                //Infer title from the filename and log a warning
+                logWarning("File at \"%s\" should have a frontmatter written.", filepath)
+                title = toTitleCase(path.parse(fallbackFilename).name);
+            }
+        } else {
+            logWarning("File at \"%s\" is empty and shouldn't be!", filepath);
+        }
+    } catch (err) {
+        logError("File error while trying to read the contents of the frontmatter of file at \"%s\".", filepath);
+        //Do not throw here in this case, we can recover from this. Just print the filestream error
+        console.error(err);
+        title = toTitleCase(path.parse(fallbackFilename).name);
+    } finally {
+        //If reader ain't null and needs closing, close it.
+        if (reader !== undefined) {
+            let line = reader.next();
+            if (line) {
+                reader.close();
+            }
+        }
+    }
+
+    return title;
 }
 
 //Main program
