@@ -6,7 +6,7 @@ description: Documentation on how the mod FTB Jar Mod works
 
 # FTB Jar Mod
 
-FTB Jar Mod is a mod that was made primarily made for the modpack `FTB OceanBlock`. It features glass jars and tubes as a crafting mechanic to allow the player to craft more advanced blocks or items.
+FTB Jar Mod is a mod that was made primarily made for the modpack **FTB OceanBlock**. It features glass jars and tubes as a crafting mechanic to allow the player to craft more advanced blocks or items.
 
 [Tempered Glass Jars](./contents/jars.md#tempered-glass-jar) are used to craft, and some cast iron tubes will connect [Glass Jars](./contents/jars.md#glass-jar) and inventories to them to provide materials for the crafts.
 
