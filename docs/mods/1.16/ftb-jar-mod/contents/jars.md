@@ -95,3 +95,10 @@ This section will also be covered more in details in the [KubeJS integration](..
 | `minecraft:blue_ice` | 4.0x | ![Blue Ice](./images/built-in/subzero-1.png "Blue Ice") | `ftbjarmod:temperature_sources/blue_ice` |
 | `minecraft:packed_ice` | 1.0x | ![Packed Ice](./images/built-in/subzero-2.png "Packed Ice") | `ftbjarmod:temperature_sources/packed_ice` |
 | `minecraft:ice` | 0.25x | ![Ice](./images/built-in/subzero-3.png "Ice") | `ftbjarmod:temperature_sources/ice` |
+
+There are also some creative sources for temperatures other than "None". They can also be disabled by removing their temperature recipes (see KubeJS integration and datapack documents from earlier).
+| Block | Efficiency | <div style="width:15em">Visual Recipe</div> | Recipe ID |
+|:--:|:--:|:--:|:--:|
+| `ftbjarmod:creative_low_temperature_source` | 100.0x | ![Creative Low Temperature Source](./images/built-in/low-creative.png "Creative Low Temperature Source") | `ftbjarmod:temperature_sources/creative_low` |
+| `ftbjarmod:creative_high_temperature_source` | 100.0x | ![Creative High Temperature Source](./images/built-in/high-creative.png "Creative High Temperature Source") | `ftbjarmod:temperature_sources/creative_high` |
+| `ftbjarmod:creative_subzero_temperature_source` | 100.0x | ![Creative Sub-Zero Temperature Source](./images/built-in/subzero-creative.png "Creative Sub-Zero Temperature Source") | `ftbjarmod:temperature_sources/creative_subzero` |
