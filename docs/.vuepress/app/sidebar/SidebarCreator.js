@@ -351,7 +351,7 @@ function toTitleCase(str) {
     return str.replaceAll("_", " ").replace(
         /\w*/g,
         function (txt) {
-            return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();
+            return txt.charAt(0).toUpperCase() + txt.substring(1);
         }
     );
 }
