@@ -75,7 +75,7 @@ Tempered Glass Jars use temperature in order to craft items. Temperature can com
 
 FTB Jar Mod also adds temperature to some blocks by default. These can be disabled by removing the temperature recipes, for example, using [KubeJS](https://www.curseforge.com/minecraft/mc-mods/kubejs-forge) or [CraftTweaker](https://www.curseforge.com/minecraft/mc-mods/crafttweaker).
 
-This section will also be covered more in details in the [KubeJS integration](../for-kubejs.md) and [datapack](../for-datapacks.md) documents.
+This section will also be covered more in details in the [KubeJS integration](../for-kubejs.md#temperature-sources-recipes) and [datapack](../for-datapacks.md) documents.
 
 
 | Block | Efficiency | <div style="width:15em">Visual Recipe</div> | Recipe ID |
@@ -98,7 +98,7 @@ This section will also be covered more in details in the [KubeJS integration](..
 
 ## Creative temperature sources
 
-There are also some creative sources for temperatures other than "None". They can also be disabled by removing their temperature recipes (see KubeJS integration and datapack documents from earlier).
+There are also some creative sources for temperatures other than "None". They can also be disabled by removing their temperature recipes (see KubeJS integration and datapack documents from earlier). Creative Temperature Sources do not display in Temperature Recipes by default, but you can force them to if you want.
 | Block | Efficiency | <div style="width:15em">Visual Recipe</div> | Recipe ID |
 |:--:|:--:|:--:|:--:|
 | `ftbjarmod:creative_low_temperature_source` | 100.0x | ![Creative Low Temperature Source](./images/jars/built-in/low-creative.png "Creative Low Temperature Source") | `ftbjarmod:temperature_sources/creative_low` |
