@@ -10,8 +10,8 @@ FTB Jar Mod is customizable, and allows certain types of recipes to be added by 
 
 
 The type of recipes that can be customized are:
-- Tempered Glass Jar recipes
-- Temperature Sources recipes
+- [Tempered Glass Jar recipes](#tempered-glass-jar-recipes)
+- [Temperature Sources recipes](#temperature-sources-recipes)
 
 # Tempered Glass Jar recipes
 
@@ -26,7 +26,7 @@ At the end of this document, however, you'll find all the examples in the simpli
 
 This simplest use case of FTB Jar Mod adds in a recipe for an Oak Sapling in the Tempered Glass Jar.
 
-![Oak Sapling made in a Tempered Glass Jar](./images/recipe-examples/oak_sapling.png "Oak Sapling made in a Tempered Glass Jar")
+![Oak Sapling made in a Tempered Glass Jar](./images/recipe-examples/oak-sapling.png "Oak Sapling made in a Tempered Glass Jar")
 
 This is one of the most simple recipes you can add, and will transform a Dead Bush into an Oak Sapling over 10 seconds, using 1 bucket of water.
 ```js
@@ -53,6 +53,19 @@ This will do the same thing, but will also explicitly set the temperature requir
 ```js
 onEvent('recipes', (event) => {
     event.recipes.ftbjarmod.jar('minecraft:oak_sapling', ['minecraft:dead_bush', Fluid.of('minecraft:water', 1000)]).temperature('none');
+});
+```
+
+If we wanted to explicitly set the temperature ourselves, we could use any of the following functions instead of `.temperature('none')`:
+- `.temperature('none')`
+- `.temperature('low')`
+- `.temperature('high')`
+- `.temperature('subzero')`
+
+Example using a "low" temperature instead:
+```js
+onEvent('recipes', (event) => {
+    event.recipes.ftbjarmod.jar('minecraft:oak_sapling', ['minecraft:dead_bush', Fluid.of('minecraft:water', 1000)]).temperature('low');
 });
 ```
 
@@ -92,38 +105,81 @@ onEvent('recipes', (event) => {
 });
 ```
 
-```js
-onEvent('recipes', (event) => {
-    
-});
-```
+## Water bottle turning into snowball under "subzero" temperature
+
+A water bottle contains named binary tag (NBT) just like the above example. This will convert the water bottle into a snowball and the glass bottle itself is lost in the process.
+
+![Snowballs recipe](./images/recipe-examples/bottle-to-snowball.png "Snowballs recipe")
 
 ```js
 onEvent('recipes', (event) => {
-    
+    event.recipes.ftbjarmod.jar('minecraft:snowball', Item.of('minecraft:potion', '{Potion:"minecraft:water"}')).subzeroTemp();
 });
 ```
 
-```js
-onEvent('recipes', (event) => {
-    
-});
-```
+## Water to ice under "subzero" temperature
+
+This will convert water as a fluid into ice. This means this recipe requires connected Glass Jars filled with water.
+
+![Water to ice](./images/recipe-examples/water-to-ice.png "Water to ice")
 
 ```js
 onEvent('recipes', (event) => {
-    
+    event.recipes.ftbjarmod.jar('minecraft:ice', Fluid.of('minecraft:water', 1000)).subzeroTemp();
 });
 ```
 
-```js
-onEvent('recipes', (event) => {
-    
-});
-```
+## Ice to packed ice under "subzero" temperature
+
+This will further convert ice into packed ice, using water and 50 percent more time, requiring a total of 15 seconds to craft this recipe.
+
+![Ice to packed ice](./images/recipe-examples/ice-to-packed-ice.png "Ice to packed ice")
 
 ```js
 onEvent('recipes', (event) => {
-    
+    event.recipes.ftbjarmod.jar('minecraft:packed_ice', ['minecraft:ice', Fluid.of('minecraft:water', 1000)]).subzeroTemp().timeScale(1.5);
 });
 ```
+
+# Temperature Sources recipes
+
+KubeJS has the option to be able to remove the present temperature sources recipes from the FTB Jar Mod. There are quite a few.
+
+Here is one long way you could remove all those recipes by recipe "id".
+
+```js
+onEvent('recipes', (event) => {
+    event.remove({ id: "ftbjarmod:temperature_sources/beacon" });
+    event.remove({ id: "ftbjarmod:temperature_sources/blue_ice" });
+    event.remove({ id: "ftbjarmod:temperature_sources/blue_magma_block" });
+    event.remove({ id: "ftbjarmod:temperature_sources/campfire" });
+    event.remove({ id: "ftbjarmod:temperature_sources/creative_high" });
+    event.remove({ id: "ftbjarmod:temperature_sources/creative_low" });
+    event.remove({ id: "ftbjarmod:temperature_sources/creative_subzero" });
+    event.remove({ id: "ftbjarmod:temperature_sources/crying_obsidian" });
+    event.remove({ id: "ftbjarmod:temperature_sources/fire" });
+    event.remove({ id: "ftbjarmod:temperature_sources/glowstone_block" });
+    event.remove({ id: "ftbjarmod:temperature_sources/ice" });
+    event.remove({ id: "ftbjarmod:temperature_sources/lava" });
+    event.remove({ id: "ftbjarmod:temperature_sources/magma_block" });
+    event.remove({ id: "ftbjarmod:temperature_sources/packed_ice" });
+    event.remove({ id: "ftbjarmod:temperature_sources/respawn_anchor" });
+    event.remove({ id: "ftbjarmod:temperature_sources/soul_campfire" });
+    event.remove({ id: "ftbjarmod:temperature_sources/soul_fire" });
+    event.remove({ id: "ftbjarmod:temperature_sources/torch" });
+    event.remove({ id: "ftbjarmod:temperature_sources/wall_torch" });
+});
+```
+
+::: warning Note
+It is not possible to remove the recipe that grants the "none" temperature to [all blocks that don't specify a temperature](./contents/jars.md#blocks-with-no-temperature).
+:::
+
+Here is a much shorter way if you plan on removing all of them in any case.
+
+```js
+onEvent('recipes', (event) => {
+    event.remove({type: "ftbjarmod:temperature_source"});
+});
+```
+

@@ -1,10 +1,10 @@
 ---
 date: 2023-01-02
-title: FTB Jar Mod
+title: Introduction
 description: Documentation on how the mod FTB Jar Mod works
 ---
 
-![Logo](./images/README/logo.png "Logo")
+![Logo](./images/introduction/logo.png "Logo")
 
 # FTB Jar Mod
 
@@ -12,13 +12,13 @@ FTB Jar Mod is a mod that was made primarily made for the modpack **FTB OceanBlo
 
 [Tempered Glass Jars](./contents/jars.md#tempered-glass-jar) are used to craft, and some cast iron tubes will connect [Glass Jars](./contents/jars.md#glass-jar) and inventories to them to provide materials for the crafts.
 
-| ![Example Setup](./images/README/example_setup.png "Example Setup") |
+| ![Example Setup](./images/introduction/example-setup.png "Example Setup") |
 |:--:|
 | <figcaption>[Tempered Glass Jars](./contents/jars.md#tempered-glass-jar) are recognizable by their metal lids</figcaption> |
 
 Other inventories are also supported, such as modded fluid containers or item containers.
 
-![Modded Setup](./images/README/modded_setup.png "Modded Setup")
+![Modded Setup](./images/introduction/modded-setup.png "Modded Setup")
 
 The mod does not add recipes in [Tempered Glass Jars](./contents/jars.md#tempered-glass-jar) by default, but you can add your own either with the [KubeJS integration](./for-kubejs.md) the mod possesses or with a [datapack](./for-datapacks.md) relatively easily.
 

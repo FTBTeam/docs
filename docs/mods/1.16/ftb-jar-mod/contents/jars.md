@@ -77,12 +77,12 @@ FTB Jar Mod also adds temperature to some blocks by default. These can be disabl
 
 This section will also be covered more in details in the [KubeJS integration](../for-kubejs.md) and [datapack](../for-datapacks.md) documents.
 
+
 | Block | Efficiency | <div style="width:15em">Visual Recipe</div> | Recipe ID |
 |:--:|:--:|:--:|:--:|
 | `minecraft:respawn_anchor` | 8.0x | ![Respawn Anchor](./images/jars/built-in/none-1.png "Respawn Anchor") | `ftbjarmod:temperature_sources/respawn_anchor` |
 | `minecraft:glowstone` | 1.25x | ![Glowstone](./images/jars/built-in/none-2.png "Glowstone") | `ftbjarmod:temperature_sources/glowstone_block` |
 | `minecraft:crying_obsidian` | 3.0x | ![Crying Obsidian](./images/jars/built-in/none-3.png "Crying Obsidian") | `ftbjarmod:temperature_sources/crying_obsidian` |
-| Any Block | 1.0x | ![Any Block](./images/jars/built-in/none-4.png "Any Block") | No ID, cannot be changed |
 | `minecraft:torch` & `minecraft:wall_torch` | 0.25x | ![Torch](./images/jars/built-in/low-1.png "Torch") | `ftbjarmod:temperature_sources/torch` & `ftbjarmod:temperature_sources/wall_torch` |
 | `minecraft:fire` | 0.75x | ![Fire](./images/jars/built-in/low-2.gif "Fire") | `ftbjarmod:temperature_sources/fire` |
 | `minecraft:lava` | 4.0x | ![Lava](./images/jars/built-in/low-3.png "Lava") | `ftbjarmod:temperature_sources/lava` |
@@ -96,9 +96,18 @@ This section will also be covered more in details in the [KubeJS integration](..
 | `minecraft:packed_ice` | 1.0x | ![Packed Ice](./images/jars/built-in/subzero-2.png "Packed Ice") | `ftbjarmod:temperature_sources/packed_ice` |
 | `minecraft:ice` | 0.25x | ![Ice](./images/jars/built-in/subzero-3.png "Ice") | `ftbjarmod:temperature_sources/ice` |
 
+## Creative temperature sources
+
 There are also some creative sources for temperatures other than "None". They can also be disabled by removing their temperature recipes (see KubeJS integration and datapack documents from earlier).
 | Block | Efficiency | <div style="width:15em">Visual Recipe</div> | Recipe ID |
 |:--:|:--:|:--:|:--:|
 | `ftbjarmod:creative_low_temperature_source` | 100.0x | ![Creative Low Temperature Source](./images/jars/built-in/low-creative.png "Creative Low Temperature Source") | `ftbjarmod:temperature_sources/creative_low` |
 | `ftbjarmod:creative_high_temperature_source` | 100.0x | ![Creative High Temperature Source](./images/jars/built-in/high-creative.png "Creative High Temperature Source") | `ftbjarmod:temperature_sources/creative_high` |
 | `ftbjarmod:creative_subzero_temperature_source` | 100.0x | ![Creative Sub-Zero Temperature Source](./images/jars/built-in/subzero-creative.png "Creative Sub-Zero Temperature Source") | `ftbjarmod:temperature_sources/creative_subzero` |
+
+## Blocks with no temperature
+
+Blocks that don't have any temperature will automatically be given the "none" temperature.
+| Block | Efficiency | <div style="width:15em">Visual Recipe</div> | Recipe ID |
+|:--:|:--:|:--:|:--:|
+| Any other block | 1.0x | ![Any Block](./images/jars/built-in/none-4.png "Any Block") | No ID, cannot be changed |
