@@ -339,16 +339,16 @@ function isFrontmatterCharLine(l) {
  * //returns "Happy Hour"
  * toTitleCase("happy hour")
  * @example
- * //returns "Happy-Hour"
+ * //returns "Happy Hour"
  * toTitleCase("happy-hour")
  * @example
- * //returns "Happy Hour"
+ * //returns "Happy_hour"
  * toTitleCase("happy_hour")
  * @param {string} str The string to raise to title case (elevate the first letter of some words to capitals).
- * @returns {string} The string with uppercased letters on word boundaries or underscore boundaries (which have been replaced to spaces).
+ * @returns {string} The string with uppercased letters on word boundaries or hyphens boundaries (which have been replaced to spaces).
  */
 function toTitleCase(str) {
-    return str.replaceAll("_", " ").replace(
+    return str.replaceAll("-", " ").replace(
         /\w*/g,
         function (txt) {
             return txt.charAt(0).toUpperCase() + txt.substring(1);
