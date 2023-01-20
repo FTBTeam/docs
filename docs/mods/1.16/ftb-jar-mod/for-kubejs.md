@@ -4,7 +4,7 @@ title: KubeJS Integration
 description: Despicts how KubeJS is integrated into FTB Jar Mod
 ---
 
-# Usage of KubeJS to add recipes
+# Usage of KubeJS to add or remove recipes
 
 FTB Jar Mod is customizable, and allows certain types of recipes to be added by a modpack creator through the use of [KubeJS](https://www.curseforge.com/minecraft/mc-mods/kubejs-forge). KubeJS makes it much easier to add recipes in bulk!
 
@@ -107,13 +107,13 @@ onEvent('recipes', (event) => {
 
 ## Cobblestone to lava under "high" temperature
 
-This will allow one to convert cobblestone listed in the `#forge:cobblestone` to one bucket of lava and will require 20 seconds to make.
+This will allow one to convert cobblestone listed in the `#forge:cobblestone` to one bucket of lava and will require 3 seconds to make.
 
 ![Lava from cobblestone](./images/recipe-examples/cobblestone-to-lava.png "Lava from cobblestone")
 
 ```js
 onEvent('recipes', (event) => {
-    event.recipes.ftbjarmod.jar(Fluid.of('minecraft:lava', 1000), '#forge:cobblestone').time(400).highTemp();
+    event.recipes.ftbjarmod.jar(Fluid.of('minecraft:lava', 1000), '#forge:cobblestone').time(60).highTemp();
 });
 ```
 
