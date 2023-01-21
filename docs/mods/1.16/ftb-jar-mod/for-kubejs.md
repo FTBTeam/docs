@@ -17,7 +17,7 @@ The type of recipes that can be customized are:
 
 :::tip Tip
 In KubeJS, which uses JavaScript syntax, you can define constants which can simplify work for you. All following examples will use the full definition of function calls, without any simplification.  
-At the end of this document, however, you'll find all the examples in the [simplified syntax](#simplified-examples) if you wish to skip ahead.
+At the end of this document, however, you will find all the examples in the [simplified syntax](#simplified-examples) if you wish to skip ahead.
 :::
 
 # Tempered Glass Jar recipes
