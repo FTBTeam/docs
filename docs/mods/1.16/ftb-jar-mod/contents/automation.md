@@ -3,10 +3,10 @@ date: 2023-01-19
 title: Automation
 description: How you can automate jars in-game for crafting
 tags:
-    - auto-processing
     - automatic
     - automate
-    - jars
+    - tempered glass jars
+    - overflow
 ---
 
 # Jar Auto-Processing Block for automated crafting

@@ -2,6 +2,8 @@
 date: 2023-01-13
 title: KubeJS Integration
 description: Despicts how KubeJS is integrated into FTB Jar Mod
+tags:
+    - customize
 ---
 
 # Usage of KubeJS to add or remove recipes

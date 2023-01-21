@@ -2,6 +2,9 @@
 date: 2023-01-02
 title: Configuration
 description: Configuration of the FTB Jar Mod
+tags:
+    - fluid container
+    - hide
 ---
 
 # Configuration of the FTB Jar Mod
