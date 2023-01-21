@@ -27,7 +27,7 @@ export default defineUserConfig({
   }),
   plugins: [
     searchPlugin({
-      // options
+      getExtraFields: (page) => page.frontmatter.tags as string[] ?? [],
     }),
   ],
 });
