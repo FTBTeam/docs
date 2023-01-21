@@ -26,3 +26,5 @@ onEvent("jei.hide.items", (event) => {
     event.hide(/^ftblibrary:fluid_container/g);
 });
 ```
+
+Something to keep in mind while hiding fluid containers is that the [output behavior](./contents/jars.md#output-behavior) of the Tempered Glass Jars will not change.
