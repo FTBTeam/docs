@@ -62,6 +62,24 @@ Here, the player is holding the necessary items directly inside the inventory.
 
 ![Example Craft](./images/jars/sample-recipe.gif "Example Craft")
 
+## Output behavior
+
+The Tempered Glass Jar will output to the nearest item or fluid container it can find. If you wish to separate your input from the output, you can put the input item or fluid containers further away from the output ones.
+
+| !["Output prioritizes nearby containers"](./images/jars/output-priority.png "Output prioritizes nearby containers") |
+|:--:|
+| <figcaption>The tube coral block is inputted from the left barrel, and the dead tube coral block is outputted to the barrel on the right in the [drying coral block](../for-kubejs.md#drying-a-coral-block-with-low-temperature) recipe.</figcaption> |
+
+If all possible inputs and outputs are full and a recipe is being processed, the resulting items will be ejected into the world.
+
+!["Items outputting in the world"](./images/jars/output-in-world.gif "Items outputting in the world")
+
+In the case of fluids, they will be ejected as a special item, the fluid container item.
+
+| !["Fluid container item outputting in the world"](./images/jars/output-in-world-fluid.gif "Fluid container item outputting in the world") |
+|:--:|
+| <figcaption>The [cobblestone to lava](../for-kubejs.md#cobblestone-to-lava-under-high-temperature) recipe cannot output to the Glass Jar nor the barrel because they are both full, so a fluid container item is created in the world instead.</figcaption> |
+
 # Temperature
 
 Tempered Glass Jars use temperature in order to craft items. Temperature can come from a block directly under the Tempered Glass Jar. There are four different levels of temperature:
