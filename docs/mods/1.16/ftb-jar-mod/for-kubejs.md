@@ -178,7 +178,7 @@ onEvent('recipes', (event) => {
 
 KubeJS has the option to be able to remove the present temperature sources recipes from the FTB Jar Mod. There are quite a few.
 
-Here is one long way you could remove all those recipes by recipe "id".
+Here is one long way you could remove all those recipes by recipe "ID".
 
 ```js
 onEvent('recipes', (event) => {
@@ -413,7 +413,7 @@ onEvent('recipes', (event) => {
 
 ```js
 onEvent('recipes', (event) => {
-    //Remove all temperature sources recipes by id, one by one
+    //Remove all temperature sources recipes by ID, one by one
     event.remove({ id: "ftbjarmod:temperature_sources/beacon" });
     event.remove({ id: "ftbjarmod:temperature_sources/blue_ice" });
     event.remove({ id: "ftbjarmod:temperature_sources/blue_magma_block" });
@@ -510,4 +510,3 @@ onEvent('recipes', (event) => {
     }).id('ftbjarmod:temperature_sources/creative_high');
 });
 ```
-
