@@ -11,7 +11,7 @@ tags:
 FTB Jar Mod is customizable, and allows certain types of recipes to be added by a modpack creator through the use of [KubeJS](https://www.curseforge.com/minecraft/mc-mods/kubejs-forge). KubeJS makes it much easier to add recipes in bulk!
 
 
-The type of recipes that can be customized are:
+The type of recipes that can be customized are :
 - [Tempered Glass Jar recipes](#tempered-glass-jar-recipes)
 - [Temperature Sources recipes](#temperature-sources-recipes)
 
@@ -58,13 +58,13 @@ onEvent('recipes', (event) => {
 });
 ```
 
-If we wanted to explicitly set the temperature ourselves, we could use any of the following functions instead of `temperature('none')`:
+If we wanted to explicitly set the temperature ourselves, we could use any of the following functions instead of `temperature('none')` :
 - `temperature('none')`
 - `temperature('low')`
 - `temperature('high')`
 - `temperature('subzero')`
 
-Example using a "low" temperature instead:
+Example using a "low" temperature instead :
 ```js
 onEvent('recipes', (event) => {
     event.recipes.ftbjarmod.jar('minecraft:oak_sapling', ['minecraft:dead_bush', Fluid.of('minecraft:water', 1000)]).temperature('low');
@@ -222,7 +222,7 @@ Here are some simple examples that add all four temperatures to some blocks.
 
 ```js
 onEvent('recipes', (event) => {
-    /*Adds the "none" temperature to the Glowstone
+    /*Adds the "none" temperature to the glowstone
     block with 25% bonus efficiency (1.25 times faster than normal)*/
     event.recipes.ftbjarmod.temperature_source({
         temperature: 'none',
@@ -230,7 +230,7 @@ onEvent('recipes', (event) => {
         efficiency: 1.25
     });
 
-    /*Adds the "low" temperature to the Magma Block
+    /*Adds the "low" temperature to the magma block
     with 50% reduced efficiency (0.5 times slower than normal)*/
     event.recipes.ftbjarmod.temperature_source({
         temperature: 'low',
@@ -238,15 +238,15 @@ onEvent('recipes', (event) => {
         efficiency: 0.5
     });
 
-    /*Adds the "high" temperature to the Blue Magma
-    Block with normal efficiency*/
+    /*Adds the "high" temperature to the blue magma
+    block with normal efficiency*/
     event.recipes.ftbjarmod.temperature_source({
         temperature: 'high',
         block: 'ftbjarmod:blue_magma_block',
         efficiency: 1.0
     });
 
-    /*Adds the "subzero" temperature to the Blue Ice
+    /*Adds the "subzero" temperature to the blue ice
     block with 300% bonus efficiency (4 times faster than normal)*/
     event.recipes.ftbjarmod.temperature_source({
         temperature: 'subzero',
