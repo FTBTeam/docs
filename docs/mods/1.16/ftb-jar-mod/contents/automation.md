@@ -23,7 +23,7 @@ If materials for the craft run out, the Jar Auto-Processing Block will automatic
 
 | !["Automated lava production"](./images/automation/cobble-to-lava-automation.gif "Automated lava production") |
 |:--:|
-| <figcaption>An example of a simple [cobblestone to lava](../for-kubejs.md#cobblestone-to-lava-under-high-temperature) automation using the Jar Auto-Processing Block</figcaption> |
+| <figcaption>An example of a simple [cobblestone to lava](../KubeJS-integration/tempered-glass-jar-recipes.md#cobblestone-to-lava-under-high-temperature) automation using the Jar Auto-Processing Block</figcaption> |
 
 ## Chaining
 

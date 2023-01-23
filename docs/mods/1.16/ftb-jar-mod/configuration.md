@@ -11,7 +11,7 @@ tags:
 
 The FTB Jar Mod does not have any client or server configuration offered.
 
-Everything is done by modifying recipes, such as through [KubeJS integration](./for-kubejs.md) or [datapack](./for-datapacks.md).
+Everything is done by modifying recipes, such as through KubeJS integration or datapack.
 
 If you need to hide the fluid containers items added by FTB Library in the recipe browser, you need to use mods such as [KubeJS](https://www.curseforge.com/minecraft/mc-mods/kubejs-forge) or [CraftTweaker](https://www.curseforge.com/minecraft/mc-mods/crafttweaker).
 

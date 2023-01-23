@@ -76,7 +76,7 @@ The Tempered Glass Jar will output to the nearest item or fluid container it can
 
 | !["Output prioritizes nearby containers"](./images/jars/output-priority.png "Output prioritizes nearby containers") |
 |:--:|
-| <figcaption>The tube coral block is inputted from the left barrel, and the dead tube coral block is outputted to the barrel on the right in the [drying coral block](../for-kubejs.md#drying-a-coral-block-with-low-temperature) recipe.</figcaption> |
+| <figcaption>The tube coral block is inputted from the left barrel, and the dead tube coral block is outputted to the barrel on the right in the [drying coral block](../KubeJS-integration/tempered-glass-jar-recipes.md#drying-a-coral-block-with-low-temperature) recipe.</figcaption> |
 
 If all possible inputs and outputs are full and a recipe is being processed, the resulting items will be ejected into the world.
 
@@ -86,7 +86,7 @@ In the case of fluids, they will be ejected as a special item, the fluid contain
 
 | !["Fluid container item outputting in the world"](./images/jars/output-in-world-fluid.gif "Fluid container item outputting in the world") |
 |:--:|
-| <figcaption>The [cobblestone to lava](../for-kubejs.md#cobblestone-to-lava-under-high-temperature) recipe cannot output to the Glass Jar nor the barrel because they are both full, so a fluid container item is created in the world instead.</figcaption> |
+| <figcaption>The [cobblestone to lava](../KubeJS-integration/tempered-glass-jar-recipes.md#cobblestone-to-lava-under-high-temperature) recipe cannot output to the Glass Jar nor the barrel because they are both full, so a fluid container item is created in the world instead.</figcaption> |
 
 # Temperature
 
@@ -99,9 +99,9 @@ Tempered Glass Jars use temperature in order to craft items. Temperature can com
 | High | ![High](./images/jars/temperature-high.png "High") | ![High](./images/jars/tempered-glass-jar-high.png "High") |
 | Sub-Zero | ![Sub-Zero](./images/jars/temperature-subzero.png "Sub-Zero") | ![Sub-Zero](./images/jars/tempered-glass-jar-subzero.png "Sub-Zero") |
 
-FTB Jar Mod also adds temperature to some blocks by default. These can be disabled by removing the temperature recipes, for example, using [KubeJS](https://www.curseforge.com/minecraft/mc-mods/kubejs-forge) or [CraftTweaker](https://www.curseforge.com/minecraft/mc-mods/crafttweaker).
+FTB Jar Mod also adds temperature to some blocks by default. These can be disabled by removing the temperature recipes, for example, using [KubeJS](https://www.curseforge.com/minecraft/mc-mods/kubejs-forge), [CraftTweaker](https://www.curseforge.com/minecraft/mc-mods/crafttweaker) or datapacks.
 
-This section will also be covered more in details in the [KubeJS integration](../for-kubejs.md#temperature-sources-recipes) and [datapack](../for-datapacks.md) documents.
+This section will also be covered more in details in the documents for KubeJS integration or datapack.
 
 
 | Block | Efficiency | <div style="width:15em">Visual Recipe</div> | Recipe ID |
