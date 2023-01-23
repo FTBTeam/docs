@@ -16,7 +16,7 @@ FTB Jar Mod is a mod that was made primarily made for the modpack **FTB OceanBlo
 
 | ![Example Setup](./images/introduction/example-setup.png "Example Setup") |
 |:--:|
-| <figcaption>[Tempered Glass Jars](./contents/jars.md#tempered-glass-jar) are recognizable by their metal lids</figcaption> |
+| <figcaption>[Tempered Glass Jars](./contents/jars.md#tempered-glass-jar) are recognizable by their metal corks</figcaption> |
 
 Other inventories are also supported, such as modded fluid or item containers.
 
