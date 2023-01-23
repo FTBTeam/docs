@@ -124,7 +124,7 @@ This section will also be covered more in details in the documents for KubeJS in
 
 ## Creative temperature sources
 
-There are also some creative sources for temperatures other than "None". They can also be disabled by removing their temperature recipes (see KubeJS integration and datapack documents from earlier). Creative Temperature Sources do not display in Temperature Recipes by default, but you can force them to if you want.
+There are also some creative sources for temperatures other than "none". They can also be disabled by removing their temperature recipes (see KubeJS integration and datapack documents from earlier). Creative Temperature Sources do not display in Temperature Recipes by default, but you can force them to if you want.
 | Block | Efficiency | <div style="width:15em">Visual Recipe</div> | Recipe ID |
 |:--:|:--:|:--:|:--:|
 | `ftbjarmod:creative_low_temperature_source` | 100.0x | ![Creative Low Temperature Source](./images/jars/built-in/low-creative.png "Creative Low Temperature Source") | `ftbjarmod:temperature_sources/creative_low` |
