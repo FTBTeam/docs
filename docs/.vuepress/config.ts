@@ -25,9 +25,13 @@ export default defineUserConfig({
     contributors: false,
     colorMode: "dark",
   }),
+  head: [
+    ["meta", { name: "robots", content: "noindex" }],
+    ["meta", { name: "robots", content: "noindex" }],
+  ],
   plugins: [
     searchPlugin({
-      getExtraFields: (page) => page.frontmatter.tags as string[] ?? [],
+      getExtraFields: (page) => (page.frontmatter.tags as string[]) ?? [],
     }),
   ],
 });
