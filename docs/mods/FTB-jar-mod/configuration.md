@@ -30,4 +30,4 @@ onEvent("jei.hide.items", (event) => {
 });
 ```
 
-Something to keep in mind while hiding fluid containers is that the [output behavior](./contents/jars.md#output-behavior) of the Tempered Glass Jars will not change.
+Something to keep in mind while hiding fluid containers is that the [output behavior](./contents/tempered-glass-jars.md#output-behavior) of the Tempered Glass Jars will not change.

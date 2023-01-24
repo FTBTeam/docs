@@ -1,7 +1,7 @@
 ---
 date: 2023-01-22
 title: Temperature Sources Recipes
-description: Despicts how to use KubeJS to modify temperature sources recipes
+description: Depicts how to use KubeJS to modify temperature sources recipes
 tags:
     - customize
 ---
@@ -15,7 +15,7 @@ In KubeJS, which uses JavaScript syntax, you can define constants which can simp
 At the end of this document, however, you will find all the examples in the [simplified syntax](#simplified-examples) if you wish to skip ahead.
 :::
 
-# Temperature Sources recipes
+## Temperature Sources recipes
 
 KubeJS has the option to be able to remove the built-in temperature sources recipes from the FTB Jar Mod. There are quite a few.
 
@@ -46,7 +46,7 @@ onEvent('recipes', (event) => {
 ```
 
 ::: warning Note
-It is not possible to remove the recipe that grants the "none" temperature to [all blocks that don't specify a temperature](../contents/jars.md#blocks-with-no-temperature).
+It is not possible to remove the recipe that grants the "none" temperature to [all blocks that don't specify a temperature](../contents/temperature.md#blocks-with-no-temperature).
 :::
 
 Here is a much shorter way if you plan on removing all of them in any case.
@@ -57,7 +57,7 @@ onEvent('recipes', (event) => {
 });
 ```
 
-## Adding recipes
+### Adding recipes
 
 Here are some simple examples that add all four temperatures to some blocks.
 
@@ -97,11 +97,11 @@ onEvent('recipes', (event) => {
 });
 ```
 
-## Custom display
+### Custom display
 
 If you wish to set the display manually on the temperature source recipe, you may as well. This is particularly useful when using fluids as temperature sources for example, which don't display in item form (they use a filled bucket instead).
 
-### Lava case
+#### Lava case
 
 Adds lava as a temperature source, but uses the filled lava bucket as the display. Displays the text "Lava" when hovering the Lava Bucket.
 
@@ -127,7 +127,7 @@ onEvent('recipes', (event) => {
 });
 ```
 
-### Torch case
+#### Torch case
 
 Some blocks have variants of themselves, like the torch, and those variants don't have an item form. For example, the torch itself standing up is called a "torch". The torch on a wall however, is called a "wall torch". There is an item called the "torch", but there is no item called "wall torch".
 
@@ -137,7 +137,7 @@ By placing your block in the world and looking at it while the debug screen (F3)
 
 | ![Wall Torch](../images/recipe-examples/wall-torch.png "Wall Torch") |
 |:--:|
-| <figcaption>The torch placed on a wall shows a different name than when simply standing up</figcaption> |
+| The torch placed on a wall shows a different name than when simply standing up |
 
 To handle those special cases, you may need to add two separate entries.
 
@@ -179,13 +179,13 @@ onEvent('recipes', (event) => {
 });
 ```
 
-### Creative Temperature Sources
+#### Creative Temperature Sources
 
-[Creative Temperature Sources](../contents/jars.md#creative-temperature-sources) don't need adjustments by default, but they also don't display in the recipe browser. You can however make them display if you want. Just like with a datapack, overriding the recipe ID will result in that recipe being modified and shown in-game.
+[Creative Temperature Sources](../contents/temperature.md#creative-temperature-sources) don't need adjustments by default, but they also don't display in the recipe browser. You can however make them display if you want. Just like with a datapack, overriding the recipe ID will result in that recipe being modified and shown in-game.
 
 Here is an example of the Creative High Temperature Source being added again so that it can display in-game, using its recipe ID inside the `id()` function.
 
-![Creative High Temperature Source](../contents/images/jars/built-in/high-creative.png "Creative High Temperature Source")
+![Creative High Temperature Source](../contents/images/temperature/built-in/high-creative.png "Creative High Temperature Source")
 
 ```js
 onEvent('recipes', (event) => {
@@ -199,11 +199,12 @@ onEvent('recipes', (event) => {
 });
 ```
 
-# Simplified Examples
+## Simplified Examples
 
 Below you'll find all examples from this page compiled into two example scripts. None that you might need to use only specific portions of this script for what you want to achieve.
 
 ::: details Temperature Sources recipes
+
 ```js
 onEvent('recipes', (event) => {
     //Remove all temperature sources recipes by ID, one by one
@@ -303,4 +304,5 @@ onEvent('recipes', (event) => {
     }).id('ftbjarmod:temperature_sources/creative_high');
 });
 ```
+
 :::

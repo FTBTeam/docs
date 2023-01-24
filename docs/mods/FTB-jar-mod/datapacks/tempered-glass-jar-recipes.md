@@ -1,7 +1,7 @@
 ---
 date: 2023-01-22
 title: Tempered Glass Jar Recipes
-description: Despicts how to use datapacks to modify tempered glass jar recipes
+description: Depicts how to use datapacks to modify tempered glass jar recipes
 tags:
   - customize
 ---
@@ -12,11 +12,11 @@ FTB Jar Mod is customizable, and allows tempered glass jar recipes to be added b
 
 At the end of this document, you will find [example datapacks](#example-datapacks) to download.
 
-# Tempered Glass Jar recipes
+## Tempered Glass Jar recipes
 
 Tempered Glass Jar recipes by default take as much time as a Furnace to finish crafting, which is 10 seconds, or 200 game ticks.
 
-## Simple recipe with "none" temperature
+### Simple recipe with "none" temperature
 
 This simplest use case of FTB Jar Mod adds in a recipe for an Oak Sapling in the Tempered Glass Jar.
 
@@ -203,7 +203,7 @@ Example using a "low" temperature instead :
 
 :::
 
-## Drying a coral block with "low" temperature
+### Drying a coral block with "low" temperature
 
 ![Coral block drying up](../images/recipe-examples/coral.png "Coral block drying up")
 
@@ -235,7 +235,7 @@ This will transform a tube coral block into a dead tube coral block under low te
 
 :::
 
-## Smelting gold ore under "high" temperature
+### Smelting gold ore under "high" temperature
 
 This recipe will transform any 2 gold ores and a glowstone dust into 8 gold ingots, using 500 millibuckets of lava (1/2 of a bucket of lava) and under high temperature. The recipe will take 10 seconds to complete.
 
@@ -280,7 +280,7 @@ This recipe will transform any 2 gold ores and a glowstone dust into 8 gold ingo
 
 :::
 
-## Enchanting a golden pickaxe under "high" temperature
+### Enchanting a golden pickaxe under "high" temperature
 
 This will enchant a newly crafted golden pickaxe with any 3 emeralds to gain the enchantment Fortune III.
 
@@ -320,7 +320,7 @@ This will enchant a newly crafted golden pickaxe with any 3 emeralds to gain the
 
 :::
 
-## Cobblestone to lava under "high" temperature
+### Cobblestone to lava under "high" temperature
 
 This will allow one to convert cobblestone listed in the `#forge:cobblestone` to one bucket of lava and will require 3 seconds to make.
 
@@ -353,7 +353,7 @@ This will allow one to convert cobblestone listed in the `#forge:cobblestone` to
 
 :::
 
-## Complicated iron ore recipe under "high" temperature
+### Complicated iron ore recipe under "high" temperature
 
 This complicated recipe will take one bucket of lava and one iron ore and process them over one (1) second in order to create a block of stone and an iron ingot.
 
@@ -397,7 +397,7 @@ This complicated recipe will take one bucket of lava and one iron ore and proces
 
 :::
 
-## Water bottle turning into snowball under "subzero" temperature
+### Water bottle turning into snowball under "subzero" temperature
 
 A water bottle contains named binary tag (NBT) just like the above example. This will convert the water bottle into a snowball and the glass bottle itself is lost in the process.
 
@@ -430,7 +430,7 @@ A water bottle contains named binary tag (NBT) just like the above example. This
 
 :::
 
-## Water to ice under "subzero" temperature
+### Water to ice under "subzero" temperature
 
 This will convert water as a fluid into ice. This means this recipe requires connected Glass Jars filled with water.
 
@@ -463,7 +463,7 @@ This will convert water as a fluid into ice. This means this recipe requires con
 
 :::
 
-## Ice to packed ice under "subzero" temperature
+### Ice to packed ice under "subzero" temperature
 
 This will further convert ice into packed ice, using water and 50 percent more time, requiring a total of 15 seconds to craft this recipe.
 
@@ -503,7 +503,7 @@ This will further convert ice into packed ice, using water and 50 percent more t
 
 :::
 
-# Example datapacks
+## Example datapacks
 
 Below you'll find all examples from this page compiled into a downloadable datapack.
 

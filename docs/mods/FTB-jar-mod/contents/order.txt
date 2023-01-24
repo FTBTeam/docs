@@ -1,1 +1,4 @@
-jars.md
+glass-jars.md
+tempered-glass-jars.md
+temperature.md
+automation.md
