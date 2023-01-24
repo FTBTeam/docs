@@ -3,7 +3,7 @@ date: 2023-01-22
 title: Temperature Sources Recipes
 description: Despicts how to use datapacks to modify temperature sources recipes
 tags:
-    - customize
+  - customize
 ---
 
 # Usage of datapacks to add recipes
@@ -23,7 +23,7 @@ Recipe IDs are listed quickly in the document explaining what [temperature](../c
 For example, to remove the lava temperature source, which has the recipe ID `ftbjarmod:temperature_sources/lava`, we have to make an empty JSON file at the location `data/ftbjarmod/recipes/temperature_sources/lava.json`.
 
 For convenience and simplicity, here are all locations done in datapack format, ready to be used :
-[remove_all_temperature_sources.zip](./references/temperature-sources-recipes/remove-all-temperature-sources.zip)
+[remove_all_temperature_sources.zip](/assets/files/mods-ftb-jar/remove-all-temperature-sources.zip)
 
 ::: warning Note
 It is not possible to remove the recipe that grants the "none" temperature to [all blocks that don't specify a temperature](../contents/jars.md#blocks-with-no-temperature).
@@ -36,55 +36,62 @@ Here are some simple examples that add all four temperatures to some blocks.
 Adds the "none" temperature to the glowstone block with 25% bonus efficiency (1.25 times faster than normal) :
 
 ::: details data/ftbjarmod/recipes/temperature_sources/none/glowstone.json
+
 ```json
 {
-    "temperature": "none",
-    "block": "minecraft:glowstone",
-    "efficiency": 1.25,
-    "type": "ftbjarmod:temperature_source"
+  "temperature": "none",
+  "block": "minecraft:glowstone",
+  "efficiency": 1.25,
+  "type": "ftbjarmod:temperature_source"
 }
 ```
+
 :::
 
 Adds the "low" temperature to the magma block with 50% reduced efficiency (0.5 times slower than normal) :
 
 ::: details data/ftbjarmod/recipes/temperature_sources/low/magma_block.json
+
 ```json
 {
-    "temperature": "low",
-    "block": "minecraft:magma_block",
-    "efficiency": 0.5,
-    "type": "ftbjarmod:temperature_source"
+  "temperature": "low",
+  "block": "minecraft:magma_block",
+  "efficiency": 0.5,
+  "type": "ftbjarmod:temperature_source"
 }
 ```
+
 :::
 
 Adds the "high" temperature to the blue magma block with normal efficiency :
 
 ::: details data/ftbjarmod/recipes/temperature_sources/high/blue_magma_block.json
+
 ```json
 {
-    "temperature": "high",
-    "block": "ftbjarmod:blue_magma_block",
-    "efficiency": 1,
-    "type": "ftbjarmod:temperature_source"
+  "temperature": "high",
+  "block": "ftbjarmod:blue_magma_block",
+  "efficiency": 1,
+  "type": "ftbjarmod:temperature_source"
 }
 ```
+
 :::
 
 Adds the "subzero" temperature to the blue ice block with 300% bonus efficiency (4 times faster than normal) :
 
 ::: details data/ftbjarmod/recipes/temperature_sources/subzero/blue_ice.json
+
 ```json
 {
-    "temperature": "subzero",
-    "block": "minecraft:blue_ice",
-    "efficiency": 4,
-    "type": "ftbjarmod:temperature_source"
+  "temperature": "subzero",
+  "block": "minecraft:blue_ice",
+  "efficiency": 4,
+  "type": "ftbjarmod:temperature_source"
 }
 ```
-:::
 
+:::
 
 ## Custom display
 
@@ -99,22 +106,24 @@ Adds lava as a temperature source, but uses the filled lava bucket as the displa
 Adds the "low" temperature to the lava fluid (in-world) with 300% bonus efficiency (4 times faster than normal) :
 
 ::: details data/ftbjarmod/recipes/temperature_sources/low/lava.json
+
 ```json
 {
-    "temperature": "low",
-    "block": "minecraft:lava",
-    "item": {
-        "item": "minecraft:lava_bucket",
-        "nbt": {
-            "display": {
-                "Name": "{\"translate\": \"block.minecraft.lava\"}"
-            }
-        }
-    },
-    "efficiency": 4,
-    "type": "ftbjarmod:temperature_source"
+  "temperature": "low",
+  "block": "minecraft:lava",
+  "item": {
+    "item": "minecraft:lava_bucket",
+    "nbt": {
+      "display": {
+        "Name": "{\"translate\": \"block.minecraft.lava\"}"
+      }
+    }
+  },
+  "efficiency": 4,
+  "type": "ftbjarmod:temperature_source"
 }
 ```
+
 :::
 
 ### Torch case
@@ -125,8 +134,8 @@ Some blocks have variants of themselves, like the torch, and those variants don'
 
 By placing your block in the world and looking at it while the debug screen (F3) is active will allow you to see the block name in the top right of the screen and see if this applies to a block.
 
-| ![Wall Torch](../images/recipe-examples/wall-torch.png "Wall Torch") |
-|:--:|
+|                  ![Wall Torch](../images/recipe-examples/wall-torch.png "Wall Torch")                   |
+| :-----------------------------------------------------------------------------------------------------: |
 | <figcaption>The torch placed on a wall shows a different name than when simply standing up</figcaption> |
 
 To handle those special cases, you may need to add two separate entries.
@@ -136,43 +145,47 @@ To handle those special cases, you may need to add two separate entries.
 Adds the torch standing up as a "low" temperature source with 75% reduced efficiency (0.25 times slower than normal) :
 
 ::: details data/ftbjarmod/recipes/temperature_sources/low/torch.json
+
 ```json
 {
-    "temperature": "low",
-    "block": "minecraft:torch",
-    "item": {
-        "item": "minecraft:torch",
-        "nbt": {
-            "display": {
-                "Name": "{\"translate\": \"block.minecraft.torch\"}"
-            }
-        }
-    },
-    "efficiency": 0.25,
-    "type": "ftbjarmod:temperature_source"
+  "temperature": "low",
+  "block": "minecraft:torch",
+  "item": {
+    "item": "minecraft:torch",
+    "nbt": {
+      "display": {
+        "Name": "{\"translate\": \"block.minecraft.torch\"}"
+      }
+    }
+  },
+  "efficiency": 0.25,
+  "type": "ftbjarmod:temperature_source"
 }
 ```
+
 :::
 
 Adds the torch that is on a wall as a "low" temperature source with 75% reduced efficiency (0.25 times slower than normal) :
 
 ::: details data/ftbjarmod/recipes/temperature_sources/low/wall_torch.json
+
 ```json
 {
-    "temperature": "low",
-    "block": "minecraft:wall_torch",
-    "item": {
-        "item": "minecraft:torch",
-        "nbt": {
-            "display": {
-                "Name": "{\"translate\": \"block.minecraft.wall_torch\"}"
-            }
-        }
-    },
-    "efficiency": 0.25,
-    "type": "ftbjarmod:temperature_source"
+  "temperature": "low",
+  "block": "minecraft:wall_torch",
+  "item": {
+    "item": "minecraft:torch",
+    "nbt": {
+      "display": {
+        "Name": "{\"translate\": \"block.minecraft.wall_torch\"}"
+      }
+    }
+  },
+  "efficiency": 0.25,
+  "type": "ftbjarmod:temperature_source"
 }
 ```
+
 :::
 
 ### Creative Temperature Sources
@@ -184,18 +197,20 @@ Adds the torch that is on a wall as a "low" temperature source with 75% reduced 
 Adds the creative high temperature source as a "high" temperature source with 900% bonus efficiency (10 times faster than normal) :
 
 ::: details data/ftbjarmod/recipes/temperature_sources/creative_high.json
+
 ```json
 {
-    "temperature": "high",
-    "block": "ftbjarmod:creative_high_temperature_source",
-    "efficiency": 10,
-    "type": "ftbjarmod:temperature_source"
+  "temperature": "high",
+  "block": "ftbjarmod:creative_high_temperature_source",
+  "efficiency": 10,
+  "type": "ftbjarmod:temperature_source"
 }
 ```
+
 :::
 
 # Example datapacks
 
 Below you'll find all examples from this page compiled into a downloadable datapack.
 
-[temperature-sources-recipes.zip](./references/temperature-sources-recipes/temperature-sources-recipes.zip)
+[temperature-sources-recipes.zip](/assets/files/mods-ftb-jar/temperature-sources-recipes.zip)
