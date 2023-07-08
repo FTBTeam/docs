@@ -3,7 +3,7 @@ title: Create your own Server
 description: Detailed guide on how to create a Minecraft Server for any FTB Modpacks
 ---
 
-# How to create a Minecraft Server for any FTB Modpack
+# Create your own server for any FTB Modpack
 
 Creating a server for an FTB Modpack is a little different from most other Modpack providers. To help you through these differences we've outlined each step in detail below.
 
@@ -85,11 +85,11 @@ This is a question we see pop up occasionally. The reason we do it this is way i
 We also do it this way to reduce load on our servers. Having 100k+ people downloading a 500mb+ every couple of seconds is a big strain on our systems. The server installer uses heavily cached files from our distribution system which dramatically reduces the load on our systems.
 :::
 
-:::info What if I don't want to use your `run.sh`
+:::info What if I don't want to use your run.sh
 No problem, just delete it and make your own. Just make sure you include the right arguments to Java
 :::
 
-## This all seems a bit complicated... <Badge type="tip" text="Ad" vertical="middle" />
+## `Ad` This all seems a bit complicated...
 
 We 100% agree! Running a server is no trivial task... If all this seems like too much of a pain in the rear end, maybe managed server hosting is what you're looking for? It's actually more affordable than you might think.
 
