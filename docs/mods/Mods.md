@@ -1,5 +1,6 @@
 ---
 title: Mods
+sidebar_position: 1
 ---
 
 :::caution
@@ -13,6 +14,16 @@ Due to the nature of how Minecraft updates work, we're put into a position where
 What this means is that we have had to find a careful balance between ensuring documentation is up-to-date as well as ensuring we try and cover variations between different Minecraft versions.
 
 With this in mind, keep an eye out for any version specific information as we'll try and highlight any of note within the normal documentation.
+
+## 1.16
+
+|[![FTB Jar Mod](./FTB%20Jar%20Mod/_assets/Introduction/logo.png "FTB Jar Mod")](./FTB%20Jar%20Mod/Introduction.md) [FTB Jar Mod](./FTB%20Jar%20Mod/Introduction.md)|
+|:--:|
+
+## 1.20
+
+|[![FTB Quests](./FTB%20Quests/images/introduction/logo.png "FTB Quests")](./FTB%20Quests/introduction.md) [FTB Quests](./FTB%20Quests/introduction.md)|
+|:--:|
 
 ### Major changes in mod versions
 
