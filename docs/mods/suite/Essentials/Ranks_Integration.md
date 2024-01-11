@@ -4,7 +4,7 @@ title: Ranks Integration
 
 ## Overview
 
-FTB Essentials integrates with the [FTB Ranks](/docs/mods/suite/Ranks) mod to provide the following additional configurability:
+FTB Essentials integrates with the FTB Ranks mod to provide the following additional configurability:
 
 * Commands which normally require OP permissions to run can be made available to players by giving them the corresponding command node permission.
 * Commands which have configurable [warm-ups and cool-downs](/docs/mods/suite/Essentials/Warmups_Cooldowns) can use FTB Ranks permission nodes to override the default warmup and cooldown times, as defined in the [mod configuration](/docs/mods/suite/Essentials/Configuration).
