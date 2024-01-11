@@ -9,8 +9,7 @@ sidebar_position: 1
 
 # Minimap
 
-The minimap in FTB Chunks is situated in the top-right corner of the screen, displaying information about the environment around the player.
-
-It can also show coordinates or other positional information.
+The minimap in FTB Chunks is situated in the top-right corner of the screen, displaying information about the player and the environment.
 
 ![Minimap](./_assets/Minimap/minimap.png "The minimap displays information about the environment")
+

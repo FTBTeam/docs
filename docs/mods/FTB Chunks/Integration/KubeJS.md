@@ -1,7 +1,7 @@
 ---
 date: 2024-01-10
 title: KubeJS
-description: Available KubeJS Integration within FTB Chunks
+description: Available KubeJS integration within FTB Chunks
 tags:
     - kubejs
     - script
