@@ -2,15 +2,6 @@
 title: Commands
 ---
 
-## Contents
-
-- [Homes](#homes)
-- [Teleporting](#teleporting)
-- [Warps](#warps)
-- [Cheats / Admin](#cheats--admin)
-- [Kits](#kits) `1.20+`
-- [Miscellaneous](#miscellaneous)
-
 ## Key
 
 - `< >` - Required argument.
@@ -20,152 +11,120 @@ title: Commands
 
 ## Homes
 
-`/home [home]` - Takes you to either your default home or the home specified.
+__Homes__ are player-specific saved teleport destinations. Players may have one or more saved locations, depending on server and (if installed) [FTB Ranks](/docs/mods/suite/Essentials/Ranks_Integration) configuration.
 
-`/sethome <name>` - Adds a new home to your homes list.
-
-`/delhome [home]` - Deletes your default home or the home specified.
-
-`/listhomes` - Lists all of your homes.
+| Command     |Op Required| Description |
+| ----------- | --------- | ------------ |
+|`/home [home]` | N | Takes you to either your default home or the specified home. |
+|`/sethome <name>` | N | Adds a new home to your homes list, subject to your player homes limit. |
+|`/delhome [home]` | N | Deletes your default home or the specified home. |
+|`/listhomes` | N | Lists all of your homes. |
 
 ## Teleporting
 
 ### TPA
 
-`/tpa <player>` - Sends a teleport request to the player specified.
-
-`/tpahere <player>` - Sends a teleport request to the player specified to teleport to you.
-
-`/tpaccept <id>` - Accepts a teleport request. (rarely needed as you can just click the request)
-
-`/tpdeny <id>` - Denies a teleport request. (rarely needed as you can just click the request)
+| Command     |Op Required| Description |
+| ----------- | --------- | ------------ |
+|`/tpa <player>` | N | Sends a teleport request to the specified player. If they accept the request, you will be teleported to the player. |
+|`/tpahere <player>` | N | Sends a teleport request to the specified player to teleport to you. If they accept the request, they will be teleported to you. |
+|`/tpaccept <id>` | N | Accepts a teleport request (rarely needed as you can just click the **Accept** link in the message you receive). |
+|`/tpdeny <id>` | N | Denies a teleport request (rarely needed as you can just click the **Deny** link in the message you receive). |
 
 ### Misc
 
-`/back` - Teleports you to your last location.
-
-`/spawn` - Teleports you to the server spawn.
-
-`/setspawn` - Sets the server spawn to your current location.
-
-`/rtp` - Takes you to a random location in the world with a configured bounds.
-
-`/tpl <player>` - `Requires OP` Teleports you to the last location of the player specified.
-
-`/tpx <dimension>` - `Requires OP` Teleports you to another dimension at your current location.
-
-`/jump` - `Requires OP` Teleports you to the block you're looking at
+| Command     |Op Required| Description |
+| ----------- | --------- | ------------ |
+|`/back` | N | Teleports you to the last location where you used any command that teleports you (including vanilla `/tp` command). Note that Essentials maintains a teleport history "stack", so this can be used multiple times to go to progressively older teleport points. |
+|`/spawn` | N | Teleports you to the server spawn. |
+|`/rtp` | N | Takes you to a random location in the world with a configured bounds. |
+|`/tpl <player>` | Y | Teleports you to the last known location of the specified player (even if they're currently offline). |
+|`/tpx <dimension>` | Y | Teleports you to another dimension at your current location. |
+|`/jump` | Y | Teleports you to the block you're looking at (more precisely, to the top of the block column you're looking at). |
 
 ## Warps
 
-`/warp <warp>` - Teleports you to the warp specified. (Names will be suggested)
+__Warps__ are server-wide saved teleport destinations, common to all players.
 
-`/setwarp <name>` - `Requires OP` Creates a new warp at your current location.
-
-`/delwarp <warp>` - `Requires OP` Deletes the warp specified.
-
-`/listwarps` - Lists all of the warps on the server.
+| Command     |Op Required| Description |
+| ----------- | --------- | ------------ |
+|`/warp`     | N | Teleports you to the warp specified. (Names will be suggested) |
+|`/setwarp <name>` | Y | Creates a new warp at your current location.|
+|`/delwarp <warp>` | Y | Deletes the warp specified.|
+|`/listwarps` | N | Lists all of the warps on the server.|
 
 ## Cheats / Admin
 
 All of these commands require `OP` to function
 
-`/heal [player]` - Heals you or the player specified.
-
-`/feed [player]` - Feeds you or the player specified.
-
-`/extinguish [player]` - Puts your or the player specified out if they're on fire.
-
-`/fly [player]` - Toggles flight for you or the player specified.
-
-`/speed [boost_precent] [player]` - When no `boost_precent` is provided, this command will show you your, or the player specified, movement speed. With the `boost_precent` provided, your, or the player specified, movement speed `Attributes.MOVEMENT_SPEED` will be increased by the `boost_precent`. `Min: -100`, `Max: 2000`
-
-`/god [player]` - Enables God mode (Invulnerability) for you or the player specified.
-
-`/invsee <player>` - Opens the players inventory allowing you to modify the inventory's contents.
-
-`/nicknamefor <player> <nickname>` - Forces a nickname on a specific player
-
-`/mute <player> [until]` - Mutes a player for a specified amount of time (`until`) or forever.
-
-The `until` is a duration time. See [Duration](/mods/FTB Suite/FTB Essentials/Durations) for more information.
-
-A valid example of this command might be `/mute Slowpoke101 2h` to mute the player `Slowpoke101` for `2 hours`
-
-`/unmute <player>` - Unmutes the player specified.
-
-`/tp-offline <name|id> <pos>` - `(New in Essentials 1.20.1+)` Teleports a player to a given location that's whilst they're offline
-
-This command takes either a players UUID or a players username.
+| Command     |Description |
+| ----------- | --------- |
+|`/heal [player]` | Fully heals you or the specified player, as well as replenishing food, and extinguishing any flames.|
+|`/feed [player]` | Fully feeds you or the specified player.|
+|`/extinguish [player]` | Puts your or the specified player out if they're on fire.|
+|`/fly [player]` | Toggles creative flight for you or the specified player.|
+|`/speed [boost_percent] [player]` | When no `boost_percent` is provided, this command will display your (or the specified player's) movement speed modifier. With the `boost_percent` provided, your (or the specified player's) movement speed will be increased by the `boost_percent` (this uses a standard vanilla [attribute modifier](https://minecraft.fandom.com/wiki/Attribute)). `Min: -100`, `Max: 2000`|
+|`/god [player]` | Enables God mode (Invulnerability) for you or the specified player.|
+|`/invsee <player>` | Opens the specified players inventory, allowing you to view and modify the inventory's contents.|
+|`/nicknamefor <player> <nickname>` | Forces a nickname on a specific player.|
+|`/mute <player> [until]` | Mutes a player for a specified amount of time (`until`) or forever.  The `until` is a duration time; omitting it mutes the player indefinitely. See [Duration](/docs/mods/suite/Essentials/Durations) for more information. Example: `/mute Slowpoke101 2h` mutes the player `Slowpoke101` for two hours.|
+|`/unmute <player>` | Unmutes the specified player.|
+|`/tp-offline <name/id> <pos>` | _[New in Essentials 1.20.1+]_ Teleports a player to a given location when they're offline. This command takes either a player's UUID or username. If you wish to teleport a player to a different dimension too, use the standard vanilla `execute in` method. E.g. `/execute in minecraft:the_nether run tp-offline someplayer 0 70 0` ports the player to (0, 70, 0) in the Nether.|
 
 ## Kits
 
-Kits are a pretty a relatively new feature to Essentials and have more in-depth documentation on the [Kits](/mods/FTB Suite/FTB Essentials/Kits) page.
+Kits are a relatively new feature to Essentials and have more in-depth documentation on the [Kits](/docs/mods/suite/Essentials/Kits) page. All `/kit` commands require `OP` permissions to use.
 
-`/kit list` - Lists all of the kits available on the server.
-
-`/kit show <name>` - Shows you the contents of the kit specified.
-
-`/kit give <player> <name>` - Gives the specified player the kit specified.
+| Command     |Description |
+| ----------- | --------- |
+|`/kit list` | Lists all of the kits available on the server.|
+|`/kit show <name>` | Shows you the contents of the specified kit.|
+|`/kit give <player> <name>` | Gives the specified player the specified kit.|
 
 ### Management
 
-`/kit delete <name>` - Deletes the kit specified.
-
-`/kit create_from_player_inv <name> [cooldown]` - Creates a kit from the current players inventory contents
-
-The `cooldown` is a duration time. See [Duration](/mods/FTB Suite/FTB Essentials/Durations) for more information.
-
-`/kit create_from_player_hotbar <name> [cooldown]` - Creates a kit from the current players hotbar contents with an optional cooldown.
-
-The `cooldown` is a duration time. See [Duration](/mods/FTB Suite/FTB Essentials/Durations) for more information.
-
-`/kit create_from_block_inv <name> [cooldown]` - Creates a kit from the block you're looking at's inventory contents with an optional cooldown.
-
-The `cooldown` is a duration time. See [Duration](/mods/FTB Suite/FTB Essentials/Durations) for more information.
+| Command     |Description |
+| ----------- | --------- |
+|`/kit delete <name>` | Deletes the specified kit.|
+|`/kit create_from_player_inv <name> [cooldown]` | Creates a kit from the current player's inventory contents, with an optional cooldown [duration](/docs/mods/suite/Essentials/Durations).|
+|`/kit create_from_player_hotbar <name> [cooldown]` | Creates a kit from the current players hotbar contents, with an optional cooldown [duration](/docs/mods/suite/Essentials/Durations).|
+|`/kit create_from_block_inv <name> [cooldown]` | Creates a kit from the inventory contents of the block you're looking at, with an optional cooldown [duration](/docs/mods/suite/Essentials/Durations).|
 
 ### Helper commands
 
-`/kit cooldown <name> <cooldown>` - Modifies the cooldown of the kit specified.
-
-`/kit reset_cooldown <name> <player|id>` - Resets the cooldown of the kit specified.
-
-The player can be identified by either their UUID or their in-game name.
-
-`/kit set_autogrant <name> <true|false>` - Sets the autogrant status of the kit specified.
-
-`/kit put_in_block_inv <name>` - Puts the kit specified into the block you're looking at's inventory. 
+| Command     |Description |
+| ----------- | --------- |
+|`/kit cooldown <name> <cooldown>` | Modifies the cooldown of the kit specified.|
+|`/kit reset_cooldown <name> <player/id>` | Resets the cooldown of the kit specified.  The player can be identified by either their UUID or their in-game name.|
+|`/kit set_autogrant <name> <true/false>` | Sets the autogrant status of the kit specified.|
+|`/kit put_in_block_inv <name>` | Puts the kit specified into the block you're looking at's inventory. |
 
 ## Miscellaneous
 
-`/kickme` - Kicks you from the server
+| Command     |Op Required| Description |
+| ----------- | --------- | ------------ |
+|`/kickme` | N | Kicks you from the server|
+|`/leaderboard [leaderboard]` | N | Shows the current data for a specific leaderboard in the game (The command auto completes the leaderboard name)|
+|`/nickname [nickname]` | N | Allows you to modify your in-game name|
+|`/hat` | N | Forces the item held in your main hand onto your head, and your current head item into your main hand.|
+|`/near [radius]` |  Y | Shows the distance of other players around you|
+|`/near <player> [radius]` |  Y |Shows the distance of a specific player from you|
 
-`/leaderboard [leaderboard]` - Shows the current data for a specific leaderboard in the game (The command auto completes the leaderboard name)
+### Inventories
 
-`/nickname [nickname]` - Allows you to modify your in-game name
+| Command     |Op Required| Description |
+| ----------- | --------- | ------------ |
+|`/trashcan` | N | Opens a virtual inventory that will void any items put into it.|
+|`/enderchest` | N | Opens your enderchest inventory.|
+|`/enderchest <player>` | Y | Opens another player's enderchest inventory. OP is required if the specified player is not you.|
+|`/anvil` | Y | Opens the Anvil's GUI.|
+|`/smithing` | Y | Opens the Smithing Table's GUI.|
+|`/crafting` | Y | Opens the Crafting Table's GUI.|
+|`/stonecutter` | Y | Opens the Stonecutter's GUI.|
 
-`/hat` - Forces the current item in your `main hand` onto your head. This command will put the currrent head item in your `main hand` upon the switch.
+### Notifying
 
-`/near [radius]` - `Requires OP` - Shows the distance of other players around you
-
-`/near <player> [radius]` - `Requires OP` - Shows the distance of a specific player from you
-
-### Inventory's
-
-`/trashcan` - Opens an inventory that will void any items put into it
-
-`/enderchest [player]` - Opens your enderchest inventory. `Requires OP` if the player is specified, it will open the players inventory. This command does not require OP by default for a player seeing their own enderchest inventory.
-
-`/anvil` - `Requires OP` Opens the Anvil blocks GUI
-
-`/smithing` - `Requires OP` Opens the Smithing Tables GUI
-
-`/crafting` - `Requires OP` Opens the Crafting Tables GUI
-
-`/stonecutter` `Requires OP` Opens the Stone Cutting GUI
-
-### Notifity
-
-`/recording` - Marks your player in the `Tab` screen as recording and changes your name in the chat
-
-`/streaming` - Marks your player in the `Tab` screen as streaming and changes your name in the chat
+| Command     |Op Required| Description |
+| ----------- | --------- | ------------ |
+|`/recording` | N | Marks your player in the `Tab` screen as recording and adds a red icon to your name in chat.|
+|`/streaming` | N | Marks your player in the `Tab` screen as streaming and adds a purple icon to your name in chat.|

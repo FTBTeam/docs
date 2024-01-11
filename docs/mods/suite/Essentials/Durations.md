@@ -2,7 +2,7 @@
 title: Durations
 ---
 
-Durations are used in a number of places in FTB Essentials, such as muting players, and are a short hand way of specifying a time period.
+Durations are used in a number of places in FTB Essentials, such as muting players, and are a shorthand way of specifying a time period.
 
 - `1s` - 1 second
 - `1m` - 1 minute
