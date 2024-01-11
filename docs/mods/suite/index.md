@@ -1,5 +1,6 @@
 ---
 title: FTB Mod Suite
+sidebar_position: 1
 ---
 
 :::caution
