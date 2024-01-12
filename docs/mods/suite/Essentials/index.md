@@ -1,6 +1,5 @@
 ---
-title: About
-sidebar_position: 1
+title: Essentials
 ---
 
 ## What is FTB Essentials?
