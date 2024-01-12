@@ -26,7 +26,7 @@ Then, locate the settings cog in the lower-left corner of the screen and click i
 
 ![Settings](./_assets/Minimap/settings.png "The settings cog is located in the lower-left corner")
 
-On the "Minimap" tab you'll be able to configure settings.
+On the "Minimap" tab you'll be able to configure the settings.
 
 ![Minimap tab](./_assets/Minimap/minimap-tab.png "The minimap tab")
 
@@ -148,6 +148,12 @@ todo image carousel that states scale and font scaling per image (they are the s
 </TabItem>
 </Tabs>
 
+:::note
+
+Font Scaling is affected by the GUI scale value in Video Settings.
+
+:::
+
 ### Zoom
 
 Adjusts the level of zoom the minimap has.
@@ -196,6 +202,12 @@ todo slider
 
 ![Waypoints true](./_assets/Minimap/waypoints-on.png "Waypoints = true")
 ![Waypoints false](./_assets/Minimap/waypoints-off.png "Waypoints = false")
+
+:::info
+
+The "waypoints" setting will also affect waypoints seen in-game. Setting it to false will hide any waypoints from sight.
+
+:::
 
 ### Player heads
 
@@ -275,3 +287,134 @@ todo slider
 
 ![Biome true](./_assets/Minimap/xyz-biome-true.png 'The biome "Dark Forest" is shown under the minimap')
 ![Biome false](./_assets/Minimap/biome-false.png "The biome is hidden")
+
+### Blur mode
+
+Default: auto
+
+Blur mode adjusts pixels on the minimap to make the image more cohesive. When set to true, it will blur pixels at any zoom level.
+
+The following figure is an example of visible blur on the minimap.
+
+todo slider
+
+![Blur mode true](./_assets/Minimap/blur-on.png "The image is a bit blurry")
+![Blur mode false](./_assets/Minimap/blur-off.png "The image is clear")
+
+When blur is set to auto, it will only blur the minimap when it is fully zoomed out.
+
+![Blur mode auto](./_assets/Minimap/blur-auto.gif "The image is only blurred when zoomed out")
+
+### Compass
+
+Default: true
+
+True will display the cardinal points (north, east, south, west) within the minimap. Setting compass to false will instead hide them.
+
+todo slider
+
+![Compass true](./_assets/Minimap/compass-true.png "Cardinal points are present")
+![Compass false](./_assets/Minimap/compass-false.png "Cardinal points are hidden")
+
+### Visibility
+
+Sets the opacity of the minimap, from 0 to 255. The default value is 255, so the minimap is fully visible.
+
+<Tabs>
+<TabItem value="visibility-255" label="255" default>
+
+  ![Visibility 255](./_assets/Minimap/compass-true.png "Max opacity, the minimap is visible")
+
+</TabItem>
+<TabItem value="visibility-100" label="100">
+
+  ![Visibility 100](./_assets/Minimap/visibility-100.png "Visibility = 100")
+
+</TabItem>
+<TabItem value="visibility-50" label="50">
+
+  ![Visibility 50](./_assets/Minimap/visibility-50.png "Visibility = 50")
+
+</TabItem>
+<TabItem value="visibility-0" label="0">
+
+  ![Visibility 0](./_assets/Minimap/visibility-0.png "Minimum opacity, the minimap is no longer visible!")
+
+</TabItem>
+</Tabs>
+
+### Zone
+
+Default: true
+
+If set to true and you are standing in claimed lands, it will show the name of the team. Setting it to false instead hides the name.
+
+todo slider
+
+![Zone true](./_assets/Minimap/zone-true.png 'FTB Team owns the chunks in yellow')
+![Zone false](./_assets/Minimap/zone-false.png "The team that owns the chunks is hidden")
+
+### Position Offset X and Position Offset Y
+
+Default for both: 0
+
+Offsets the minimap with the upper-right corner as the anchor point.
+
+Positive X extends leftwards (←) and positive Y extends downwards (↓).
+
+The following figure offsets the minimap by 60 pixels in both X and Y.
+
+todo slider
+
+![Offset 0](./_assets/Minimap/offset-0.png "The default minimap offset")
+![Offset 60](./_assets/Minimap/offset-60.png "An offset of 60")
+
+### Position Offset condition
+
+Default: None
+
+|Position Offset condition|Description|
+|:--:|:--:|
+|Bottom Left|Offsets only if the minimap [position](#position) is set to "Bottom Left"|
+|Left|Offsets only if the minimap [position](#position) is set to "Left"|
+|Top Left|Offsets only if the minimap [position](#position) is set to "Top Left"|
+|Top Right|Offsets only if the minimap [position](#position) is set to "Top Right"|
+|Right|Offsets only if the minimap [position](#position) is set to "Right"|
+|Bottom Right|Offsets only if the minimap [position](#position) is set to "Bottom Right"|
+|None|Offsets from the upper-right corner|
+
+:::tip
+
+Works well when [Position Offset X & Position Offset Y](#position-offset-x-and-position-offset-y) is set to something else than 0!
+
+:::
+
+### Square Minimap
+
+Default: false
+
+If Square Minimap is set to true, the minimap will be a square! Otherwise, it is a circle.
+
+todo slider
+
+![Minimap circle](./_assets/Minimap/minimap-circle.png "The default minimap")
+![Minimap square](./_assets/Minimap/minimap-square.png "The square minimap")
+
+### Proportional sizing
+
+Default: true
+
+When true, minimap size is proportional to 10% of the screen width (modifiable by the [Scale](#scale) setting).
+
+When false, it is a fixed size regardless of screen resolution.
+
+todo carousel
+
+![Proportional sizing true](./_assets/Minimap/proportional-true.png "Around 10% of the right of the screen is taken by the minimap")
+![Proportional sizing false](./_assets/Minimap/proportional-false.png "The minimap has a fixed size regardless of resolution")
+
+:::note
+
+Proportional sizing is always affected by [Scale](#scale).
+
+:::
