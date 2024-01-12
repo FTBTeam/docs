@@ -7,7 +7,7 @@ tags:
     - interact
     - whitelist
     - blacklist
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Datapacks
