@@ -32,6 +32,8 @@ On the "Minimap" tab you'll be able to configure settings.
 
 ### Enabled
 
+Default: true
+
 True enables the minimap, false disables it so it is no longer shown on screen.
 
 todo slider
@@ -40,6 +42,8 @@ todo slider
 ![Enabled false](./_assets/Minimap/enabled-false.png "Enabled = false")
 
 ### Position
+
+Default: Top Right
 
 Six arrangements are possible for the position of the minimap.
 
@@ -158,6 +162,8 @@ The keybinds "Zoom In Minimap" (default: '=') and "Zoom Out Minimap" (default: '
 
 ### Locked North
 
+Default: true
+
 If true, locks the minimap onto place.
 
 If false, it will be allowed to rotate with the player like in the following figure.
@@ -165,6 +171,8 @@ If false, it will be allowed to rotate with the player like in the following fig
 !["Rotating minimap"](./_assets/Minimap/lock-north.gif 'The minimap can rotate if "locked north" is false')
 
 ### Show player when not locked north
+
+Default: true
 
 :::tip
 
@@ -178,4 +186,92 @@ If false, no marker will be shown, such as in the following figure.
 
 !["No player marker"](./_assets/Minimap/no-player.gif "The player marker is not being displayed")
 
-###
+### Waypoints
+
+Default: true
+
+True shows the [waypoints](./Waypoints.md) in the minimap, false hides them.
+
+todo slider
+
+![Waypoints true](./_assets/Minimap/waypoints-on.png "Waypoints = true")
+![Waypoints false](./_assets/Minimap/waypoints-off.png "Waypoints = false")
+
+### Player heads
+
+Default: true
+
+True displays an icon for the heads of other players on the minimap, false will hide them.
+
+![Player heads true](./_assets/Minimap/player-heads-true.png "Player heads = true")
+![Player heads false](./_assets/Minimap/player-heads-false.png "Player heads = false")
+
+### Entities
+
+Default: true
+
+True will display entities (mobs, items, players, etc.) and false will hide them from the minimap.
+
+todo slider
+
+![Entities true](./_assets/Minimap/entities-heads.png "Entities = true")
+![Entities false](./_assets/Minimap/entities-none.png "Entities = false")
+
+### Entity heads
+
+Default: true
+
+True will display entities on the minimap using an icon for their heads (when possible); false will instead display them as white dots.
+
+![Entity heads true](./_assets/Minimap/entities-heads.png "Entity heads = true")
+![Entity heads false](./_assets/Minimap/entities-dots.png "Entity heads = false")
+
+### Large entities
+
+Default: false
+
+Large entities will increase the size of entity heads if set to true.
+
+If the entity heads are being displayed as white dots instead, it will also increase their size.
+
+todo carousel
+
+<Tabs>
+<TabItem value="entity-heads" label="Standard" default>
+
+  ![Entity heads](./_assets/Minimap/entities-heads.png "Entity heads = true, Large entities = false")
+
+</TabItem>
+<TabItem value="entity-large-heads" label="Large Heads">
+
+  ![Entity large heads](./_assets/Minimap/entities-large-heads.png "Entity heads = true, Large entities = true")
+
+</TabItem>
+<TabItem value="entity-large-dots" label="Large Dots">
+
+  ![Entity large dots](./_assets/Minimap/entities-large-dots.png "Entity heads = false, Large entities = true")
+
+</TabItem>
+</Tabs>
+
+### XYZ
+
+Default: true
+
+Set to true to display the coordinates of the block within the legs and feet of the player; set to false to hide them.
+
+todo slider
+
+![XYZ true](./_assets/Minimap/xyz-biome-true.png "Coordinates X=2786 Y=80 and Z=-210 are shown under the minimap")
+![XYZ false](./_assets/Minimap/xyz-false.png "Coordinates are hidden")
+
+### Biome
+
+Default: true
+
+Set to true to display the current biome the player is in; set to false to hide it.
+
+todo slider
+
+![Biome true](./_assets/Minimap/xyz-biome-true.png 'The biome "Dark Forest" is shown under the minimap')
+![Biome false](./_assets/Minimap/biome-false.png "The biome is hidden")
