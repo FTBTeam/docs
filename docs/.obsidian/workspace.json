@@ -1,0 +1,178 @@
+{
+  "main": {
+    "id": "fa2e506d8e7e558b",
+    "type": "split",
+    "children": [
+      {
+        "id": "45601bf9d1d6b1b7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "447d79a4bbf5901e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "mods/suite/Ranks/Commands.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ee62efa3ab71a324",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "mods/suite/Ranks/Advanced Conditions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fef12342d0c869db",
+    "type": "split",
+    "children": [
+      {
+        "id": "bd52f5bc40a527bf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d9ea852d7bad941d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "41edbada305831b9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fcbd589cad9f0caa",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8bcfc35f0ea9f4af",
+    "type": "split",
+    "children": [
+      {
+        "id": "e1bf88d93420b4c4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "af762dfe9554ae11",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "mods/suite/Ranks/Commands.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3d0f653db0ebedad",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "mods/suite/Ranks/Commands.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2c8695a855aa8140",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "b577d02b1f97b1dc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "mods/suite/Ranks/Commands.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "447d79a4bbf5901e",
+  "lastOpenFiles": [
+    "mods/suite/Ranks/Configuration.md",
+    "mods/suite/Ranks/Commands.md",
+    "mods/suite/Ranks/Advanced Conditions.md",
+    "mods/suite/Ranks/Simple Conditions.md",
+    "mods/suite/Ranks/index.md",
+    "Advanced.md",
+    "Advanced-Conditions.md",
+    "mods/suite/Ranks/Integration/FTB XMod Compat.md",
+    "mods/suite/Essentials/About.md",
+    "mods/suite/Essentials/Commands.md",
+    "mods/suite/Ranks/Introduction.md",
+    "mods/suite/Ranks/Integration",
+    "mods/suite/Ranks",
+    "mods/suite/Essentials/Configuration.md"
+  ]
+}
