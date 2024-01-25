@@ -10,6 +10,10 @@ SNBT, otherwise know as Stringified NBT, is a way to write [NBT data](https://mi
 
 FTB's implementation of SNBT is pretty much compatible with [vanilla SNBT](https://minecraft.fandom.com/wiki/NBT_format#SNBT_format), although FTB SNBT supports multiline structures, and does not require commas to delimit objects in such multiline structures.
 
+## Why SNBT?
+
+Why don't we just use Forge's night-config system like any other mod does? Or one of the multiple config libraries for Fabric? Our mods are cross-platform, and there isn't one single config mod that would work everywhere. So, we have our own system, as part of FTB Library. As for why SNBT in particular; it's based on an existing vanilla format, and the config files it uses are easily human-readable, and close enough to the familiar JSON format to be easy to pick up, while also offering a few improvements over JSON.
+
 ## What does it look like
 
 SNBT is very similar to JSON, with a few key differences. The following is an example of a config file:
