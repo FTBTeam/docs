@@ -11,9 +11,9 @@ Our core suite of FTB Mods are designed to provide essential features to all of 
 
 ## Mod List
 
-- [FTB Library](/docs/mods) (Not documented yet)
+- [FTB Library](/docs/mods/suite) (Not documented yet)
 - [FTB Essentials](/docs/mods/suite/Essentials/About.md)
-- [FTB Chunks](/docs/mods) (Not documented yet)
-- [FTB Quests](/docs/mods) (Not documented yet)
-- [FTB Teams](/docs/mods) (Not documented yet)
+- [FTB Chunks](/docs/mods/suite) (Not documented yet)
+- [FTB Quests](/docs/mods/suite) (Not documented yet)
+- [FTB Teams](/docs/mods/suite) (Not documented yet)
 - [FTB Ranks](/docs/mods/suite/Ranks)
