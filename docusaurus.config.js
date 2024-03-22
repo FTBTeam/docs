@@ -7,6 +7,7 @@ const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  plugins: ['docusaurus-plugin-sass'],
   title: 'Feed The Beast Docs',
   tagline: 'Documentation for FTB Modpacks, Mods, the FTB App and Support topics',
   favicon: 'img/favicon.ico',
