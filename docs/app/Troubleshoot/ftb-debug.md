@@ -30,7 +30,7 @@ You can find the download links for each operating system we support. We've incl
 
 ## Using
 
-Using the FTB Debug Tool is typically as simple as double-clicking the `.exe` file that you downloaded from above. In some cases it's a bit more complicated so we've outlined what you need to do for [`Linux & MacOS`](#using-on-macos-linux) below.
+Using the FTB Debug Tool is typically as simple as double-clicking the `.exe` file that you downloaded from above. In some cases it's a bit more complicated so we've outlined what you need to do for [`Linux & MacOS`](#using-on-macos--linux) below.
 
 Once you've downloaded the tool, you'll want to run it. A successful run will look like this
 
