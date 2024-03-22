@@ -4,9 +4,10 @@
 }
 
 .ftbFooter {
-  background-color: var(--ifm-navbar-background-color);
-  margin-top: 5rem;
+  background-color: #141616;
+  margin-top: 5em;
   padding: 6rem 0;
+  font-size: 14px;
   
   a {
     text-decoration: none;
@@ -16,8 +17,8 @@
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 4rem;
-    margin-bottom: 4rem;
+    gap: 4em;
+    margin-bottom: 4em;
     
     @media (min-width: 600px) {
       grid-template-columns: 1fr 1fr;
@@ -36,7 +37,7 @@
     
     ul {
       list-style: none;
-      line-height: 2.2rem;
+      line-height: 2.2em;
       padding: 0;
       
       li {
@@ -63,17 +64,17 @@
     margin-top: 0;
     
     .copyright {
-      margin-top: 2rem;
+      margin-top: 2em;
       opacity: .5;
       color: white;
     }
     
     @media (min-width: 600px) {
       flex-direction: row;
-      margin-top: 2rem;
+      margin-top: 2em;
       
       .copyright {
-        margin-top: 0rem;
+        margin-top: 0em;
       }
     }
     
@@ -82,7 +83,7 @@
       a {
         width: 17px;
         display: block;
-        margin-left: 1.5rem;
+        margin-left: 1.5em;
         opacity: .8;
         transition: opacity .25s ease-in-out;
 
@@ -97,13 +98,13 @@
 .heading {
   font-weight: 900;
   color: var(--ftb-text-red);
-  font-size: 1.14rem;
+  font-size: 1.14em;
   text-transform: uppercase;
   letter-spacing: .05em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5em;
 }
 
 .branding a {
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
   display: block;
 }
