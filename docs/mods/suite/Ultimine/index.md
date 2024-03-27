@@ -18,7 +18,7 @@ FTB Ultimine is our take on a vein miner like mod. It allows you to mine blocks 
 
 ## Commands
 
-See [In-game Config Screen](docs/mods/technical/Config-Screen) for more information about the in-game config screen.
+See [In-game Config Screen](/docs/mods/technical/Config-Screen) for more information about the in-game config screen.
 
 | Command | Description | Requires OP |
 | --- | --- | --- |

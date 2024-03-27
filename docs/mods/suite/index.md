@@ -18,4 +18,4 @@ Our core suite of FTB Mods are designed to provide essential features to all of 
 - [FTB Chunks](/docs/mods/suite) (Not documented yet)
 - [FTB Quests](/docs/mods/suite) (Not documented yet)
 - [FTB Ultimine](/docs/mods/suite/Ultimine)
-- [FTB XMod Compat](/docs/mods/suite) (Not documented yet)
+- [FTB XMod Compat](/docs/mods/suite/XMod/)
