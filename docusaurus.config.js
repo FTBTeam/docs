@@ -73,7 +73,7 @@ const config = {
         respectPrefersColorScheme: true
       },
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/ftb-share-image.png',
       navbar: {
         title: 'FTB Docs',
         logo: {
