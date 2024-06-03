@@ -6,10 +6,6 @@ comment: "TODO: this will need updating when the app's settings page get it's re
 
 # Find App Logs
 
-:::caution Notice
-This guide will soon become outdated with the migration to full utilising the [FTB Debug Tool](./ftb-debug). This guide is still valid as of `2022/12/31`
-:::
-
 You should only need to find the app logs if something has gone wrong. This guide walks you through finding the app logs.
 
 Finding the logs is simple, you will first need the app open. For best results, run the app logs right after you've experienced an issue.

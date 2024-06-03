@@ -1,0 +1,95 @@
+.slideshow {
+  display: grid;
+  row-gap: .5rem;
+
+  .main {
+    position: relative;
+    overflow: hidden;
+
+    // Use aspect ratio to keep the slideshow at 16:9
+    padding-top: 56.25%;
+
+    .item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      opacity: 0;
+      transition: opacity 0.5s;
+
+      &.active {
+        opacity: 1;
+        z-index: 10;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .control {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 11;
+      cursor: pointer;
+
+      background-color: rgba(black, .4);
+      transition: background-color ease-in-out;
+      @apply rounded;
+      @apply backdrop-blur-sm;
+      @apply duration-300;
+
+      &:hover {
+        background-color: rgba(black, .8);
+      }
+
+      &.right {
+        left: auto;
+        right: 1rem;
+      }
+    }
+  }
+
+  .thumbnails {
+    overflow-x: auto;
+
+    .thumbnailsHolder {
+      display: flex;
+      gap: 1rem;
+      width: fit-content;
+      padding: .5rem 0;
+
+      .thumbnail {
+        display: inline-block;
+
+        // aspect ratio 16:9
+        width: 150px;
+        height: 84.375px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: border 0.25s ease-in-out;
+
+        &.active {
+          border-color: var(--ftb-blue);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

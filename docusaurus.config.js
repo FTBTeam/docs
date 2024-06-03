@@ -95,6 +95,13 @@ const config = {
           // },
           {
             type: 'docSidebar',
+            sidebarId: 'marketplace',
+            position: 'left',
+            label: 'Marketplace'
+
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'mods',
             position: 'left',
             label: 'Mods',
