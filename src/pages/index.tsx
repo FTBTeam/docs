@@ -18,7 +18,7 @@ function LearnSection({title, desc, img, imgAlt, link, btnText, ...divProps}: Le
     {...divProps}
     className={clsx("flex relative bg-black dark:bg-opacity-20 bg-opacity-5 overflow-hidden items-center justify-center gap-12 lg:max-w-screen-lg rounded-xl mx-auto lg:flex-row flex-col text-center lg:text-left p-4 py-16 lg:py-4 shadow-lg", divProps.className)}
   >
-    <div className="w-80 max-h-none lg:max-h-56  flex items-center justify-center">
+    <div className="w-80 max-h-none lg:max-h-56 flex items-center justify-center">
       <img src={img} className="relative lg:-bottom-20 lg:-mt-12 w-full h-full"
            alt={imgAlt} />
     </div>
