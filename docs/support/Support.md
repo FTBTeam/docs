@@ -3,6 +3,10 @@ title: Support
 sidebar_position: 1
 ---
 
-:::caution
-We're currently still actively building out the base of our support documentation. 
-:::
+## Guides
+
+- [Create your own server](/docs/support/Guides/create-a-server)
+
+## Troubleshooting
+
+- [Low FPS and AMD GPUs](/docs/support/Troubleshooting/low-fps-on-amd)

@@ -7,7 +7,19 @@ const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: [
+    'docusaurus-plugin-sass',
+    async function tailwind(context, options) {
+      return {
+        name: "docusaurus-tailwind",
+        configurePostCss(postcssOptions) {
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
+    }
+  ],
   title: 'Feed The Beast Docs',
   tagline: 'Documentation for FTB Modpacks, Mods, the FTB App and Support topics',
   favicon: 'img/favicon.ico',
@@ -75,12 +87,12 @@ const config = {
             position: 'left',
             label: 'FTB App',
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'modpacks',
-            position: 'left',
-            label: 'Modpacks',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'modpacks',
+          //   position: 'left',
+          //   label: 'Modpacks',
+          // },
           {
             type: 'docSidebar',
             sidebarId: 'mods',
@@ -110,10 +122,10 @@ const config = {
                 label: 'FTB App',
                 to: '/docs/app',
               },
-              {
-                label: 'Modpacks',
-                to: '/docs/modpacks',
-              },
+              // {
+              //   label: 'Modpacks',
+              //   to: '/docs/modpacks',
+              // },
               {
                 label: 'Mods',
                 to: '/docs/mods',
