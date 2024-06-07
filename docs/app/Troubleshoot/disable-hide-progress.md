@@ -15,11 +15,8 @@ The word `Instance` is typically used to relate to a Modpack that you have insta
 
 1. Open the FTB App
 2. Go to the Instance you want to disable FTB Hide/FTB Progress on
-3. Click on the three dots next to the play button
-4. Select the option titled `Open`
-5. Then select the option titled `Instance Folder`
-6. Create a new file in this folder called `.no_loading_mods.marker`
-   - The `.` at the start of the file name is important and will cause this file to be a hidden file, so dont worry if you no longer see the file after creating it
-7. Now open the `mods` folder and delete the `ftb-hide.jar` and `ftb-progress.jar` mods
+3. Click on the Setting button on the right of the screen
+4. Scroll down to the `Advanced` section and then the enable `Disable helper mod injection` option
+   ![Advanced Instance Settings](./../_assets/images/ftb-app.webp)
 
-When you start the modpack up now, you should notice that the loading screen is no longer hidden.
+When you start the modpack up now, you should notice that the Minecraft loading screen is no longer hidden.
