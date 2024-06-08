@@ -1,4 +1,5 @@
 ---
+sidebar_position: 2
 title: Using the FTB Debug Tool
 description: A simple tool designed to provide as much useful debugging information to our team to support resolving any app issues.
 ---
