@@ -6,7 +6,7 @@ description: Detailed guide on how to disable mods on a modpack.
 # How to disable Mods on a Modpack
 
 :::caution
-Please be aware that disabling mods on an already configured and stable Modpack can introduce instability, out right crashing, missing blocks, and in some cases, world corruption. We recommend making a backup of your world before disabling mods.
+Please be aware that disabling mods on a Modpack can introduce instability, out right crashing, missing blocks, and in some cases, world corruption. We recommend making a backup of your world before disabling mods.
 :::
 
 Disabling mods can be useful if you're experiencing issues with a specific mod or troubbleshooting a problem. Here's how you can disable mods on a modpack using the FTB App
@@ -21,5 +21,5 @@ Disabling mods can be useful if you're experiencing issues with a specific mod o
 ## Troubleshooting
 
 :::info My Game crashes
-This will happen sometimes, some mods depend on other mods so you may also need those. You can ask in our [Discord](https://go.ftb.team/discord) for support if you can't find out why it's crashing. Typically game crashes log out very detailed reasons why the game crashed. You can find a guide on how to [find game logs here](./instance-logs).
+This will happen sometimes, some mods depend on other mods, so you may also need those mods as well. You can ask in our [Discord](https://go.ftb.team/discord) for support if you can't find out why it's crashing. Typically game crashes log out very detailed reasons why the game crashed. You can find a guide on how to [find game logs here](./instance-logs).
 :::
