@@ -2,6 +2,29 @@
 title: Change Log
 ---
 
+## `1.7.0`
+
+### Added ✨
+
+- 🛠️ Durability Overhaul: A brand new durability system has been implemented to better match vanilla gameplay (Note: This is incompatible with the Unbreaking enchantment).
+- 🥫 Iron Cans: Introducing Iron Cans, smaller containers that hold 100mB of fluid - perfect for storing those leftover liquids!
+
+### Fixed 🔧
+
+- 🛠️ Say goodbye to malfunctioning tools! All tools should now function as intended.
+- 🏗️ Smeltery and Melter components can finally be placed on bamboo blocks.
+- 🛢️ Copper cans within the Smeltery are now operating correctly.
+- 💎 Diamond and Emerald smelting is no longer a problem.
+- 🔧 Ardite tools now break stone variants properly.
+
+### Changed ⚙
+
+- 🔍 The digger component has increased compatibility.
+- 🛒 The Wandering Tinker has undergone a balancing revamp. They now require specific types of nuggets for certain trades, based on a fantastic community suggestion! Additionally, the Wandering Tinker has expanded their trade offerings.
+- 🔥 Ardite tools can now smelt terracotta into glazed terracotta, offering more crafting options.
+- 🧱 Breaking Clay blocks with Ardite tools will now yield bricks instead of terracotta.
+- 📖 Page 6 of the Puny Smelting book has been updated to reflect the introduction of Iron Cans.
+
 ## `1.6.0`
 
 ### Added ✨
