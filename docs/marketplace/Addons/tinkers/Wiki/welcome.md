@@ -4,15 +4,17 @@ title: Welcome
 
 ![The Tinkers' Construct Add-on Logo](../_assets/images/tinkers-logo.png)
  
-## **Tinkers' Construct Add-on Wiki for Minecraft Bedrock (Marketplace)**
+## **Tinkers' Construct Add-on Wiki**
 
-This wiki is your one-stop shop for all things **Tinkers' Construct** Dive deep into crafting unique tools, weapons, and gadgets to enhance your Minecraft experience.
+This wiki is your one-stop shop for all things **Tinkers' Construct for Minecraft Bedrock (Marketplace)** Dive deep into crafting unique tools, weapons, and gadgets to enhance your Minecraft experience.
 
 This wiki focuses specifically on content found in the add-on for the Marketplace version of Tinkers' Construct, which may differ from the original mod or other versions.
 
 ### Where can i download Tinkers' Construct?
 
 Thats easy! you can get it [**Here**](https://go.ftb.team/tinkers-addon) from the Minecraft Marketplace. for 🪙990 Minecoins
+
+![Lots of Tools!](../_assets/images/tinkers-screenshot-1.jpg)
 
 ### What is Tinkers' Construct?
 
