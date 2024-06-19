@@ -72,4 +72,4 @@ While advanced modifications aren't available in the current version, keep your 
 *For Weapons like Swords or Cleavers, you will need a Tinkers' Anvil.*
 
 
-[**Previous Page**![Welcome](../_assets/images/tinkers-back.png)](./welcome.md) / [**Next Paage**![Tier 1 Materials](../_assets/images/tinkers-next.png)](./tier_1.md)
+[![Back](../_assets/images/tinkers-back.png) **Previous Page**](./welcome.md) / [**Next Paage** ![Next](../_assets/images/tinkers-next.png)](./tier_1.md)
