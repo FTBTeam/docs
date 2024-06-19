@@ -26,3 +26,5 @@ But it's not just about bashing things. Tinkers' Construct throws in a whole new
 *FTB* brought all this goodness to the **Bedrock Edition** of Minecraft, so console and mobile players can join the fun.  
 
 While it's not a perfect copy of the original Java mod, it keeps the core ideas that make Tinkers' Construct awesome.  Get ready to craft, fight, and explore in a whole new way!
+
+[**Next Page**](./getting_started.md)

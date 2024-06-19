@@ -41,30 +41,21 @@ The possibilities are endless! Experiment with these materials in the Part Build
 ### Bone
 
 **Tool Head**
-- Durabilty: 60
-- Harvest Tier: Wood
-- Mining Speed: 2
-- Attack Damage: 0
-- Trait: Cultivation
+- Durabilty: 100
+- Harvest Tier: Stone
+- Mining Speed: 2.5
+- Attack Damage: 1.25
+- Trait: Undead
 
 **Tool Handle/Guard**
-- Durabilty: 1x
+- Durabilty: 0.75x
 - Attack Damage: 1x
 
-**Trait**: Cultivation
-
-**Tool Head**
-- Durabilty: 60
-- Harvest Tier: Wood
-- Mining Speed: 2
-- Attack Damage: 0
-- Trait: Cultivation
-
-**Tool Handle/Guard**
-- Durabilty: 1x
-- Attack Damage: 1x
-
-**Trait**: Cultivation
+**Trait**: Undead
 
 ### String
 
+**Binding**
+- Holds your tools together.
+
+**Trait**: Undead
