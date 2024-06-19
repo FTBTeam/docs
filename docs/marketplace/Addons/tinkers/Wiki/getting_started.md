@@ -70,3 +70,6 @@ Once you've meticulously crafted all the parts, head over to the Tinker Station.
 While advanced modifications aren't available in the current version, keep your eyes peeled for future updates. The possibilities for customization are bound to expand!
 
 *For Weapons like Swords or Cleavers, you will need a Tinkers' Anvil.*
+
+
+[**Previous Page**![Welcome](../_assets/images/tinkers-back.png)](./welcome.md) / [**Next Paage**![Tier 1 Materials](../_assets/images/tinkers-next.png)](./tier_1.md)

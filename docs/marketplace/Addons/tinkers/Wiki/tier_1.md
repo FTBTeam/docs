@@ -58,4 +58,4 @@ The possibilities are endless! Experiment with these materials in the Part Build
 **Binding**
 - Holds your tools together.
 
-**Trait**: Undead
+**Trait**: Stringy
