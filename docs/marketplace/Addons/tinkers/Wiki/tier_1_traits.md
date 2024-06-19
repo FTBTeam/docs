@@ -29,4 +29,4 @@ Here are the Tier 1 Traits:
 
 [![Back](../_assets/images/tinkers-back.png) **Previous Page**](./tools.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./tool_repairs.md)
 
-[**Back to the Top**](./tier_1_traits#tier-1-traits)
+[**Back to the Top**](./tier_1_traits.md#tier-1-traits)
