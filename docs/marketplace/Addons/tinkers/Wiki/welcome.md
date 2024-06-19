@@ -1,5 +1,6 @@
 ---
 title: Welcome
+sidebar_position: 1
 ---
 
 ![The Tinkers' Construct Add-on Logo](../_assets/images/tinkers-logo.png)

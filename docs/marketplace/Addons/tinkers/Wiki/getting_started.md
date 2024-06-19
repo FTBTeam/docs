@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+sidebar_position: 2
 ---
 
 ![Getting Started](../_assets/images/tinkers-getting_started.png)
