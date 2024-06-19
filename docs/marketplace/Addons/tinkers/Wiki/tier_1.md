@@ -9,7 +9,7 @@ sidebar_position: 3
 
 The possibilities are endless! Experiment with these materials in the Part Builder to forge unique parts for your melee weapons and harvest tools.
 
-### <font color="red">Wood</font>
+### Wood
 
 **Tool Head**
 - Durabilty: 60
