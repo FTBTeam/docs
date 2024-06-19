@@ -57,6 +57,9 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/ftbteam/docs/tree/main/',
+          remarkPlugins: [
+
+          ]
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
