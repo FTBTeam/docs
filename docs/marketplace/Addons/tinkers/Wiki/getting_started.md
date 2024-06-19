@@ -9,6 +9,12 @@ sidebar_position: 2
 
 Feeling overwhelmed by the possibilities in Tinkers' Construct? Don't worry, we've got you covered! This guide is designed to be a handy companion to your in-game experience.  Each section here mirrors the informative books you'll find within the Add-on itself.
 
+Here's a list of what is covered in this section: 
+ - [**Blank Patterns**](./getting_started.md#blank-patterns)
+ - [**Stencil Table**](./getting_started.md#stencil-table)
+ - [**Part Builder**](./getting_started.md#part-builder)
+ - [**Tinkers' Station**](./getting_started.md#tinkers-station)
+
 ### Blank Patterns
 
 ![Pattern Crafting](../_assets/images/tinkers-pattern_recipe.png)
@@ -49,7 +55,7 @@ Time to turn Patterns into Parts! Here's how:
 2. Use the in-game crafting guide to find the desired tool part.
 3. Select the corresponding soft material and Pattern from your inventory.
 
-### Part Builder
+### Tinkers Station
 
 ![Tinkers' Station Crafting](../_assets/images/tinkers-tinkers_station_recipe.png)
 
@@ -73,3 +79,5 @@ While advanced modifications aren't available in the current version, keep your 
 
 
 [![Back](../_assets/images/tinkers-back.png) **Previous Page**](./welcome.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./tier_1.md)
+
+[**Back to the Top**](./getting_started.md#getting-started)

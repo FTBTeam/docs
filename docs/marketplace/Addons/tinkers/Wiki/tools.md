@@ -1,5 +1,5 @@
 ---
-title: Tier 1 Materials
+title: Tools
 sidebar_position: 4
 ---
 
@@ -90,3 +90,5 @@ Not only does it function as the ultimate defense against mobs, but its legendar
 *Requires the Tinkers' Anvil to craft.*
 
 [![Back](../_assets/images/tinkers-back.png) **Previous Page**](./tier_1.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./tier_1_traits.md)
+
+[**Back to the Top**](./tools.md#tools)

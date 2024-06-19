@@ -65,3 +65,5 @@ The possibilities are endless! Experiment with these materials in the Part Build
 **Trait**: Stringy
 
 [![Back](../_assets/images/tinkers-back.png) **Previous Page**](./getting_started.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./tools.md)
+
+[**Back to the Top**](./tier_1.md#tier-1-materials)

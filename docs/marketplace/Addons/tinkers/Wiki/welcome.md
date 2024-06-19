@@ -28,3 +28,5 @@ But it's not just about bashing things. Tinkers' Construct throws in a whole new
 While it's not a perfect copy of the original Java mod, it keeps the core ideas that make Tinkers' Construct awesome.  Get ready to craft, fight, and explore in a whole new way!
 
 Continue to the [**Getting Started**](./getting_started.md) Page to learn more.
+
+[**Back to the Top**](./welcome.md#tinkers-construct-add-on-wiki)
