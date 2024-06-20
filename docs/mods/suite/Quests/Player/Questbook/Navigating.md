@@ -2,6 +2,14 @@
 title: Navigating the questbook
 ---
 
+## Key References
+FTB Quests has a number of keyboard shortcuts that can help you quickly navigate the questbook such as <kbd>Ctrl</kbd> + <kbd>F</kbd>
+to quickly find a quest.
+
+You can view a full list of key references by opening the quest book then clicking on the `i` icon in the top right of the screen.
+
+SCREENSHOT/GIF
+
 ## Showing the chapter list
 Moving your mouse cursor to the left of the screen will open the questbook chapter list. Clicking on a chapter will show you the quests available in that chapter.
 
@@ -27,4 +35,8 @@ You can also click on the task to view the crafting recipe.
 SCREENSHOT/GIF
 
 ## Completing a quest
-Once you have completed all the tasks in a quest the questbook
+Once you have completed all the tasks for a quest, you will get a notification in the top right of the screen and an `!` will appear on the questbook icon in your inventory screen.
+
+When you open the questbook the chapter the quest is in will also have an `!` along with the specific quest that was completed
+
+SCREENSHOTs show the different places the `!` can be
