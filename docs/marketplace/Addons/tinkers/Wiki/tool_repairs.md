@@ -34,15 +34,15 @@ Repairing Tools in Tinkers' Construct: A Step-by-Step Guide
 
 3. Click anywhere to use the repair kit. This will automatically move it to your off-hand.
 
-![Repair Kit Off-hand](../_assets/images/tinkers-repair_kit_offhand.png)
-
 4. Equip the tool you want to repair in your main hand.
 
 5. Click anywhere again while holding the tool. 
 
 This will consume the repair kit and restore the durability of your tool.
 
-Tip: You can check the durability of your tool by hovering over it in your inventory. Aim to repair your tools before they break completely for optimal efficiency.
+*Additionally, helpful notifications will appear as your tool's durability drops, warning you when it reaches 25, 10 and 1 durability remaining. Aim to repair your tools before they break completely.*
+
+![Repair Kit Off-hand](../_assets/images/tinkers-repair_kit_offhand.png)
 
 [![Back](../_assets/images/tinkers-back.png) **Previous Page**](./tier_1_traits.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./tool_repairs.md)
 
