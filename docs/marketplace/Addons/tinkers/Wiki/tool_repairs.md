@@ -44,6 +44,6 @@ This will consume the repair kit and restore the durability of your tool.
 
 ![Repair Kit Off-hand](../_assets/images/tinkers-repair_kit_offhand.png)
 
-[![Back](../_assets/images/tinkers-back.png) **Previous Page**](./tier_1_traits.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./tool_repairs.md)
+[![Back](../_assets/images/tinkers-back.png) **Previous Page**](./tier_1_traits.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./melting_and_more.md)
 
 [**Back to the Top**](./tool_repairs.md#tool-repairs)

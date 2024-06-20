@@ -1,6 +1,6 @@
 ---
 title: Melting & More
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 ![Melting & More](../_assets/images/tinkers-melting_&_more.png)
@@ -81,4 +81,4 @@ Seared Bricks in a Flash:
 
 [![Back](../_assets/images/tinkers-back.png) **Previous Page**](./tool_repairs.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./melter.md)
 
-[**Back to the Top**](./melting_and_more.md)
+[**Back to the Top**](./melting_and_more.md#melting--more)
