@@ -1,5 +1,6 @@
 ---
 title: Navigating the questbook
+sidebar_position: 2
 ---
 
 ## Key References
@@ -34,7 +35,12 @@ You can also click on the task to view the crafting recipe.
 
 SCREENSHOT/GIF
 
-## Completing a quest
+## Pinning a quest
+You can pin a quest so that the quest is always visible to you by opening the quest you want to track the progress of and then clicking on the pin icon
+
+SCREENSHOT
+
+## Completing a quest and claiming rewards
 Once you have completed all the tasks for a quest, you will get a notification in the top right of the screen and an `!` will appear on the questbook icon in your inventory screen.
 
 When you open the questbook the chapter the quest is in will also have an `!` along with the specific quest that was completed
