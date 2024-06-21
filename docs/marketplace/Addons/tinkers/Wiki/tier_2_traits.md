@@ -27,6 +27,6 @@ Here are the Tier 1 Traits:
 ### Experienced
 - Increases the amount of experience you get from defeating mobs and mining ores.
 
-[![Back](../_assets/images/tinkers-back.png) **Previous Page**](./tier_2.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./tier_2_traits.md)
+[![Back](../_assets/images/tinkers-back.png) **Previous Page**](./tier_2.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./tinkers_anvil.md)
 
 [**Back to the Top**](./tier_2_traits.md#tier-2-traits)
