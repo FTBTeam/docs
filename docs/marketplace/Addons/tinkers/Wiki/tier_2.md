@@ -3,7 +3,7 @@ title: Tier 2 Materials
 sidebar_position: 12
 ---
 
-![Tier 2 Materials](../_assets/images/tinkers-tier_2.png)
+![Tier 2 Materials](../_assets/images/tinkers-tier_2_materials.png)
 
 ## Tier 1 Materials
 

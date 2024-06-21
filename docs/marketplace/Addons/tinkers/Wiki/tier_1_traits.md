@@ -3,7 +3,7 @@ title: Tier 1 Traits
 sidebar_position: 5
 ---
 
-![Tools](../_assets/images/tinkers-tier_1_traits.png)
+![Tier 1 Traits](../_assets/images/tinkers-tier_1_traits.png)
 
 ## Tier 1 Traits
 
