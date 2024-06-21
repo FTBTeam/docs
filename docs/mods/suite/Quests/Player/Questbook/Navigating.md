@@ -1,10 +1,10 @@
 ---
-title: Navigating the questbook
+title: Navigating the Quest Book
 sidebar_position: 2
 ---
 
 ## Key References
-FTB Quests has a number of keyboard shortcuts that can help you quickly navigate the questbook such as <kbd>Ctrl</kbd> + <kbd>F</kbd>
+FTB Quests has a number of keyboard shortcuts that can help you quickly navigate the quest book such as <kbd>Ctrl</kbd> + <kbd>F</kbd>
 to quickly find a quest.
 
 You can view a full list of key references by opening the quest book then clicking on the `i` icon in the top right of the screen.
@@ -12,7 +12,7 @@ You can view a full list of key references by opening the quest book then clicki
 SCREENSHOT/GIF
 
 ## Showing the chapter list
-Moving your mouse cursor to the left of the screen will open the questbook chapter list. Clicking on a chapter will show you the quests available in that chapter.
+Moving your mouse cursor to the left of the screen will open the quest book chapter list. Clicking on a chapter will show you the quests available in that chapter.
 
 SCREENSHOT
 
@@ -41,8 +41,8 @@ You can pin a quest so that the quest is always visible to you by opening the qu
 SCREENSHOT
 
 ## Completing a quest and claiming rewards
-Once you have completed all the tasks for a quest, you will get a notification in the top right of the screen and an `!` will appear on the questbook icon in your inventory screen.
+Once you have completed all the tasks for a quest, you will get a notification in the top right of the screen and an `!` will appear on the quest book icon in your inventory screen.
 
-When you open the questbook the chapter the quest is in will also have an `!` along with the specific quest that was completed
+When you open the quest book the chapter the quest is in will also have an `!` along with the specific quest that was completed
 
 SCREENSHOTs show the different places the `!` can be
