@@ -1,5 +1,5 @@
 ---
-title: Command Index
+title: Commands
 sidebar_position: 1
 ---
 
