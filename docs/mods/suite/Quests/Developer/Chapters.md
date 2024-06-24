@@ -1,10 +1,9 @@
 ---
-title: Chapters
+title: Creating Chapters
+sidebar_position: 2
 ---
 
 ## Creating Chapters
-
-At least 1 chapter is required for a quest to be created.
 
 To create a chapter, expand the sidebar on the left and click on the green `+` button, this will open a menu where you can either create a new chapter or chapter group.
 
