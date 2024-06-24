@@ -9,7 +9,7 @@ sidebar_position: 12
 
 Materials have special abilities called traits.
 
-Here are the Tier 1 Traits: 
+Here are the Tier 2 Traits: 
  - [**Magnetic**](./tier_2_traits.md#magnetic)
  - [**Speed**](./tier_2_traits.md#speed)
  - [**Tasty**](./tier_2_traits.md#tasty)

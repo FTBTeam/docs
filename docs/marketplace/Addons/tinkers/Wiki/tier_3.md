@@ -9,7 +9,7 @@ sidebar_position: 16
 
 Use these materials to craft parts for your melee weapons and harvest tools!
 
-Here's all the Tier 2 Materials: 
+Here's all the Tier 3 Materials: 
  - [**Amethyst Bronze**](./tier_3.md#amethyst-bronze)
  - [**Diamond**](./tier_3.md#diamond)
  - [**Cobalt**](./tier_3.md#cobalt)
