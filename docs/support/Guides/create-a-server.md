@@ -5,7 +5,7 @@ description: Detailed guide on how to create a Minecraft Server for any FTB Modp
 
 # Create your own server for any FTB Modpack
 
-Creating a server for an FTB Modpack is a little different from most other Modpack providers. To help you through these differences we've outlined each step in detail below.
+Creating a server for an FTB modpack is a little different from most other modpack providers. To help you through these differences we've outlined each step in detail below.
 
 :::tip Disclaimer
 This guide is only intended to show you how to download the files required to setup a Minecraft server for an FTB modpack. This guide will not help you run a Minecraft Server. There are many other guides out there on how to do this.
@@ -13,11 +13,11 @@ This guide is only intended to show you how to download the files required to se
 
 ## Downloading the server files
 
-Unlike other providers, FTB ships a single binary file (executable) that contains a system that can download, update, and extract out all the Modpack files from our servers.
+Unlike other providers, FTB ships a single binary file (executable) that contains a system that can download, update, and extract out all the modpack files from our servers.
 
-This tool is called the `Server Installer` and each Modpack has one on it's modpack's page.
+This tool is called the `Server Installer` and each modpack has one on it's modpack's page.
 
-For the reminder of this guide, we're going to use `FTB StoneBlock 3` Modpack from FTB as the Modpack we're going to setup a server for.
+For the reminder of this guide, we're going to use `FTB StoneBlock 3` modpack from FTB as the modpack we're going to setup a server for.
 
 ### Locating the Server files
 
