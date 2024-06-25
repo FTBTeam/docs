@@ -9,20 +9,20 @@ to quickly find a quest.
 
 You can view a full list of key references by opening the quest book then clicking on the `i` icon in the top right of the screen.
 
-SCREENSHOT/GIF
+![Key References](../../../../_assets/images/quests/key-reference.webp)
 
 ## Showing the chapter list
 Moving your mouse cursor to the left of the screen will open the quest book chapter list. Clicking on a chapter will show you the quests available in that chapter.
 
-SCREENSHOT
+![Chapter sidebar minimized](../../../../_assets/images/quests/chapter-sidebar-min.webp)
 
 You can also 'pin' the chapter list open by clicking the pin icon in the top left of the screen. This will keep the chapter list open even when you move your mouse away from it.
 
-SCREENSHOT
+![Pin chapter sidebar](../../../../_assets/images/quests/chapter-sidebar-pin.webp)
 
 ## Moving around the quests
 Sometimes there may be a lot of quests in a single chapter. You can move around the quests by clicking and holding your left mouse button on an empty area of the quest screen
-and dragging it around. You can also use the scroll wheel on your mouse to zoom in and out on an area of the quest screen.
+and dragging it around. For a full list of way to navigate the quest book, see the key references above.
 
 SCREENSHOT/GIF
 
