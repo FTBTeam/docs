@@ -31,7 +31,7 @@ To open a quest, simply click on the quest you would like to view. This will the
 
 SCREENSHOT
 
-You can also click on the task to view the crafting recipe.
+You can also click on the task to view the crafting recipe or any other extra information about the task.
 
 SCREENSHOT/GIF
 
