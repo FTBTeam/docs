@@ -28,7 +28,7 @@ Right, now that's out of the way, here are the steps to locate the server files.
 
 You should now be on a page that looks like this
 
-![The FTB Website on the StoneBlock 3 website page](../_assets/images/ftb-website-modpack-page.webp)
+![The FTB Website on the StoneBlock 3 website page](../../_assets/images/ftb-website-modpack-page.webp)
 
 - Next, select Versions in the tabs under the Modpack name
 - Then under selected version, select the version you need a Minecraft server for.
@@ -36,7 +36,7 @@ You should now be on a page that looks like this
 - Under the selected version, you'll see a big heading tilted `Server Files`
 - Select the option that is correct for your operating system. We provide both ARM and Intel/AMD binaries.
 
-![The FTB website focused on the server files section](../_assets/images/ftb-website-modpack-version-selection.webp)
+![The FTB website focused on the server files section](../../_assets/images/ftb-website-modpack-version-selection.webp)
 
 Now you have this downloaded, we can move onto how to use the server installer
 
