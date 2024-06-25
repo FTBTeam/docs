@@ -5,7 +5,7 @@ sidebar_position: 1
 
 ## Guides
 
-- [Create your own server](/docs/support/Guides/create-a-server)
+- [Create your own server](/docs/support/Guides/Server/index.md)
 
 ## Troubleshooting
 
