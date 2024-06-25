@@ -24,21 +24,21 @@ You can also 'pin' the chapter list open by clicking the pin icon in the top lef
 Sometimes there may be a lot of quests in a single chapter. You can move around the quests by clicking and holding your left mouse button on an empty area of the quest screen
 and dragging it around. For a full list of way to navigate the quest book, see the key references above.
 
-SCREENSHOT/GIF
+![Moving around the quest book](../../../../_assets/images/quests/moving-around-quests.webp)
 
 ## Opening a quest
 To open a quest, simply click on the quest you would like to view. This will then open a new window with the details of the quests, which includes the quest description, tasks, and rewards.
 
-SCREENSHOT
+![Opening a quest](../../../../_assets/images/quests/opening-a-quest.webp)
 
 You can also click on the task to view the crafting recipe or any other extra information about the task.
 
-SCREENSHOT/GIF
+![Viewing a task](../../../../_assets/images/quests/viewing-a-task.webp)
 
 ## Pinning a quest
 You can pin a quest so that the quest is always visible to you by opening the quest you want to track the progress of and then clicking on the pin icon
 
-SCREENSHOT
+![Pinning a quest](../../../../_assets/images/quests/pinning-a-quest.webp)
 
 ## Completing a quest and claiming rewards
 Once you have completed all the tasks for a quest, you will get a notification in the top right of the screen and an `!` will appear on the quest book icon in your inventory screen.
@@ -46,3 +46,5 @@ Once you have completed all the tasks for a quest, you will get a notification i
 When you open the quest book the chapter the quest is in will also have an `!` along with the specific quest that was completed
 
 SCREENSHOTs show the different places the `!` can be
+
+### Claiming reward
