@@ -17,9 +17,12 @@ There is also a quest book item that you can craft and use to open the quest boo
 
 If you are playing a modpack that does not have any quests added to it the quest book will be empty.
 
-SCREENSHOT
+![Empty quest book](../../../../_assets/images/quests/empty-questbook.png)
 
-On modpacks that have quests such as FTB University, you will see a list of chapters on the left side of the screen. Clicking on a chapter will show you the quests that are available in that chapter.
+On modpacks that have quests such as FTB NeoTech, you will see a list of chapters on the left side of the screen. Clicking on a chapter will show you the quests that are available in that chapter.
+
+:::tip
 Some quests and chapters may be hidden until you complete other quests or chapters first.
+:::
 
-SCREENSHOT
+![Quest book with chapters](../../../../_assets/images/quests/questbook-chapters.webp)
