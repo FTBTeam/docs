@@ -9,9 +9,11 @@ The quest book is a simple and easy-to-use way to track your progress in the gam
 
 You can open the quest book by opening your inventory and clicking on the book icon in the top left of the screen. This will open the quest book interface, where you can see all of the quests and chapters that are available.
 
+![Opening the quest book](../../../../_assets/images/quests/opening-questbook-inv.webp)
+
 There is also a quest book item that you can craft and use to open the quest book interface.
 
-SCREENSHOT
+![Quest book item](../../../../_assets/images/quests/questbook-item.webp)
 
 If you are playing a modpack that does not have any quests added to it the quest book will be empty.
 
