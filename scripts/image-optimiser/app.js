@@ -68,7 +68,7 @@ for (const image of images) {
                 nearLossless: true,
             })
             .toFile(fileOut)
-    }else{
+    } else {
         data = await imageSharp
             .webp({ nearLossless: true, quality: 70  })
             .toFile(fileOut)
