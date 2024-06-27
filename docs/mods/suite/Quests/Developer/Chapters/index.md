@@ -9,11 +9,11 @@ To create a chapter, expand the sidebar on the left and click on the green `+` b
 
 A chapter group is a way to organize your chapters into categories, for example, you could have a chapter group called "Introduction" and then have all of your introductory chapters inside that group.
 
-![Creating a chapter](../../../_assets/images/quests/creating-a-chapter.webp)
+![Creating a chapter](../../../../_assets/images/quests/creating-a-chapter.webp)
 
 Once the chapter is created, you can right-click on it to open the chapter options menu where you can choose to move the chapter up or down and edit the chapter settings.
 
-![Chapter options menu](../../../_assets/images/quests/chapter-rightclick.png)
+![Chapter options menu](../../../../_assets/images/quests/chapter-rightclick.png)
 
 ## Editing Chapter Settings
 
