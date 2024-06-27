@@ -13,7 +13,7 @@ For details on creating a chapter, see the [Chapters](../Chapters/index.md) page
 To create a quest, right anywhere in the blank space of the quest book and select the type of quest you want to create.
 A detailed explanation of the different quest types can be found on the [Quest Types](./Types.md) page.
 
-SCREENSHOT
+![Create Quest](../../../../_assets/images/quests/create-a-quest.gif)
 
 After selecting the type of quest you want to create you will be asked to select/enter some intial settings for the quest such
 selecting an item needed to complete the quest or how much XP levels the player needs to collect.
