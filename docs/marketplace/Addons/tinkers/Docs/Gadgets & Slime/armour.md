@@ -11,9 +11,9 @@ Tinkers' adds new slimes into your world! Each boasts unique properties to eleva
 Dive in, discover their slimy secrets, and harness their power for tinkering triumphs!
 
 Here's the you can find: 
- - [**Earth Slime Sling**](#earth-slime-sling)
- - [**Sky Slime Sling**](#sky-slime-sling)
- - [**Scarlet Slime Sling**](#scarlet-slime-sling)
+ - [**Travelers Armour**](#travelers-armour)
+ - [**Plate Armour**](#plate-armour)
+ - [**Slime Armour**](#slime-armour)
 
 
 ### Travelers Armour
