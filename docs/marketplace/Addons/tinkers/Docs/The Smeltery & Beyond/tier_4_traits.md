@@ -3,7 +3,7 @@ title: Tier 4 Traits
 sidebar_position: 19
 ---
 
-![Tier 4 Materials](../_assets/images/tinkers-tier_4_traits.png)
+![Tier 4 Materials](../../_assets/images/tinkers-tier_4_traits.png)
 
 ## Tier 4 Traits
 
@@ -22,7 +22,3 @@ Here are the Tier 4 Traits:
 
 **Guarding**
 - Stand your ground! This trait absorbs the force of blows, keeping you steady in combat.
-
-[![Back](../_assets/images/tinkers-back.png) **Previous Page**](./tier_4.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./gadgetry.md)
-
-[**Back to the Top**](./tier_4_traits.md#tier-4-traits)

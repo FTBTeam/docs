@@ -3,11 +3,11 @@ title: The Melter
 sidebar_position: 8
 ---
 
-![The Melter](../_assets/images/tinkers-melter.png)
+![The Melter](../../_assets/images/tinkers-melter.png)
 
 ## The Melter
 
-![Melter Recipes](../_assets/images/tinkers-melter_crafting.png)
+![Melter Recipes](../../_assets/images/tinkers-melter_crafting.png)
 
 This is your basic Melter, perfect for getting started with simple tasks.
 
@@ -23,14 +23,10 @@ The fuel will slowly go down over time, A bar shows how much fuel remains.
 **Melt Some Ore:**
 While fueled, interact with raw ore (like iron), and Watch as the molten metal fills the tank!
 
-![Melter Image](../_assets/images/tinkers-melter_image.png)
+![Melter Image](../../_assets/images/tinkers-melter_image.png)
 
 *The Melter is restriced to using tier 2 Materials;*
 - Iron
 - Gold
 - Pig Iron
 - Rose Gold
-
-[![Back](../_assets/images/tinkers-back.png) **Previous Page**](./melting_and_more.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./moving_liquids.md)
-
-[**Back to the Top**](./melter.md#the-melter)

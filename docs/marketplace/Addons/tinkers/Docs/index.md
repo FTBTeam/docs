@@ -1,11 +1,11 @@
 ---
-title: Welcome
+title: Docs
 sidebar_position: 1
 ---
 
 ![The Tinkers' Construct Add-on Logo](../_assets/images/tinkers-logo.png)
  
-## **Tinkers' Construct Add-on Wiki**
+## **Tinkers' Construct Add-on**
 
 This wiki is your one-stop shop for all things **Tinkers' Construct for Minecraft Bedrock (Marketplace)** Dive deep into crafting unique tools, weapons, and gadgets to enhance your Minecraft experience.
 
@@ -26,7 +26,3 @@ But it's not just about bashing things. Tinkers' Construct throws in a whole new
 *FTB* brought all this goodness to the **Bedrock Edition** of Minecraft, so console and mobile players can join the fun.  
 
 While it's not a perfect copy of the original Java mod, it keeps the core ideas that make Tinkers' Construct awesome.  Get ready to craft, fight, and explore in a whole new way!
-
-Continue to the [**Getting Started**](./getting_started.md) Page to learn more.
-
-[**Back to the Top**](./welcome.md#tinkers-construct-add-on-wiki)

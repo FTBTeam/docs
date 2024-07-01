@@ -3,7 +3,7 @@ title: Tier 1 Traits
 sidebar_position: 5
 ---
 
-![Tier 1 Traits](../_assets/images/tinkers-tier_1_traits.png)
+![Tier 1 Traits](../../_assets/images/tinkers-tier_1_traits.png)
 
 ## Tier 1 Traits
 
@@ -26,7 +26,3 @@ Here are the Tier 1 Traits:
 
 ### Undead 
 - Striking undead mobs like zombies and husks transforms them into skeletons. Additionally, all defeated mobs now drop bones and bonemeal.
-
-[![Back](../_assets/images/tinkers-back.png) **Previous Page**](./tools.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./tool_repairs.md)
-
-[**Back to the Top**](./tier_1_traits.md#tier-1-traits)

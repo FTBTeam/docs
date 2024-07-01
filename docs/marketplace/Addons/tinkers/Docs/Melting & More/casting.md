@@ -3,7 +3,7 @@ title: Casting
 sidebar_position: 10
 ---
 
-![Casting](../_assets/images/tinkers-casting.png)
+![Casting](../../_assets/images/tinkers-casting.png)
 
 ## Casting
 
@@ -11,20 +11,20 @@ Now you've gotten your metals nice and melted, and you know how to handle it saf
 
 Now. The fun part: Casting it into some useful tool parts!
 
-- [**Casting Table**](./casting.md#casting-table)
-- [**Sand Casts**](./casting.md#sand-casts)
-- [**Gold Casts**](./casting.md#gold-casts)
-- [**Casting Basin**](./casting.md#casting-basin)
+- [**Casting Table**](#casting-table)
+- [**Sand Casts**](#sand-casts)
+- [**Gold Casts**](#gold-casts)
+- [**Casting Basin**](#casting-basin)
 
 ### Casting Table
 
-![Casting Table Recipe](../_assets/images/tinkers-casting_table_recipe.png)
+![Casting Table Recipe](../../_assets/images/tinkers-casting_table_recipe.png)
 
 To craft tool parts for your weapons and tools in Tinkers' Construct, you'll need to use a Casting Table.
 
 ### Sand Casts
 
-![Sand Cast Recipe](../_assets/images/tinkers-sand_cast_recipe.png)
+![Sand Cast Recipe](../../_assets/images/tinkers-sand_cast_recipe.png)
 
 Creating a Tool Part with Casting:
 
@@ -40,7 +40,7 @@ Creating a Tool Part with Casting:
 
 6. **Cool and Obtain Tool Part:** Let the metal cool down. Once cooled, interact with the Casting Table to remove and obtain your newly created tool part.
 
-![Sand Cast Demo](../_assets/images/tinkers-sand_cast_demo.png)
+![Sand Cast Demo](../../_assets/images/tinkers-sand_cast_demo.png)
 
 *Note: The Sand Cast will be consumed during this process and cannot be reused.*
 
@@ -48,7 +48,7 @@ Creating a Tool Part with Casting:
 
 ### Gold Casts
 
-![Gold Cast Recipe](../_assets/images/tinkers-gold_cast_recipe.png)
+![Gold Cast Recipe](../../_assets/images/tinkers-gold_cast_recipe.png)
 
 The casting table lets you make reusable gold molds! Here's how:
 
@@ -66,10 +66,6 @@ The casting table lets you make reusable gold molds! Here's how:
 
 The Casting Basin is your one-stop shop for creating solid blocks. 
 
-![Casting Basin Recipe](../_assets/images/tinkers-casting_basin_recipe.png)
+![Casting Basin Recipe](../../_assets/images/tinkers-casting_basin_recipe.png)
 
 Pour in any Bucket of molten metal, and it will solidify into a full-sized block.
-
-[![Back](../_assets/images/tinkers-back.png) **Previous Page**](./moving_liquids.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./alloys.md)
-
-[**Back to the Top**](./casting.md#casting)

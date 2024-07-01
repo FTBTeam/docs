@@ -1,28 +1,28 @@
 ---
-title: The Smeltery
-sidebar_position: 14
+title: Gadgets & Slime
+sidebar_position: 20
 ---
 
-![The Smeltery](../_assets/images/tinkers-smeltery.png)
+![Gadgets & Slime](../../_assets/images/tinkers-gadgets.png)
 
-## The Smeltery
+## Gadgets & Slime
 
 The Smeltery isn't your average furnace. This multi-block beast unlocks advanced processing for your ores and materials. But unlike a simple Melter, the Smeltery requires specific components arranged just right. 
 
 Let's break down what you'll need to build your very own smelting powerhouse!
 
-- [**Smeltery Controller**](./the_smeltery.md#smeltery-controller)
-- [**Seared Tank**](./the_smeltery.md#seared-tank)
-- [**Seared Drain**](./the_smeltery.md#seared-drain)
-- [**Building the Smeltery**](./the_smeltery.md#building-the-smeltery)
-- [**Using the Seared Tank**](./the_smeltery.md#using-the-seared-tank)
-- [**Using the Smeltery Controller**](./the_smeltery.md#using-the-smeltery-controller)
-- [**Using the Seared Drain**](./the_smeltery.md#using-the-seared-drain)
-- [**Final Notes**](./the_smeltery.md#using-the-smeltery-final-notes)
+- [**Smeltery Controller**](#smeltery-controller)
+- [**Seared Tank**](#seared-tank)
+- [**Seared Drain**](#seared-drain)
+- [**Building the Smeltery**](#building-the-smeltery)
+- [**Using the Seared Tank**](#using-the-seared-tank)
+- [**Using the Smeltery Controller**](#using-the-smeltery-controller)
+- [**Using the Seared Drain**](#using-the-seared-drain)
+- [**Final Notes**](#using-the-smeltery-final-notes)
 
 ### Smeltery Controller
 
-![Smeltery Controller Recipe](../_assets/images/tinkers-smeltery_controller_recipe.png)
+![Smeltery Controller Recipe](../../_assets/images/tinkers-smeltery_controller_recipe.png)
 
 **Crafting a Smeltery Controller**
 
@@ -34,7 +34,7 @@ Let's break down what you'll need to build your very own smelting powerhouse!
 
 *Once cooled, the Seared Brick Block will have transformed into a Smeltery Controller. and you can revove it from the Basin*
 
-![Smeltery Controller Demo](../_assets/images/tinkers-smeltery_controller_demo.png)
+![Smeltery Controller Demo](../../_assets/images/tinkers-smeltery_controller_demo.png)
 
 **Bring Your Smeltery to Life!**
 
@@ -44,7 +44,7 @@ With your Smeltery Controller crafted, it's time to set the stage for your new m
 
 ### Seared Tank
 
-![Seared Tank Recipe](../_assets/images/tinkers-seared_tank_recipe.png)
+![Seared Tank Recipe](../../_assets/images/tinkers-seared_tank_recipe.png)
 
 Smelteries need a steady supply of heat to melt metals. That's where tanks come in! These handy containers hold the fuel, typically **Lava** or **Blazing Lava**, that keeps your smeltery running.
 
@@ -56,7 +56,7 @@ Smelteries need a steady supply of heat to melt metals. That's where tanks come 
 
 ### Seared Drain
 
-![Seared Drain Recipe](../_assets/images/tinkers-seared_Drain_recipe.png)
+![Seared Drain Recipe](../../_assets/images/tinkers-seared_Drain_recipe.png)
 
 The Seared Drain is the key to extracting all those molten metals you've been working hard to create in your smeltery.
 
@@ -76,7 +76,7 @@ Just put it there, and it will automatically connect to the smeltery controller,
 
 3. **Place the Seared Bricks:** In the chosen location (or in the hole you dug), carefully arrange your seared bricks in a 3x3 pattern.
 
-![Smeltery Stage 1](../_assets/images/tinkers-smeltery_stage_1.png)
+![Smeltery Stage 1](../../_assets/images/tinkers-smeltery_stage_1.png)
 
 4. **The Controller Takes Charge:** With your 3x3 seared brick base complete, it's time to place the Smeltery Controller. 
 
@@ -90,7 +90,7 @@ Put the Controller down, and watch it work its magic!
 
 7. **Walling It In:** Now that the core components are placed, continue building the walls of your smeltery using seared bricks. 
 
-![Smeltery Stage 2](../_assets/images/tinkers-smeltery_stage_2.png)
+![Smeltery Stage 2](../../_assets/images/tinkers-smeltery_stage_2.png)
 
 8. **Stacking Success:** Now that you have the base and core components in place, let's add another layer of seared blocks! 
 
@@ -100,19 +100,19 @@ Carefully place these blocks on top of your existing structure, creating a secon
 
 You can use any type of seared block you like, such as seared glass or seared stone.
 
-![Smeltery Stage 3](../_assets/images/tinkers-smeltery_stage_3.png)
+![Smeltery Stage 3](../../_assets/images/tinkers-smeltery_stage_3.png)
 
 9. **Capping It Off:** This is it, the final touch! Place the last layer of seared blocks on top of your second level, completing the outer frame of your smeltery.
 
 As soon as the final block is placed, poof!  The red outline will magically disappear. 
 
-![Smeltery Stage 4](../_assets/images/tinkers-smeltery_stage_4.png)
+![Smeltery Stage 4](../../_assets/images/tinkers-smeltery_stage_4.png)
 
 ***Congratulations!, your very own smeltery is now complete and ready to unleash its fiery potential!**
 
 ### Using the Seared Tank
 
-![Seared Tank Demo](../_assets/images/tinkers-seared_tank_demo.png)
+![Seared Tank Demo](../../_assets/images/tinkers-seared_tank_demo.png)
 
 With your smeltery constructed, it's time to unleash its fiery potential. 
 
@@ -124,7 +124,7 @@ Watch as the tank fills up, ready to power your smelting adventures!
 
 ### Using the Smeltery Controller
 
-![Smeltery Controller Demo](../_assets/images/tinkers-smeltery_controller_demo2.png)
+![Smeltery Controller Demo](../../_assets/images/tinkers-smeltery_controller_demo2.png)
 
 Make sure your Seared Tank is filled with lava to keep the heat on.
 
@@ -136,7 +136,7 @@ and watch as your chosen material melts.
 
 ### Using the Seared Drain
 
-![Seared Drain Demo](../_assets/images/tinkers-seared_drain_demo.png)
+![Seared Drain Demo](../../_assets/images/tinkers-seared_drain_demo.png)
 
 The drain acts as a tap for your smeltery, Here's how to use it.
 
@@ -161,7 +161,3 @@ Hold Sneak and punch the block you want to break.
 You'll receive a confirmation message to prevent accidental destruction. 
 
 *Remember, these are the main smeltery parts (Controller, Tank, Drain), so break with caution!*
-
-[![Back](../_assets/images/tinkers-back.png) **Previous Page**](./tinkers_anvil.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./the_nether.md)
-
-[**Back to the Top**](./the_smeltery.md#the-smeltery)

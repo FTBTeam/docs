@@ -3,7 +3,7 @@ title: Tools
 sidebar_position: 4
 ---
 
-![Tools](../_assets/images/tinkers-tools.png)
+![Tools](../../_assets/images/tinkers-tools.png)
 
 ## Tools
 
@@ -23,7 +23,7 @@ Here's a breakdown of the tools you can create:
 
 Dig it up with the Pickaxe!
 
-![Pickaxe Recipe](../_assets/images/tinkers-pickaxe_recipe.png)
+![Pickaxe Recipe](../../_assets/images/tinkers-pickaxe_recipe.png)
 
 The sturdy Pickaxe is your go-to tool for mining valuable ores and tough blocks like stone. 
 It's not the fanciest tool, but it gets the job done, breaking blocks with ease. 
@@ -34,7 +34,7 @@ It's not the fanciest tool, but it gets the job done, breaking blocks with ease.
 
 Chop & Defend with the Hand Axe!
 
-![Axe Recipe](../_assets/images/tinkers-axe_recipe.png)
+![Axe Recipe](../../_assets/images/tinkers-axe_recipe.png)
 
 This handy axe tackles wood and leaves, clearing paths and gathering resources. 
 Doubles as a reliable weapon, making it a versatile companion.
@@ -45,7 +45,7 @@ Doubles as a reliable weapon, making it a versatile companion.
 
 Multitasker Alert: The Shoel
 
-![Shoel Recipe](../_assets/images/tinkers-shoel_recipe.png)
+![Shoel Recipe](../../_assets/images/tinkers-shoel_recipe.png)
 
 This innovative tool combines the functionalities of a Shovel and a Hoe
 
@@ -57,7 +57,7 @@ Not only can you dig Dirt paths with ease, but you can also till the ground for 
 
 The Pocket Powerhouse: The Dagger
 
-![Dagger Recipe](../_assets/images/tinkers-dagger_recipe.png)
+![Dagger Recipe](../../_assets/images/tinkers-dagger_recipe.png)
 
 This compact weapon may be shorter than a sword, but it packs a punch in close combat. 
 
@@ -69,7 +69,7 @@ While not the strongest, the dagger is a reliable and versatile companion for an
 
 More Than Just a Weapon: The Sword
 
-![Sword Recipe](../_assets/images/tinkers-sword_recipe.png)
+![Sword Recipe](../../_assets/images/tinkers-sword_recipe.png)
 
 Sure, swords excel at vanquishing foes, but that's not all they can do! 
 
@@ -81,14 +81,10 @@ They also act as handy tools for swiftly breaking down things like bamboo and co
 
 Cleave Your Way to Victory: The Mighty Cleaver
 
-![Cleaver Recipe](../_assets/images/tinkers-cleaver_recipe.png)
+![Cleaver Recipe](../../_assets/images/tinkers-cleaver_recipe.png)
 
 This colossal cleaver isn't just for combat; it's a true warrior's multi-tool. 
 
 Not only does it function as the ultimate defense against mobs, but its legendary sharpness allows you to collect mob heads, perfect for crafting and decorating. 
 
 *Requires the Tinkers' Anvil to craft.*
-
-[![Back](../_assets/images/tinkers-back.png) **Previous Page**](./tier_1.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./tier_1_traits.md)
-
-[**Back to the Top**](./tools.md#tools)

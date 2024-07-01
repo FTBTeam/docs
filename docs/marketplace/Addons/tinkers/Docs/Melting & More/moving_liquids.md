@@ -3,19 +3,19 @@ title: Moving Liquids
 sidebar_position: 9
 ---
 
-![Moving Liquids](../_assets/images/tinkers-moving_liquids.png)
+![Moving Liquids](../../_assets/images/tinkers-moving_liquids.png)
 
 ## Moving Liquids
 
 You've got the hang of melting, Tinker! Now, the burning question: how do we get that molten metal out of there?
 
-![Cans and Melter](../_assets/images/tinkers-cans_and_melter.png)
+![Cans and Melter](../../_assets/images/tinkers-cans_and_melter.png)
 
 ### Iron and Copper Cans
 
 Need to transport, store, or pour your freshly melted liquids? 
 
-![Cans Recipe](../_assets/images/tinkers-cans_recipe.png)
+![Cans Recipe](../../_assets/images/tinkers-cans_recipe.png)
 
 Look no further than Iron & Copper Cans!
 
@@ -29,10 +29,6 @@ However, **Copper Cans** hold one-fifth the volume of a bucket, offering a conve
 
 For larger volumes of molten liquids, consider using **Buckets**.
  
-![Bucket Recipe](../_assets/images/tinkers-bucket_recipe.png)
+![Bucket Recipe](../../_assets/images/tinkers-bucket_recipe.png)
 
 They offer a generous *1000mB* of capacity, making them four times larger than copper cans.
-
-[![Back](../_assets/images/tinkers-back.png) **Previous Page**](./melter.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./casting.md)
-
-[**Back to the Top**](./moving_liquids.md#moving-liquids)

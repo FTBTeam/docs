@@ -3,7 +3,7 @@ title: Tool Repairs
 sidebar_position: 6
 ---
 
-![Tools](../_assets/images/tinkers-tool_repairs.png)
+![Tools](../../_assets/images/tinkers-tool_repairs.png)
 
 ## Tool Repairs
 
@@ -16,13 +16,13 @@ Here are the Tier 1 Traits:
 
 ### Repair Kits
 
-![Repair Kit Recipe](../_assets/images/tinkers-repair_kit_recipe.png)
+![Repair Kit Recipe](../../_assets/images/tinkers-repair_kit_recipe.png)
 
 Use tool repair kits to restore the health of your weapons and tools.
 
 *Use the Part Builder to craft these low tier kits*
 
-![Repair Kit in Part Builder](../_assets/images/tinkers-repair_kit_part_builder.png)
+![Repair Kit in Part Builder](../../_assets/images/tinkers-repair_kit_part_builder.png)
 
 ### Repairing Tools
 
@@ -42,8 +42,4 @@ This will consume the repair kit and restore the durability of your tool.
 
 *Additionally, helpful notifications will appear as your tool's durability drops, warning you when it reaches 25, 10 and 1 durability remaining. Aim to repair your tools before they break completely.*
 
-![Repair Kit Off-hand](../_assets/images/tinkers-repair_kit_offhand.png)
-
-[![Back](../_assets/images/tinkers-back.png) **Previous Page**](./tier_1_traits.md) / [**Next Page** ![Next](../_assets/images/tinkers-next.png)](./melting_and_more.md)
-
-[**Back to the Top**](./tool_repairs.md#tool-repairs)
+![Repair Kit Off-hand](../../_assets/images/tinkers-repair_kit_offhand.png)
