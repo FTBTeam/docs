@@ -9,6 +9,8 @@ sidebar_position: 2
 
 Feeling overwhelmed by the possibilities in Tinkers' Construct? Don't worry, we've got you covered! This guide is designed to be a handy companion to your in-game experience.  Each section here mirrors the informative books you'll find within the Add-on itself.
 
+![Selena](../../_assets/images/tinkers-selena.png)
+
 Here's a list of what is covered in this section: 
  - [**Blank Patterns**](#blank-patterns)
  - [**Stencil Table**](#stencil-table)

@@ -9,6 +9,8 @@ sidebar_position: 7
 
 Level up your Tinkering skills! You've mastered the basics, now get ready to craft amazing things;
 
+![Thruul](../../_assets/images/tinkers-thruul.png)
+
 - [**Grout and Seared Bricks**](#grout-and-seared-bricks)
 - [**Seared Blocks**](#seared-blocks)
     - [**Seared Brick**](#seared-brick)

@@ -9,6 +9,8 @@ sidebar_position: 14
 
 The Smeltery isn't your average furnace. This multi-block beast unlocks advanced processing for your ores and materials. But unlike a simple Melter, the Smeltery requires specific components arranged just right. 
 
+![Thruul](../../_assets/images/tinkers-thruul-2.png)
+
 Let's break down what you'll need to build your very own smelting powerhouse!
 
 - [**Smeltery Controller**](#smeltery-controller)
