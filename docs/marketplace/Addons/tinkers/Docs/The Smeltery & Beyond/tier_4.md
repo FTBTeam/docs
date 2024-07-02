@@ -7,7 +7,7 @@ sidebar_position: 18
 
 ## Tier 4 Materials
 
-Blaze Lava is required for tier 4 smelting swap to [**Blaze Lava**](../the_nether.md#blazing-lava) for these tougher materials.
+Blaze Lava is required for tier 4 smelting swap to [**Blaze Lava**](./the_nether.md#blazing-lava) for these tougher materials.
 
 Use these materials to craft parts for your melee weapons and harvest tools!
 
