@@ -3,7 +3,7 @@ title: Docs
 sidebar_position: 1
 ---
 
-![The Tinkers' Construct Add-on Logo](../_assets/images/tinkers-logo.png)
+![The Tinkers' Construct Add-on Logo](../_assets/images/tinkers-logo.webp)
  
 ## **Tinkers' Construct Add-on**
 
@@ -15,7 +15,7 @@ This wiki focuses specifically on content found in the add-on for the Marketplac
 
 Thats easy! you can get it [**Here**](https://go.ftb.team/tinkers-addon) from the Minecraft Marketplace. for 🪙990 Minecoins
 
-![Lots of Tools!](../_assets/images/tinkers-screenshot-1.jpg)
+![Lots of Tools!](../_assets/images/tinkers-screenshot-1.webp)
 
 ### What is Tinkers' Construct?
 

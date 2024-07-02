@@ -36,7 +36,7 @@ Let's break down what you'll need to build your very own smelting powerhouse!
 
 *Once cooled, the Seared Brick Block will have transformed into a Smeltery Controller. and you can revove it from the Basin*
 
-![Smeltery Controller Demo](../../_assets/images/tinkers-smeltery_controller_demo.png)
+![Smeltery Controller Demo](../../_assets/images/tinkers-smeltery_controller_demo.webp)
 
 **Bring Your Smeltery to Life!**
 
@@ -114,7 +114,7 @@ As soon as the final block is placed, poof!  The red outline will magically disa
 
 ### Using the Seared Tank
 
-![Seared Tank Demo](../../_assets/images/tinkers-seared_tank_demo.png)
+![Seared Tank Demo](../../_assets/images/tinkers-seared_tank_demo.webp)
 
 With your smeltery constructed, it's time to unleash its fiery potential. 
 
@@ -126,7 +126,7 @@ Watch as the tank fills up, ready to power your smelting adventures!
 
 ### Using the Smeltery Controller
 
-![Smeltery Controller Demo](../../_assets/images/tinkers-smeltery_controller_demo2.png)
+![Smeltery Controller Demo](../../_assets/images/tinkers-smeltery_controller_demo2.webp)
 
 Make sure your Seared Tank is filled with lava to keep the heat on.
 
@@ -138,7 +138,7 @@ and watch as your chosen material melts.
 
 ### Using the Seared Drain
 
-![Seared Drain Demo](../../_assets/images/tinkers-seared_drain_demo.png)
+![Seared Drain Demo](../../_assets/images/tinkers-seared_drain_demo.webp)
 
 The drain acts as a tap for your smeltery, Here's how to use it.
 

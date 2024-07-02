@@ -22,7 +22,7 @@ Use tool repair kits to restore the health of your weapons and tools.
 
 *Use the Part Builder to craft these low tier kits*
 
-![Repair Kit in Part Builder](../../_assets/images/tinkers-repair_kit_part_builder.png)
+![Repair Kit in Part Builder](../../_assets/images/tinkers-repair_kit_part_builder.webp)
 
 ### Repairing Tools
 
@@ -42,4 +42,4 @@ This will consume the repair kit and restore the durability of your tool.
 
 *Additionally, helpful notifications will appear as your tool's durability drops, warning you when it reaches 25, 10 and 1 durability remaining. Aim to repair your tools before they break completely.*
 
-![Repair Kit Off-hand](../../_assets/images/tinkers-repair_kit_offhand.png)
+![Repair Kit Off-hand](../../_assets/images/tinkers-repair_kit_offhand.webp)

@@ -21,7 +21,7 @@ Here's the Beans you can find:
 
 ### Earth Slime Bean
 
-![Earth Slime Beans](../../_assets/images/tinkers-earth_slime_beans.png)
+![Earth Slime Beans](../../_assets/images/tinkers-earth_slime_beans.webp)
 
 The Earthslime Bean can be found hidden within Tall Grass.
 
@@ -29,7 +29,7 @@ Once planted on Grass an Earthslime Bean sprout will emerge from the ground that
 
 ### Terracube Bean
 
-![Terracube Beans](../../_assets/images/tinkers-terracube_beans.png)
+![Terracube Beans](../../_assets/images/tinkers-terracube_beans.webp)
 
 Hidden in Moss, you might find a strange clay-like bean, the Terracube Bean.
 
@@ -37,7 +37,7 @@ Plant it on some wet clay, and watch it sprout a tiny island that looks just lik
 
 ### Sky Slime Bean
 
-![Sky Slime Beans](../../_assets/images/tinkers-sky_slime_beans.png)
+![Sky Slime Beans](../../_assets/images/tinkers-sky_slime_beans.webp)
 
 Search for the Skyslime Bean nestled within Mud or clinging to Muddy Mangrove Roots.
 
@@ -45,7 +45,7 @@ Plant it in the mud, and watch a Skyslime Island sprout from the ground!
 
 ### Scarlet Slime Bean
 
-![Scarlet Slime Beans](../../_assets/images/tinkers-scarlet_slime_beans.png)
+![Scarlet Slime Beans](../../_assets/images/tinkers-scarlet_slime_beans.webp)
 
 Delve into the heart of the Nether to find the Scarletslime Bean.
 
@@ -53,7 +53,7 @@ Break Weeping Vines to discover these beans and plant them on Crimson Nylium, an
 
 ### Ender Slime Bean
 
-![Ender Slime Beans](../../_assets/images/tinkers-ender_slime_beans.png)
+![Ender Slime Beans](../../_assets/images/tinkers-ender_slime_beans.webp)
 
 This elusive Ender Bean lies hidden within End Stone.
 

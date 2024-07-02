@@ -19,7 +19,7 @@ Keep an eye out for them while exploring Nether Wastes near Piglin activity.
 
 *Unlike most ores, **Ardite and Cobalt** can also spontaneously appear in previously explored areas.*
 
-![Ardite and Cobalt](../../_assets/images/tinkers-nether_ores.png)
+![Ardite and Cobalt](../../_assets/images/tinkers-nether_ores.webp)
 
 Hunting for treasure in the Nether? Keep an eye out for Ardite and Cobalt ores poking out of the Netherrack. 
 

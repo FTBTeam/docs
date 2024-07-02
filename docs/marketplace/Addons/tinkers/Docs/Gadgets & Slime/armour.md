@@ -46,6 +46,6 @@ However, this is purely cosmetic and won't grant any additional benefits.
 
 ### Slime Armour
 
-![Slime Armour](../../_assets/images/tinkers-slime_armour.png)
+![Slime Armour](../../_assets/images/tinkers-slime_armour.webp)
 
 Slime Armour can be created by pouring Liquid Ender Slime onto either a Rabbit Foot, Shulker Shell, Plate Chestplate or Travelers Googles.

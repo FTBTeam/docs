@@ -23,7 +23,7 @@ Here's the you can find:
 
 ### Earth Slime
 
-![Earth Slime](../../_assets/images/tinkers-earth_slime.png)
+![Earth Slime](../../_assets/images/tinkers-earth_slime.webp)
 
 Earth Slimes can be found naturally in Swamp biomes. 
 
@@ -33,7 +33,7 @@ When killed, they drop Slimeballs.
 
 ### Terracube
 
-![Terracube](../../_assets/images/tinkers-terracube.png)
+![Terracube](../../_assets/images/tinkers-terracube.webp)
 
 The Terracube can be discovered when using a Terracube Bean on a Clay block.
 
@@ -43,7 +43,7 @@ When killed, they drop Clay Balls.
 
 ### Sky Slime
 
-![Sky Slime](../../_assets/images/tinkers-sky_slime.png)
+![Sky Slime](../../_assets/images/tinkers-sky_slime.webp)
 
 Sky Slimes are home to the Sky Slime Island. 
 
@@ -53,7 +53,7 @@ When killed, they drop Sky Slimeballs.
 
 ### Scarlet Slime
 
-![Scarlet Slime](../../_assets/images/tinkers-scarlet_slime.png)
+![Scarlet Slime](../../_assets/images/tinkers-scarlet_slime.webp)
 
 Scarlet Slimes can be found on a Scarlet Slime Islands.
 
@@ -63,7 +63,7 @@ When killed, they drop Scarlet Slimeballs.
 
 ### Ender Slime
 
-![Ender Slime](../../_assets/images/tinkers-ender_slime.png)
+![Ender Slime](../../_assets/images/tinkers-ender_slime.webp)
 
 Ender Slime can only be obtained from growing an Ender Slime Bean on End Stone.
 
@@ -89,7 +89,7 @@ They won’t grow naturally, they need to be forced grown using Bonemeal.
 
 ### Liquid Slime
 
-![Liquid Slime](../../_assets/images/tinkers-liquid_slime.png)
+![Liquid Slime](../../_assets/images/tinkers-liquid_slime.webp)
 
 You can create Liquid Slime by melting Slime in a smeltery setup.
 

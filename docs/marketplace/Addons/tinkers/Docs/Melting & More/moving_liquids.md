@@ -9,7 +9,7 @@ sidebar_position: 9
 
 You've got the hang of melting, Tinker! Now, the burning question: how do we get that molten metal out of there?
 
-![Cans and Melter](../../_assets/images/tinkers-cans_and_melter.png)
+![Cans and Melter](../../_assets/images/tinkers-cans_and_melter.webp)
 
 ### Iron and Copper Cans
 
