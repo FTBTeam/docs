@@ -13,7 +13,7 @@ A chapter group is a way to organize your chapters into categories, for example,
 
 Once the chapter is created, you can right-click on it to open the chapter options menu where you can choose to move the chapter up or down and edit the chapter settings.
 
-![Chapter options menu](../../../../_assets/images/quests/chapter-rightclick.png)
+![Chapter options menu](../../../../_assets/images/quests/chapter-rightclick.webp)
 
 ## Editing Chapter Settings
 
@@ -21,8 +21,6 @@ When you click on the edit button in the chapter options menu, you will be taken
 
 A description of each setting can be read by hovering over the options
 
-SCREENSHOTs
+![Chapter settings](../../../../_assets/images/quests/chapter-settings.webp)
 
-
-
-
+A full list of settings can be found on the [Chapter Settings](./Settings.md) page.

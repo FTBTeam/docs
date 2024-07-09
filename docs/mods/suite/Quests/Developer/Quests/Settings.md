@@ -35,11 +35,11 @@ The title of the quest.
 
 ### Icon scaling
 
-???
+Size of the quest icon in the questbook
 
 ### Min opened quest window width
 
-???
+Minimum width of the quest description window
 
 ### Shape
 
@@ -58,7 +58,7 @@ The shape of the quest in the questbook. The following shapes are available:
 
 ### Size
 
-???
+Size of the quest in the questbook including the icon
 
 ### X
 
@@ -82,7 +82,7 @@ If enabled, the quest will be hidden until all of its dependencies are visible.
 
 ### Hide text until quest is completed
 
-???
+Hides the quest description until the quest is completed.
 
 ### Invisible until completed
 
@@ -98,7 +98,7 @@ Only applies if invisible is enabled. The quest will be invisible until X tasks 
 
 ### Dependencies
 
-???
+List of quests that the quest depends on, see the below dependency requirement options for more information.
 
 ### Dependency requirement
 
@@ -121,7 +121,7 @@ Hides the dependent lines for any quests that depend on this quest.
 
 ### Min required dependencies
 
-???
+Number of dependencies that must be completed before this quest can be started.
 
 ---
 
