@@ -15,7 +15,7 @@ if (args.length === 0 || !args.includes('--just-do-it')) {
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 // Find all the images from the docs/**/_assets/images folder using glob pattern
-const images = globSync(path.join(__dirname, '../../docs/**/_assets/images/*.{png,jpg,jpeg}'))
+const images = globSync(path.join(__dirname, '../../docs/**/_assets/images/**/*.{png,jpg,jpeg,gif}'))
 
 // Get all the markdown documents :D
 const documents = globSync(path.join(__dirname, '../../docs/**/*.md'))
@@ -35,20 +35,44 @@ for (const image of images) {
     }
 
     // Get the dimensions of the image
-    const { width, height } = await sharp(image).metadata();
+    var imageMeta = await sharp(image).metadata();
+    const { width, height } = imageMeta;
 
     // Optimise and output
-    const fileOut = image.replace(/\.(png|jpg|jpeg)$/, '.webp');
+    const fileOut = image.replace(/\.(png|jpg|jpeg|gif)$/, '.webp');
 
-    const imageSharp = sharp(image);
+    // Is the image a gif?
+    const isGif = image.endsWith('.gif');
+
+    const options = {};
+    if (isGif) {
+        options.animated = true;
+        options.pages = -1;
+        options.limitInputPixels = false;
+    }
+
+    const imageSharp = sharp(image, options);
     if (width > 1920) {
         imageSharp.resize(1920, null, { fit: 'inside' })
     }
 
     // Finally output the image
-    const data = await imageSharp
-        .webp({ nearLossless: true, quality: 70  })
-        .toFile(fileOut)
+    let data;
+    if (isGif) {
+        const { paletteBitDepth, loop, delay } = imageMeta
+        data = await imageSharp
+            .webp({
+                loop,
+                delay,
+                quality: 70, // 0-100
+                nearLossless: true,
+            })
+            .toFile(fileOut)
+    } else {
+        data = await imageSharp
+            .webp({ nearLossless: true, quality: 70  })
+            .toFile(fileOut)
+    }
 
     const newSize = data.size;
 
