@@ -32,7 +32,7 @@ The title of the chapter. This is what will be displayed in the chapter list.
 
 ### Default Min Opened Quest Window Width
 
-??? Not sure
+Default minimum width of the quest description window for quests in this chapter. This can be overridden on a per-quest basis.
 
 ### Default Quest Shape
 
@@ -40,7 +40,7 @@ Sets the default shape of a quest in this chapter. This can be overridden on a p
 
 ### Default Quest Size
 
-??? Not sure
+Default quest object size in the questbook for this chapter. This can be overridden on a per-quest basis.
 
 ---
 
@@ -56,7 +56,7 @@ Hide the dependency lines for quests in this chapter by default. This can be ove
 
 ### Hide quest details until startable
 
-??? Not sure
+Default option for hiding quest details until the quest is startable. This can be overridden on a per-quest basis.
 
 ### Hide quests until dependencies visible
 

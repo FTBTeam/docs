@@ -51,7 +51,7 @@ SCREENSHOTs show the different places the `!` can be
 
 To claim a reward you can either click on the Claim all button in the top right of the screen.
 
-![Claiming a reward](../../../../_assets/images/quests/claim-all-rewards.png)
+![Claiming a reward](../../../../_assets/images/quests/claim-all-rewards.webp)
 
 Or you can open the completed quest and click on the rewards.
 Some rewards will allow you to choose between multiple rewards, you can click on the reward you would like to claim.
