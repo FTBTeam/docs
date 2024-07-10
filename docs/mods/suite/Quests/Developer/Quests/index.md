@@ -21,5 +21,17 @@ selecting an item needed to complete the quest or how much XP levels the player 
 With the quest created you will now be able to add additional tasks that the player needs to complete to the quest in addition to
 what rewards the player will get for completing the quest.
 
-SCREENSHOT/GIF
+### Quest Tasks
+
+You can add additional tasks to a quest by clicking the `+` button in the tasks section of the quest.
+This will allow you to select the type of task you want to add to the quest again.
+
+GIF
+
+### Quest Rewards
+
+Quests rewards can be added by clicking the `+` button in the rewards section of the quest window.
+This will open a dialog where you can select the type of reward you want to add to the quest.
+
+GIF
 

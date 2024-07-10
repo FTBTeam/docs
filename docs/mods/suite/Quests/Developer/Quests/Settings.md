@@ -129,7 +129,7 @@ Number of dependencies that must be completed before this quest can be started.
 
 ### Disable JEI recipe
 
-???
+Disable showing JEI recipes for this quest.
 
 ### Guide page
 
