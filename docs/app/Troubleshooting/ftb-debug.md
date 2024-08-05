@@ -20,14 +20,14 @@ If you do not have an issue. You do not need to use this guide.
 
 You can find the download links for each operating system we support. We've included ARM versions for each system but unless you know you're running an ARM machine, you'll likely want the `Intel / AMD 64` versions.
 
-| Operating System | Architecture        | Link                                                                                    |
-|------------------|---------------------|-----------------------------------------------------------------------------------------|
-| Windows          | Intel / AMD         | [Download (**Recommended**)](https://dist.creeper.host/tools/ftb-debug/ftb-debug.exe)   |
-| Windows          | Arm                 | [Download](https://dist.creeper.host/tools/ftb-debug/ftb-debug-arm64.exe)               |
-| MacOS            | Intel / AMD         | [Download (**Recommended**)](https://dist.creeper.host/tools/ftb-debug/ftb-debug-macos) |
-| MacOS            | Apple Silicon / ARM | [Download](https://dist.creeper.host/tools/ftb-debug/ftb-debug-macos-arm64)             |
-| Linux            | Intel / AMD         | [Download (**Recommended**)](https://dist.creeper.host/tools/ftb-debug/ftb-debug-linux) |
-| Linux            | Arm                 | [Download](https://dist.creeper.host/tools/ftb-debug/ftb-debug-linux-arm)               |
+| Operating System | Architecture        | Link                                                                                                                    |
+|------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------|
+| Windows          | Intel / AMD         | [Download (**Recommended**)](https://github.com/FTBTeam/FTB-Debug/releases/latest/download/ftb-debug-windows-amd64.exe) |
+| Windows          | Arm                 | [Download](https://github.com/FTBTeam/FTB-Debug/releases/latest/download/ftb-debug-windows-arm64.exe)                   |
+| MacOS            | Intel / AMD         | [Download (**Recommended**)](https://github.com/FTBTeam/FTB-Debug/releases/latest/download/ftb-debug-darwin-amd64)      |
+| MacOS            | Apple Silicon / ARM | [Download](https://github.com/FTBTeam/FTB-Debug/releases/latest/download/ftb-debug-darwin-arm64)                        |
+| Linux            | Intel / AMD         | [Download (**Recommended**)](https://github.com/FTBTeam/FTB-Debug/releases/latest/download/ftb-debug-linux-amd64)       |
+| Linux            | Arm                 | [Download](https://github.com/FTBTeam/FTB-Debug/releases/latest/download/ftb-debug-linux-arm64)                         |
 
 ## Using
 
@@ -37,7 +37,7 @@ Once you've downloaded the tool, you'll want to run it. A successful run will lo
 
 ![What the app looks like when running](./../_assets/images/ftb-debug-tool-running-windows.webp)
 
-You can see that after the application has run, you are given a code, in this example the code is `FTB-DBGLOQUVILEPA`. Copy this code and provide it to the support team member that has requested it from you.
+You can see that after the application has run, you are given a code, in this example the code is `dbg:YBJTSjo26pw`. Copy this code and provide it to the support team member that has requested it from you.
 
 If something has gone wrong, see our [troubleshooting](#troubleshooting) guide below.
 
@@ -48,15 +48,15 @@ Using the debug tool on MacOS and Linux is a little more involved but is still r
 1. Download the tool ([Download](#downloading))
 2. Open the `Terminal` (Linux users, open your distro's variant of the terminal)
 3. Run `cd {location of the debug tool}` typically this will be the downloads' folder. A real example of this would be `cd /home/mikey/Downloads/`
-4. Run the follow command `chmod +x ftb-debug-macos` (`chmod +x ftb-debug-linux` for linux operating systems). Add `-arm64 or -arm` respectively for ARM systems
-5. This step is optional as most systems will now let you double-click the file. If this is not the case. Simple run the same command as above but replace `chmod +x` with `./`. An example of this would be `./ftb-debug-linux`.
+4. Run the follow command `chmod +x ftb-debug-darwin-amd64` (`chmod +x ftb-debug-linux-amd64` for linux operating systems). Replace `-amd64` with `-arm64 or -arm` respectively for ARM systems
+5. This step is optional as most systems will now let you double-click the file. If this is not the case. Simple run the same command as above but replace `chmod +x` with `./`. An example of this would be `./ftb-debug-linux-amd64`.
 6. Provide the code to the support member that asked for the code
 7. Profit!
 
 ```bash
 # Example of the full flow
 cd /home/mikey/Downloads
-chmod +x ftb-debug-linux
+chmod +x ftb-debug-linux-amd64
 ./ftb-debug-linux
 ```
 
