@@ -20,14 +20,14 @@ If you do not have an issue. You do not need to use this guide.
 
 You can find the download links for each operating system we support. We've included ARM versions for each system but unless you know you're running an ARM machine, you'll likely want the `Intel / AMD 64` versions.
 
-| Operating System | Architecture        | Link                                                                                    |
-|------------------|---------------------|-----------------------------------------------------------------------------------------|
-| Windows          | Intel / AMD         | [Download (**Recommended**)](https://dist.creeper.host/tools/ftb-debug/ftb-debug.exe)   |
-| Windows          | Arm                 | [Download](https://dist.creeper.host/tools/ftb-debug/ftb-debug-arm64.exe)               |
-| MacOS            | Intel / AMD         | [Download (**Recommended**)](https://dist.creeper.host/tools/ftb-debug/ftb-debug-macos) |
-| MacOS            | Apple Silicon / ARM | [Download](https://dist.creeper.host/tools/ftb-debug/ftb-debug-macos-arm64)             |
-| Linux            | Intel / AMD         | [Download (**Recommended**)](https://dist.creeper.host/tools/ftb-debug/ftb-debug-linux) |
-| Linux            | Arm                 | [Download](https://dist.creeper.host/tools/ftb-debug/ftb-debug-linux-arm)               |
+| Operating System | Architecture        | Link                                                                                                                    |
+|------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------|
+| Windows          | Intel / AMD         | [Download (**Recommended**)](https://github.com/FTBTeam/FTB-Debug/releases/latest/download/ftb-debug-windows-amd64.exe) |
+| Windows          | Arm                 | [Download](https://github.com/FTBTeam/FTB-Debug/releases/latest/download/ftb-debug-windows-arm64.exe)                   |
+| MacOS            | Intel / AMD         | [Download (**Recommended**)](https://github.com/FTBTeam/FTB-Debug/releases/latest/download/ftb-debug-darwin-amd64)      |
+| MacOS            | Apple Silicon / ARM | [Download](https://github.com/FTBTeam/FTB-Debug/releases/latest/download/ftb-debug-darwin-arm64)                        |
+| Linux            | Intel / AMD         | [Download (**Recommended**)](https://github.com/FTBTeam/FTB-Debug/releases/latest/download/ftb-debug-linux-amd64)       |
+| Linux            | Arm                 | [Download](https://github.com/FTBTeam/FTB-Debug/releases/latest/download/ftb-debug-linux-arm64)                         |
 
 ## Using
 
