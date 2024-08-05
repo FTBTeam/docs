@@ -37,7 +37,7 @@ Once you've downloaded the tool, you'll want to run it. A successful run will lo
 
 ![What the app looks like when running](./../_assets/images/ftb-debug-tool-running-windows.webp)
 
-You can see that after the application has run, you are given a code, in this example the code is `FTB-DBGLOQUVILEPA`. Copy this code and provide it to the support team member that has requested it from you.
+You can see that after the application has run, you are given a code, in this example the code is `dbg:YBJTSjo26pw`. Copy this code and provide it to the support team member that has requested it from you.
 
 If something has gone wrong, see our [troubleshooting](#troubleshooting) guide below.
 
@@ -48,15 +48,15 @@ Using the debug tool on MacOS and Linux is a little more involved but is still r
 1. Download the tool ([Download](#downloading))
 2. Open the `Terminal` (Linux users, open your distro's variant of the terminal)
 3. Run `cd {location of the debug tool}` typically this will be the downloads' folder. A real example of this would be `cd /home/mikey/Downloads/`
-4. Run the follow command `chmod +x ftb-debug-macos` (`chmod +x ftb-debug-linux` for linux operating systems). Add `-arm64 or -arm` respectively for ARM systems
-5. This step is optional as most systems will now let you double-click the file. If this is not the case. Simple run the same command as above but replace `chmod +x` with `./`. An example of this would be `./ftb-debug-linux`.
+4. Run the follow command `chmod +x ftb-debug-darwin-amd64` (`chmod +x ftb-debug-linux-amd64` for linux operating systems). Replace `-amd64` with `-arm64 or -arm` respectively for ARM systems
+5. This step is optional as most systems will now let you double-click the file. If this is not the case. Simple run the same command as above but replace `chmod +x` with `./`. An example of this would be `./ftb-debug-linux-amd64`.
 6. Provide the code to the support member that asked for the code
 7. Profit!
 
 ```bash
 # Example of the full flow
 cd /home/mikey/Downloads
-chmod +x ftb-debug-linux
+chmod +x ftb-debug-linux-amd64
 ./ftb-debug-linux
 ```
 
