@@ -15,3 +15,7 @@ JEI, REI: Works with lib as well and shows a dedicated page on the item selectio
 KubeJS: Events and custom quest types as well as custom filters
 
 Not sure if there is anything else par from those
+
+
+Explain how to make tag based quests using FTB filters and xmod compat, e.g Logs
+tl;dr create a Logs item quest, right click on the quest and convert it to a tag quest
