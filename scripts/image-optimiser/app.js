@@ -18,7 +18,7 @@ const __dirname = path.dirname(new URL(import.meta.url).pathname);
 const images = globSync(path.join(__dirname, '../../docs/**/_assets/images/**/*.{png,jpg,jpeg,gif}'))
 
 // Get all the markdown documents :D
-const documents = globSync(path.join(__dirname, '../../docs/**/*.md'))
+const documents = globSync(path.join(__dirname, '../../docs/**/*.{md,mdx}'))
 
 console.log(`Found ${documents.length} in docs/`);
 
