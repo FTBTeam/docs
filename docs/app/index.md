@@ -21,7 +21,7 @@ The FTB app is our take on a Modded Minecraft Launcher. Primarily it is focused 
 
 *Searching for mods is a feature provided by Curseforge. We currently do not support adding mods from Modrinth or other mod hosting sites.
 
-![The FTB App Library](_assets/images/ftb-app-library.png)
+![The FTB App Library](_assets/images/ftb-app-library.webp)
 
 ## What's Next?
 

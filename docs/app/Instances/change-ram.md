@@ -43,6 +43,6 @@ Never manually configure the `-Xmx` using the FTB App. This will cause issues. P
 
 **Go to settings & drag the slider**
 
-![The FTB App's Instance settings page](./../_assets/images/ftb-app-instance-settings-page.webp)
+![The FTB App's Instance settings page](./../_assets/images/ftb-app-instance-settings-page.png)
 
 **You're done! 🎉**
