@@ -15,6 +15,12 @@ There are two ways of installing Mods into a Modpack. We've outlined both of the
 
 ## Using the FTB App to add extra mods
 
+:::tip
+You may need to unlock the instance first before you can add mods.
+
+You can do this by going to the instance settings then clicking the `Unlock instance` button.
+:::
+
 1. Open the FTB App
 2. Locate your installed Instance / Modpack. For examples sake, let's say we're installing a new mod to `FTB Presents Direwolf20 1.19`.
 3. Select the mods Tab just under the play button
@@ -66,7 +72,7 @@ Some mods only support specific Minecraft versions, if the mod does not support 
 
 **Locate the pack you want to install extra mods to**
 
-![The FTB App's Instance Page](../_assets/images/ftb-app-instance-page.webp)
+![The FTB App's Instance Page](../_assets/images/ftb-app-instance-page-mods.webp)
 
 **Adding extra mods**
 
@@ -81,3 +87,5 @@ Some mods only support specific Minecraft versions, if the mod does not support 
 ![The FTB App's Mods install modal](../_assets/images/ftb-app-mods-install-modal.webp)
 
 **You're done, enjoy your extra mods! 🎉**
+
+![The FTB App's Mods install done](../_assets/images/ftb-app-mods-install-done.webp)
