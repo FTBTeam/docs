@@ -1,6 +1,7 @@
 ---
 title: Force app update
 description: Detailed guide on how to force update the FTB App on Overwolf
+sidebar_position: 4
 ---
 
 # Force app update on Overwolf

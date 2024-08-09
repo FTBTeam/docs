@@ -1,5 +1,6 @@
 ---
 title: Disable FTB Hide/FTB Progress
+sidebar_position: 3
 ---
 
 FTB Hide/FTB Progress are mods that are included in some modpacks that hide the loading screen and show the loading progress in the app. This guide will show you how to disable them.
