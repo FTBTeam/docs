@@ -36,7 +36,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Welcome`}
-      description="FTB Documentaion and support topics">
+      description="FTB Documentation and support topics">
 
       <div className="container container-fluid padding-bottom--lg padding-top--lg">
         <div className="flex justify-center mt-10 mb-16">
