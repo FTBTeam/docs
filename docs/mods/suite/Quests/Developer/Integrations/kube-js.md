@@ -1,5 +1,6 @@
 ---
 title: KubeJS
+draft: true
 ---
 
 Need something to go here.
