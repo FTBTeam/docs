@@ -26,12 +26,22 @@ what rewards the player will get for completing the quest.
 You can add additional tasks to a quest by clicking the `+` button in the tasks section of the quest.
 This will allow you to select the type of task you want to add to the quest again.
 
-GIF
+![Add Quest Task](../../../../_assets/images/quests/quest-add-task.webp)
+
+#### Using item tags
+
+When creating a task that requires the player to collect a certain item you can use item tags to make the task more flexible.
+
+For example, if you want the player to collect any type of wood you can create the quest with a item task and select oak planks as the item.
+
+Now you can right-click the task and select `Convert to 'FTB Filter System' Tag Filter`, this will open a new window that allow you to select which tag you want to use.
+
+![Convert to Tag Filter](../../../../_assets/images/quests/quest-convert-to-tag-filter.webp)
 
 ### Quest Rewards
 
 Quests rewards can be added by clicking the `+` button in the rewards section of the quest window.
 This will open a dialog where you can select the type of reward you want to add to the quest.
 
-GIF
+![Add Quest Reward](../../../../_assets/images/quests/quest-add-reward.webp)
 

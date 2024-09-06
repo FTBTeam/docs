@@ -6,7 +6,7 @@ sidebar_position: 2
 | Type            | Description                                                      |
 |-----------------|------------------------------------------------------------------|
 | Item            | Obtain the specified item                                        |
-| Custom          | todo                                                             |
+| Custom          | Custom quest type                                                |
 | XP Levels       | Collect `x` levels of XP                                         |
 | Visit Dimension | The player will need to visit a given dimension                  |
 | Stat            | Specify a statistic that the player will need to something words |
@@ -14,7 +14,7 @@ sidebar_position: 2
 | Location        | Navigate to the given position in the world                      |
 | Checkmark       | Click on the checkmark to complete the task                      |
 | Advancement     | Complete the specified advancement                               |
-| Observation     | todo                                                             |
+| Observation     | Observe a set block/entity                                       |
 | Visit Biome     | Find the biome specified                                         |
 | Find Structure  | Find the specified structure (e.g. Stronghold)                   |
 | Stage           | Game stages?                                                     |
