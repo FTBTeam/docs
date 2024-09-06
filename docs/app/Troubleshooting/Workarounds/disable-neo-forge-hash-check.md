@@ -11,4 +11,4 @@ This workaround will ignore the processor hashes checks for Forge and NeoForge. 
 3. Click on `Advanced` in the sidebar of the settings page
 4. Enable the `Ignore (Neo)Forge processor hashes checks` option
 
-   SCREENSHOT
+![Ignore (Neo)Forge processor hashes checks](../../_assets/images/ftb-app-settings-hash-disable.png)
