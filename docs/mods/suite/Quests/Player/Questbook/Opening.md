@@ -7,19 +7,19 @@ The quest book is a simple and easy-to-use way to track your progress in the gam
 
 ## How to open the quest book
 
-You can open the quest book by opening your inventory and clicking on the book icon in the top left of the screen. This will open the quest book interface, where you can see all of the quests and chapters that are available.
+You can open the quest book by opening your inventory and clicking on the book icon in the top left of the screen. This will open the quest book interface, where you can see all the quests and chapters that are available.
 
 ![Opening the quest book](../../../../_assets/images/quests/opening-questbook-inv.webp)
 
-There is also a quest book item that you can craft and use to open the quest book interface.
+It's also possible to open the quest book by crafting the quest book item and right-clicking it, or by using the key bind (The key bind is not bound by default).
 
 ![Quest book item](../../../../_assets/images/quests/questbook-item.webp)
 
-If you are playing a modpack that does not have any quests added to it the quest book will be empty.
+If you are playing a modpack that does not have any quests added to it, the quest book will be empty.
 
 ![Empty quest book](../../../../_assets/images/quests/empty-questbook.webp)
 
-On modpacks that have quests such as FTB NeoTech, you will see a list of chapters on the left side of the screen. Clicking on a chapter will show you the quests that are available in that chapter.
+On modpacks that have quests, such as FTB NeoTech, you will see a list of chapters on the left side of the screen. Clicking on a chapter will show you the quests that are available in that chapter.
 
 :::tip
 Some quests and chapters may be hidden until you complete other quests or chapters first.
