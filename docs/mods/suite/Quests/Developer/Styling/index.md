@@ -11,8 +11,8 @@ Secondly: Themes are handled by placing a `ftbquests/ftb_quests_theme.txt` file 
 
 ### Properties
 
-#### Color
-- `color`: A colo(u)r property is a RGBA colour code but it supports a bunch of things so here goes
+#### Colour
+- `color`: A colour property is a RGBA colour code but it supports a bunch of things so here goes
     - "#00A8FF" (Hex codes are supported)
     - "#FF00A8FF" (Alpha supported (First 2) hex codes are supported
     - Then the following presets are supported: `transparent`, `black`, `dark_gray`, `gray`, `white`, `red`, `green`, `blue`, `light_red`, `light_green`, `light_blue`
