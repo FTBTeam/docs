@@ -10,7 +10,8 @@ be put inside a chapter group.
 For details on creating a chapter, see the [Chapters](../Chapters/index.md) page.
 :::
 
-To create a quest, right anywhere in the blank space of the quest book and select the type of quest you want to create.
+To create a quest, right anywhere in the blank space of the quest book and select the type of task you want to create. Additional tasks can be added to the quest later (see [Quest Tasks](#quest-tasks)).
+
 A detailed explanation of the different quest types can be found on the [Quest Types](./Types.md) page.
 
 ![Create Quest](../../../../_assets/images/quests/create-a-quest.webp)
