@@ -15,7 +15,7 @@ Disables the completion toast for this quest. This will prevent the toast from a
 
 ### Icon
 
-The quest icon, this is the icon that will be displayed in the questbook
+The quest icon, this is the icon that will be displayed in the quest book
 
 ### Subtitle
 
@@ -23,7 +23,7 @@ The subtitle will be displayed as a tooltip when you hover over the quest title 
 
 ### Tags
 
-Tags are used to help theme the quest/questbook and also allow you to use them in KubeJS events. You can add multiple tags to a quest.
+Tags are used to help theme the quest/quest book and also allow you to use them in KubeJS events. You can add multiple tags to a quest.
 
 ### Title
 
@@ -35,7 +35,7 @@ The title of the quest.
 
 ### Icon scaling
 
-Size of the quest icon in the questbook
+Size of the quest icon in the quest book
 
 ### Min opened quest window width
 
@@ -43,7 +43,7 @@ Minimum width of the quest description window
 
 ### Shape
 
-The shape of the quest in the questbook. The following shapes are available:
+The shape of the quest in the quest book. The following shapes are available:
 
 - Default (Will use the default shape for the chapter)
 - Circle
@@ -58,15 +58,15 @@ The shape of the quest in the questbook. The following shapes are available:
 
 ### Size
 
-Size of the quest in the questbook including the icon
+Size of the quest in the quest book including the icon
 
 ### X
 
-X position of the quest in the questbook
+X position of the quest in the quest book
 
 ### Y
 
-Y position of the quest in the questbook
+Y position of the quest in the quest book
 
 ---
 
@@ -152,4 +152,6 @@ The quest can be repeated as many times as the player wants.
 
 ### Sequential task completion
 
-If enabled tasks in this quest will need to be completed in order.
+If enabled, tasks in this quest will need to be completed in order.
+
+

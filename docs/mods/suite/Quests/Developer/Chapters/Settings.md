@@ -20,7 +20,7 @@ The subtitle will be displayed as a tooltip when you hover over the chapter titl
 
 ### Tags
 
-Tags are used to help theme the questbook and also allow you to use them in KubeJS events. You can add multiple tags to a chapter.
+Tags are used to help theme the quest book and also allow you to use them in KubeJS events. You can add multiple tags to a chapter.
 
 ### Title
 
@@ -40,7 +40,7 @@ Sets the default shape of a quest in this chapter. This can be overridden on a p
 
 ### Default Quest Size
 
-Default quest object size in the questbook for this chapter. This can be overridden on a per-quest basis.
+Default quest object size in the quest book for this chapter. This can be overridden on a per-quest basis.
 
 ---
 
@@ -85,3 +85,5 @@ Sets the default consume items status for item tasks in this chapter. This can b
 ### Sequential task completion
 
 If enabled tasks in this chapter will need to be completed in order.
+
+

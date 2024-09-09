@@ -9,7 +9,7 @@ sidebar_position: 2
 | Custom          | Custom quest type                                                |
 | XP Levels       | Collect `x` levels of XP                                         |
 | Visit Dimension | The player will need to visit a given dimension                  |
-| Stat            | Specify a statistic that the player will need to something words |
+| Stat            | Specify a statistic that the player will need to reach or exceed |
 | Kill Entity     | Kill the entity specified                                        |
 | Location        | Navigate to the given position in the world                      |
 | Checkmark       | Click on the checkmark to complete the task                      |

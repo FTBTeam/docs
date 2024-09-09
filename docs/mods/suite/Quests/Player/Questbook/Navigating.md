@@ -4,10 +4,10 @@ sidebar_position: 2
 ---
 
 ## Key References
-FTB Quests has a number of keyboard shortcuts that can help you quickly navigate the quest book such as <kbd>Ctrl</kbd> + <kbd>F</kbd>
+FTB Quests has a number of keyboard shortcuts that can help you quickly navigate the quest book, such as <kbd>Ctrl</kbd> + <kbd>F</kbd>
 to quickly find a quest.
 
-You can view a full list of key references by opening the quest book then clicking on the `i` icon in the top right of the screen.
+You can view a full list of key references by opening the quest book, then clicking on the `i` icon in the top right of the screen.
 
 ![Key References](../../../../_assets/images/quests/key-reference.webp)
 
@@ -21,7 +21,7 @@ You can also 'pin' the chapter list open by clicking the pin icon in the top lef
 ![Pin chapter sidebar](../../../../_assets/images/quests/chapter-sidebar-pin.webp)
 
 ## Moving around the quests
-Sometimes there may be a lot of quests in a single chapter. You can move around the quests by clicking and holding your left mouse button on an empty area of the quest screen
+Sometimes there may be countless quests in a single chapter. You can move around the quests by clicking and holding your left mouse button on an empty area of the quest screen
 and dragging it around. For a full list of way to navigate the quest book, see the key references above.
 
 ![Moving around the quest book](../../../../_assets/images/quests/moving-around-quests.webp)
@@ -43,13 +43,13 @@ You can pin a quest so that the quest is always visible to you by opening the qu
 ## Completing a quest and claiming rewards
 Once you have completed all the tasks for a quest, you will get a notification in the top right of the screen and an `!` will appear on the quest book icon in your inventory screen.
 
-When you open the quest book the chapter the quest is in will also have an `!` along with the specific quest that was completed
+When you open the quest book, the chapter the quest is in will also have an `!` along with the specific quest that was completed
 
 SCREENSHOTs show the different places the `!` can be
 
 ### Claiming reward
 
-To claim a reward you can either click on the Claim all button in the top right of the screen.
+To claim a reward, you can either click on the Claim all button in the top right of the screen.
 
 ![Claiming a reward](../../../../_assets/images/quests/claim-all-rewards.webp)
 

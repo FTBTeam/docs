@@ -3,18 +3,18 @@ title: Theming the quest book
 toc_max_heading_level: 4
 ---
 
-Firstly: Themes are just a `.txt` file that tells quests how to look. Most components will use this for their styling. If they don't. Let us know! Not many people use this system
+Firstly: Themes are just a `.txt` file that tells quests how to look. Most components will use this for their styling. If they don't. Please let us know! Not many people use this system
 
-Secondly: Themes are handled by placing a `ftbquests/ftb_quests_theme.txt` file in your resource pack (kubejs works here)
+Secondly: Themes are handled by placing a `ftbquests/ftb_quests_theme.txt` file in your resource pack (KubeJS works here)
 
 ## The fun stuff
 
 ### Properties
 
 #### Colour
-- `color`: A colour property is a RGBA colour code but it supports a bunch of things so here goes
+- `color`: A colour property is an RGBA colour code, but it supports a bunch of things, so here goes
     - "#00A8FF" (Hex codes are supported)
-    - "#FF00A8FF" (Alpha supported (First 2) hex codes are supported
+    - "#FF00A8FF" (Alpha supported (First 2) hex codes are supported)
     - Then the following presets are supported: `transparent`, `black`, `dark_gray`, `gray`, `white`, `red`, `green`, `blue`, `light_red`, `light_green`, `light_blue`
 #### Icon
 - `icon`: Another fun one, this can be handled using the following:
@@ -33,9 +33,9 @@ Secondly: Themes are handled by placing a `ftbquests/ftb_quests_theme.txt` file 
         - `padding={int_value}` Icon padding (all directions (left, right, up, down))
         - `border={color_value}` see colour description above.
             - You can give this rounded corners by adding `border_round_edges=true`
-        - `color={color_value}` See above for colours but this will give the icon a standard colour under all the other options
+        - `color={color_value}` See above for colours, but this will give the icon a standard colour under all the other options
         - `tint={color_value}` See above again. But this adds an overall tint to the icon
-        - The distinction between `color` and `tint` is subtle and the effect often depends on the specific icon type. If in doubt, experiment!
+        - The distinction between `color` and `tint` is subtle, and the effect often depends on the specific icon type. If in doubt, experiment!
         - Finally, these are added together using a `;` meaning a full example might look like this
             - `icon:minecraft:diamond;padding=5;border=#00A8FF;border_round_edges=true;color=blue;tint=#A8FFFFFF`
 - `double`: This one is simple. It's just a double (`1.0D`)
@@ -44,7 +44,7 @@ Secondly: Themes are handled by placing a `ftbquests/ftb_quests_theme.txt` file 
 
 Well! Wasn't that fun. Now we know all about properties. As you can tell, the colour and icon properties are pretty powerful!
 
-Now we get onto the fun stuff. How do you use this in quests? Well as we said above it's all configured in the `ftb_quests_theme.txt`
+Now we get onto the fun stuff. How do you use this in quests? Well, as we said above, it's all configured in the `ftb_quests_theme.txt`
 
 As of right now, the quest themes system supports the following values
 
@@ -139,7 +139,7 @@ Widgets are most of the UI containers (IIRC)
 
 You may have noticed a `[*]` line at the very top of the `ftb_quests_theme.txt` file. Lines like this act as _filters_, limiting which quests that theming should be applied to. The default filter, a `*`, indicates that anything below this should apply to _all_ quests, so this is the fallback behaviour.
 
-You can add more `[...]` lines if you want. Between the `[]` brackets, put either a quest ID (the long hex ID you can get by right-clicking a quest and selecting "Copy ID"), or a quest _tag_. Quest tags are just freeform strings, which you can add to quests via the "Edit" context menu action - see the "Tags" list property in the edit screen.
+You can add more `[...]` lines if you like. Between the `[]` brackets, put either a quest ID (the long hex ID you can get by right-clicking a quest and selecting "Copy ID"), or a quest _tag_. Quest tags are just free form strings, which you can add to quests via the "Edit" context menu action - see the "Tags" list property in the edit screen.
 
 Example:
 ```
@@ -152,26 +152,28 @@ quest_not_started_color: #FFFF0000
 
 Now, adding the "bluequests" tag to any quest will make it render blue when it hasn't yet been started, and similarly for the "redquests" tag. Every other theming property is inherited from the `[*]` defaults.
 
-In general, it's better to use tags than literal quest ID's, just because tags are lot more flexible.
+In general, it's better to use tags than literal quest ID's, just because tags are a lot more flexible.
 
 #### Custom Shapes
 
-You can have custom quest shapes if the builtin shapes aren't sufficient for your needs. To do this:
+You can have custom quest shapes if the built-in shapes aren't sufficient for your needs. To do this:
 
-* Pick a shape name (freeform text, keep it short and meaningful, one word) and add it to the comma-separated list in `extra_quest_shapes`
+* Pick a shape name (free form text, keep it short and meaningful, one word) and add it to the comma-separated list in `extra_quest_shapes`
 * Place three texture files for your new shape name in your resource pack, accessible as:
     * `ftbquests:textures/shapes/<shapename>/background.png` - textured background
     * `ftbquests:textures/shapes/<shapename>/outline.png` - a solid outline for the shape edge
     * `ftbquests:textures/shapes/<shapename>/shape.png` - used for masking, the same as (and exactly enclosing) the outline
     * See one of the existing texture sets in https://github.com/FTBTeam/FTB-Quests/tree/main/common/src/main/resources/assets/ftbquests/textures/shapes if unsure
-* Add a translation for your shape in a lang file: `"ftbquests.quest.shape.<shapename>": "New Shape"`
+* Add a translation for your shape in a language file: `"ftbquests.quest.shape.<shapename>": "New Shape"`
 
 ### Side notes
 
 Finally, there are a couple of side notes to this system
 
-At any point in your `.txt` file, if you use `{{ NAME }}` in the value, it will assume you want to use the value of a different property. So this might looke like the following: `quest_completed_color: {{rewards_text_color}}`
+At any point in your `.txt` file, if you use `{{ NAME }}` in the value, it will assume you want to use the value of a different property. So this might look like the following: `quest_completed_color: {{rewards_text_color}}`
 
 It's important to note that these need to be the same (or compatible) property types for a replacement to be successful.
 
-Some of the above values have mins and maxs. You should check here: https://github.com/FTBTeam/FTB-Quests/blob/main/common/src/main/java/dev/ftb/mods/ftbquests/quest/theme/property/ThemeProperties.java for those min and max values
+Some of the above values have a min and max. You should check here: https://github.com/FTBTeam/FTB-Quests/blob/main/common/src/main/java/dev/ftb/mods/ftbquests/quest/theme/property/ThemeProperties.java for those min and max values
+
+
