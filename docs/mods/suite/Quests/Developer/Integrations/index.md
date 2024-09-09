@@ -11,11 +11,9 @@ WIP
 
 FTB Filter system but that’s a mod that needs it’s own docs anyway. Basically, complex filters that allows authors to configure item checks via a GUI
 
-JEI, REI: Works with lib as well and shows a dedicated page on the item selection for JEI items, it also adds quest items as a reward section in the uses / recipe tabs, it might do more, not sure.
+JEI, REI: Works with lib as well and shows a dedicated page on the item selection for JEI items, it also adds quest items as a reward section in the uses / recipe tabs, if a reward contains a loot create it will also show what items can drop from it
 
 KubeJS: Events and custom quest types as well as custom filters
-
-Not sure if there is anything else par from those
 
 
 Explain how to make tag based quests using FTB filters and xmod compat, e.g Logs
