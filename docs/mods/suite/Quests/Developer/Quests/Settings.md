@@ -131,10 +131,6 @@ Number of dependencies that must be completed before this quest can be started.
 
 Disable showing JEI recipes for this quest.
 
-### Guide page
-
-???
-
 ### Ignore reward blocking
 
 Offer the quest rewards even if reward blocking is enabled for the team.

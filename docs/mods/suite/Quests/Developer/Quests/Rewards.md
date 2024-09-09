@@ -14,5 +14,5 @@ sidebar_position: 3
 | XP            | Give the player `x` XP                                  |
 | XP Levels     | Give the player `x` levels of XP                        |
 | Toast         | Show a toast with a custom message to the player        |
-| Stage         | Game stages?                                            |
+| Stage         | Set or remove a game stage                              |
 
