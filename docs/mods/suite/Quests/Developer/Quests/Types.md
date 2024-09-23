@@ -17,7 +17,7 @@ sidebar_position: 2
 | Observation     | Observe a set block/entity                                       |
 | Visit Biome     | Find the biome specified                                         |
 | Find Structure  | Find the specified structure (e.g. Stronghold)                   |
-| Stage           | Game stages?                                                     |
+| Stage           | Game stages                                                      |
 | Fluid           | Obtain the given fluid                                           |
 | Forge Energy    | Generate `x` amount of Forge Energy                              |
 | Image           | Set a decorative image for your quest chapter                    |

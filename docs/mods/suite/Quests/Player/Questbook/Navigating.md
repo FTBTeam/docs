@@ -45,7 +45,8 @@ Once you have completed all the tasks for a quest, you will get a notification i
 
 When you open the quest book, the chapter the quest is in will also have an `!` along with the specific quest that was completed
 
-SCREENSHOTs show the different places the `!` can be
+![Quest completed](../../../../_assets/images/quests/quest-notification-1.png)
+![Quest completed](../../../../_assets/images/quests/quest-notification-2.png)
 
 ### Claiming reward
 
