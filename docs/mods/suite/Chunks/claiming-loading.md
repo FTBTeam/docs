@@ -24,3 +24,4 @@ GIF
 
 ## Chunk loading
 
+Chunk loading is newarly identical to how you would claim or unclaim chunks. Open up the chunk map and shift click on the chunk you want to load. You can also load multiple chunks by holding shift and clicking and dragging your mouse over the chunks you want to load.
