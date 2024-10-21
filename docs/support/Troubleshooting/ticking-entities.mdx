@@ -17,7 +17,7 @@ The options to remove erroring entities and tile entities are missing in some ve
 If you are unable to find these options as detailed in the steps below, we recommend you restore a backup of your world.
 :::
 
-<Tabs groupId="operating-systems">
+<Tabs groupId="modloader-version">
     <TabItem value="forge-1.12-older" label="Forge 1.12 and older">
         ### Packs running Forge 1.12 and older
 
@@ -31,7 +31,7 @@ If you are unable to find these options as detailed in the steps below, we recom
         - For ticking tile entities do the following:
             - Find the line `B:removeErroringTileEntities=false` and change it to `B:removeErroringTileEntities=true`
     </TabItem>
-    <TabItem value="forge-1.14-newer" label="Forge 1.14 and newer">
+    <TabItem value="forge-1.14-1.20.1" label="Forge 1.14 to Forge/Neoforge 1.20.1">
         ### Packs running Forge 1.14 and newer
 
         - Stop your game or server if they are running
@@ -43,6 +43,19 @@ If you are unable to find these options as detailed in the steps below, we recom
             - Find the line `removeErroringEntities = false` and change it to `removeErroringEntities = true`
         - For ticking tile entities do the following:
             - Find the line `removeErroringBlockEntities = false` and change it to `removeErroringBlockEntities = true`
+    </TabItem>
+    <TabItem value="neoforge-1.21+" label="NeoForge 1.21 or Newer" default>
+        ### Packs running NeoForge 1.21 and newer
+
+        - Stop your game or server if they are running
+        - Navigate to where the modpack/server files are located
+        - If you are using the FTB App you can right-click on the modpack and select `Open Folder` > `Instance Folder`
+        - Open the `config`
+        - Open the `neoforge-server.toml` file with a text editor such as Notepad or Visual Studio Code
+        - If you are having issues with ticking entities do the following:
+        - Find the line `removeErroringEntities = false` and change it to `removeErroringEntities = true`
+        - For ticking tile entities do the following:
+        - Find the line `removeErroringBlockEntities = false` and change it to `removeErroringBlockEntities = true`
     </TabItem>
 </Tabs>
 
