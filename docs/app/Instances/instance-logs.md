@@ -39,8 +39,6 @@ Upload the files to any typical log sharing website. We've listed our preferred 
 
 | Name                | Website                                                              | Requires account |
 |---------------------|----------------------------------------------------------------------|------------------|
-| FTB Pastes          | [https://paste.feed-the-beast.com](https://paste.feed-the-beast.com) | No               |
-| CreeperHosts Pastes | [https://pste.ch](https://pste.ch)                                   | No               |
 | PasteBin            | [https://pastebin.com](https://pastebin.com)                         | No               |
 | Gist                | [https://gist.github.com](https://gist.github.com)                   | Yes              |
 | Pste Me             | [https://pste.me](https://pste.me)                                   | No               |
