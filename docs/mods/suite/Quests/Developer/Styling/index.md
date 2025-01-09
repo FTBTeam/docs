@@ -36,8 +36,9 @@ Secondly: Themes are handled by placing a `ftbquests/ftb_quests_theme.txt` file 
         - `color={color_value}` See above for colours, but this will give the icon a standard colour under all the other options
         - `tint={color_value}` See above again. But this adds an overall tint to the icon
         - The distinction between `color` and `tint` is subtle, and the effect often depends on the specific icon type. If in doubt, experiment!
-        - Finally, these are added together using a `;` meaning a full example might look like this
-            - `icon:minecraft:diamond;padding=5;border=#00A8FF;border_round_edges=true;color=blue;tint=#A8FFFFFF`
+        - Finally, these are added together using a `; ` meaning a full example might look like this
+            - `icon:minecraft:diamond; padding=5; border=#00A8FF; border_round_edges=true; color=blue; tint=#A8FFFFFF`
+        - The whitespace after each `;` character is _important_ !
 - `double`: This one is simple. It's just a double (`1.0D`)
 - `int`: (See above)
 - `string`: (See above)
