@@ -30,7 +30,7 @@ export default function FooterLayout({ style, links, logo, copyright }) {
           <div className={clsx(styles.column, styles.left, styles.branding)}>
             <div className={styles.heading}>Proudly partnered with</div>
 
-            <a href="https://bisecthosting.com">
+            <a href="https://bisecthosting.com/ftb">
               <img
                 src="/img/branding/bh-logo.svg"
                 alt="BisectHosting Logo"

@@ -97,5 +97,5 @@ FTB is partnered with BisectHosting. With **24/7/365** support, **2,000+** Minec
 
 Click the image below to get started!
 
-[![BisectHosting](../../../../static/img/bh-promotion.png)](https://bisecthosting.com/)
+[![BisectHosting](https://cdn.feed-the-beast.com/assets/promo/ftb-bh-promo-large.png)](https://bisecthosting.com/ftb)
 
