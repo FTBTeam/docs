@@ -19,6 +19,6 @@ The word `Instance` is typically used to relate to a Modpack that you have insta
 3. Click on the Setting button on the right of the screen
 4. Scroll down to the `Advanced` section and then the enable `Disable helper mod injection` option
 
-   ![Advanced Instance Settings](./../_assets/images/ftb-app-disable-hide-progress.png)
+   ![Advanced Instance Settings](./../_assets/images/ftb-app-disable-hide-progress.webp)
 
 When you start the modpack up now, you should notice that the Minecraft loading screen is no longer hidden.
