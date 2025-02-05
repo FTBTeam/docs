@@ -38,7 +38,7 @@ __Homes__ are player-specific saved teleport destinations. Players may have one 
 |`/back` | N | Teleports you to the last location where you used any command that teleports you (including vanilla `/tp` command). Note that Essentials maintains a teleport history "stack", so this can be used multiple times to go to progressively older teleport points. |
 |`/spawn` | N | Teleports you to the server spawn. |
 |`/rtp` | N | Takes you to a random location in the world with a configured bounds. |
-|`/tpl <player>` | Y | Teleports you to the last known location of the specified player (even if they're currently offline). |
+|`/teleport_last <player>` | Y | Teleports you to the last known location of the specified player (even if they're currently offline). |
 |`/tpx <dimension>` | Y | Teleports you to another dimension at your current location. |
 |`/jump` | Y | Teleports you to the block you're looking at (more precisely, to the top of the block column you're looking at). |
 
