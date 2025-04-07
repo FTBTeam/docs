@@ -2,24 +2,21 @@ import React from "react";
 import clsx from "clsx";
 import styles from "./index.module.scss";
 
-import discordIcon from "../../../assets/icons/discord.svg";
-import twitterIcon from "../../../assets/icons/twitter.svg";
-import instagramIcon from "../../../assets/icons/instagram.svg";
-import twitchIcon from "../../../assets/icons/twitch.svg";
-import youtubeIcon from "../../../assets/icons/youtube.svg";
-import facebookIcon from "../../../assets/icons/facebook.svg";
-import githubIcon from "../../../assets/icons/github.svg";
+import {
+  faBluesky,
+  faDiscord, faFacebook, faGithub,
+  faInstagram,
+  faTwitch,
+  faTwitter,
+  faXTwitter,
+  faYoutube
+} from "@fortawesome/free-brands-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const domain = "https://feed-the-beast.com";
 
 const Link = ({ href, children }) => {
   return <a href={domain + href}>{children}</a>;
-};
-
-const FontAwesomeIcon = ({ icon, alt }) => {
-  const IconComponent = icon;
-
-  return <span className={styles.icon}><IconComponent alt={alt} /></span>;
 };
 
 export default function FooterLayout({ style, links, logo, copyright }) {
@@ -130,25 +127,29 @@ export default function FooterLayout({ style, links, logo, copyright }) {
 
           <div className={styles.socials}>
             <a title="FTB Discord" href="https://go.ftb.team/discord">
-              <FontAwesomeIcon icon={discordIcon} />
+              <FontAwesomeIcon size="lg" icon={faDiscord} />
             </a>
-            <a title="FTB Twitter" href="https://go.ftb.team/twitter">
-              <FontAwesomeIcon icon={twitterIcon} />
+            <a rel="noreferrer noopener" target="_blank" title="Bluesky" href="https://go.ftb.team/bsky">
+              <FontAwesomeIcon size="lg" icon={faBluesky} />
+            </a>
+            <a rel="noreferrer noopener" target="_blank" title="Twitter" className={styles.twitter} href="https://go.ftb.team/twitter">
+              <FontAwesomeIcon size="lg" icon={faXTwitter} className={styles.x} />
+              <FontAwesomeIcon size="lg" icon={faTwitter} className={styles.bird} />
             </a>
             <a title="FTB Instagram" href="https://go.ftb.team/instagram">
-              <FontAwesomeIcon icon={instagramIcon} />
+              <FontAwesomeIcon size="lg" icon={faInstagram} />
             </a>
             <a title="FTB Twitch" href="https://go.ftb.team/twitch">
-              <FontAwesomeIcon icon={twitchIcon} />
+              <FontAwesomeIcon size="lg" icon={faTwitch} />
             </a>
             <a title="FTB Youtube" href="https://go.ftb.team/youtube">
-              <FontAwesomeIcon icon={youtubeIcon} />
+              <FontAwesomeIcon size="lg" icon={faYoutube} />
             </a>
             <a title="FTB Facebook" href="https://go.ftb.team/facebook">
-              <FontAwesomeIcon icon={facebookIcon} />
+              <FontAwesomeIcon size="lg" icon={faFacebook} />
             </a>
             <a title="FTB Github" href="https://go.ftb.team/github">
-              <FontAwesomeIcon icon={githubIcon} />
+              <FontAwesomeIcon size="lg" icon={faGithub} />
             </a>
           </div>
         </div>
