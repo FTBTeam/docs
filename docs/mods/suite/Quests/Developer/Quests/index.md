@@ -41,7 +41,7 @@ Now you can right-click the task and select `Convert to 'FTB Filter System' Tag 
 
 ### Quest Rewards
 
-Quests rewards can be added by clicking the `+` button in the rewards section of the quest window.
+[Quests rewards](./Rewards/index.md) can be added by clicking the `+` button in the rewards section of the quest window.
 This will open a window where you can select the type of reward you would like to add to the quest.
 
 ![Add Quest Reward](../../../../_assets/images/quests/quest-add-reward.webp)
