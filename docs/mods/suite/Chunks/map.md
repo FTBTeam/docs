@@ -1,3 +1,4 @@
 ---
-title: Map
+title: Map & Waypoints
+sidebar_position: 2
 ---
