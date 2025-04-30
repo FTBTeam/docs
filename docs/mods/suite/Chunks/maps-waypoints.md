@@ -8,8 +8,7 @@ FTB Chunks comes with a mini map and a fullscreen map that allows you to see the
 
 The mini map is enabled by default and can be expanded to the fullscreen map by pressing <kbd>M</kbd> by default, a keyboard/mouse reference can be seen by clicking on the blue `i` icon while on the fullscreen map.
 
-## Mini map
-The mini map is displayed in the top right corner of the screen by default.
+## Minimap
 
 ### Configuring the mini map
 The mini map can be configured by clicking on the gear icon in the bottom left corner of the fullscreen map, this will open a GUI where you can configure the mini map settings.

@@ -1,5 +1,8 @@
 ---
 title: Chunks
+tags:
+  - FTB Suite
+  - FTB Mods
 ---
 
 ## What is FTB Chunks?
