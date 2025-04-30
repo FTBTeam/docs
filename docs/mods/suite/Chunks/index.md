@@ -20,7 +20,7 @@ Features:
   - Allows you to have KubeJS, FTB Ranks / Luckperms, Waystones, Game Stages integration with FTB Chunks.
 
 ## Guides
-- [Claiming Chunks](./claiming_chunks.md)
+- [Claiming Chunks](./claiming-loading.md)
 - [FTB Chunks Map](./map.md)
 - [FTB Chunks Config](./config.md)
 - [FTB Chunks Commands](./commands.md)
