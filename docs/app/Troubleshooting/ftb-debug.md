@@ -33,7 +33,23 @@ You can find the download links for each operating system we support. We've incl
 
 Using the FTB Debug Tool is typically as simple as double-clicking the `.exe` file that you downloaded from above. In some cases it's a bit more complicated so we've outlined what you need to do for [`Linux & MacOS`](#using-on-macos--linux) below.
 
-Once you've downloaded the tool, you'll want to run it. A successful run will look like this
+Once you've downloaded the tool, you'll want to run it. 
+
+When the debug tool opens you will be shown a screen like this where you have 2 options.
+
+![Debug menu](./../_assets/images/ftb-debug-tool-menu.png)
+
+- Option 1 "Run FTB App diagnostics", will run a diagnostics test on the files the app stores on your computer and provides a support code for the support team to use. 
+
+- Option 2 "Fix common FTB App issues", will run though some common fixes for the app, we recommend only running this if you have been asked to by a support team member.
+
+You can swap between the options by using the arrow keys on your keyboard and pressing enter to select the option.
+
+### Running diagnostics
+
+To run the diagnostics, you'll want to select the first option by pressing enter once the tool has opened. This will then run the diagnostics and provide you with a code to provide to the support team member that has requested it.
+
+A successful run will look like this
 
 ![What the app looks like when running](./../_assets/images/ftb-debug-tool-running-windows.webp)
 

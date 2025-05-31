@@ -1,3 +1,0 @@
----
-title: StoneBlock 2
----

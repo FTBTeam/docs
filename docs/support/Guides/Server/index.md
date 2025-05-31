@@ -76,7 +76,7 @@ This guide is only intended to help you create the server. Using the server is u
 :::
 
 :::info The server installer failed
-If for any reason the server installer stopped working. You will want to create an issue on our Github which can be [found here](https://github.com/CreeperHost/modpacksch-serverdownloader/issues).
+If for any reason the server installer stopped working. You will want to create an issue on our Github which can be [found here](https://github.com/FTBTeam/FTB-Server-Installer/issues).
 :::
 
 :::info Why can't you just offer a .zip file
@@ -93,9 +93,9 @@ No problem, just delete it and make your own. Just make sure you include the rig
 
 We 100% agree! Running a server is no trivial task... If all this seems like too much of a pain in the rear end, maybe managed server hosting is what you're looking for? It's actually more affordable than you might think.
 
-FTB is partnered with CreeperHost. CreeperHost provide high quality, fairly priced Minecraft servers with excellent support and a in-house management panel. We highly recommend them for your Minecraft Server needs.
+FTB is partnered with BisectHosting. With **24/7/365** support, **2,000+** Minecraft modpacks, and hosting for over **70+** games, you're in good hands.
 
-Click [here](https://go.ftb.team/creeperhost) to receive a discount on your first order.
+Click the image below to get started!
 
-[![CreeperHost Server Promotion](/img/creeper-host-promotion.png)](https://go.ftb.team/creeperhost)
+[![BisectHosting](https://cdn.feed-the-beast.com/assets/promo/ftb-bh-promo-large.png)](https://bisecthosting.com/ftb)
 

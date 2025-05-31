@@ -6,9 +6,10 @@
 .ftbFooter {
   background-color: #141616;
   margin-top: 5em;
-  padding: 6rem 0;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
   font-size: 14px;
-  
+
   a {
     text-decoration: none;
   }
@@ -19,27 +20,27 @@
     text-align: center;
     gap: 4em;
     margin-bottom: 4em;
-    
+
     @media (min-width: 600px) {
       grid-template-columns: 1fr 1fr;
       text-align: left;
     }
-    
+
     @media (min-width: 900px) {
       grid-template-columns: 1.3fr .9fr .9fr .9fr;
       text-align: right;
       gap: 0;
-      
+
       .left {
         text-align: left;
       }
     }
-    
+
     ul {
       list-style: none;
       line-height: 2.2em;
       padding: 0;
-      
+
       li {
         list-style: none;
       }
@@ -55,40 +56,79 @@
       }
     }
   }
-  
+
   .socialCopyright {
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
-    
+    border-top: 1px solid var(--ftb-text-red);;
+    padding-top: 2rem;
+
     .copyright {
       margin-top: 2em;
       opacity: .5;
       color: white;
     }
-    
+
     @media (min-width: 600px) {
       flex-direction: row;
       margin-top: 2em;
-      
+
       .copyright {
         margin-top: 0em;
       }
     }
-    
+
     .socials {
       display: flex;
+      gap: 1.5rem;
+
       a {
+        color: white;
         width: 17px;
         display: block;
-        margin-left: 1.5em;
-        opacity: .8;
+        opacity: .6;
         transition: opacity .25s ease-in-out;
 
         &:hover {
           opacity: 1;
+        }
+      }
+
+      .twitter {
+        position: relative;
+        display: block;
+        width: 21px;
+        height: 21px;
+
+        .bird, .x {
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+        }
+
+        .x {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        &:hover {
+          .x {
+            visibility: hidden;
+            opacity: 0;
+          }
+
+          .bird {
+            visibility: visible;
+            opacity: 1;
+          }
         }
       }
     }

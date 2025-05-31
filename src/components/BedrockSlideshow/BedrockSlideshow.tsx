@@ -10,16 +10,17 @@ export function BedrockSlideshow({slug}: Props) {
   const [data, setData] = useState(null);
 
   function loadMedia(data: any) {
-    if (!data || !data.images) {
+    if (!data || !data.media) {
       return;
     }
 
-    const thumbnail = data.images.find((a: any) => a.type === "Thumbnail").location;
-    const screenshots = data.images.filter((a: any) => a.type.toLowerCase() === "screenshot");
+    const thumbnail = data.media.find((a: any) => a.type === "logo").url;
+    const screenshots = data.media.filter((a: any) => a.type.toLowerCase() === "image");
+    const video = data.media.find((a: any) => a.type === "youtube");
 
-    let videoEmbedUrl;
-    if (data.video?.location) {
-      const parsedUrl = new URL(data.video.location);
+    let videoEmbedUrl: string;
+    if (video) {
+      const parsedUrl = new URL(video.url);
       const videoId = parsedUrl.searchParams.get("v");
       videoEmbedUrl = `https://www.youtube.com/embed/${videoId}`;
     }
@@ -27,13 +28,13 @@ export function BedrockSlideshow({slug}: Props) {
     setData([
         {type: "image", url: thumbnail},
         ...(videoEmbedUrl ? [{type: "youtube", url: videoEmbedUrl}] : []),
-        ...screenshots.map((image: any) => ({type: "image", url: image.location}))
+        ...screenshots.map((image: any) => ({type: "image", url: image.url}))
     ])
   }
 
   useEffect(() => {
     // Get the data for the slideshow
-    fetch(`https://meta.feed-the-beast.com/v1/marketplace/${slug}`)
+    fetch(`https://api.feed-the-beast.com/v1/dataforge/public/bedrock/product/${slug}`)
       .then(res => res.json())
       .then(data => loadMedia(data))
       .finally(() => setLoading(false))

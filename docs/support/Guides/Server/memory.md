@@ -3,7 +3,7 @@ title: Memory Allocation
 ---
 
 :::caution
-If you are using a hosting company such as CreeperHost you may not be able to change the amount of memory allocated to you using this method, you will need to contact your hosting provider for more information.
+If you are using a hosting company such as BisectHosting you may not be able to change the amount of memory allocated to you using this method, you will need to contact your hosting provider for more information.
 :::
 
 ## How to change the amount of memory allocated to your server

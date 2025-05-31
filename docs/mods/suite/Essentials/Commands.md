@@ -38,7 +38,7 @@ __Homes__ are player-specific saved teleport destinations. Players may have one 
 |`/back` | N | Teleports you to the last location where you used any command that teleports you (including vanilla `/tp` command). Note that Essentials maintains a teleport history "stack", so this can be used multiple times to go to progressively older teleport points. |
 |`/spawn` | N | Teleports you to the server spawn. |
 |`/rtp` | N | Takes you to a random location in the world with a configured bounds. |
-|`/tpl <player>` | Y | Teleports you to the last known location of the specified player (even if they're currently offline). |
+|`/teleport_last <player>` | Y | Teleports you to the last known location of the specified player (even if they're currently offline). |
 |`/tpx <dimension>` | Y | Teleports you to another dimension at your current location. |
 |`/jump` | Y | Teleports you to the block you're looking at (more precisely, to the top of the block column you're looking at). |
 
@@ -69,7 +69,15 @@ All of these commands require `OP` to function
 |`/nicknamefor <player> <nickname>` | Forces a nickname on a specific player.|
 |`/mute <player> [until]` | Mutes a player for a specified amount of time (`until`) or forever.  The `until` is a duration time; omitting it mutes the player indefinitely. See [Duration](/docs/mods/suite/Essentials/Durations) for more information. Example: `/mute Slowpoke101 2h` mutes the player `Slowpoke101` for two hours.|
 |`/unmute <player>` | Unmutes the specified player.|
-|`/tp-offline <name/id> <pos>` | _[New in Essentials 1.20.1+]_ Teleports a player to a given location when they're offline. This command takes either a player's UUID or username. If you wish to teleport a player to a different dimension too, use the standard vanilla `execute in` method. E.g. `/execute in minecraft:the_nether run tp-offline someplayer 0 70 0` ports the player to (0, 70, 0) in the Nether.|
+
+### Offline Teleport
+
+_[New in Essentials 1.20.1+]_ Teleports a player to a given location when they're offline. If you wish to teleport a player to a different dimension too, use the standard vanilla `execute in` method. E.g. `/execute in minecraft:the_nether run tp_offline name someplayer 0 70 0` teleports the player to (0, 70, 0) in the Nether. All `/tp_offline` commands require `OP` permissions to use.
+
+| Command     |Description |
+| ----------- | --------- |
+|`/tp_offline name <player> <pos>` | Teleport player using player name.|
+|`/tp_offline id <player_id> <pos>` | Teleport player using player UUID.|
 
 ## Kits
 

@@ -1,13 +1,40 @@
 .slideshow {
   display: grid;
-  row-gap: .5rem;
+
+  .text {
+    position: relative;
+    background-color: hsl(var(--ftb-bg-shade-hsl), .15);
+    border: 1px solid rgba(white, .05);
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: .8rem;
+
+    .title {
+      font-weight: bold;
+      font-size: 1.125rem;
+    }
+
+    p {
+      margin-top: .5rem;
+      opacity: .8;
+      font-size: 0.876rem;
+      margin-bottom: 0;
+    }
+  }
 
   .main {
     position: relative;
-    overflow: hidden;
+    aspect-ratio: 16/9;
+    background-color: hsl(var(--ftb-bg-shade-hsl), .05);
+    border: 1px solid hsla(0, 0%, 100%, .05);
+    border-radius: 10px 10px 0 0;
 
-    // Use aspect ratio to keep the slideshow at 16:9
-    padding-top: 56.25%;
+    .masker {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      padding: 1rem 0;
+    }
 
     .item {
       position: absolute;
@@ -27,7 +54,8 @@
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        border-radius: 8px;
       }
     }
 
