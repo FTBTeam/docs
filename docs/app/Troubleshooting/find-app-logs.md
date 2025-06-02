@@ -15,10 +15,10 @@ Finding the logs is simple, you will first need the app open. For best results, 
 
 1. Have the app open
 2. Navigate to the settings of the app (Located in the bottom left)
-3. Select `App Info` on the left side
-4. Then select the blue button titled `Upload App Logs`
-    - This will upload the app logs and place a link to them in your clipboard.
-5. Paste this code to the member of our team supporting you with your issue.
+3. Select `App` on the left side
+4. Then select the blue button titled `Create App Logs ZIP`
+    - This will create a ZIP file containing the app logs and save it to your computer, it may take a few seconds to complete and once it is done, a file explorer window will open showing you the ZIP file, it will also show a message in the app that the ZIP has been created and where its located.
+5. Upload the ZIP to the member of our team supporting you with your issue.
 
 Done correctly, you should be on a page that looks a bit like this one.
 
