@@ -1,5 +1,5 @@
 ---
-title: Cobblestone/Bassalt Generators
+title: Cobblestone/Basalt Generators
 sidebar_position: 6
 tags:
   - sieves and things
