@@ -11,7 +11,7 @@ To register a recipe send a scriptevent with id `ftb_sd:register_compacting_reci
 - `bottomSlot` - the bottom slot of the drawer item - This is the item that will be compacted into the top slot
 - `bottomSlotCount` - The amount of the bottom slot item that will be compacted into the top slot
 
-### Code Example (TypeScript)
+### Code Example (```typescript```)
 ```
 interface CompactingRecipe {
     topSlot: string;
