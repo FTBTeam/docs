@@ -1,6 +1,5 @@
 ---
 title: Compacting Recipe
-sidebar_position: 14
 ---
 
 This allows you to register a compacting recipe for the Compacting Drawer.
