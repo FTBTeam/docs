@@ -26,6 +26,6 @@ For example, if you add only Storage Upgrade(V) to all 7 slots, you will achieve
 - Storage Upgrade(III) - 8x Base value.
 - Storage Upgrade(IV) - 16x Base value.
 - Storage Upgrade(V) - 32x Base value.
-- Light Upgrade - Iluminates the Drawer.
+- Light Upgrade - Illuminates the Drawer.
 - Void Upgrade - Removes excess items.
 - Person Lock Upgrade - Locks to Owner
