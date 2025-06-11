@@ -32,10 +32,11 @@ world.afterEvents.worldInitialize.subscribe((event) => {
 ```
 
 ### Command Example
-```
-/scriptevent ftb_sd:register_compacting_recipe '{"topSlot":"minecraft:diamond_block","bottomSlot":"minecraft:diamond","bottomSlotCount":9}'
-```
 
 :::warning
 Please note if using commands to register a recipe you must run the command at least once every time you load the world
 :::
+
+```
+/scriptevent ftb_sd:register_compacting_recipe '{"topSlot":"minecraft:diamond_block","bottomSlot":"minecraft:diamond","bottomSlotCount":9}'
+```
