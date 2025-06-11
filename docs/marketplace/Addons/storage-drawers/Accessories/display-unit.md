@@ -18,7 +18,7 @@ You can only view and remove items.
 
 ### Crafting
 
-Crafting a Storage Display Unit is simple! Just combine 4 redstone, 3 iron ingots, 1 eye of ender and a single Drawer Crontroller in the crafting grid.
+Crafting a Storage Display Unit is simple! Just combine 4 redstone, 3 iron ingots, 1 eye of ender and a single Drawer Controller in the crafting grid.
 
 ![Storage Display Unit Crafting](../_assets/images/storage-display-unit-crafting.png)
 
