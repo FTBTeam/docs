@@ -5,7 +5,7 @@ sidebar_position: 2
 
 Access your items quickly using the Storage Display Unit.
 
-![Storage Display Unit](../_assets/images/storage-display-unit.png)
+![Storage Display Unit](../_assets/images/storage-display-unit.webp)
 
 Place the Storage Display Unit near your Drawers.
 Interact with the Storage Display Unit.

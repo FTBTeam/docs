@@ -7,7 +7,7 @@ Keys are your master control for Drawers.
 
 Use them to lock Drawers to specific block types, customize how amounts are displayed, and manage upgrades.
 
-![Keys](./_assets/images/keys.png)
+![Keys](./_assets/images/keys.webp)
 
 ### How to Use Keys
 

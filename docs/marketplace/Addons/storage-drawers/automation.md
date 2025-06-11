@@ -17,7 +17,7 @@ To use a Hopper with a Storage Drawer:
 
 4. Place additional items into the Hopper. They will automatically be transferred to the Drawer.
 
-![Hopper Automation Example](./_assets/images/hoppers.png)
+![Hopper Automation Example](./_assets/images/hoppers.webp)
 
 You can also use Hoppers with a Drawer Controller to efficiently and automatically sort items.
 
