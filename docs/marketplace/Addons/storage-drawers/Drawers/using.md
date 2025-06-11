@@ -20,12 +20,12 @@ Don't be afraid to stack 'em up! Experiment with building your storage system in
 
 **To place Drawers on top of each other, players must be sneaking.**
 
-![Drawer stacking](../_assets/images/drawers-stacking.png)
+![Drawer stacking](../_assets/images/drawers-stacking.webp)
 
 
 ### Compacting Drawer
 
-![Compacting Drawer](../_assets/images/compacting-drawers.png)
+![Compacting Drawer](../_assets/images/compacting-drawers.webp)
 
 1. Choose a material (for example, an Iron Block).
 

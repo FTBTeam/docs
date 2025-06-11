@@ -26,7 +26,7 @@ Unleash your creativity! Craft Storage Drawers from a variety of materials:
 
 Crafting Storage Drawers is a breeze! Just combine a chest with your choice of material.
 
-![Drawer crafting](../_assets/images/drawer-crafting.png)
+![Drawer crafting](../_assets/images/drawer-crafting.webp)
 
 ### Half Drawer
 

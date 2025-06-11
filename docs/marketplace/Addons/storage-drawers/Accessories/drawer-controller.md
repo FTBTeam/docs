@@ -27,4 +27,4 @@ Right-click the Drawer Controller to instantly distribute all your held items in
 
 But remember, for the magic to work, each drawer needs to already have at least one item inside to act as a category.
 
-![Drawer Controller Usage](../_assets/images/controller-usage.png)
+![Drawer Controller Usage](../_assets/images/controller-usage.webp)
