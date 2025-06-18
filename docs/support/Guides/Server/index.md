@@ -23,20 +23,21 @@ For the reminder of this guide, we're going to use `FTB StoneBlock 3` modpack fr
 
 Right, now that's out of the way, here are the steps to locate the server files.
 
-- Go to the [FTB Website](https://feed-the-beast.com)
+- Go to the [FTB Website Server Files](https://feed-the-beast.com/modpacks/server-files) page
+- Click on the Operating System you want to install the server on.
 - Find the modpack you want to install, in this case, it's going to be `FTB StoneBlock 3`
 
 You should now be on a page that looks like this
 
-![The FTB Website on the StoneBlock 3 website page](../../_assets/images/ftb-website-modpack-page.webp)
+![The FTB Website on the StoneBlock 3 server files page](../../_assets/images/server-guide/ftb-server-files-page.png)
 
-- Next, select Versions in the tabs under the Modpack name
-- Then under selected version, select the version you need a Minecraft server for.
+- Now select the version of the modpack you need the server files for from the dropdown box.
     - Typically, the latest version is the one you'd need
-- Under the selected version, you'll see a big heading tilted `Server Files`
-- Select the option that is correct for your operating system. We provide both ARM and Intel/AMD binaries.
+- Under the selected version, you will see a few download methods, select the one that suits you best. Both methods download the same file, just in different ways.
+    - The Desktop option has 2 buttons that will just download the server installer for you.
+    - The Server options gives you a `curl` command that you can run in your terminal to download the server installer.
 
-![The FTB website focused on the server files section](../../_assets/images/ftb-website-modpack-version-selection.webp)
+![The FTB website focused on the server files section](../../_assets/images/server-guide/ftb-server-files-download-highlight.png)
 
 Now you have this downloaded, we can move onto how to use the server installer
 
