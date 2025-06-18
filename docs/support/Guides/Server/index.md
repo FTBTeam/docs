@@ -11,6 +11,24 @@ Creating a server for an FTB modpack is a little different from most other modpa
 This guide is only intended to show you how to download the files required to setup a Minecraft server for an FTB modpack. This guide will not help you run a Minecraft Server. There are many other guides out there on how to do this.
 :::
 
+<details>
+  <summary>FAQs</summary>
+- Do I need to have Java installed?
+  - No, the server installer will download the correct version of Java for you.
+---
+- How do I give the server more RAM?
+  - See our [Memory allocation](./memory.md) guide.
+---
+- Can I use this guide for any FTB modpack?
+  - Yes, this guide is intended to be used for any FTB modpack. The steps are the same for all modpacks.
+---
+- How much RAM do I need to run a server?
+  - This depends on the modpack you are trying to run. Most FTB modpacks recommend at least 4GB-6GB of RAM, but some may require more. You can find the recommended RAM for a modpack by visiting the [modpacks page](https://https://feed-the-beast.com/modpacks), selecting the modpack you want to run, and looking at the "Requirements" section on the right side of the page.
+---
+- I have never used a terminal before, can you help me?
+  - No, this guide assumes you have some basic knowledge of how to use a terminal. If you don't know how to use a terminal, we recommend you look up some guides on how to use it or take a look at our partner [BisectHosting](#ad-this-all-seems-a-bit-complicated) who can help get you started with a server.
+</details>
+
 ## Downloading the server files
 
 Unlike other providers, FTB ships a single binary file (executable) that contains a system that can download, update, and extract out all the modpack files from our servers.
