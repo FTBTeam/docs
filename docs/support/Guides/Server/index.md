@@ -11,6 +11,24 @@ Creating a server for an FTB modpack is a little different from most other modpa
 This guide is only intended to show you how to download the files required to setup a Minecraft server for an FTB modpack. This guide will not help you run a Minecraft Server. There are many other guides out there on how to do this.
 :::
 
+<details>
+  <summary>FAQs</summary>
+- Do I need to have Java installed?
+  - No, the server installer will download the correct version of Java for you.
+---
+- How do I give the server more RAM?
+  - See our [Memory allocation](./memory.md) guide.
+---
+- Can I use this guide for any FTB modpack?
+  - Yes, this guide is intended to be used for any FTB modpack. The steps are the same for all modpacks.
+---
+- How much RAM do I need to run a server?
+  - This depends on the modpack you are trying to run. Most FTB modpacks recommend at least 4GB-6GB of RAM, but some may require more. You can find the recommended RAM for a modpack by visiting the [modpacks page](https://https://feed-the-beast.com/modpacks), selecting the modpack you want to run, and looking at the "Requirements" section on the right side of the page.
+---
+- I have never used a terminal before, can you help me?
+  - No, this guide assumes you have some basic knowledge of how to use a terminal. If you don't know how to use a terminal, we recommend you look up some guides on how to use it or take a look at our partner [BisectHosting](#ad-this-all-seems-a-bit-complicated) who can help get you started with a server.
+</details>
+
 ## Downloading the server files
 
 Unlike other providers, FTB ships a single binary file (executable) that contains a system that can download, update, and extract out all the modpack files from our servers.
@@ -23,20 +41,21 @@ For the reminder of this guide, we're going to use `FTB StoneBlock 3` modpack fr
 
 Right, now that's out of the way, here are the steps to locate the server files.
 
-- Go to the [FTB Website](https://feed-the-beast.com)
+- Go to the [FTB Website Server Files](https://feed-the-beast.com/modpacks/server-files) page
+- Click on the Operating System you want to install the server on.
 - Find the modpack you want to install, in this case, it's going to be `FTB StoneBlock 3`
 
 You should now be on a page that looks like this
 
-![The FTB Website on the StoneBlock 3 website page](../../_assets/images/ftb-website-modpack-page.webp)
+![The FTB Website on the StoneBlock 3 server files page](../../_assets/images/server-guide/ftb-server-files-page.png)
 
-- Next, select Versions in the tabs under the Modpack name
-- Then under selected version, select the version you need a Minecraft server for.
+- Now select the version of the modpack you need the server files for from the dropdown box.
     - Typically, the latest version is the one you'd need
-- Under the selected version, you'll see a big heading tilted `Server Files`
-- Select the option that is correct for your operating system. We provide both ARM and Intel/AMD binaries.
+- Under the selected version, you will see a few download methods, select the one that suits you best. Both methods download the same file, just in different ways.
+    - The Desktop option has 2 buttons that will just download the server installer for you.
+    - The Server options gives you a `curl` command that you can run in your terminal to download the server installer.
 
-![The FTB website focused on the server files section](../../_assets/images/ftb-website-modpack-version-selection.webp)
+![The FTB website focused on the server files section](../../_assets/images/server-guide/ftb-server-files-download-highlight.png)
 
 Now you have this downloaded, we can move onto how to use the server installer
 
