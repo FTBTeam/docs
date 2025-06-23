@@ -27,7 +27,7 @@ FTB Library is one of our core mods / library mod that is a collection of common
 | `/ftblibrary day` | Set time to day |
 | `/ftblibrary night` | Set time to night |
 | `/ftblibrary clientconfig` | Opens the client config |
-| `/ftblibrary nbtedit` | Opens a rich NBT Editing GUI |
+| `/ftblibrary nbtedit <block\|entity\|item\|player>` | Opens a rich NBT Editing GUI |
 
 ## NBT Editor
 
@@ -35,3 +35,12 @@ The NBT Editor is a powerful tool that allows you to edit NBT data in a user-fri
 
 ![Screenshot of the NBT Editor in-game](../../_assets/ftb-library-nbt-editor.png)
 
+## Sidebar System
+
+The Sidebar System can be used to display a dynamic array of buttons on the inventory screen as shortcuts for the user. Many FTB Mods add one or more buttons to the sidebar by default.
+
+Players can edit the position and visibility of the buttons by right-clicking on one of them to enter edit mode. The sidebar can be disabled entirely in `/ftblibrary clientconfig` if desired. Modpack Creators can edit the default setup of the sidebar by editing `defaultconfig/ftblibrary-client.snbt`.
+
+![Screenshot of the Sidebar Buttons in-game](../../_assets/ftb-library-sidebar-buttons.png)
+
+Non-FTB Mods can add support for a sidebar button via a json asset file. The supported features are subject to change, but here are some references: [JSON Schema](https://github.com/FTBTeam/FTB-Library/blob/dev/common/src/main/java/dev/ftb/mods/ftblibrary/sidebar/SidebarButtonData.java#L26). [Click Event Translation](https://github.com/FTBTeam/FTB-Library/blob/dev/common/src/main/java/dev/ftb/mods/ftblibrary/util/client/ClientUtils.java#L67). [Example Button JSON](https://github.com/FTBTeam/FTB-Library/blob/dev/common/src/main/resources/assets/ftblibrary/sidebar_buttons/toggle/day.json)
