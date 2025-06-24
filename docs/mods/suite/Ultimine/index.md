@@ -1,5 +1,6 @@
 ---
 title: Ultimine
+description: FTB Ultimine is our take on a vein miner like mod.
 ---
 
 ## What is Ultimine?

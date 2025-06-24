@@ -1,7 +1,7 @@
 ---
 title: Library
 sidebar_position: 1
-description: Introduction to FTB Ranks
+description: Introduction to FTB Library
 tags:
   - introduction
 ---

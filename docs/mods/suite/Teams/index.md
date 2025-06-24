@@ -1,5 +1,6 @@
 ---
 title: Teams
+description: FTB Teams is our all in one solution for team management.
 tags:
   - FTB Suite
   - FTB Mods
