@@ -15,7 +15,7 @@ sidebar_position: 3
 |---------------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------|
 | `/ftbchunks block_color`                                            | N           | Gets the colour of the block you are looking at                                                          |
 | `/ftbchunks claim [radius in blocks]`                               | N           | Claim the chunk you are standing in, you can also pass in a radius                                       |
-| `/ftbchunks info [<x> <z>] [dimention]`                             | N           | View the claim status of the chunk you are standing in or the one specified                              |
+| `/ftbchunks info [<x> <z>] [dimension]`                             | N           | View the claim status of the chunk you are standing in or the one specified                              |
 | `/ftbchunks load [radius in blocks]`                                | N           | Load the claimed chunk(s) you are standing in                                                            |
 | `/ftbchunks unclaim [radius in blocks]`                             | N           | Unclaim the chunk you are standing in, you can pass in a radius in blocks to unclaim neighbouring chunks |
 | `/ftbchunks unclaim_all`                                            | N           | Unclaim all chunks you have claimed                                                                      |

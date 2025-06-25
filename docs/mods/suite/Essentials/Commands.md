@@ -123,12 +123,11 @@ Kits are a relatively new feature to Essentials and have more in-depth documenta
 | Command     |Op Required| Description |
 | ----------- | --------- | ------------ |
 |`/trashcan` | N | Opens a virtual inventory that will void any items put into it.|
-|`/enderchest` | N | Opens your enderchest inventory.|
-|`/enderchest <player>` | Y | Opens another player's enderchest inventory. OP is required if the specified player is not you.|
-|`/anvil` | Y | Opens the Anvil's GUI.|
-|`/smithing` | Y | Opens the Smithing Table's GUI.|
-|`/crafting` | Y | Opens the Crafting Table's GUI.|
-|`/stonecutter` | Y | Opens the Stonecutter's GUI.|
+|`/enderchest [player]` | Y | Opens another player's enderchest inventory.|
+|`/open anvil` | Y | Opens the Anvil's GUI.|
+|`/open smithing` | Y | Opens the Smithing Table's GUI.|
+|`/open crafting` | Y | Opens the Crafting Table's GUI.|
+|`/open stonecutter` | Y | Opens the Stonecutter's GUI.|
 
 ### Notifying
 

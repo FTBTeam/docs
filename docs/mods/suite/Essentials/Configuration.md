@@ -4,7 +4,7 @@ title: Configuration
 
 ## Overview
 
-The FTB Essentials configuration file can be found at `<world>/serverconfig/ftbessentials.snbt`. This contains a configuration section for every command added by the mod; every command can be disabled in the config file, and some commands have extra configuration.
+The FTB Essentials configuration file can be found at `config/ftbessentials.snbt`. This contains a configuration section for every command added by the mod; every command can be disabled in the config file, and some commands have extra configuration.
 
 The config file is heavily-commented, so each individual subsection will not be documented here.
 
@@ -22,7 +22,7 @@ anvil: {
 }
 ```
 
-To remove the `/anvil` command, just change `enabled` to `false`, and (if running) restart your server.
+To remove the `/open anvil` command, just change `enabled` to `false`, and (if running) restart your server.
 
 A command with a more complex configuration:
 

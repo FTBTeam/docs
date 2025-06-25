@@ -1,5 +1,6 @@
 ---
 title: Chunks
+description: FTB Chunks allows for mapping, claiming, and protecting chunks.
 tags:
   - FTB Suite
   - FTB Mods

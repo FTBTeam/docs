@@ -1,7 +1,7 @@
 ---
 date: 2024-01-17
 title: Ranks
-description: Introduction to FTB Ranks
+description: FTB Ranks is a server-side mod for permission management.
 tags:
   - introduction
 ---
