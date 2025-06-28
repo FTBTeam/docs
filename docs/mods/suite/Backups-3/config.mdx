@@ -6,6 +6,10 @@ tags:
   - FTB Mods
   - Backups 3
 ---
+import clientConfigScreen from '../../_assets/images/backups3/backups-3-client-config.webp';
+import serverConfigScreen from '../../_assets/images/backups3/backups-3-server-config.webp';
+import configSelector from '../../_assets/images/backups3/backups-3-config-select.webp';
+import {Slideshow} from '../../../../src/components/SlideShow/Slideshow';
 
 FTB Backups 3 can be configured either in-game by opening the FTB Backups 3 menu from the inventory screen or by editing the `ftbbackups3-server.toml` located in the config folder.
 
@@ -13,7 +17,11 @@ FTB Backups 3 can be configured either in-game by opening the FTB Backups 3 menu
 
 To open the FTB Backups 3 config menu, open your inventory then in the top left corner click on the save icon ( 💾 it looks like a floppy disk). This will open the FTB Backups 3 menu where you can configure the client and server settings for FTB Backups 3.
 
-IMAGE OF FTB BACKUPS 3 MENU
+<Slideshow media={[
+    {type: "image", url: configSelector, title: 'Config select screen', text: "This is the screen you will see when you click on the FTB Backups 3 icon in your inventory."},
+    {type: "image", url: clientConfigScreen, title: 'Browsing', text: "This is the client configuration screen. Here you can set the position of the backup progress panel and whether it should be shown or not."},
+    {type: "image", url: serverConfigScreen, title: 'Searching', text: "This is the server configuration screen. Here you can set various options for how FTB Backups 3 works"},
+]} />
 
 ### Server configuration
 
@@ -38,3 +46,11 @@ The server configuration allows you to set the following options:
 
 ### Client configuration
 
+The client configuration allows you to set the following options:
+
+| Name                       | Description                                    |
+|----------------------------|------------------------------------------------|
+| Progress panel position    | Sets the location of the backup progress panel |
+| Progress panel x inset     | X offset for the progress panel                |
+| Progress panel y inset     | Y offset for the progress panel                |
+| Show backup progress panel | Enables/Disables the progress panel            |
