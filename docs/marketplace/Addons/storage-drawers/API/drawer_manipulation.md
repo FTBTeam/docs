@@ -18,23 +18,23 @@ To request to add items to a drawer, send a script event with the id `ftb_sd:add
 
 ### Response
 
-After items where added a scriptevent with the id `ftb_sd:add_item_status_v2` responds with the data expect `itemAmount` is the number of items not added
+After items are added, a script event with the id `ftb_sd:add_item_status_v2` responds with the data expect `itemAmount` is the number of items not added
 
 ## Removing Items
 
 ### Remove
-To request to add items to a drawer, send a script event with the id `ftb_sd:remove_item_v2` as JSON with the following data:
+To request to remove items to a drawer, send a script event with the id `ftb_sd:remove_item_v2` as JSON with the following data:
 
 - `dimId` - the dimension ID of the drawer
 - `blockLocation` - the location as of the drawer block
-- `itemTypeId` - the item Id of the item to add
+- `itemTypeId` - the item Id of the item to remove
 - `itemAmount` - the amount of the item to remove (Not limited to 64)
-- `slots` - Optional, the slots to add the item to, if not specified it will try to add to all drawer slots
-- `feedbackId` - Optional, the id of the feedback event to send when the item is added
+- `slots` - Optional, the slots to remove the item to, if not specified it will try to add to all drawer slots
+- `feedbackId` - Optional, the id of the feedback event to send when the item is removed
 
 ### Response
 
-After items where added a scriptevent with the id `ftb_sd:remove_item_status_v2` responds with the data expect `itemAmount` is the number of items not removed
+After items are removed, a script event with the id `ftb_sd:add_item_status_v2` responds with the data expect: `itemAmount` is the number of items not removed.
 
 ## Status
 
