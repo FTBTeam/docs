@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 title: Find App Logs
 description: Guide for find app logs when trying to troubleshoot issues.
 comment: "TODO: this will need updating when the app's settings page get it's redesign!"
