@@ -16,24 +16,24 @@ All FTB Ranks commands start with `/ftbranks`. The following commands are define
 | `/ftbranks list_ranks_of <player>` | Y | List all the ranks that the given `<player>` currently has. |
 | `/ftbranks list_players_with <rank>` | Y | Lists all the players who currently have the given `<rank>`. |
 | `/ftbranks node <add\|remove\|list> <rank> <node> <value>` | Y | Adds or removes the given node to/from the given `<rank>`. |
-| `/ftbranks condition <rank> <value>` | Y | Sets the condition for the given ranks. [Simple conditions](Simple Conditions.md) just need a condition name here, but [advanced conditions](Advanced Conditions.md) require a code block. A condition can be removed by specifying the empty string. See below for examples. |
+| `/ftbranks condition <rank> <value>` | Y | Sets the condition for the given ranks. [Simple conditions](Simple%20Conditions.md) just need a condition name here, but [advanced conditions](Advanced%20Conditions.md) require a code block. A condition can be removed by specifying the empty string. See below for examples. |
 | `/ftbranks show_rank <rank>` | Y | Dumps the configuration information for the given `<rank>` |
 
 ### Adding conditions
 
-Example command to set a simple condition on a rank:
+Example command to set a simple condition on the `Near Spawn` rank:
 
 ```
 /ftbranks condition "Near Spawn" spawn
 ```
 
-Example command to set an advanced condition on a rank (player has walked at least 500000 cm and been playing for at least 3 weeks):
+Example command to set an advanced condition on the `Veteran` rank (player has walked at least 500000 cm and been playing for at least 3 weeks):
 
 ```
-/ftbranks condition Veteran { type: "and", conditions: [ { type: "stat", stat: "minecraft:walk_one_cm", value: 5000, value_check: ">=" }, { type: "playtime", time: 3, time_unit: "weeks" } ] }
+/ftbranks condition Veteran { type: "and", conditions: [ { type: "stat", stat: "minecraft:walk_one_cm", value: 500000, value_check: ">=" }, { type: "playtime", time: 3, time_unit: "weeks" } ] }
 ```
 
-Example command to clear a condition:
+Example command to clear the condition from the `VIP` rank (after this, players can only have the `VIP` rank by direct assignment via `/ftbranks add ...`):
 
 ```
 /ftbranks condition VIP ""
