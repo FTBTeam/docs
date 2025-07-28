@@ -36,7 +36,7 @@ for (const image of images) {
 
     // Get the dimensions of the image
     var imageMeta = await sharp(image).metadata();
-    const { width, height } = imageMeta;
+    const { width } = imageMeta;
 
     // Optimise and output
     const fileOut = image.replace(/\.(png|jpg|jpeg|gif)$/, '.webp');
@@ -59,7 +59,7 @@ for (const image of images) {
     // Finally output the image
     let data;
     if (isGif) {
-        const { paletteBitDepth, loop, delay } = imageMeta
+        const { loop, delay } = imageMeta
         data = await imageSharp
             .webp({
                 loop,
