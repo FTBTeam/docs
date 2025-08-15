@@ -15,6 +15,6 @@ In the example below, it's guaranteed to get any of the five tools, with a 20% c
 Even if the reward table's empty weight is greater than zero, the player will always receive an item.
 :::
 
-## Empty pockets
-
+:::tip
 Want a chance to reward nothing? See [Loot Reward](./Loot_Reward.md) instead.
+:::
