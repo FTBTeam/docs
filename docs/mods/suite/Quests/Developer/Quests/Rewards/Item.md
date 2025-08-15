@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Item Reward
 
-## The full count is received
+## Receiving the item
 
 When the player finishes the quest with an item reward, they will be given an item or a count of an item (by default).
 
