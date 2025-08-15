@@ -124,3 +124,53 @@ By creating a reward table with any name in the "Name" column below (e.g. "`comm
 |![Rare crate preset](../../../../_assets/images/quests/rewards/loot-crate-rare.png "The rare crate")|rare|0x0094FF|50|200|0|false|
 |![Epic crate preset](../../../../_assets/images/quests/rewards/loot-crate-epic.png "The epic crate")|epic|0x8000FF|9|10|10|false|
 |![Legendary crate preset](../../../../_assets/images/quests/rewards/loot-crate-legendary.webp "The legendary crate")|legendary|0xFFC147|1|1|190|true|
+
+### Nesting with loot crates
+
+Reward tables and loot crates can be nested in each other.
+
+The "parent" table needs to be a reward table or a loot crate, and the "children" needs to be loot crates.
+
+#### Nesting example
+
+Step 1: Start by creating your children reward tables and convert them all to loot crates. In this example below we have the five rarities.
+
+![Example loot crates](../../../../_assets/images/quests/rewards/nesting-five-types.png "Fives types of loot crates")
+
+Step 2: Give yourself all the loot crates using their identifiers (ID).
+
+```mcfunction
+/give @s ftbquests:lootcrate[ftbquests:loot_crate="common"]
+/give @s ftbquests:lootcrate[ftbquests:loot_crate="uncommon"]
+/give @s ftbquests:lootcrate[ftbquests:loot_crate="rare"]
+/give @s ftbquests:lootcrate[ftbquests:loot_crate="epic"]
+/give @s ftbquests:lootcrate[ftbquests:loot_crate="legendary"]
+```
+
+![Loot crates in hotbar](../../../../_assets/images/quests/rewards/nesting-five-crates-inv.webp "The five types of loot crates are in our hotbar")
+
+Step 3: With the loot crates in your hotbar, create a new parent reward table. We will call it "All Loot Crates" for this example.
+
+![New reward table](../../../../_assets/images/quests/rewards/nesting-parent.png "The new parent reward table")
+
+Step 4: Add each of the children loot crates to the parent reward table by clicking the "Add" button.
+
+![Add the loot crate to the parent](../../../../_assets/images/quests/rewards/nesting-add-common.webp "The common loot crate is added to the parent reward table")
+
+For this example we do this until we get the following.
+
+![All five types](../../../../_assets/images/quests/rewards/nesting-all-five.webp "All our five loot crates are added to the parent reward table")
+
+Step 5 (optional): Before hitting "accept", you can click each of the loot crates and rename the titles. Much cleaner!
+
+![Renaming the common crate](../../../../_assets/images/quests/rewards/nesting-rename-loot-crate.png "Renaming the entries of the parent table looks cleaner")
+
+Step 6: Hit accept until you are back at quest creation.
+
+![The accept button](../../../../_assets/images/quests/rewards/nesting-accept.png "Hitting the accept button ensures saving your changes!")
+
+Step 7: Create a quest, create a "Loot Table" reward and set it to your parent reward table (in this example, "All Loot Crates").
+
+![Loot reward](../../../../_assets/images/quests/rewards/nesting-loot-reward.webp "A chance to get any of the five loot crates!")
+
+Now your players can truly receive a random assortment of items; the possibilities are limitless!
