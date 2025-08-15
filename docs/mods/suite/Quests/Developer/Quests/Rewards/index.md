@@ -6,7 +6,7 @@ sidebar_position: 3
 | Type | Description |
 |-|-|
 | [Item](./Item.md) | Give an item as a reward |
-| Choice Reward | Allow the player to choose from a selection of rewards |
+| [Choice Reward](./Choice_Reward.md) | Allow the player to choose from a selection of rewards |
 | All Table Reward | Gives the player every item from a set reward table regardless of the set weights |
 | Random Reward | The player gets a random reward from a set reward table and is always guaranteed to reward the player with an item |
 | Loot Reward | Reward a player with loot from a reward table, if the reward table has the chance of dropping nothing the player will have a chance of not being given a reward |
