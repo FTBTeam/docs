@@ -167,7 +167,7 @@ Step 5 (optional): Before hitting "accept", you can click each of the loot crate
 
 Step 6: Hit accept until you are back at quest creation.
 
-![The accept button](../../../../_assets/images/quests/rewards/nesting-accept.png "Hitting the accept button ensures saving your changes!")
+![The accept button](../../../../_assets/images/quests/rewards/accept.png "Hitting the accept button ensures saving your changes!")
 
 Step 7: Create a quest, create a "Loot Table" reward and set it to your parent reward table (in this example, "All Loot Crates").
 
