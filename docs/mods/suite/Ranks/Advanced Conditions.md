@@ -148,7 +148,7 @@ If a `time_unit` is not supplied it will default to ticks (and a warning will be
 ```json
 {
   admin: {
-    name: "Has the 'xyz' rank"
+    name: "Has the 'xyz' rank added"
     power: 1000
     condition: {
       type: "rank_added"
@@ -158,10 +158,34 @@ If a `time_unit` is not supplied it will default to ticks (and a warning will be
 }
 ```
 
-The `"rank_added"` condition can be used to check if a player has some other rank. This rank applies to the player if they also have the other rank. This is a fairly esoteric condition, but could be used to simplify the usage of complex compound conditions, where you might otherwise end up with multiple levels of nested and/or/not conditions.
+The `"rank_added"` condition can be used to check if a player has had some other rank explicitly added, either by the `/ftbranks add ...` command, or by direct editing of the player rank file. It does _not_ match ranks which apply implicitly; see the `rank_applies` condition if you need that.
+
+This is a fairly esoteric condition, but can be used to simplify the usage of complex compound conditions, where you might otherwise end up with multiple levels of nested and/or/not conditions.
 
 #### Fields
-* `rank` - the rank to check
+* `rank` - the rank to check, which must be explicitly added to the player
+
+---
+
+### `rank_applies`
+
+```json
+{
+  admin: {
+    name: "The 'xyz' rank applies to the player"
+    power: 1000
+    condition: {
+      type: "rank_applies"
+      rank: "xyz"
+    }
+  }
+}
+```
+
+The `rank_applies` condition is very similar to the `rank_added` condition, but with one important difference: it matches _any_ rank that currently applies to the player, either explicitly added, or by an implicit match (e.g. a `playtime` or `stat` condition).
+
+#### Fields
+* `rank` - the rank to check, may be explicitly added or applies implictly
 
 ---
 

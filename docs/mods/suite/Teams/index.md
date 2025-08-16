@@ -1,5 +1,6 @@
 ---
 title: Teams
+description: FTB Teams is our all in one solution for team management.
 tags:
   - FTB Suite
   - FTB Mods
@@ -13,10 +14,10 @@ FTB Teams is our all in one solution for team management. It allows you to creat
 
 - Team creation, management, and deletion
 - Team invites
-- Team permissions / settings
-  - Feely join
-  - Description
-  - When FTB Chunks is installed you can also control
+- Team permissions and settings
+  - Free to Join vs Invite Only
+  - Team Description
+  - When FTB Chunks is installed you can also control the following for your claimed chunks.
     - Mob griefing
     - Block breaking
     - Block placing
@@ -42,3 +43,15 @@ FTB Teams is our all in one solution for team management. It allows you to creat
 ## What is a server team?
 
 A server team is a team that is created by and managed by the server. This team is typically used in combination with FTB Chunks to control permissions on a server level to protect chunks, claim areas, etc. Server teams are not managed by players and **cannot** be joined, invited to or left by players. They are purely for server management.
+
+## Managing or restricting team creation
+
+For some modpacks or servers, you may want to prevent players from creating or managing their own teams. In those cases, you can use a permission management mod like FTB Ranks to deny permission to the commands required to create, join, or leave a team:
+```
+command.ftbteams.party.create
+command.ftbteams.party.join
+command.ftbteams.party.invite
+command.ftbteams.party.leave
+```
+
+It is also possible to override the Teams behavior via API. For example, [FTB Team Bases](/docs/mods/suite/Team_Bases) used in FTB Oceanblock 2 does this to manage the creation of teams and their base.

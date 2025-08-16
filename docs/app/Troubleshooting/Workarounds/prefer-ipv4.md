@@ -11,5 +11,5 @@ This workaround will add the `-Djava.net.preferIPv4Stack=true` JVM argument to t
 3. Right-click on the modpack you want to enable Prefer IPv4 Networking on and click on settings
 4. Scroll down to the `Advanced` section and enable the `Prefer IPv4 network requests` option
 
-![Enable Prefer IPv4 Networking](../../_assets/images/ftb-app-settings-prefer-ipv4.png)
+![Enable Prefer IPv4 Networking](../../_assets/images/ftb-app-settings-prefer-ipv4.webp)
 

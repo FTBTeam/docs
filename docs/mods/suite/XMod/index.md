@@ -1,5 +1,6 @@
 ---
 title: XMod Compat
+description: FTB XMod Compat is a compatibility mod that is designed to provide compatibility between FTB Mods and other mods.
 ---
 
 ## What is FTB XMod Compat?

@@ -1,7 +1,7 @@
 ---
 date: 2024-01-17
 title: Ranks
-description: Introduction to FTB Ranks
+description: FTB Ranks is a server-side mod for permission management.
 tags:
   - introduction
 ---
@@ -28,6 +28,8 @@ It is strongly advised to prefix mod-specific node names with the mod id, e.g. `
 
 ## Conditions
 
-Each rank may have a _condition_, which determines whether or not the rank should apply to a given player (in other words, whether the player should be implicitly a member of that rank). Conditions are documented in [Simple Conditions](Simple Conditions.md) and [Advanced Conditions](Advanced Conditions.md).
+Each rank may have a _condition_, which determines whether or not the rank should apply to a given player (in other words, whether the player should be implicitly a member of that rank). Conditions are documented in [Simple Conditions](Simple%20Conditions.md) and [Advanced Conditions](Advanced%20Conditions.md).
 
+:::info
 Ranks which do not have a condition must be explicitly granted to players, using the `/ftbranks add` command.
+:::

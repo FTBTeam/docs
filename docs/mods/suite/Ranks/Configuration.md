@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 FTB Ranks is configured via two SNBT files, which can be found in `<world>/serverconfig/ftbranks/`
 
-* `ranks.snbt` defines the ranks for the mod, along with the membership conditions for each rank, and the permissions granted by each rank. This file can be edited manually, and reloaded with `/ftbranks reload`; i. Many operations can also be carried out by commands, and where possible it is suggested to use commands rather than direct config file editing. See [Commands](Commands.md) for more information.
+* `ranks.snbt` defines the ranks for the mod, along with the membership conditions for each rank, and the permissions granted by each rank. This file can be edited manually, and reloaded with `/ftbranks reload`. Many operations can also be carried out by commands, and where possible it is suggested to use commands rather than direct config file editing. See [Commands](Commands.md) for more information.
 * `players.snbt` lists the players which have been explicitly added to ranks. While this file can also be edited manually, it is suggested to use the `/ftbranks add <player> <rank>` and `/ftbranks remove <player> <rank>` commands.
 
 :::warning
@@ -96,7 +96,7 @@ All other nodes have a mod-specific meaning; it is up to that mod to determine h
 
 | Name | Description |
 | ---- | ---- |
-| `name`  | A human-readable name assigned to the role, for documentation and display purposes. This is freeform text, but should be kept brief, since it can be configured ti appear with a player's name in chat. |
+| `name`  | A human-readable name assigned to the role, for documentation and display purposes. This is freeform text, but should be kept brief, since it can be configured to appear with a player's name in chat. |
 | `power` | Determines which rank has the highest priority; if more than one rank applies to the player, and those ranks have conflicting values for permission nodes, then the rank with the higher power level takes precedence.<br  /> <br  /> This also applies to the rank's `name`; e.g. if a player only has the `member` rank, their name would be "Member". If they have only `vip`, their name would be "VIP". If they have both ranks, their name would be "VIP" as `vip`'s power level (50) is higher than `member`'s' (1). |
 | `condition` | The rank condition determines whether a rank should be applied to a `player`. If no condition is specified for a rank, then players must be explicitly added to the rank via [command](Commands.md). Simple conditions can be applied by just a simple string; see [Simple Conditions](Simple%20Conditions.md) and [Advanced Conditions](Advanced%20Conditions.md) for more information. <br/>In the example above, `member` and `admin` have simple conditions, `VIP` has no condition (so must be manually assigned to players), and `alien` and `senior` have advanced conditions.|
 | Mod-specific nodes | Any other node which contains a `.` is one used by a particular mod. `ftbranks.name_format` is an example discussed below, and nodes added by FTB Chunks are also present in the above example. |

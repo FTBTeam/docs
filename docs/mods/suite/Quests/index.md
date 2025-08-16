@@ -1,5 +1,6 @@
 ---
 title: Quests
+description: FTB Quests is a lightweight, team-based questing mod that is very simple to use.
 ---
 
 :::info
@@ -8,7 +9,7 @@ These docs were created using FTB Quests for Minecraft 1.21, there may be differ
 
 ## What is FTB Quests?
 
-FTB Quests is a lightweight, team-based questing mod and is very simple to use
+FTB Quests is a lightweight, team-based questing mod that is very simple to use.
 
 ## Getting Started
 
