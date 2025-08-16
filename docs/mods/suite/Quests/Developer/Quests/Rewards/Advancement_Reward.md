@@ -15,7 +15,7 @@ In this example we want to grant the "Isn't It Iron Pick" advancement.
 
 ![Isn't It Iron Pick advancement](../../../../../_assets/images/quests/rewards/advancement-isnt-iron-pick.png "The Isn't It Iron Pick advancement as a reward")
 
-Only this advancement (in yellow) will be granted to the player. Dependencies of that advancement are untouched.
+Only this advancement (in yellow) will be granted to the player. Dependencies until that advancement are untouched.
 
 ![The advancement tree](../../../../../_assets/images/quests/rewards/advancement-screen-iron-pick.png "The dependencies of Isn't It Iron Pick are not granted")
 
