@@ -5,9 +5,9 @@ sidebar_position: 1
 
 # Item Reward
 
-## Receiving the item
+Item rewards give the player an item or a count of an item.
 
-When the player finishes the quest with an item reward, they will be given an item or a count of an item (by default).
+## Example with count
 
 For example here clicking the axe icon rewards two identical axes.
 
