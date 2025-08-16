@@ -11,7 +11,7 @@ sidebar_position: 3
 | [Random Reward](./Random_Reward.md) | The player gets a random reward from a set reward table and is always guaranteed to reward the player with an item |
 | [Loot Reward](./Loot_Reward) | Reward a player with loot from a reward table, if the reward table has the chance of dropping nothing the player will have a chance of not being given a reward |
 | [Command](./Command.md) | Run a command when the quest is completed |
-| Custom | Does nothing on its own |
+| [Custom](./Custom.md) | Does nothing on its own |
 | XP | Give the player `x` XP |
 | XP Levels | Give the player `x` levels of XP |
 | Advancement | Completes an advancement for the player |
