@@ -12,8 +12,8 @@ sidebar_position: 3
 | [Loot Reward](./Loot_Reward) | Reward a player with loot from a reward table, if the reward table has the chance of dropping nothing the player will have a chance of not being given a reward |
 | [Command](./Command.md) | Run a command when the quest is completed |
 | [Custom](./Custom.md) | Does nothing on its own |
-| XP | Give the player `x` XP |
-| XP Levels | Give the player `x` levels of XP |
+| [XP](./XP.md) | Give the player `x` XP |
+| [XP Levels](./XP.md) | Give the player `x` levels of XP |
 | Advancement | Completes an advancement for the player |
 | Toast | Show a toast with a custom message to the player |
 | Stage | Grant or revoke a game stage |
