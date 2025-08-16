@@ -30,7 +30,7 @@ Within the questbook interface, reward tables are created and categorized into v
 
 ## Loot crates
 
-Loot crates are loot boxes that reward the player with a **Random Reward** upon their use. They keep all the benefits offered by reward tables.
+Loot crates reward the player with a **[Loot Reward](./Rewards/Loot_Reward.md)** upon their use. They keep all the benefits offered by reward tables.
 
 ### Converting a reward table
 
