@@ -103,11 +103,11 @@ In the following code block is the code for the loot table. Notice the use of th
 }
 ```
 
-After saving our `silverfish.json` file, we exit the world and enter it again. Now, silverfish will drop our "Igneous Rocks" loot crate on death.
+After saving our `silverfish.json` file, we exit the world and enter it again. Now, silverfish drop the "Igneous Rocks" loot crate on death.
 
 ![Silverfish dropping a loot crate](../../../../_assets/images/quests/rewards/loot-crate-silverfish.png "A silverfish drops the loot crate on death")
 
-When we will open the loot crate from the silverfish, we will obtain either one Granite, Diorite or Andesite.
+When we open the loot crate from the silverfish, we obtain either one Granite, Diorite or Andesite.
 
 ![An igneous rock is randomly obtained when opening the loot crate](../../../../_assets/images/quests/rewards/loot-crate-igneous-rocks.png "An igneous rock is randomly obtained when opening the loot crate")
 
