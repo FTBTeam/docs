@@ -1,9 +1,9 @@
 ---
-title: Command
+title: Command Reward
 sidebar_position: 6
 ---
 
-# Command
+# Command Reward
 
 With a command reward, you can almost do anything. You input the command in the reward itself.
 
