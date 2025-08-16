@@ -14,6 +14,6 @@ sidebar_position: 3
 | [Custom](./Custom_Reward.md) | Does nothing on its own |
 | [XP](./Experience_Reward.md) | Give the player `x` XP |
 | [XP Levels](./Experience_Reward.md) | Give the player `x` levels of XP |
-| Advancement | Completes an advancement for the player |
+| [Advancement](./Advancement_Reward.md) | Completes an advancement for the player |
 | Toast | Show a toast with a custom message to the player |
 | [Stage](./Stage_Reward.md) | Grant or revoke a game stage |
