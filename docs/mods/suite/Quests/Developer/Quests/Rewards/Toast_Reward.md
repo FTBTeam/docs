@@ -15,6 +15,8 @@ Let's say you create a quest and edit it.
 
 You then disable the pop-up by setting "Disable Toast Completion" to `True`.
 
+Optionally, set a title. In this example we choose "Gather Iron Ingots".
+
 ![Disabling the pop-up](../../../../../_assets/images/quests/rewards/toast-disable-popup.png "Disabling the toast completion pop-up")
 
 Hit "Accept".
@@ -29,9 +31,11 @@ Now edit the toast reward.
 
 ![Editing the toast](../../../../../_assets/images/quests/rewards/toast-edit-reward.webp "Right-click the icon to edit the toast reward")
 
-We'll set the title of the toast reward to the title of the quest: "Gather Iron Ingots".
+We enable "Auto-claim".
 
-We'll also set the description to "You can claim a diamond!"
+We set the description to "You can claim a diamond!"
+
+We set the title of the toast reward to the title of the quest: "Gather Iron Ingots".
 
 ![Editing the title and description](../../../../../_assets/images/quests/rewards/toast-edit-title-desc.png "Edit the title and description with some custom text")
 
