@@ -44,7 +44,7 @@ In the following image, we convert a reward table of igneous rocks to a loot cra
 
 To obtain the crate as an item in-game, you must know its identifier (id). In the previous example, the id was `igneous_rocks`.
 
-![The previous example's id was igneous rocks](../../../../_assets/images/quests/rewards/loot-crate-id.png "The previous example's id was igneous_rocks")
+![Previous example id](../../../../_assets/images/quests/rewards/loot-crate-id.png "The previous example's id was igneous_rocks")
 
 :::info
 Minecraft 1.20.5 and above use the new [component](https://minecraft.wiki/w/Data_component_format) item system when giving items.
