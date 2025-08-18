@@ -1,6 +1,6 @@
 ---
 title: Advancement Reward
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 # Advancement Reward
