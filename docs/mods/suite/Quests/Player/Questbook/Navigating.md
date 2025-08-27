@@ -41,6 +41,11 @@ You can pin a quest so that the quest is always visible to you by opening the qu
 ![Pinning a quest](../../../../_assets/images/quests/pinning-a-quest.webp)
 
 ## Completing a quest and claiming rewards
+
+:::info
+Some quests may be team based, meaning that once a task is completed by any member of the team, it will be marked as completed for all members of the team, the rewards can also be marked as a team reward.
+:::
+
 Once you have completed all the tasks for a quest, you will get a notification in the top right of the screen and an `!` will appear on the quest book icon in your inventory screen.
 
 When you open the quest book, the chapter the quest is in will also have an `!` along with the specific quest that was completed
