@@ -23,7 +23,7 @@ const plugin = (options: any) => {
                     attributes: [
                         {
                             type: "mdxJsxAttribute",
-                            name: "recipes",
+                            name: "recipeString",
                             value: JSON.stringify({
                                 ingredients,
                                 output,

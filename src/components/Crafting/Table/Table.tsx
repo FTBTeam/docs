@@ -1,5 +1,5 @@
 import s from "@site/src/components/Crafting/Crafting.module.scss";
-// @ts-ignore
+
 import ctArrow from "@site/src/components/Crafting/assets/img/ct_arrow.png";
 import {getItemName, getNamespace, RecipeOutput} from "@site/src/components/Crafting/util";
 
@@ -36,14 +36,14 @@ export default function Table({ingredients, output}: Props) {
                 <div className={s.arrow}>
                     <img className={s.itemImg} src={ctArrow} alt=""/>
                 </div>
-                <span className={`${s.outputSlot}`}>
-                    <img className={`${s.itemImg} ${s.bigSlot}`} src={`/img/mc/${resultNamespace}/${resultItem}.png`} alt=""/>
-                    {output.count >= 2 && (
-                        <span className={s.itemCount}>
-                            <span>{output.count}</span>
-                        </span>
-                    )}
-                </span>
+                    <span className={`${s.outputSlot}`}>
+                        <img className={`${s.itemImg} ${s.bigSlot}`} src={`/img/mc/${resultNamespace}/${resultItem}.png`} alt=""/>
+                        {output.count >= 2 && (
+                            <span className={s.itemCount}>
+                                <span>{output.count}</span>
+                            </span>
+                        )}
+                    </span>
             </div>
         </div>
     )

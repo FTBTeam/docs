@@ -1,27 +1,28 @@
 import s from './Crafting.module.scss'
-// @ts-ignore
-import ctArrow from './assets/img/ct_arrow.png'
-// @ts-ignore
-import ctFire from './assets/img/ct_fire.png'
 import Table from "@site/src/components/Crafting/Table/Table";
 import Furnace from "@site/src/components/Crafting/Furnace/Furnace";
 import {Recipe} from "@site/src/components/Crafting/util";
 
 type Props = {
-    recipes: string
+    recipeString: string
 }
 
-export function Crafting({recipes}: Props) {
-    const recipe = JSON.parse(recipes) as Recipe;
+export function Crafting({recipeString}: Props) {
+    try {
+        if (!recipeString) throw new Error('No recipe string provided');
+        const recipe = JSON.parse(recipeString) as Recipe;
 
-    return (
-        <div className={s.craftingUiWrapper}>
-            {recipe.type === 'table' && (
-                <Table ingredients={recipe.ingredients} output={recipe.output} />
-            )}
-            {recipe.type === 'smelting' && (
-                <Furnace ingredients={recipe.ingredients} output={recipe.output}/>
-            )}
-        </div>
-    )
+        return (
+            <div className={s.craftingUiWrapper}>
+                {recipe.type === 'table' && (
+                    <Table ingredients={recipe.ingredients} output={recipe.output} />
+                )}
+                {recipe.type === 'smelting' && (
+                    <Furnace ingredients={recipe.ingredients} output={recipe.output} />
+                )}
+            </div>
+        )
+    } catch (e) {
+        return <div style={{color: 'red'}}>Error loading recipe: {(e as Error).message}</div>
+    }
 }

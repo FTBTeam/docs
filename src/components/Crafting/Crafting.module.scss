@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Minecraft';
-  src: url('/font/Minecraft-Seven_v2.woff2');
+  src: url('@site/src/components/Crafting/assets/font/Minecraft-Seven_v2.woff2');
 }
 
 .craftingUiWrapper {
@@ -56,7 +56,6 @@
   border-color: #373737 #FFF #FFF #373737;
   width: 64px;
   height: 64px;
-  margin-left: 6px;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -89,9 +88,7 @@
 
 .arrow {
   display: flex;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 6px;
+  margin: auto 6px;
   width: 33px;
   height: 22.5px;
 }

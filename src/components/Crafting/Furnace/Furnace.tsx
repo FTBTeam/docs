@@ -1,8 +1,6 @@
 import s from "@site/src/components/Crafting/Crafting.module.scss";
 
-// @ts-ignore
 import ctFire from "@site/src/components/Crafting/assets/img/ct_fire.png";
-// @ts-ignore
 import ctArrow from "@site/src/components/Crafting/assets/img/ct_arrow.png";
 import {getItemName, getNamespace, RecipeOutput} from "@site/src/components/Crafting/util";
 
