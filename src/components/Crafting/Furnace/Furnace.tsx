@@ -3,6 +3,7 @@ import s from "@site/src/components/Crafting/Crafting.module.scss";
 import ctFire from "@site/src/components/Crafting/assets/img/ct_fire.png";
 import ctArrow from "@site/src/components/Crafting/assets/img/ct_arrow.png";
 import {getItemName, getNamespace, RecipeOutput} from "@site/src/components/Crafting/util";
+import SlotComponent from "@site/src/components/Crafting/SlotComponent";
 
 type Props = {
     ingredients: string[]
@@ -16,9 +17,7 @@ export default function Furnace({ingredients, output}: Props) {
             <div className={s.flexRow}>
                 <div className={s.slotGroup}>
                     <div className={s.slotRow}>
-                        <span className={s.invSlot}>
-                            <img className={s.itemImg} src={`/img/mc/${getNamespace(ingredients[0])}/${getItemName(ingredients[0])}.png`} alt=""/>
-                        </span>
+                        <SlotComponent ingredient={ingredients[0]} />
                     </div>
                     <div className={s.slotRow}>
                         <span className={`${s.invSlot} ${s.fire} ${s.noBg} ${s.noBorder}`}>
@@ -26,22 +25,13 @@ export default function Furnace({ingredients, output}: Props) {
                         </span>
                     </div>
                     <div className={s.slotRow}>
-                        <span className={s.invSlot}>
-                            <img className={s.itemImg} src={`/img/mc/${getNamespace(ingredients[1])}/${getItemName(ingredients[1])}.png`} alt=""/>
-                        </span>
+                        <SlotComponent ingredient={ingredients[1]} />
                     </div>
                 </div>
                 <div className={s.arrow}>
                     <img className={s.itemImg} src={ctArrow} alt=""/>
                 </div>
-                <span className={`${s.outputSlot}`}>
-                    <img className={`${s.itemImg} ${s.bigSlot}`} src={`/img/mc/${getNamespace(output.item)}/${getItemName(output.item)}.png`} alt=""/>
-                    {output.count >= 2 && (
-                        <span className={s.itemCount}>
-                            <span>{output.count}</span>
-                        </span>
-                    )}
-                </span>
+                <SlotComponent output={output} />
             </div>
         </div>
     )
