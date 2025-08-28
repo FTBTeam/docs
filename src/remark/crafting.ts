@@ -28,7 +28,7 @@ const plugin = (options) => {
     return transform;
 }
 
-const parseCrafting = (code): [string[], string | null] => {
+const parseCrafting = (code: any): [string[], string | null] => {
     const lines = code.split('\n');
     const grid = [];
     let result = null;

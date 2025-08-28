@@ -17,7 +17,6 @@ type Recipes = {
 
 export function Crafting({recipes}: Props) {
     const recipe = JSON.parse(recipes) as Recipes;
-    console.log(recipe);
 
     return (
         <div className={s.craftingUiWrapper}>

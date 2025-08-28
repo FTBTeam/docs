@@ -1,6 +1,7 @@
 import s from "@site/src/components/Crafting/Crafting.module.scss";
 // @ts-ignore
 import ctArrow from "@site/src/components/Crafting/assets/img/ct_arrow.png";
+import {getItemName, getNamespace} from "@site/src/components/Crafting/util";
 
 type Props = {
     ingredients: string[]
@@ -19,8 +20,8 @@ export default function Table({ingredients, output}: Props) {
                         <div className={s.inputRow} key={row}>
                             {[0, 1, 2].map(col => {
                                 const rawItem = ingredients[row * 3 + col];
-                                const item = rawItem?.includes(':') ? rawItem.split(':')[1] : rawItem;
-                                const namespace = rawItem?.includes(':') ? rawItem.split(':')[0] : 'vanilla';
+                                const item = getItemName(rawItem);
+                                const namespace = getNamespace(rawItem)
                                 return (
                                     <span className={s.inputSlot} key={col}>
                                         {item &&
