@@ -9,8 +9,8 @@ type Props = {
 }
 
 export default function Table({ingredients, output}: Props) {
-    const resultNamespace = output?.includes(':') ? output.split(':')[0] : 'vanilla';
-    const resultItem = output?.includes(':') ? output.split(':')[1] : output;
+    const resultNamespace = getNamespace(output);
+    const resultItem = getItemName(output);
     return (
         <div className={s.craftingTableUi}>
             <div className={s.heading}>Crafting Table</div>

@@ -1,6 +1,6 @@
 const getNamespace = (item: string | null): string | null => {
     if (!item) return null;
-    return item.includes(':') ? item.split(':')[0] : 'vanilla';
+    return item.includes(':') ? item.split(':')[0] : 'minecraft';
 }
 const getItemName = (item: string | null): string | null => {
     if (!item) return null;
