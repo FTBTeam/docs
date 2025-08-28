@@ -14,19 +14,19 @@ export default function Furnace({ingredients, output}: Props) {
         <div className={s.smeltingUi}>
             <div className={s.heading}>Furnace</div>
             <div className={s.flexRow}>
-                <div className={s.inputGroup}>
-                    <div className={s.inputRow}>
-                        <span className={s.inputSlot}>
+                <div className={s.slotGroup}>
+                    <div className={s.slotRow}>
+                        <span className={s.invSlot}>
                             <img className={s.itemImg} src={`/img/mc/${getNamespace(ingredients[0])}/${getItemName(ingredients[0])}.png`} alt=""/>
                         </span>
                     </div>
-                    <div className={s.inputRow}>
-                        <span className={`${s.inputSlot} ${s.fire} ${s.noBg} ${s.noBorder}`}>
+                    <div className={s.slotRow}>
+                        <span className={`${s.invSlot} ${s.fire} ${s.noBg} ${s.noBorder}`}>
                             <img className={s.itemImg} src={ctFire} alt=""/>
                         </span>
                     </div>
-                    <div className={s.inputRow}>
-                        <span className={s.inputSlot}>
+                    <div className={s.slotRow}>
+                        <span className={s.invSlot}>
                             <img className={s.itemImg} src={`/img/mc/${getNamespace(ingredients[1])}/${getItemName(ingredients[1])}.png`} alt=""/>
                         </span>
                     </div>

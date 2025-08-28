@@ -15,15 +15,15 @@ export default function Table({ingredients, output}: Props) {
         <div className={s.craftingTableUi}>
             <div className={s.heading}>Crafting Table</div>
             <div className={s.flexRow}>
-                <div className={s.inputGroup}>
+                <div className={s.slotGroup}>
                     {[0, 1, 2].map(row => (
-                        <div className={s.inputRow} key={row}>
+                        <div className={s.slotRow} key={row}>
                             {[0, 1, 2].map(col => {
                                 const rawItem = ingredients[row * 3 + col];
                                 const item = getItemName(rawItem);
                                 const namespace = getNamespace(rawItem)
                                 return (
-                                    <span className={s.inputSlot} key={col}>
+                                    <span className={s.invSlot} key={col}>
                                         {item &&
                                             <img className={s.itemImg} src={`/img/mc/${namespace}/${item}.png`} alt=""/>
                                         }
