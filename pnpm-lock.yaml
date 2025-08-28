@@ -65,6 +65,9 @@ importers:
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17
+      unist-util-visit:
+        specifier: ^5.0.0
+        version: 5.0.0
     devDependencies:
       '@docusaurus/module-type-aliases':
         specifier: 3.8.1
