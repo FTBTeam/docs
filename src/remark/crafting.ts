@@ -1,7 +1,7 @@
 import {visit} from 'unist-util-visit';
 
-const plugin = (options) => {
-    const transform = async (tree) => {
+const plugin = (options: any) => {
+    const transform = async (tree: any) => {
         visit(tree, 'code', (node, index, parent) => {
             if (node.lang === 'crafting') {
                 const [ingredients, output] = parseCrafting(node.value)
@@ -28,7 +28,7 @@ const plugin = (options) => {
     return transform;
 }
 
-const parseCrafting = (code: any): [string[], string | null] => {
+const parseCrafting = (code: string): [string[], string | null] => {
     const lines = code.split('\n');
     const grid = [];
     let result = null;
