@@ -1,16 +1,16 @@
 import s from "@site/src/components/Crafting/Crafting.module.scss";
 // @ts-ignore
 import ctArrow from "@site/src/components/Crafting/assets/img/ct_arrow.png";
-import {getItemName, getNamespace} from "@site/src/components/Crafting/util";
+import {getItemName, getNamespace, RecipeOutput} from "@site/src/components/Crafting/util";
 
 type Props = {
     ingredients: string[]
-    output: string | null
+    output: RecipeOutput
 }
 
 export default function Table({ingredients, output}: Props) {
-    const resultNamespace = getNamespace(output);
-    const resultItem = getItemName(output);
+    const resultNamespace = getNamespace(output.item);
+    const resultItem = getItemName(output.item);
     return (
         <div className={s.craftingTableUi}>
             <div className={s.heading}>Crafting Table</div>
@@ -36,8 +36,13 @@ export default function Table({ingredients, output}: Props) {
                 <div className={s.arrow}>
                     <img className={s.itemImg} src={ctArrow} alt=""/>
                 </div>
-                <span className={`${s.outputSlot} ${s.bigSlot}`}>
-                    <img className={s.itemImg} src={`/img/mc/${resultNamespace}/${resultItem}.png`} alt=""/>
+                <span className={`${s.outputSlot}`}>
+                    <img className={`${s.itemImg} ${s.bigSlot}`} src={`/img/mc/${resultNamespace}/${resultItem}.png`} alt=""/>
+                    {output.count >= 2 && (
+                        <span className={s.itemCount}>
+                            <span>{output.count}</span>
+                        </span>
+                    )}
                 </span>
             </div>
         </div>

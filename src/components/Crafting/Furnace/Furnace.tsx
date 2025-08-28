@@ -4,11 +4,11 @@ import s from "@site/src/components/Crafting/Crafting.module.scss";
 import ctFire from "@site/src/components/Crafting/assets/img/ct_fire.png";
 // @ts-ignore
 import ctArrow from "@site/src/components/Crafting/assets/img/ct_arrow.png";
-import {getItemName, getNamespace} from "@site/src/components/Crafting/util";
+import {getItemName, getNamespace, RecipeOutput} from "@site/src/components/Crafting/util";
 
 type Props = {
     ingredients: string[]
-    output: string | null
+    output: RecipeOutput
 }
 
 export default function Furnace({ingredients, output}: Props) {
@@ -36,8 +36,13 @@ export default function Furnace({ingredients, output}: Props) {
                 <div className={s.arrow}>
                     <img className={s.itemImg} src={ctArrow} alt=""/>
                 </div>
-                <span className={`${s.outputSlot} ${s.bigSlot}`}>
-                    <img className={s.itemImg} src={`/img/mc/${getNamespace(output)}/${getItemName(output)}.png`} alt=""/>
+                <span className={`${s.outputSlot}`}>
+                    <img className={`${s.itemImg} ${s.bigSlot}`} src={`/img/mc/${getNamespace(output.item)}/${getItemName(output.item)}.png`} alt=""/>
+                    {output.count >= 2 && (
+                        <span className={s.itemCount}>
+                            <span>{output.count}</span>
+                        </span>
+                    )}
                 </span>
             </div>
         </div>

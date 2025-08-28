@@ -5,18 +5,14 @@ import ctArrow from './assets/img/ct_arrow.png'
 import ctFire from './assets/img/ct_fire.png'
 import Table from "@site/src/components/Crafting/Table/Table";
 import Furnace from "@site/src/components/Crafting/Furnace/Furnace";
+import {Recipe} from "@site/src/components/Crafting/util";
 
 type Props = {
     recipes: string
 }
-type Recipes = {
-    type: string | null
-    ingredients: string[]
-    output: string
-}
 
 export function Crafting({recipes}: Props) {
-    const recipe = JSON.parse(recipes) as Recipes;
+    const recipe = JSON.parse(recipes) as Recipe;
 
     return (
         <div className={s.craftingUiWrapper}>

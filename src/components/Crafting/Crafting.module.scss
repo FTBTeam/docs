@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Minecraft';
+  src: url('/font/Minecraft-Seven_v2.woff2');
+}
+
 .craftingUiWrapper {
   display: flex;
 }
@@ -24,6 +29,7 @@
   flex-direction: row;
   margin-bottom: 5px;
   align-self: flex-start;
+  font-family: Minecraft, sans-serif;
 }
 
 .inputSlot {
@@ -53,6 +59,22 @@
   margin-left: 6px;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.itemCount {
+  display: block;
+  position: absolute;
+  font-family: Minecraft, sans-serif;
+  color: white;
+  text-shadow: 2px 2px 0 #3F3F3F;
+  font-size: 24px;
+  //margin: 16px 0 0 31px;
+  text-align: right;
+  width: 64px;
+  height: 64px;
+  padding-right: 11px;
+  padding-bottom: 1px;
+  align-content: end;
 }
 
 .bigSlot {

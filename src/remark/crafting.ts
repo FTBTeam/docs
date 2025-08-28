@@ -1,5 +1,16 @@
 import {visit} from 'unist-util-visit';
 
+type Recipe = {
+    type: string | null
+    ingredients: string[]
+    output: RecipeOutput
+}
+
+type RecipeOutput = {
+    item: string
+    count: number
+}
+
 const plugin = (options: any) => {
     const transform = async (tree: any) => {
         visit(tree, 'code', (node, index, parent) => {
@@ -28,14 +39,15 @@ const plugin = (options: any) => {
     return transform;
 }
 
-const parseCrafting = (code: string): [string[], string | null] => {
+const parseCrafting = (code: string): [string[], RecipeOutput] => {
     const lines = code.split('\n');
     const grid = [];
-    let result = null;
+    let output: RecipeOutput = null;
 
     for (const line of lines) {
         if (line.startsWith('result:')) {
-            result = line.replace('result:', '').trim();
+            let result = line.replace('result:', '').trim().split(',');
+            output = {item: result[0], count: result[1] ? parseInt(result[1]) : 1};
         } else if (line.trim()) {
             const items = line.split(/\s+/).map(item =>
                 item === '-' ? null : item
@@ -44,7 +56,7 @@ const parseCrafting = (code: string): [string[], string | null] => {
         }
     }
 
-    return [grid, result]
+    return [grid, output]
 }
 
 module.exports = plugin;
