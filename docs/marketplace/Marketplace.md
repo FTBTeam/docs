@@ -18,9 +18,9 @@ Dig into the ultimate survival toolkit with Sieves & Things! Whether you're in a
 ## DEMO OF CRAFTING AND SMELTING RECIPES DISPLAY REMOVE BEFORE MERGE
 
 ```crafting table
-oak_planks oak_planks -
-oak_planks oak_planks -
-oak_planks oak_planks -
+oak_planks #logs -
+oak_planks #logs -
+oak_planks #logs -
 result: oak_door
 ```
 
@@ -28,7 +28,7 @@ result: oak_door
 oak_planks oak_planks -
 oak_planks oak_planks -
 oak_planks oak_planks -
-result: oak_door,3
+result: #logs,3
 ```
 
 ```crafting smelting
