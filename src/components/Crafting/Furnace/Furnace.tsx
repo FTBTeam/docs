@@ -2,12 +2,12 @@ import s from "@site/src/components/Crafting/Crafting.module.scss";
 
 import ctFire from "@site/src/components/Crafting/assets/img/ct_fire.png";
 import ctArrow from "@site/src/components/Crafting/assets/img/ct_arrow.png";
-import {getItemName, getNamespace, RecipeOutput} from "@site/src/components/Crafting/util";
+import {SlotItem} from "@site/src/components/Crafting/util";
 import SlotComponent from "@site/src/components/Crafting/SlotComponent";
 
 type Props = {
-    ingredients: string[]
-    output: RecipeOutput
+    ingredients: SlotItem[]
+    output: SlotItem
 }
 
 export default function Furnace({ingredients, output}: Props) {

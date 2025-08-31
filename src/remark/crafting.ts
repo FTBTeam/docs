@@ -1,15 +1,5 @@
 import {visit} from 'unist-util-visit';
-
-type Recipe = {
-    type: string | null
-    ingredients: string[]
-    output: RecipeOutput
-}
-
-type RecipeOutput = {
-    item: string
-    count: number
-}
+import {SlotItem} from "@site/src/components/Crafting/util";
 
 const plugin = (options: any) => {
     const transform = async (tree: any) => {
@@ -39,19 +29,31 @@ const plugin = (options: any) => {
     return transform;
 }
 
-const parseCrafting = (code: string): [string[], RecipeOutput] => {
+const getNamespace = (item: string | null): string | null => {
+    if (!item) return null;
+    return item.includes(':') ? item.split(':')[0] : 'minecraft';
+}
+const getItemName = (item: string | null): string | null => {
+    if (!item) return null;
+    return item.includes(':') ? item.split(':')[1] : item;
+}
+
+
+const parseCrafting = (code: string): [SlotItem[], SlotItem] => {
     const lines = code.split('\n');
-    const grid = [];
-    let output: RecipeOutput = null;
+    const grid: SlotItem[] = [];
+    let output: SlotItem = null;
 
     for (const line of lines) {
         if (line.startsWith('result:')) {
-            let result = line.replace('result:', '').trim().split(',');
-            output = {item: result[0], count: result[1] ? parseInt(result[1]) : 1};
+            const result = line.replace('result:', '').trim().split(',');
+            output = {namespace: getNamespace(result[0]), itemName: getItemName(result[0]), count: result[1] ? parseInt(result[1]) : 1};
         } else if (line.trim()) {
-            const items = line.split(/\s+/).map(item =>
-                item === '-' ? null : item
-            );
+            const items: SlotItem[] = line.split(/\s+/).map(item => {
+                const namespace = getNamespace(item)
+                const itemName = getItemName(item)
+                return item === '-' ? null : {namespace, itemName}
+            });
             grid.push(...items);
         }
     }
