@@ -1,0 +1,23 @@
+tags:
+  minecraft:
+    logs: [
+      'cherry_log',
+      'log_acacia',
+      'log_big_oak',
+      'log_birch',
+      'log_jungle',
+      'log_oak',
+      'log_spruce',
+      'mangrove_log',
+      'pale_oak_log',
+    ]
+    planks: [
+      "planks_oak",
+      "planks_birch",
+      "planks_spruce"
+    ]
+  ftbsa:
+    compressed: [
+      "compressed_cobble",
+      "double_compressed_cobble"
+    ]

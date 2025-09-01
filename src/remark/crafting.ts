@@ -1,11 +1,15 @@
 import {visit} from 'unist-util-visit';
-import {SlotItem} from "@site/src/components/Crafting/util";
+import {SlotItem, TagsYaml} from "@site/src/components/Crafting/util";
+import fs from "fs";
+import path from "path";
+import yaml from "yaml";
 
 const plugin = (options: any) => {
     const transform = async (tree: any) => {
         visit(tree, 'code', (node, index, parent) => {
             if (node.lang === 'crafting') {
                 const [ingredients, output] = parseCrafting(node.value)
+                const tags = loadTags();
                 const type = node.meta || null;
                 parent.children[index] = {
                     type: "mdxJsxFlowElement",
@@ -17,7 +21,8 @@ const plugin = (options: any) => {
                             value: JSON.stringify({
                                 ingredients,
                                 output,
-                                type
+                                type,
+                                tags: tags.tags,
                             }),
                         },
                     ],
@@ -59,6 +64,12 @@ const parseCrafting = (code: string): [SlotItem[], SlotItem] => {
     }
 
     return [grid, output]
+}
+
+const loadTags = (): TagsYaml => {
+    const filePath = path.join(__dirname, 'tags.yaml');
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    return yaml.parse(fileContents) as TagsYaml;
 }
 
 module.exports = plugin;

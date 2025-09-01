@@ -1,40 +1,29 @@
 import s from "@site/src/components/Crafting/Crafting.module.scss";
-import {SlotItem} from "@site/src/components/Crafting/util";
+import {SlotItem, Tags} from "@site/src/components/Crafting/util";
 import {useEffect, useState} from "react";
 
 type Props = {
     ingredient?: SlotItem
     output?: SlotItem
+    tags: Tags
 }
-
-// testing data
-const logs = [
-    'cherry_log',
-    'log_acacia',
-    'log_big_oak',
-    'log_birch',
-    'log_jungle',
-    'log_oak',
-    'log_spruce',
-    'mangrove_log',
-    'pale_oak_log',
-]
 
 const getImagePath = (namespace: string, itemName: string): string => {
     if (!namespace || !itemName) return '';
     return `/img/mc/${namespace}/${itemName}.png`;
 }
 
-export default function SlotComponent({ingredient, output}: Props) {
+export default function SlotComponent({ingredient, output, tags}: Props) {
     const [currentIngredientImg, setCurrentIngredientImg] = useState('');
     const [currentOutputImg, setCurrentOutputImg] = useState('');
 
-    const tagImageCycler = (tagName: string, setImage: (imgPath: string) => void)=> {
+    const tagImageCycler = (namespace: string, tagName: string, setImage: (imgPath: string) => void)=> {
         let index = 0;
-        setImage(getImagePath('minecraft', logs[index]));
+        console.log(tags)
+        setImage(getImagePath(namespace, tags[namespace][tagName][index]));
         const interval = setInterval(() => {
-            index = (index + 1) % logs.length;
-            setImage(getImagePath('minecraft', logs[index]));
+            index = (index + 1) % tags[namespace][tagName].length;
+            setImage(getImagePath(namespace, tags[namespace][tagName][index]));
         }, 1000);
         return () => clearInterval(interval);
     }
@@ -43,7 +32,7 @@ export default function SlotComponent({ingredient, output}: Props) {
         if (ingredient) {
             if (ingredient.itemName?.startsWith('#')) {
                 const tagName = ingredient.itemName.slice(1);
-                tagImageCycler(tagName, setCurrentIngredientImg);
+                tagImageCycler(ingredient.namespace, tagName, setCurrentIngredientImg);
             } else {
                 setCurrentIngredientImg(getImagePath(ingredient.namespace || '', ingredient.itemName || ''));
             }
@@ -54,7 +43,7 @@ export default function SlotComponent({ingredient, output}: Props) {
         if (output) {
             if (output.itemName?.startsWith('#')) {
                 const tagName = output.itemName.slice(1);
-                tagImageCycler(tagName, setCurrentOutputImg);
+                tagImageCycler(output.namespace, tagName, setCurrentOutputImg);
             }else {
                 setCurrentOutputImg(getImagePath(output.namespace || '', output.itemName || ''));
             }

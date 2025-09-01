@@ -20,7 +20,7 @@ Dig into the ultimate survival toolkit with Sieves & Things! Whether you're in a
 ```crafting table
 oak_planks #logs -
 oak_planks #logs -
-oak_planks #logs -
+oak_planks #planks -
 result: oak_door
 ```
 
@@ -34,7 +34,7 @@ result: #logs,3
 ```crafting smelting
 ftbsa:compressed_cobble
 oak_planks
-result: ftbsa:double_compressed_cobble,20
+result: ftbsa:#compressed,20
 ```
 
 ```crafting smelting

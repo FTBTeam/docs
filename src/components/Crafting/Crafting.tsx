@@ -1,7 +1,7 @@
 import s from './Crafting.module.scss'
 import Table from "@site/src/components/Crafting/Table/Table";
 import Furnace from "@site/src/components/Crafting/Furnace/Furnace";
-import {Recipe} from "@site/src/components/Crafting/util";
+import {Recipe, TagsYaml} from "@site/src/components/Crafting/util";
 
 type Props = {
     recipeString: string
@@ -15,10 +15,10 @@ export function Crafting({recipeString}: Props) {
         return (
             <div className={s.craftingUiWrapper}>
                 {recipe.type === 'table' && (
-                    <Table ingredients={recipe.ingredients} output={recipe.output} />
+                    <Table ingredients={recipe.ingredients} output={recipe.output} tags={recipe.tags} />
                 )}
                 {recipe.type === 'smelting' && (
-                    <Furnace ingredients={recipe.ingredients} output={recipe.output} />
+                    <Furnace ingredients={recipe.ingredients} output={recipe.output} tags={recipe.tags} />
                 )}
             </div>
         )
