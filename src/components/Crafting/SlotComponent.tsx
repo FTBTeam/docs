@@ -19,7 +19,6 @@ export default function SlotComponent({ingredient, output, tags}: Props) {
 
     const tagImageCycler = (namespace: string, tagName: string, setImage: (imgPath: string) => void)=> {
         let index = 0;
-        console.log(tags)
         setImage(getImagePath(namespace, tags[namespace][tagName][index]));
         const interval = setInterval(() => {
             index = (index + 1) % tags[namespace][tagName].length;
@@ -54,14 +53,14 @@ export default function SlotComponent({ingredient, output, tags}: Props) {
         <>
             {!output &&
                 <span className={s.invSlot}>
-                    {currentIngredientImg != '' &&
+                    {currentIngredientImg !== '' &&
                         <img className={s.itemImg} src={currentIngredientImg} alt=""/>
                     }
                 </span>
             }
             {output &&
                 <span className={`${s.outputSlot}`}>
-                    { currentOutputImg != '' &&
+                    { currentOutputImg !== '' &&
                         <img className={`${s.itemImg} ${s.bigSlot}`} src={currentOutputImg} alt=""/>
                     }
                     {output.count >= 2 && (

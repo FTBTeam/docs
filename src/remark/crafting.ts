@@ -47,7 +47,7 @@ const getItemName = (item: string | null): string | null => {
 const parseCrafting = (code: string): [SlotItem[], SlotItem] => {
     const lines = code.split('\n');
     const grid: SlotItem[] = [];
-    let output: SlotItem = null;
+    let output: SlotItem = {namespace: '', itemName: '', count: 0};
 
     for (const line of lines) {
         if (line.startsWith('result:')) {
