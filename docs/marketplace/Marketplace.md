@@ -18,27 +18,27 @@ Dig into the ultimate survival toolkit with Sieves & Things! Whether you're in a
 ## DEMO OF CRAFTING AND SMELTING RECIPES DISPLAY REMOVE BEFORE MERGE
 
 ```crafting table
-oak_planks #logs -
-oak_planks #logs -
-oak_planks #planks -
+planks_oak #logs -
+planks_oak #logs -
+planks_oak #planks -
 result: oak_door
 ```
 
 ```crafting table
-oak_planks oak_planks -
-oak_planks oak_planks -
-oak_planks oak_planks -
+planks_oak planks_oak -
+planks_oak planks_oak -
+planks_oak planks_oak -
 result: #logs,3
 ```
 
 ```crafting smelting
 ftbsa:compressed_cobble
-oak_planks
+planks_oak
 result: ftbsa:#compressed,20
 ```
 
 ```crafting smelting
 ftbsa:compressed_cobble
-oak_planks
+planks_oak
 result: ftbsa:double_compressed_cobble
 ```
