@@ -54,14 +54,14 @@ export default function SlotComponent({ingredient, output, tags}: Props) {
             {!output &&
                 <span className={s.invSlot}>
                     {currentIngredientImg !== '' &&
-                        <img className={s.itemImg} src={currentIngredientImg} alt=""/>
+                        <img className={s.itemImg} src={currentIngredientImg} alt="Crafting Item"/>
                     }
                 </span>
             }
             {output &&
                 <span className={`${s.outputSlot}`}>
                     { currentOutputImg !== '' &&
-                        <img className={`${s.itemImg} ${s.bigSlot}`} src={currentOutputImg} alt=""/>
+                        <img className={`${s.itemImg} ${s.bigSlot}`} src={currentOutputImg} alt="Crafting Item"/>
                     }
                     {output.count >= 2 && (
                         <span className={s.itemCount}>
