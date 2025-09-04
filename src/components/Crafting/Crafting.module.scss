@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Minecraft';
+  src: url('@site/src/components/Crafting/assets/font/Minecraft-Seven_v2.woff2');
+}
+
+.craftingUiWrapper {
+  display: flex;
+}
+
+.slotGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.slotRow {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.heading {
+  color: #000000;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  align-self: flex-start;
+  font-family: Minecraft, sans-serif;
+}
+
+.invSlot {
+  display: flex;
+  background: #8B8B8B no-repeat center center;
+  border: 2px solid;
+  border-color: #373737 #FFF #FFF #373737;
+  width: 48px;
+  height: 48px;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.noBg {
+  background: none !important;
+}
+.noBorder {
+  border: none !important;
+}
+
+.outputSlot {
+  display: flex;
+  background: #8B8B8B no-repeat center center;
+  border: 2px solid;
+  border-color: #373737 #FFF #FFF #373737;
+  width: 64px;
+  height: 64px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.itemCount {
+  display: block;
+  position: absolute;
+  font-family: Minecraft, sans-serif;
+  color: white;
+  text-shadow: 2px 2px 0 #3F3F3F;
+  font-size: 24px;
+  //margin: 16px 0 0 31px;
+  text-align: right;
+  width: 64px;
+  height: 64px;
+  padding-right: 11px;
+  padding-bottom: 1px;
+  align-content: end;
+}
+
+.bigSlot {
+  padding: 8px;
+}
+
+.itemImg {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.arrow {
+  display: flex;
+  margin: auto 6px;
+  width: 33px;
+  height: 22.5px;
+}
+
+.craftingTableUi {
+  display: flex;
+  flex-direction: column;
+  background-color: #C6C6C6;
+  border: 2px solid;
+  border-radius: 4px;
+  border-color: #DBDBDB #5B5B5B #5B5B5B #DBDBDB;
+  padding: 0 8px 8px 8px;
+  margin-bottom: 20px;
+}
+
+.smeltingUi {
+  display: flex;
+  flex-direction: column;
+  background-color: #C6C6C6;
+  border: 2px solid;
+  border-radius: 4px;
+  border-color: #DBDBDB #5B5B5B #5B5B5B #DBDBDB;
+  padding: 0 8px 8px 8px;
+  margin-bottom: 20px;
+
+  .fire {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+}

@@ -2,6 +2,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const {themes} = require('prism-react-renderer');
+const remarkCrafting = require('./src/remark/crafting')
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 
@@ -58,8 +59,8 @@ const config = {
           editUrl:
             'https://github.com/ftbteam/docs/tree/main/',
           remarkPlugins: [
-
-          ]
+            remarkCrafting
+          ],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
