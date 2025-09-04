@@ -17,7 +17,7 @@ export default function SlotComponent({ingredient, output, tags}: Props) {
     const [currentIngredientImg, setCurrentIngredientImg] = useState('');
     const [currentOutputImg, setCurrentOutputImg] = useState('');
 
-    const tagImageCycler = (namespace: string, tagName: string, setImage: (imgPath: string) => void)=> {
+    const tagImageCycler = (namespace: string, tagName: string, setImage: (imgPath: string) => void) => {
         let index = 0;
         setImage(getImagePath(namespace, tags[namespace][tagName][index]));
         const interval = setInterval(() => {
@@ -43,7 +43,7 @@ export default function SlotComponent({ingredient, output, tags}: Props) {
             if (output.itemName?.startsWith('#')) {
                 const tagName = output.itemName.slice(1);
                 tagImageCycler(output.namespace, tagName, setCurrentOutputImg);
-            }else {
+            } else {
                 setCurrentOutputImg(getImagePath(output.namespace || '', output.itemName || ''));
             }
         }
