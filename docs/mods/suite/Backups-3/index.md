@@ -11,6 +11,10 @@ tags:
 FTB Backups 3 is required on both the client and server.
 :::
 
+FTB Backups 3 is available on CurseForge
+
+[![Backups 3](https://cf.way2muchnoise.eu/title/1294188_Get_Today!.svg)](https://www.curseforge.com/minecraft/mc-mods/ftb-backups-3) ![Backups 3 Versions](https://cf.way2muchnoise.eu/versions/1294188.svg)
+
 Our simple but powerful backups solution for Minecraft 1.21.1+!
 
 ### Features
