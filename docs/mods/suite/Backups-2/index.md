@@ -5,7 +5,7 @@ tags:
   - FTB Suite
   - FTB Mods
   - Backups 2
-sidebar_position: 
+sidebar_position: 7
 ---
 
 :::warning

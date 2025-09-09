@@ -1,6 +1,6 @@
 ---
 title: Library
-sidebar_position: 1
+sidebar_position: 4
 description: FTB Library provides common code for UI, configs and utilities used by the rest of our mods.
 tags:
   - introduction
