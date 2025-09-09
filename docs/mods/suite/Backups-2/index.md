@@ -6,7 +6,7 @@ description: FTB Backups 2 is a mod that creates backups of your world
 :::warning
 ⚠ LTS Notice!
 
-FTB Backups (2) is only available for Minecraft versions up 1.18 -> 1.21.5 and is now on LTS. We will continue to bug fix the mod but no new features will be accepted in.
+FTB Backups (2) is only available for Minecraft versions 1.18 -> 1.21.5 and is now on LTS. We will continue to bug fix the mod but no new features will be accepted in.
 
 For Minecraft 1.21.1+ please use [FTB Backups 3](../Backups-3).
 :::
