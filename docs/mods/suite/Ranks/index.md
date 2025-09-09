@@ -4,6 +4,7 @@ title: Ranks
 description: FTB Ranks is a server-side mod for permission management.
 tags:
   - introduction
+sidebar_position: 4
 ---
 
 # FTB Ranks

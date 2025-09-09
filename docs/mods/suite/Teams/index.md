@@ -4,6 +4,7 @@ description: FTB Teams is our all in one solution for team management.
 tags:
   - FTB Suite
   - FTB Mods
+sidebar_position: 5
 ---
 
 ## What is FTB Teams?

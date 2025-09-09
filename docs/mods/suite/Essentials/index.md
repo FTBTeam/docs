@@ -1,6 +1,7 @@
 ---
 title: Essentials
 description: FTB Essentials adds a variety of useful commands for players and server admins.
+sidebar_position: 3
 ---
 
 ## What is FTB Essentials?

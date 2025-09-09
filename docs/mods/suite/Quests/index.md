@@ -1,6 +1,7 @@
 ---
 title: Quests
 description: FTB Quests is a lightweight, team-based questing mod that is very simple to use.
+sidebar_position: 2
 ---
 
 :::info
