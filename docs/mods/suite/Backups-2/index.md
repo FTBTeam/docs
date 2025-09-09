@@ -1,6 +1,11 @@
 ---
 title: Backups 2
 description: FTB Backups 2 is a mod that creates backups of your world
+tags:
+  - FTB Suite
+  - FTB Mods
+  - Backups 2
+sidebar_position: 
 ---
 
 :::warning
