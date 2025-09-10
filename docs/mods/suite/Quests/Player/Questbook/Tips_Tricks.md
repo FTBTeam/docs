@@ -15,15 +15,15 @@ Sometimes a quest will be locked but you cannot see the incomplete dependency qu
 
 If you click the small Left Arrow in the quest, you can open a dropdown that lists all of the dependencies of the quest.
 
-![Picture of quest view with the left and right arrow highlighted with a box](../../../../_assets/images/quests/questbook-dependency-buttons.png)
+![Picture of quest view with the left and right arrow highlighted with a box](../../../../_assets/images/quests/questbook-dependency-buttons.webp)
 
 You can click on a quest in the list to be taken directly to the quest. Note that the chapter the dependency quest is in is listed here in `[brackets]` if the quest is not in the current chapter.
 
-![Dependencies dropdown list for a quest](../../../../_assets/images/quests/questbook-dependency-dropdown.png)
+![Dependencies dropdown list for a quest](../../../../_assets/images/quests/questbook-dependency-dropdown.webp)
 
 You can also use the Right Arrow on the top right of the quest to see a dropdown listing all of the Dependent quests.
 
-![Dependents dropdown list for a quest](../../../../_assets/images/quests/questbook-dependency-upstream.png)
+![Dependents dropdown list for a quest](../../../../_assets/images/quests/questbook-dependency-upstream.webp)
 
 ## Linked Quests
 

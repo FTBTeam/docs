@@ -33,7 +33,7 @@ We also have a special chapter "Woodcutting" with one quest called "Oak Log".
 
 "Oak Log" is dependent on the completion of "Dummy Quest" before it can show up, since we set it as hidden until dependencies are completed. The chapter "Woodcutting" is also hidden since we set the same setting and "Oak Log" is our only quest.
 
-![Woodcutting chapter](../../../../../_assets/images/quests/rewards/command-woodcutting.png "The hidden Woodcutting chapter and its only quest named Oak Log")
+![Woodcutting chapter](../../../../../_assets/images/quests/rewards/command-woodcutting.webp "The hidden Woodcutting chapter and its only quest named Oak Log")
 
 When you are rewarded with the command `/ftbquests change_progress @p complete 570F25BE1914AE96` (permission level 2 required in the settings), you will complete this hidden dummy quest.
 

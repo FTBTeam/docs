@@ -47,7 +47,7 @@ Right, now that's out of the way, here are the steps to locate the server files.
 
 You should now be on a page that looks like this
 
-![The FTB Website on the StoneBlock 3 server files page](../../_assets/images/server-guide/ftb-server-files-page.png)
+![The FTB Website on the StoneBlock 3 server files page](../../_assets/images/server-guide/ftb-server-files-page.webp)
 
 - Now select the version of the modpack you need the server files for from the dropdown box.
     - Typically, the latest version is the one you'd need
@@ -55,7 +55,7 @@ You should now be on a page that looks like this
     - The Desktop option has 2 buttons that will just download the server installer for you.
     - The Server options gives you a `curl` command that you can run in your terminal to download the server installer.
 
-![The FTB website focused on the server files section](../../_assets/images/server-guide/ftb-server-files-download-highlight.png)
+![The FTB website focused on the server files section](../../_assets/images/server-guide/ftb-server-files-download-highlight.webp)
 
 Now you have this downloaded, we can move onto how to use the server installer
 

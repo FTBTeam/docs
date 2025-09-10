@@ -19,7 +19,7 @@ All the minimap settings will be in its own section in the config GUI, for a des
 ### Minimap display info
 Extra information can be displayed under the minimap by clicking on the Minimap Info Settings when on the fullscreen map, this will open a GUI where you can configure the minimap info settings.
 
-![Minimap display info settings](../../_assets/images/chunks/chunks-minimap-info-button.png)
+![Minimap display info settings](../../_assets/images/chunks/chunks-minimap-info-button.webp)
 
 This allows you to display extra information under the minimap, such as the current biome, coordinates, current time of day and FPS
 
