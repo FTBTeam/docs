@@ -24,11 +24,11 @@ Let's imagine a two steps operation where you want to give your players an amoun
 
 First, let's create a quest to kill 10 Blaze for a custom reward.
 
-![Custom reward creation](../../../../../_assets/images/quests/rewards/custom-reward-creation.png "Killing 10 blazes will reward us with the currently inactive custom reward")
+![Custom reward creation](../../../../../_assets/images/quests/rewards/custom-reward-creation.webp "Killing 10 blazes will reward us with the currently inactive custom reward")
 
 Let's then copy the custom reward ID by right-clicking it. In this example our ID for this custom reward is `29F9C17B7503E992`.
 
-![Copying the id](../../../../../_assets/images/quests/rewards/custom-copy-id.png "Right-click allows us to copy the ID")
+![Copying the id](../../../../../_assets/images/quests/rewards/custom-copy-id.webp "Right-click allows us to copy the ID")
 
 :::note
 For this example, we have KubeJS and FTB XMod Compat installed since they are both required.
@@ -48,7 +48,7 @@ FTBQuestsEvents.customReward('29F9C17B7503E992', event => {
 
 Then in-game we reload the server scripts with `/kubejs reload server-scripts` and we go kill 10 blaze (or forcefully complete the quest for testing purposes).
 
-![Quest completed](../../../../../_assets/images/quests/rewards/custom-quest-complete.png "The blaze requirement of our quest is completed")
+![Quest completed](../../../../../_assets/images/quests/rewards/custom-quest-complete.webp "The blaze requirement of our quest is completed")
 
 We now take a look at our xp bar: we are level 43, so we should expect to receive 43 diamonds.
 

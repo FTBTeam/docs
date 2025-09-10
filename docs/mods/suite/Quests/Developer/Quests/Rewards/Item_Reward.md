@@ -11,7 +11,7 @@ Item rewards give the player an item or a count of an item.
 
 For example here clicking the axe icon rewards two identical axes.
 
-![Two axes reward](../../../../../_assets/images/quests/rewards/item-reward-two-axe.png "A quest that will reward two axes simultaneously")
+![Two axes reward](../../../../../_assets/images/quests/rewards/item-reward-two-axe.webp "A quest that will reward two axes simultaneously")
 
 ## Rewarding with fluids or other custom data
 

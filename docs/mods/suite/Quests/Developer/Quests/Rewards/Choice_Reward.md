@@ -9,4 +9,4 @@ Choice rewards allow the player to choose any item in a reward table. The item i
 
 In the example below, if they would choose the iron pickaxes, they would receive two.
 
-![Tools choice reward](../../../../../_assets/images/quests/rewards/choice-reward.png "A choice between a diamond pickaxe and two enchanted iron axes")
+![Tools choice reward](../../../../../_assets/images/quests/rewards/choice-reward.webp "A choice between a diamond pickaxe and two enchanted iron axes")

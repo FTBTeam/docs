@@ -35,7 +35,7 @@ Next we create a quest to get a PneumaticCraft "Finished PCB" item which rewards
 
 We copy the ID of this custom reward which for our example is `082B2A8F0870DB9E`.
 
-![Finished PCB quest](../../../../../_assets/images/quests/rewards/stages-custom-pcb-task.png "A quest to fetch a PCB item which grants a custom reward")
+![Finished PCB quest](../../../../../_assets/images/quests/rewards/stages-custom-pcb-task.webp "A quest to fetch a PCB item which grants a custom reward")
 
 :::tip
 Check the [custom reward](./Custom_Reward.md) page for more in-depth information on this reward type.
