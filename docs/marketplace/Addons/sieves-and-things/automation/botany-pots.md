@@ -8,6 +8,14 @@ tags:
 
 Botany Pots are small Copper pots that can grow Crops and Saplings, then automatically deposit the drops into a container.
 
+```crafting table
+- - -
+copper_ingot - copper_ingot
+copper_ingot copper_ingot copper_ingot
+result: ftbst:botany_pot_item, 1
+```
+
+
 **How to Use (Without Container):**
 
 1. Place down a Botany Pot.

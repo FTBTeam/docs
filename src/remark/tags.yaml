@@ -1,11 +1,28 @@
 groups:
-  
+
 tags:
   minecraft:
-    planks:
-      - planks_oak
-      - planks_birch
-      - planks_spruce
+    slabs:
+      - bamboo_planks_slab
+      - cherry_planks_slab
+      - mangrove_planks_slab
+      - pale_oak_planks_slab
+      - planks_acacia_slab
+      - planks_big_oak_slab
+      - planks_birch_slab
+      - planks_jungle_slab
+      - planks_oak_slab
+      - planks_spruce_slab
+    logs:
+      - log_oak
+      - log_birch
+      - log_spruce
+      - log_jungle
+      - log_acacia
+      - log_big_oak
+      - cherry_log
+      - mangrove_log
+      - pale_oak_log
   ftbst:
     meshes_result:
       - mesh_string
