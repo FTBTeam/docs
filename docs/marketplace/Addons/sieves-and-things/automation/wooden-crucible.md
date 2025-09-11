@@ -8,6 +8,13 @@ tags:
 
 The Wooden Crucible is a basic cauldron-like block used to generate water.
 
+```crafting table
+#logs - #logs
+#logs - #logs
+#logs #slabs #logs
+result: ftbst:wooden_crucible, 1
+```
+
 **How to Use:**
 
 1. Place down a Wooden Crucible.

@@ -1,23 +1,32 @@
+groups:
+
 tags:
   minecraft:
-    logs: [
-      'cherry_log',
-      'log_acacia',
-      'log_big_oak',
-      'log_birch',
-      'log_jungle',
-      'log_oak',
-      'log_spruce',
-      'mangrove_log',
-      'pale_oak_log',
-    ]
-    planks: [
-      "planks_oak",
-      "planks_birch",
-      "planks_spruce"
-    ]
-  ftbsa:
-    compressed: [
-      "compressed_cobble",
-      "double_compressed_cobble"
-    ]
+    slabs:
+      - bamboo_planks_slab
+      - cherry_planks_slab
+      - mangrove_planks_slab
+      - pale_oak_planks_slab
+      - planks_acacia_slab
+      - planks_big_oak_slab
+      - planks_birch_slab
+      - planks_jungle_slab
+      - planks_oak_slab
+      - planks_spruce_slab
+    logs:
+      - log_oak
+      - log_birch
+      - log_spruce
+      - log_jungle
+      - log_acacia
+      - log_big_oak
+      - cherry_log
+      - mangrove_log
+      - pale_oak_log
+  ftbst:
+    meshes_result:
+      - mesh_string
+      - mesh_flint
+      - mesh_iron
+      - mesh_diamond
+      - mesh_emerald
