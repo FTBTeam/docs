@@ -18,6 +18,14 @@ Here's a breakdown of the tools you can create:
  - [**Dagger**](./tools.md#dagger)
  - [**Sword**](./tools.md#sword)
  - [**Cleaver**](./tools.md#cleaver)
+ - [**Bow**](./tools.md#bow)
+
+## Damage
+
+Tinkers' Construct handles tool damage a bit differently.
+When you hover over a tool, you'll find its current damage displayed at the bottom of the tooltip.
+
+Additionally, helpful notifications Will appear as your tool's durability drops, warning you when it reaches 10 and 1 durability remaining.
 
 ### Pickaxe
 
@@ -88,3 +96,23 @@ This colossal cleaver isn't just for combat; it's a true warrior's multi-tool.
 Not only does it function as the ultimate defense against mobs, but its legendary sharpness allows you to collect mob heads, perfect for crafting and decorating. 
 
 *Requires the Tinkers' Anvil to craft.*
+
+### Bow
+
+The Bow's Big Brother: The humble bow is a classic choice for ranged attacks.
+
+But Tinker's' Bows ane the real deal! With a variety of materials and unique abilities, you can create bows that pack a serious punch.
+
+*Bows are incompatible with Modifiers.
+
+Like other tools, Bows can be crafted at the Tinker's Station.
+
+The crafting recipe is a variation of the vanilla bow recipe.
+Simply replace the Sticks with 3 Tool Handles of the same type.
+
+```crafting table,Tinker's Station
+- ftbtc:item/large_handle_bone string
+ftbtc:item/large_handle_bone - string
+- ftbtc:item/large_handle_bone string
+result: ftbtc:item/bone_bow, 1
+```

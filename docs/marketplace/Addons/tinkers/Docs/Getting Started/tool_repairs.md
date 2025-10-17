@@ -16,7 +16,12 @@ Here are the Tier 1 Traits:
 
 ### Repair Kits
 
-![Repair Kit Recipe](../../_assets/images/tinkers-repair_kit_recipe.png)
+```crafting table,Part Builder
+- cobblestone -
+cobblestone ftbtc:item/pattern_repair_kit cobblestone
+- cobblestone -
+result: ftbtc:item/stone_repair_kit
+```
 
 Use tool repair kits to restore the health of your weapons and tools.
 

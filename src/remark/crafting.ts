@@ -8,9 +8,11 @@ const plugin = (options: any) => {
     const transform = async (tree: any) => {
         visit(tree, 'code', (node, index, parent) => {
             if (node.lang === 'crafting') {
+                const meta = node.meta.split(",")
                 const [ingredients, output] = parseCrafting(node.value)
                 const tags = loadTags();
-                const type = node.meta || null;
+                const type = meta[0] || null;
+                const customTableName = meta[1] || null;
                 parent.children[index] = {
                     type: "mdxJsxFlowElement",
                     name: "Crafting",
@@ -23,6 +25,7 @@ const plugin = (options: any) => {
                                 output,
                                 type,
                                 tags: tags.tags,
+                                customTableName
                             }),
                         },
                     ],
