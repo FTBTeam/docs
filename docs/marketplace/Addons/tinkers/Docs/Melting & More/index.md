@@ -80,3 +80,16 @@ Seared Bricks in a Flash:
 *Crafted in a Crafting Table.*
  
 **Tip:** *Pop these blocks in a Stonecutter for even more design options!*
+
+#### Seared Faucet
+
+![Seared Faucet Recipe](../../_assets/images/tinkers-seared_faucet_recipe.png)
+
+For quick and direct pouring of molten liquid into Casting Tables and Basins, Seared Faucets are significantly faster than using cans.
+
+Provided the liquid doesn't need to be moved or stored.
+
+How to use:
+1. Place a Faucet on the side of a Melter or Seared Drain.
+2. Place either a Casting Table or Basin below it.
+3. Interact with the Faucet to pour it out.

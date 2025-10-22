@@ -56,6 +56,7 @@ Smelteries need a steady supply of heat to melt metals. That's where tanks come 
 
 *Tip: While tanks are great for fueling your smeltery, they're also versatile! You can use them to store water for other purposes.*
 
+
 ### Seared Drain
 
 ![Seared Drain Recipe](../../_assets/images/tinkers-seared_Drain_recipe.png)
