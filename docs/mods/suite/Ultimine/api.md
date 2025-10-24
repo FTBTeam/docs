@@ -2,7 +2,7 @@
 title: Modder API
 ---
 
-FTB Ultimine fires a few [Architectury](https://www.curseforge.com/minecraft/mc-mods/architectury-api) events intended to make it easy for modders to write plugins and extension to FTB Ultimine. These events, and the related interfaces and systems are all descrcibed here.
+FTB Ultimine fires a few [Architectury](https://www.curseforge.com/minecraft/mc-mods/architectury-api) events intended to make it easy for modders to write plugins and extension to FTB Ultimine. These events, and the related interfaces and systems are all described here.
 
 :::note
 
@@ -29,7 +29,7 @@ And in the `dependencies` section:
 ```
 compileOnly("dev.ftb.mods:ftb-ultimine:${ftb_ultimine_version}")
 # if desired
-runTimeOnly("dev.ftb.mods:ftb-ultimine-neoforge:${ftb_ultimine_version}")
+runtimeOnly("dev.ftb.mods:ftb-ultimine-neoforge:${ftb_ultimine_version}")
 ```
 
 #### For Loom / Architectury Loom
@@ -125,10 +125,10 @@ enum MyBlockBreakHandler implements BlockBreakHandler {
   public Result breakBlock(Player player, BlockPos pos, BlockState state, Shape shape, BlockHitResult hitResult) {
     // check if it's your block, and if not return PASS asap
     if (!isMyBlock(state)) {
-       return PASS;
+       return Result.PASS;
     }
     // do your custom block break logic here, return SUCCESS or FAIL as appopriate
-    return SUCCESS;
+    return Result.SUCCESS;
   }
 }
 ```

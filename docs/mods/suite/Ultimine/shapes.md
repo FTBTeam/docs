@@ -22,7 +22,7 @@ The panel can be moved to other areas of the screen in client config; see the "O
 
 ### Options List
 
-Where you see `Y`, this means a variable distance. The distance is controlled by the Ultimine server config, via the "Max Blocks per Opertion" setting.
+Where you see `Y`, this means a variable distance. The distance is controlled by the Ultimine server config, via the "Max Blocks per Operation" setting.
 
 | Option | Description |
 | --- | --- |
