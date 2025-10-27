@@ -73,3 +73,32 @@ As the comment in the config file suggests, this can be overridden with FTB Rank
 /ftbranks node add vip ftbessentials.home.cooldown 3
 /ftbranks node add admin ftbessentials.home.cooldown 0
 ```
+
+## Kits
+
+As also discussed in [kits](http://localhost:3000/docs/mods/suite/Essentials/Kits#giving-to-yourself), it's possible to set up per-kit permission nodes to allow regular players to give themselves a controlled set of kits. Typically you would also configure those kits with some [cooldown](Kits#cooldowns) value.
+
+### Example
+
+To allow players to give themselves the `emergency_supplies` kit every 3 hours:
+
+* Put the supplies you need for the rank in a chest, then while looking at the chest:
+
+```
+/ftbessentials kit create_from_inventory emergency_supplies 3h
+```
+
+* Set up the Ranks permission node:
+
+```
+/ftbranks create resupply 100
+/ftbranks node add resupply ftbessentials.give_me_kit.emergency_supplies true
+```
+
+Now, any players added to the `resupply` rank will be able to run `/give_me_kit emergency_supplies` every 3 hours.
+
+:::note
+
+The power level for the rank - 100 here - isn't important unless you're planning to have another rank which configures the same permission node.
+
+:::
