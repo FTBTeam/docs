@@ -54,6 +54,16 @@ You can also put the contents of the kit into a chest or other inventory. To do 
 
 You should ensure there's enough space in the inventory for the kit contents; if there isn't then you may get a partial kit (Forge), or no items at all (Fabric).
 
+### Giving to Yourself
+
+To conveniently give a kit to yourself, you can use:
+
+`/give_me_kit <kitname>`
+
+This is basically just a synonym for `/kit give @s <kitname>` with one important advantage: it also checks for the permission node `ftbessentials.give_me_kit.<kitname>`. This allows for fine-grained control over which kits regular players can grant themselves.
+
+See [here](Ranks_Integration#kits) for more information.
+
 ## Managing Kits
 
 ### Viewing
