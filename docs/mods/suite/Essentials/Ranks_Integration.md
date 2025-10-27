@@ -76,7 +76,7 @@ As the comment in the config file suggests, this can be overridden with FTB Rank
 
 ## Kits
 
-As also discussed in [kits](http://localhost:3000/docs/mods/suite/Essentials/Kits#giving-to-yourself), it's possible to set up per-kit permission nodes to allow regular players to give themselves a controlled set of kits. Typically you would also configure those kits with some [cooldown](Kits#cooldowns) value.
+As also discussed in [kits](Kits#giving-to-yourself), it's possible to set up per-kit permission nodes to allow regular players to give themselves a controlled set of kits. Typically you would also configure those kits with some [cooldown](Kits#cooldowns) value.
 
 ### Example
 
