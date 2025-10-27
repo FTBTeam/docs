@@ -26,3 +26,6 @@ Here are the Tier 2 Traits:
 
 ### Experienced
 - Increases the amount of experience you get from defeating mobs and mining ores.
+
+### Reinforced
+- Each use has a 20% chance to avoid consuming durability.
