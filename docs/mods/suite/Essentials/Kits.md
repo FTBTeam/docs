@@ -60,7 +60,7 @@ To conveniently give a kit to yourself, you can use:
 
 `/give_me_kit <kitname>`
 
-This is basically just a synonym for `/kit give <kitname>` with one important advantage: it also checks for the permission node `ftbessentials.give_me_kit.<kitname>`. This allows for fine-grained control over which kits regular players can grant themselves.
+This is basically just a synonym for `/kit give @s <kitname>` with one important advantage: it also checks for the permission node `ftbessentials.give_me_kit.<kitname>`. This allows for fine-grained control over which kits regular players can grant themselves.
 
 See [here](Ranks_Integration#kits) for more information.
 
