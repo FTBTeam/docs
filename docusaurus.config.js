@@ -23,7 +23,7 @@ const config = {
   ],
   title: 'Feed The Beast Docs',
   tagline: 'Documentation for FTB Modpacks, Mods, the FTB App and Support topics',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   // Set the production url of your site here
   url: 'https://docs.feed-the-beast.com',
