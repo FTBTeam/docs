@@ -27,7 +27,7 @@ To reload the instance data, you can follow these steps:
 
 ## Purging instance/install caches
 
-If you are running into issues with installing modpacks or starting up modpacks, its possible that the install caches for modpacks contains a corrupted file.
+If you are running into issues with installing modpacks or starting up modpacks, it's possible that the install caches for modpacks contains a corrupted file.
 To purge the install caches, you can follow these steps:
 
 1. Click on the settings cog in the sidebar of the app
