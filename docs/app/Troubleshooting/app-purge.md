@@ -14,7 +14,7 @@ Some of the following actions will require you to repair any installed modpacks 
 
 ## Reloading instance data
 
-The app will cache and store data for modpacks and versions thats on our API to help speed up the loading times of the app.
+The app will cache and store data for modpacks and versions that are on our API to help speed up the loading times of the app.
 If you are running into issues with modpacks not showing up or versions not being correct, its possible that the cached data is out of date.
 
 To reload the instance data, you can follow these steps:
