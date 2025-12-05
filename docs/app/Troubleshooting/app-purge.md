@@ -5,7 +5,7 @@ description: Guide on how to purge/delete instance/app data such as install cach
 
 # Deleting/Purging Caches & Data
 
-If your app is running into issues with installing or starting up modpacks, your app may have some corrupeted caches or data.
+If your app is running into issues with installing or starting up modpacks, your app may have some corrupted caches or data.
 This guide will walk you through deleting/purging various caches and data that the app uses to run modpacks.
 
 :::warning
