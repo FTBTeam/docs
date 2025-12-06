@@ -11,15 +11,15 @@ You've got the hang of melting, Tinker! Now, the burning question: how do we get
 
 ![Cans and Melter](../../_assets/images/tinkers-cans_and_melter.webp)
 
-### Iron and Copper Cans
+### Tin and Copper Cans
 
 Need to transport, store, or pour your freshly melted liquids? 
 
 ![Cans Recipe](../../_assets/images/tinkers-cans_recipe.png)
 
-Look no further than Iron & Copper Cans!
+Look no further than Tin & Copper Cans!
 
-**Iron Cans** hold one-tenth the volume of a bucket, offering a tiny *100mB (or 100 millibuckets)* of storage.
+**Tin Cans** hold one-tenth the volume of a bucket, offering a tiny *100mB (or 100 millibuckets)* of storage.
 
 However, **Copper Cans** hold one-fifth the volume of a bucket, offering a convenient *200mB* of storage.
 

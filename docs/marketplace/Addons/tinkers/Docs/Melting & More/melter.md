@@ -13,6 +13,7 @@ This is your basic Melter, perfect for getting started with simple tasks.
 
 ### How to use
 
+**Master the Melter:** 
 This handy tool has two parts in one: the heater and the tank.
 
 **Fuel Up:**
