@@ -25,7 +25,7 @@ Four default base definition files are shipped with the mod, although none of th
 
 To set up a pregenerated base with region-relocation into the default shared dimension, use this as a start point:
 
-```json5
+```json
 {
   "id": "ftbteambases:my_base_type",
   "display": {
@@ -44,9 +44,8 @@ To set up a pregenerated base with region-relocation into the default shared dim
 
 To set up a pregenerated base in a private dimension, with no region relocation, just change the `dimension` section above:
 
-```json5
+```json
 {
-  //...
   "dimension": {
     "private": true,
     "dimension_type": "ftbteambases:default"
@@ -56,7 +55,7 @@ To set up a pregenerated base in a private dimension, with no region relocation,
 
 To set up a single-structure base in the shared dimension:
 
-```json5
+```json
 {
   "id": "ftbteambases:my_base_type",
   "display": {
@@ -87,8 +86,8 @@ This file goes in a datapack in `data/<namespace>/ftb_base_definitions/my_base_t
 | `display` | Yes | Object containing display settings (see below). |
 | `construction` | Yes | Defines how the base is built (see construction types below). |
 | `dimension` | Yes | Defines where the base is created (see below). |
-| `spawn_offset` | No | Array `[x, y, z]` offset for the default player spawn position (default: [0,0,0]). The default position is typically at the center of the region(s), and at a Y position of the world's surface. |
-| `extents` | No | Object `{x: int, z: int}` defining region extent (default: {x: 1, z: 1}) |
+| `spawn_offset` | No | Array `[x, y, z]` offset for the default player spawn position (default: `[0,0,0]`). The default position is typically at the center of the region(s), and at a Y position of the world's surface. |
+| `extents` | No | Object `{x: int, z: int}` defining region extent (default: `{x: 1, z: 1}`) |
 
 **Display section (`display`):**
 
@@ -194,7 +193,7 @@ You may also want to copy pregenerated region files for dimensions other than th
 
 To do this, use the `additional_pregen_dimensions` config option:
 
-```snbt
+```js
 lobby: {
     lobby_dimension: "minecraft:overworld"
     additional_pregen_dimensions: "mymod:custom_dim, mymod:another_dim"
@@ -359,18 +358,17 @@ There are some key differences between the 1.20.1 (Forge/NeoForge/Fabric) and 1.
 ### Base Definition JSON Structure
 
 **1.20.1** uses a flat structure for display fields:
-```json5
+```json
 {
   "id": "ftbteambases:my_base",
   "description": "Some description",
   "author": "FTB Team",
   "preview_image": "ftbteambases:textures/spawn/default.png",
-  // ...
 }
 ```
 
 **1.21.1** uses a nested `display` section:
-```json5
+```json
 {
   "id": "ftbteambases:my_base",
   "display": {
@@ -378,7 +376,6 @@ There are some key differences between the 1.20.1 (Forge/NeoForge/Fabric) and 1.
     "author": "FTB Team",
     "preview_image": "ftbteambases:textures/spawn/default.png"
   },
-  // ...
 }
 ```
 
