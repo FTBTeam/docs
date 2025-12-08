@@ -163,7 +163,7 @@ r.0.0.mca  r.0.1.mca  r.1.0.mca  r.1.1.mca
 ```
 
 !!! note
-    Only region MCA files are fully supported right now. Entity and POI MCA files (`entity/` and `/poi` subdirectories) are copied for private dimensions, but not supported for relocation in the shared dimension.
+    Only region MCA files are fully supported right now. Entity and POI MCA files (`entity/` and `poi/` subdirectories) are copied for private dimensions, but not supported for relocation in the shared dimension.
 
 These files are copied directly into the dimension folder for private (non-relocated) dimensions, but processed and renamed when relocated into a shared dimension. For this reason, creating a pregen base in a private dimension is much faster than creating one in a shared dimension.
 
