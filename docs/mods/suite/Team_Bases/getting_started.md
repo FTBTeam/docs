@@ -150,9 +150,9 @@ r.0.0.mca  r.0.1.mca  r.1.0.mca  r.1.1.mca
 
 :::info
 Only region MCA files are fully supported right now. Entity and POI MCA files (`entity/` and `poi/` subdirectories) are copied for private dimensions, but not supported for relocation in the shared dimension.
+:::
 
 These files are copied directly into the dimension folder for private (non-relocated) dimensions, but processed and renamed when relocated into a shared dimension. For this reason, creating a pregen base in a private dimension is much faster than creating one in a shared dimension.
-:::
 
 ## Setting up the Lobby
 
@@ -223,8 +223,8 @@ There are two ways to do this:
 
 :::info
 Base creation can take a few seconds, especially if there are multiple region files to be copied/relocated from the templates to the live dimension. Players get a progress indicator while their base is being prepared (preparation should not cause any noticeable server lag).
+:::
 
 - When a base is created, an FTB Teams team is automatically created for the player.
 - If a team is disbanded, the base is archived, and any players in the base are sent back to the lobby.
 - If a player joins an existing team, they are automatically sent to the team's base. If they leave the team, they are sent back to the lobby.
-:::
