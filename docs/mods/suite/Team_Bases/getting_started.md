@@ -218,8 +218,8 @@ There are two ways to do this:
 1. Use the `/ftbteambases create <base-definition>` command. This needs admin privileges, so regular players would likely run this via a command block. The base definition is the JSON file you created above, e.g. `/ftbteambases create ftbteambases:my_base_type`
 
 2. Set up a portal structure using the `ftbteambases:portal` block. This block can only be obtained with the `/give` command, but can be used to build a portal structure in your lobby. The portal block visually looks like a Nether portal block but doesn't require an obsidian frame - you can create any shape and surrounding you like. When a player walks into this portal block:
-  - If they are in a team: teleports them to their team's base spawn
-  - If they are not in a team: opens the base selection GUI to create a new base
+   - If they are in a team: teleports them to their team's base spawn
+   - If they are not in a team: opens the base selection GUI to create a new base
 
 :::info
 Base creation can take a few seconds, especially if there are multiple region files to be copied/relocated from the templates to the live dimension. Players get a progress indicator while their base is being prepared (preparation should not cause any noticeable server lag).
