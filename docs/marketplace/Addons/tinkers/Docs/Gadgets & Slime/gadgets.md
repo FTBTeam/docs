@@ -90,3 +90,10 @@ It’s effective for lighting up hard-to-reach areas without exposing yourself t
 An EFLN is a throwable TNT-like ball that explodes on impact, which is primarily used in mining circumstances.
 
 What does EFLN even mean? Explosive Flint of course!
+
+### Drying Rack
+
+Mount the Drying Rack on a wall to dry raw meat or fish items over time.
+
+After 30-60 seconds, the food item will dry into jerky
+
