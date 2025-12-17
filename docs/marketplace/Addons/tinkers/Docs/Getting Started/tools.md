@@ -101,7 +101,7 @@ Not only does it function as the ultimate defense against mobs, but its legendar
 
 The Bow's Big Brother: The humble bow is a classic choice for ranged attacks.
 
-But Tinker's' Bows ane the real deal! With a variety of materials and unique abilities, you can create bows that pack a serious punch.
+But Tinkers' Bows are the real deal! With a variety of materials and unique abilities, you can create bows that pack a serious punch.
 
 *Bows are incompatible with Modifiers.
 

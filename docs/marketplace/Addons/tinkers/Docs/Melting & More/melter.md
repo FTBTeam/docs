@@ -31,3 +31,4 @@ While fueled, interact with raw ore (like iron), and Watch as the molten metal f
 - Gold
 - Pig Iron
 - Rose Gold
+- Bronze
