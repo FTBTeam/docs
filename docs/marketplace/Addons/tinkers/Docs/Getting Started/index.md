@@ -67,7 +67,7 @@ Crafting more Blank Patterns is quick and easy.
 
 ![Tinkers' Station Usage](../../_assets/images/tinkers-tinkers_station_usage.png)
 
-TThe Forge Beckons... Craft Your First Tool!
+The Forge Beckons... Craft Your First Tool!
 
 You've conquered the initial steps of your tinkering journey! Now, it's time to unleash your creativity and forge your very first custom tool.
 
