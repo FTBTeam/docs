@@ -8,7 +8,7 @@ const plugin = (options: any) => {
     const transform = async (tree: any) => {
         visit(tree, 'code', (node, index, parent) => {
             if (node.lang === 'crafting') {
-                const meta = node.meta.split(",")
+                const meta = node.meta ? node.meta.split(",") : []
                 const [ingredients, output] = parseCrafting(node.value)
                 const tags = loadTags();
                 const type = meta[0] || null;
