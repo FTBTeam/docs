@@ -30,3 +30,11 @@ tags:
       - mesh_iron
       - mesh_diamond
       - mesh_emerald
+  ftbtc:
+    berries:
+      - item/iron_berries
+      - item/copper_berries
+      - item/gold_berries
+      - item/diamond_berries
+      - item/emerald_berries
+      - item/xp_berries

@@ -10,13 +10,9 @@ sidebar_position: 5
 Materials have special abilities called traits.
 
 Here are the Tier 1 Traits: 
- - [**Stringy**](./tier_1_traits.md#stringy)
  - [**Cultivation**](./tier_1_traits.md#cultivation)
  - [**Summoner**](./tier_1_traits.md#summoner)
  - [**Undead**](./tier_1_traits.md#undead)
-
-### Stringy
- - Spiders and sheep will now drop string when defeated.
 
 ### Cultivation 
 - Increases the chance of obtaining more items from crops when harvesting.

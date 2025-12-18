@@ -56,6 +56,7 @@ Smelteries need a steady supply of heat to melt metals. That's where tanks come 
 
 *Tip: While tanks are great for fueling your smeltery, they're also versatile! You can use them to store water for other purposes.*
 
+
 ### Seared Drain
 
 ![Seared Drain Recipe](../../_assets/images/tinkers-seared_Drain_recipe.png)
@@ -152,14 +153,9 @@ The molten metal will flow out, filling your container and ready for use in craf
 
 You've mastered the basics of the smeltery! Now, for a few extra pointers to make you a true smelting pro:
 
-**Fixed Size for Big Results:** The Smeltery has a set size. 
+**Fixed Size for Big Results:** The Smeltery has a fixed size, meaning its overall dimensions can't be changed. However, you can customize the blocks used and their placement.
 
-This means you can't customize its dimensions, so plan your smeltery's location strategically to maximize its usefulness.
+Want to build it with three tanks and two drains? Go for it!
+Prefer a smeltery made entirely of seared glass? That works too.
 
-**Breaking and Moving with Care:**  Need to relocate your smeltery or take a component apart? No problem!
-
-Hold Sneak and punch the block you want to break. 
-
-You'll receive a confirmation message to prevent accidental destruction. 
-
-*Remember, these are the main smeltery parts (Controller, Tank, Drain), so break with caution!*
+**Using Faucets:** Faucets can be attached to Seared Drains, but they'll only work if there's a Casting Table or Basin placed directly beneath them.

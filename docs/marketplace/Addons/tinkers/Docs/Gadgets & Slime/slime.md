@@ -25,9 +25,7 @@ Here's the you can find:
 
 ![Earth Slime](../../_assets/images/tinkers-earth_slime.webp)
 
-Earth Slimes can be found naturally in Swamp biomes. 
-
-But if you plant an Earth Slime Bean on Grass, an Earth Slime Island will emerge from the Ground!
+Earth Slimes can be found naturally in Swamp biomes.
 
 When killed, they drop Slimeballs.
 

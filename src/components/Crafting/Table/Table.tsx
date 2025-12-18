@@ -8,12 +8,13 @@ type Props = {
     ingredients: SlotItem[]
     output: SlotItem
     tags: Tags
+    customTableName?: string
 }
 
-export default function Table({ingredients, output, tags}: Props) {
+export default function Table({ingredients, output, tags, customTableName}: Props) {
     return (
         <div className={s.craftingTableUi}>
-            <div className={s.heading}>Crafting Table</div>
+            <div className={s.heading}>{customTableName === null ? "Crafting Table" : customTableName}</div>
             <div className={s.flexRow}>
                 <div className={s.slotGroup}>
                     {[0, 1, 2].map(row => (

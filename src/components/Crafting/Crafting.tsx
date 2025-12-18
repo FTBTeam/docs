@@ -15,7 +15,7 @@ export function Crafting({recipeString}: Props) {
         return (
             <div className={s.craftingUiWrapper}>
                 {recipe.type === 'table' && (
-                    <Table ingredients={recipe.ingredients} output={recipe.output} tags={recipe.tags} />
+                    <Table ingredients={recipe.ingredients} output={recipe.output} tags={recipe.tags} customTableName={recipe.customTableName} />
                 )}
                 {recipe.type === 'smelting' && (
                     <Furnace ingredients={recipe.ingredients} output={recipe.output} tags={recipe.tags} />

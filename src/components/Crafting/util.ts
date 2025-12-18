@@ -3,6 +3,7 @@ export type Recipe = {
     ingredients: (SlotItem | null)[]
     output: SlotItem
     tags: Tags
+    customTableName?: string
 }
 
 export type SlotItem = {

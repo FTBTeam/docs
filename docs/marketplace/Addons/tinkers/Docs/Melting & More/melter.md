@@ -13,6 +13,7 @@ This is your basic Melter, perfect for getting started with simple tasks.
 
 ### How to use
 
+**Master the Melter:** 
 This handy tool has two parts in one: the heater and the tank.
 
 **Fuel Up:**
@@ -30,3 +31,4 @@ While fueled, interact with raw ore (like iron), and Watch as the molten metal f
 - Gold
 - Pig Iron
 - Rose Gold
+- Bronze

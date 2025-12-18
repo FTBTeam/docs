@@ -67,7 +67,7 @@ Crafting more Blank Patterns is quick and easy.
 
 ![Tinkers' Station Usage](../../_assets/images/tinkers-tinkers_station_usage.png)
 
-TThe Forge Beckons... Craft Your First Tool!
+The Forge Beckons... Craft Your First Tool!
 
 You've conquered the initial steps of your tinkering journey! Now, it's time to unleash your creativity and forge your very first custom tool.
 
@@ -78,3 +78,13 @@ Once you've meticulously crafted all the parts, head over to the Tinker Station.
 While advanced modifications aren't available in the current version, keep your eyes peeled for future updates. The possibilities for customization are bound to expand!
 
 *For Weapons like Swords or Cleavers, you will need a Tinkers' Anvil.*
+
+### Tin Ore
+
+Tinkers' Construct 3.0 introduces Tin as a new material. Tin One can be found deep underground, typically in the same layers where Copper One generates.
+
+While Tin has a few uses, its primary purpose is to be combined with Copper to create the Bronze alloy.
+
+Other uses include crafting Tin Cans and decorative Tin Blocks.
+
+Tin comes in several forms: Raw Tin, Tin Nuggets, Tin Ingots, Tin Blocks, and Raw Tin Blocks.
