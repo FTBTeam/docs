@@ -75,4 +75,4 @@ const loadTags = (): TagsYaml => {
     return yaml.parse(fileContents) as TagsYaml;
 }
 
-module.exports = plugin;
+export default plugin;
