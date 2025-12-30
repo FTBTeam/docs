@@ -9,7 +9,9 @@ type Props = WrapperProps<typeof DocsVersionDropdownNavbarItemType>;
 export default function DocsVersionDropdownNavbarItemWrapper(props: Props): ReactNode {
     const {plugin} = useRouteContext();
 
-    if (plugin.name === "docusaurus-plugin-content-docs" && plugin.id !== "mods") {
+    console.log("Current plugin:", plugin);
+
+    if (plugin.id !== "mods") {
         return null;
     }
     return (
