@@ -11,7 +11,7 @@ title: Commands
 
 ## Homes
 
-__Homes__ are player-specific saved teleport destinations. Players may have one or more saved locations, depending on server and (if installed) [FTB Ranks](/docs/mods/suite/Essentials/Ranks_Integration) configuration.
+__Homes__ are player-specific saved teleport destinations. Players may have one or more saved locations, depending on server and (if installed) [FTB Ranks](/mod-docs/mods/suite/Essentials/Ranks_Integration) configuration.
 
 | Command     |Op Required| Description |
 | ----------- | --------- | ------------ |
@@ -67,7 +67,7 @@ All of these commands require `OP` to function
 |`/god [player]` | Enables God mode (Invulnerability) for you or the specified player.|
 |`/invsee <player>` | Opens the specified players inventory, allowing you to view and modify the inventory's contents.|
 |`/nicknamefor <player> <nickname>` | Forces a nickname on a specific player.|
-|`/mute <player> [until]` | Mutes a player for a specified amount of time (`until`) or forever.  The `until` is a duration time; omitting it mutes the player indefinitely. See [Duration](/docs/mods/suite/Essentials/Durations) for more information. Example: `/mute Slowpoke101 2h` mutes the player `Slowpoke101` for two hours.|
+|`/mute <player> [until]` | Mutes a player for a specified amount of time (`until`) or forever.  The `until` is a duration time; omitting it mutes the player indefinitely. See [Duration](/mod-docs/mods/suite/Essentials/Durations) for more information. Example: `/mute Slowpoke101 2h` mutes the player `Slowpoke101` for two hours.|
 |`/unmute <player>` | Unmutes the specified player.|
 
 ### Offline Teleport
@@ -81,7 +81,7 @@ _[New in Essentials 1.20.1+]_ Teleports a player to a given location when they'r
 
 ## Kits
 
-Kits are a relatively new feature to Essentials and have more in-depth documentation on the [Kits](/docs/mods/suite/Essentials/Kits) page. All `/kit` commands require `OP` permissions to use.
+Kits are a relatively new feature to Essentials and have more in-depth documentation on the [Kits](/mod-docs/mods/suite/Essentials/Kits) page. All `/kit` commands require `OP` permissions to use.
 
 | Command     |Description |
 | ----------- | --------- |
@@ -94,9 +94,9 @@ Kits are a relatively new feature to Essentials and have more in-depth documenta
 | Command     |Description |
 | ----------- | --------- |
 |`/kit delete <name>` | Deletes the specified kit.|
-|`/kit create_from_player_inv <name> [cooldown]` | Creates a kit from the current player's inventory contents, with an optional cooldown [duration](/docs/mods/suite/Essentials/Durations).|
-|`/kit create_from_player_hotbar <name> [cooldown]` | Creates a kit from the current players hotbar contents, with an optional cooldown [duration](/docs/mods/suite/Essentials/Durations).|
-|`/kit create_from_block_inv <name> [cooldown]` | Creates a kit from the inventory contents of the block you're looking at, with an optional cooldown [duration](/docs/mods/suite/Essentials/Durations).|
+|`/kit create_from_player_inv <name> [cooldown]` | Creates a kit from the current player's inventory contents, with an optional cooldown [duration](/mod-docs/mods/suite/Essentials/Durations).|
+|`/kit create_from_player_hotbar <name> [cooldown]` | Creates a kit from the current players hotbar contents, with an optional cooldown [duration](/mod-docs/mods/suite/Essentials/Durations).|
+|`/kit create_from_block_inv <name> [cooldown]` | Creates a kit from the inventory contents of the block you're looking at, with an optional cooldown [duration](/mod-docs/mods/suite/Essentials/Durations).|
 
 ### Helper commands
 

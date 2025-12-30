@@ -7,7 +7,7 @@ title: Ranks Integration
 FTB Essentials integrates with the FTB Ranks mod to provide the following additional configurability:
 
 * Commands which normally require OP permissions to run can be made available to players by giving them the corresponding command node permission.
-* Commands which have configurable [warm-ups and cool-downs](/docs/mods/suite/Essentials/Warmups_Cooldowns) can use FTB Ranks permission nodes to override the default warmup and cooldown times, as defined in the [mod configuration](/docs/mods/suite/Essentials/Configuration).
+* Commands which have configurable [warm-ups and cool-downs](/mod-docs/mods/suite/Essentials/Warmups_Cooldowns) can use FTB Ranks permission nodes to override the default warmup and cooldown times, as defined in the [mod configuration](/mod-docs/mods/suite/Essentials/Configuration).
 
 ## Command Nodes
 
@@ -48,7 +48,7 @@ Run `/ftbranks reload` after making changes to this file, and check your server 
 
 ## Warmups and Cooldowns
 
-See [warm-ups and cool-downs](/docs/mods/suite/Essentials/Warmups_Cooldowns) for general information.
+See [warm-ups and cool-downs](/mod-docs/mods/suite/Essentials/Warmups_Cooldowns) for general information.
 
 Several teleport-related commands allow their default warmup and cooldown to be overridden by FTB Ranks. To check which commands support this, see the `serverconfig/ftbessentials.snbt` configuration file; look for comments mentioning `You can override this with FTB Ranks`.
 

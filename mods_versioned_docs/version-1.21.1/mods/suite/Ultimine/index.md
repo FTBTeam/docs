@@ -20,7 +20,7 @@ FTB Ultimine is our take on a vein miner like mod. It allows you to mine blocks 
 
 ## Commands
 
-See [In-game Config Screen](/docs/mods/technical/Config-Screen) for more information about the in-game config screen.
+See [In-game Config Screen](/mod-docs/mods/technical/Config-Screen) for more information about the in-game config screen.
 
 | Command | Description | Requires OP |
 | --- | --- | --- |
@@ -33,4 +33,4 @@ These config screens can also be accessed from the standard FTB sidebar:
 
 ## Mining Shapes
 
-We support a variety of different mining shapes that can be switched on the fly in-game. To read more about these options, see [Mining Shapes](/docs/mods/suite/Ultimine/shapes).
+We support a variety of different mining shapes that can be switched on the fly in-game. To read more about these options, see [Mining Shapes](/mod-docs/mods/suite/Ultimine/shapes).

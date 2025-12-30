@@ -52,4 +52,4 @@ home: {
 }
 ```
 
-The `/home` command can be disabled (as all commmands can), but in addition, the default [warmup and cooldown](/docs/mods/suite/Essentials/Warmups_Cooldowns) can be changed, as well the default maximum number of homes that players can have. As per the comments, these defaults can be [overridden with FTB Ranks](/docs/mods/suite/Essentials/Ranks_Integration).
+The `/home` command can be disabled (as all commmands can), but in addition, the default [warmup and cooldown](/mod-docs/mods/suite/Essentials/Warmups_Cooldowns) can be changed, as well the default maximum number of homes that players can have. As per the comments, these defaults can be [overridden with FTB Ranks](/mod-docs/mods/suite/Essentials/Ranks_Integration).

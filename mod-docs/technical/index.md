@@ -6,5 +6,5 @@ In this section you will find documentation on the more technical aspects of our
 
 ## Technical Documentation
 
-- [Config Screen](/docs/mods/technical/Config-Screen)
-- [SNBT](/docs/mods/technical/SNBT)
+- [Config Screen](/mod-docs/mods/technical/Config-Screen)
+- [SNBT](/mod-docs/mods/technical/SNBT)

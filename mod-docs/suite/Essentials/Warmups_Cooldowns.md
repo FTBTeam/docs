@@ -10,7 +10,7 @@ Command _warmups_ enforce a delay between the player entering a command, and the
 
 Command _cooldowns_ enforce a delay between subsequent runs of a command, on a per-player basis. Most teleport-related commands have a default cooldown of 10 seconds, with the exception of `/back` (30 seconds), and `/rtp` (600 seconds).
 
-These values can be changed in the [configuration file](/docs/mods/suite/Essentials/Configuration). E.g. to give the `/home` command a 5-second cooldown and a 5-second warmup time:
+These values can be changed in the [configuration file](/mod-docs/mods/suite/Essentials/Configuration). E.g. to give the `/home` command a 5-second cooldown and a 5-second warmup time:
 
 ```
 # Allows users to set 'homes', which they can then freely teleport to by using /home afterwards
@@ -38,4 +38,4 @@ home: {
 }
 ```
 
-Note that default cooldowns can be overridden by [FTB Ranks](/docs/mods/suite/Essentials/Ranks_Integration#warmups-and-cooldowns), as the comments suggest.
+Note that default cooldowns can be overridden by [FTB Ranks](/mod-docs/mods/suite/Essentials/Ranks_Integration#warmups-and-cooldowns), as the comments suggest.
