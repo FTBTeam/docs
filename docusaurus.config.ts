@@ -79,6 +79,7 @@ const config: Config = {
       path: 'mod-docs',
       routeBasePath: 'mod-docs',
       sidebarPath: './sidebarsMods.ts',
+      includeCurrentVersion: false,
     }],
   ],
 
@@ -131,6 +132,11 @@ const config: Config = {
           {
             href: 'https://github.com/ftbTeam/docs/',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            type: 'docsVersionDropdown',
+            docsPluginId: 'mods',
             position: 'right',
           },
         ],
