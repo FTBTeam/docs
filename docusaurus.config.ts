@@ -130,13 +130,13 @@ const config: Config = {
             label: 'Support',
           },
           {
-            href: 'https://github.com/ftbTeam/docs/',
-            label: 'GitHub',
+            type: 'docsVersionDropdown',
+            docsPluginId: 'mods',
             position: 'right',
           },
           {
-            type: 'docsVersionDropdown',
-            docsPluginId: 'mods',
+            href: 'https://github.com/ftbTeam/docs/',
+            label: 'GitHub',
             position: 'right',
           },
         ],
@@ -157,7 +157,7 @@ const config: Config = {
               // },
               {
                 label: 'Mods',
-                to: '/docs/mods',
+                to: '/mod-docs/mods',
               },
               {
                 label: 'Support',
