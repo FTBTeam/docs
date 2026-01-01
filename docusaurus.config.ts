@@ -81,6 +81,19 @@ const config: Config = {
       sidebarPath: './sidebarsMods.ts',
       includeCurrentVersion: false,
     }],
+    ['@docusaurus/plugin-client-redirects',
+    {
+      createRedirects(existingPath) {
+        console.log(existingPath);
+        if (existingPath.includes('/mod-docs/mods')) {
+          // Redirect from /docs/team/X to /community/X and /docs/support/X to /community/X
+          return [
+            existingPath.replace('/mod-docs/mods', '/docs/mods'),
+          ];
+        }
+        return undefined; // Return a falsy value: no redirect created
+      },
+    }],
   ],
 
   themeConfig: {
@@ -103,12 +116,6 @@ const config: Config = {
             position: 'left',
             label: 'FTB App',
           },
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'modpacks',
-          //   position: 'left',
-          //   label: 'Modpacks',
-          // },
           {
             type: 'docSidebar',
             sidebarId: 'marketplace',
@@ -151,10 +158,6 @@ const config: Config = {
                 label: 'FTB App',
                 to: '/docs/app',
               },
-              // {
-              //   label: 'Modpacks',
-              //   to: '/docs/modpacks',
-              // },
               {
                 label: 'Mods',
                 to: '/mod-docs/mods',
