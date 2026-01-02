@@ -84,7 +84,6 @@ const config: Config = {
     ['@docusaurus/plugin-client-redirects',
     {
       createRedirects(existingPath) {
-        console.log(existingPath);
         if (existingPath.includes('/mod-docs/mods')) {
           // Redirect from /docs/team/X to /community/X and /docs/support/X to /community/X
           return [
