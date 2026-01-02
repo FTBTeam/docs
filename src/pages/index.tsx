@@ -67,7 +67,7 @@ export default function Home(): JSX.Element {
             desc="Learn about our Minecraft mods and how to use them. We've got guides for beginners as well as advanced users and modpack developers."
             img="/img/misc/quests.png"
             imgAlt="FTB Marketplace logo"
-            link="/docs/mods/suite"
+            link="/mod-docs/mods/suite"
             btnText="Explore our mods"
             className="mb-8"
           />

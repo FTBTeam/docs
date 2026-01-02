@@ -1,0 +1,57 @@
+---
+title: Configuring
+description: How to configure FTB Backups 3.
+tags:
+  - FTB Suite
+  - FTB Mods
+  - Backups 3
+sidebar_position: 2
+---
+import clientConfigScreen from '../../_assets/images/backups3/backups-3-client-config.webp';
+import serverConfigScreen from '../../_assets/images/backups3/backups-3-server-config.webp';
+import configSelector from '../../_assets/images/backups3/backups-3-config-select.webp';
+import {Slideshow} from '@site/src/components/SlideShow/Slideshow';
+
+FTB Backups 3 can be configured either in-game by opening the FTB Backups 3 menu from the inventory screen or by editing the `ftbbackups3-server.toml` located in the config folder.
+
+## In-game configuration
+
+To open the FTB Backups 3 config menu, open your inventory then in the top left corner click on the save icon ( 💾 it looks like a floppy disk). This will open the FTB Backups 3 menu where you can configure the client and server settings for FTB Backups 3.
+
+<Slideshow media={[
+    {type: "image", url: configSelector, title: 'Config select screen', text: "This is the screen you will see when you click on the FTB Backups 3 icon in your inventory."},
+    {type: "image", url: clientConfigScreen, title: 'Browsing', text: "This is the client configuration screen. Here you can set the position of the backup progress panel and whether it should be shown or not."},
+    {type: "image", url: serverConfigScreen, title: 'Searching', text: "This is the server configuration screen. Here you can set various options for how FTB Backups 3 works"},
+]} />
+
+### Server configuration
+
+The server configuration allows you to set the following options:
+
+| Name                                                | Description                                                                                                                                                                                                                                                                     | Default value   |
+|-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
+| Command alias<br/>`add_backup_command_alias`        | Enables/Disables the `/backup` alias for the `/ftbbackups3` command                                                                                                                                                                                                             | true            |
+| Archival plugin<br/>`archival_plugin`               | The archival method used to create the backup, Options are `ftbbackups3:zip` or `ftbbackups3:filecopy` more methods can be added through other mods (Docs on this coming soon)                                                                                                  | ftbbackups3:zip |
+| Automatic backups<br/>`auto`                        | Enables/Disables automatic creation of backups                                                                                                                                                                                                                                  | true            |
+| Backup folder<br/>`folder`                          | Absolute path to backups folder. Default of "" means to use "ftbackups3" within the game instance folder.                                                                                                                                                                       | ""              |
+| Backup timer<br/>`backup_timer`                     | Backup frequency in minutes. Minimum value: `1`, maximum value: `43800`                                                                                                                                                                                                         | 120             |
+| Backups to keep<br/>`backups_to_keep`               | Number of backups to keep, More backups = more space used. Minimum value:`0`, maximum value: `32000`                                                                                                                                                                            | 12              |
+| Compression level<br/>`compression_level`           | Compression level for archived files. Note that this is dependent on the particular plugin in use. Higher values typically mean backups take longer to do but take less space on disk. Minimum value: `0`, maximum value: `9`                                                   | 5               |
+| Display file size<br/>`display_file_size`           | Broadcasts to all online players a "(current size \| total size)" message when backup is done.                                                                                                                                                                                  | true            |
+| Extra files<br/>`extra_files`                       | Add extra files/folders to be backed up, in addition to the world folder. These files *must* be within the game instance! Example of extra files that add configs, logs and the ops.json to the backup <pre>extra_files: [<br/>"config/"<br/>"logs"<br/>"ops.json"<br/>]</pre> | []              |
+| Force backup on shutdown<br/>`force_on_shutdown`    | Create a backup when server is stopped.                                                                                                                                                                                                                                         | false           |
+| Maximum total size<br/>`max_total_size`             | Maximum total size that is allowed in backups folder. Older backups will be deleted to free space for newer ones. MB and GB can be used                                                                                                                                         | 50 GB           |
+| Notify admins only<br/>`notify_admins_only`         | If true, only player with permission level >= 2 (or SSP integrated server owners) will be notified on-screen about backup progress                                                                                                                                              | false           |
+| Only if players online<br/>`only_if_players_online` | Only create backups when at least one player is online.                                                                                                                                                                                                                         | true            |
+| Run silently<br/>`silent`                           | If set to true, no messages will be displayed in chat/status bar                                                                                                                                                                                                                | false           |
+
+### Client configuration
+
+The client configuration allows you to set the following options:
+
+| Name                       | Description                                    |
+|----------------------------|------------------------------------------------|
+| Progress panel position    | Sets the location of the backup progress panel |
+| Progress panel x inset     | X offset for the progress panel                |
+| Progress panel y inset     | Y offset for the progress panel                |
+| Show backup progress panel | Enables/Disables the progress panel            |
