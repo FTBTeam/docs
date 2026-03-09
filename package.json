@@ -12,11 +12,13 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "mod-version": "docusaurus docs:version:mods"
   },
   "dependencies": {
     "@docusaurus/core": "3.9.2",
     "@docusaurus/plugin-client-redirects": "^3.9.2",
+    "@docusaurus/plugin-content-docs": "^3.9.2",
     "@docusaurus/preset-classic": "3.9.2",
     "@docusaurus/theme-common": "3.9.2",
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
