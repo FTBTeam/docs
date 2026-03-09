@@ -14,7 +14,7 @@ export default function DocVersionBannerWrapper(props: Props): ReactNode {
       {
         versionLabel.toLowerCase().includes("beta") ? (
           <div className="alert alert--danger margin-bottom--md" role="alert">
-            <strong>{versionLabel.toLowerCase().replace("(beta)", "")}</strong> versions of FTB mods may never recieve a stable release<br/>We will only be providing limited support for this version.
+            <strong>{versionLabel.toLowerCase().replace("(beta)", "")}</strong> versions of FTB mods may never receive a stable release.<br/>We will only be providing limited support for this version.
           </div>
         ) : null
       }
