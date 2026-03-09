@@ -22,4 +22,3 @@ import DocCardList from '@theme/DocCardList';
 - FTB Materials: [GitHub](https://github.com/FTBTeam/FTB-Materials) [CurseForge](https://www.curseforge.com/minecraft/mc-mods/ftb-materials)
 - FTB Filter System: [GitHub](https://github.com/FTBTeam/FTB-Filter-System) [CurseForge](https://www.curseforge.com/minecraft/mc-mods/ftb-filter-system)
 - FTB Backups: (For MC Versions from 1.12.2 to 1.16.5) [GitHub](https://github.com/FTBTeam/FTB-Backups) [CurseForge](https://www.curseforge.com/minecraft/mc-mods/ftb-backups-forge)
-- FTB Backups 2: Maintained by CreeperHost. For MC Versions 1.18.2 and newer. [GitHub](https://github.com/CreeperHost/FTB-Backups-2) [CurseForge](https://www.curseforge.com/minecraft/mc-mods/ftb-backups-2)
