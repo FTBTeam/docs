@@ -5,6 +5,9 @@ import tailwindcss from 'tailwindcss';
 
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import * as process from "node:process";
+
+const isDev = process.env.NODE_ENV === 'development';
 
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
@@ -79,7 +82,14 @@ const config: Config = {
       path: 'mod-docs',
       routeBasePath: 'mod-docs',
       sidebarPath: './sidebarsMods.ts',
-      includeCurrentVersion: false,
+      includeCurrentVersion: false, // Only include the current version in development
+      lastVersion: '1.21.1', // Preferred version to show when visiting the base route
+      versions: {
+        '1.21.11': {
+          label: '1.21.11 (Beta)',
+          banner: 'none'
+        }
+      }
     }],
     ['@docusaurus/plugin-client-redirects',
     {
