@@ -2,7 +2,6 @@
 title: Creator Quest API
 sidebar_position: 2
 ---
-# Quest API Guide
 
 This API lets you register quest chapters and quests at runtime via Minecraft script events. Implementations live in `scripts/api/questApi.ts`, `scripts/api/registries.ts`, and the task/reward classes under `scripts/tasks` and `scripts/rewards`.
 
