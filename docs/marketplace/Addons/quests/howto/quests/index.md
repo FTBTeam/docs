@@ -5,7 +5,7 @@ sidebar_position: 1
 
 Let's start with the basics.
 
-Quest Books are given to each player when they spawn, However, if you lose yours, you can craft a new one using a regular book.
+Quest Books are given to each player when they spawn. However, if you lose yours, you can craft a new one using a regular book.
 
 To open the Quest Book, hold it in your main hand and press the "Use" button (right-click on PC, left trigger on consoles).
 
