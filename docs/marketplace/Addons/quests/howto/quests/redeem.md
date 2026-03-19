@@ -5,7 +5,7 @@ sidebar_position: 3
 
 Redeeming quests couldn't be easier.
 
-When you complete a quest, it will move to the top of the quest list within its chapter and be indicated with a hollow star️ and blue text to show that it is complete and a reward is available.
+When you complete a quest, it will move to the top of the quest list within its chapter and be indicated with a hollow star and blue text to show that it is complete and a reward is available.
 
 Once redeemed, the quest will move to the bottom of the list and be indicated with a filled star and green text.
 
