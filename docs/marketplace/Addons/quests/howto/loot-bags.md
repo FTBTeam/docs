@@ -6,7 +6,7 @@ sidebar_position: 2
 Loot Bags are randomized rewards designed with tiers, the higher the tier, the better the loot.
 
 There are 5 Loot Bags:
--Common Loot Bag
+- Common Loot Bag
 - Uncommon Loot Bag
 - Rare Loot Bag
 - Epic Loot Bag
