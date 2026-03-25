@@ -60,7 +60,7 @@
     ]
   },
   "engines": {
-    "node": ">=18.0"
+    "node": ">=22.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
@@ -69,6 +69,7 @@
       "@fortawesome/free-brands-svg-icons",
       "@fortawesome/free-regular-svg-icons",
       "@fortawesome/free-solid-svg-icons",
+      "@parcel/watcher",
       "core-js",
       "core-js-pure"
     ]
