@@ -7,7 +7,7 @@ sidebar_position: 1
 Our documentation for FTB Mods is still under active development and will change from time to time
 :::
 
-Our core suite of FTB Mods are designed to provide essential features to all of our Modpacks. We are dedicated to keeping this collection of mods up to date, feature rich and as stable as possible.
+suite of FTB Mods are designed to provide essential features to all of our Modpacks. We are dedicated to keeping this collection of mods up to date, feature rich and as stable as possible.
 
 ## Mod List
 
