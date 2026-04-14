@@ -82,9 +82,12 @@ const config: Config = {
       path: 'mod-docs',
       routeBasePath: 'mod-docs',
       sidebarPath: './sidebarsMods.ts',
-      includeCurrentVersion: false, // Only include the current version in development
+      // includeCurrentVersion: isDev, // Only include the current version in development
       lastVersion: '1.21.1', // Preferred version to show when visiting the base route
       versions: {
+        current: {
+          label: '26.1.x (Next)'
+        },
         '1.21.11': {
           label: '1.21.11 (Beta)',
           banner: 'none'
@@ -93,7 +96,7 @@ const config: Config = {
     }],
     ['@docusaurus/plugin-client-redirects',
     {
-      createRedirects(existingPath) {
+      createRedirects(existingPath: string) {
         if (existingPath.includes('/mod-docs/mods')) {
           // Redirect from /docs/team/X to /community/X and /docs/support/X to /community/X
           return [
