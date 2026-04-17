@@ -86,12 +86,8 @@ const config: Config = {
       lastVersion: '1.21.1', // Preferred version to show when visiting the base route
       versions: {
         current: {
-          label: '26.1.x (Next)'
+          label: '26.1.x (Next)' // Label for the current (next) version
         },
-        '1.21.11': {
-          label: '1.21.11 (Beta)',
-          banner: 'none'
-        }
       }
     }],
     ['@docusaurus/plugin-client-redirects',
