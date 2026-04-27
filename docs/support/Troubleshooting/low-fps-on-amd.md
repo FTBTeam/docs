@@ -1,6 +1,13 @@
 ---
 title: Low FPS on AMD
 description: Noticing performance issues with Minecraft whilst using an AMD GPU? Try turning Mipmapping off.
+sidebar_position: 5
+tags:
+  - Support
+  - Troubleshooting
+  - Performance
+  - AMD
+  - GPU
 ---
 
 Due to the way that AMD graphics cards handle OpenGL's Mip Mapping system it can sometimes lead to frame stuttering and low FPS.
