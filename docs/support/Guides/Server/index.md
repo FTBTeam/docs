@@ -7,7 +7,7 @@ description: Detailed guide on how to create a Minecraft Server for any FTB Modp
 
 Creating a server for an FTB modpack is a little different from most other modpack providers. To help you through these differences we've outlined each step in detail below.
 
-:::tip Disclaimer
+:::tip[Disclaimer]
 This guide is only intended to show you how to download the files required to setup a Minecraft server for an FTB modpack. This guide will not help you run a Minecraft Server. There are many other guides out there on how to do this.
 :::
 
@@ -86,25 +86,25 @@ As with all good things, Mac & Linux have to make it a bit more complicated. You
 
 ## Troubleshooting
 
-:::info How do I use terminal!
+:::info[How do I use terminal!]
 We won't guide you through this as it's easily google-able, just google it :D
 :::
 
-:::info How do I do X on the server
+:::info[How do I do X on the server]
 This guide is only intended to help you create the server. Using the server is up to you to research and learn.
 :::
 
-:::info The server installer failed
+:::info[The server installer failed]
 If for any reason the server installer stopped working. You will want to create an issue on our Github which can be [found here](https://github.com/FTBTeam/FTB-Server-Installer/issues).
 :::
 
-:::info Why can't you just offer a .zip file
+:::info[Why can't you just offer a .zip file]
 This is a question we see pop up occasionally. The reason we do it this is way is that we can hot fix modpacks without having to ship out a new version. Say a file is missing from a version, we can just patch this in and the FTB App and the server installer with automatically know to use this new file. This is super handy for anyone involved.
 
 We also do it this way to reduce load on our servers. Having 100k+ people downloading a 500mb+ every couple of seconds is a big strain on our systems. The server installer uses heavily cached files from our distribution system which dramatically reduces the load on our systems.
 :::
 
-:::info What if I don't want to use your run.sh
+:::info[What if I don't want to use your run.sh]
 No problem, just delete it and make your own. Just make sure you include the right arguments to Java
 :::
 

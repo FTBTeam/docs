@@ -8,7 +8,7 @@ description: A simple tool designed to provide as much useful debugging informat
 
 The FTB Debug Tool (otherwise known as `FTB-DBG`) is a tool created by FTB to provide our team as much information about the environment the app is running in and any issues that may have present during runtime.
 
-:::note Disclaimer
+:::note[Disclaimer]
 No sensitive information is ever shared using this tool!
 :::
 
@@ -78,11 +78,11 @@ chmod +x ftb-debug-linux-amd64
 
 ## Troubleshooting
 
-:::info It's not working on Windows
+:::info[It's not working on Windows]
 Windows may sometime block the running of the application. Make sure you've allowed it past your anti-virus & windows defender.
 :::
 
-:::info It's complaining about the wrong operating system
+:::info[It's complaining about the wrong operating system]
 This will happen when you've download the wrong file for your operating system. Remember that most operating systems are Intel/AMD based so that is likely the right file for you.
 :::
 

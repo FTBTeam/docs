@@ -26,6 +26,6 @@ Done correctly, you should be on a page that looks a bit like this one.
 
 ## Troubleshooting
 
-:::info Nothing happened
+:::info[Nothing happened]
 In some rare cases this might not work. If this happens for you, we recommend using the debug tool instead. You can find the guide on how to use this tool [here](./ftb-debug).
 :::
