@@ -7,7 +7,7 @@ FTB Hide/FTB Progress are mods that are included in some modpacks that hide the 
 
 # Disabling the FTB Hide/FTB Progress mods
 
-:::tip Terminology
+:::tip[Terminology]
 The word `Instance` is typically used to relate to a Modpack that you have installed to the FTB App
 :::
 

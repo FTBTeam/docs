@@ -50,15 +50,15 @@ Installing manually requires you to find your own mods first. There are many web
 
 ## Troubleshooting
 
-:::info My Game crashes
+:::info[My Game crashes]
 This will happen sometimes, not all mods will work with other mods. Especially performance mods. You can ask in our [Discord](https://go.ftb.team/discord) for support if you can't find out why it's crashing. Typically game crashes log out very detailed reasons why the game crashed. You can find a guide on how to [find game logs here](./instance-logs).
 :::
 
-:::info The mod won't install
+:::info[The mod won't install]
 Strange, typically this feature will just work... We'd recommend asking in our [Discord](https://go.ftb.team/discord) for help, specifically in the #ftb-app-support channel.
 :::
 
-:::info I can't find the mod I want
+:::info[I can't find the mod I want]
 Right now, we only support mods on the [CurseForge](https://curseforge.com) website. If you're looking for mods that aren't on this website, you won't be able to use this feature.
 
 Some mods only support specific Minecraft versions, if the mod does not support the Minecraft version the Modpack is built for; The app will not show you the mod to prevent versioning based crashes.

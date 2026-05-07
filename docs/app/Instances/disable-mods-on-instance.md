@@ -20,6 +20,6 @@ Disabling mods can be useful if you're experiencing issues with a specific mod o
 
 ## Troubleshooting
 
-:::info My Game crashes
+:::info[My Game crashes]
 This will happen sometimes, some mods depend on other mods, so you may also need those mods as well. You can ask in our [Discord](https://go.ftb.team/discord) for support if you can't find out why it's crashing. Typically game crashes log out very detailed reasons why the game crashed. You can find a guide on how to [find game logs here](./instance-logs).
 :::

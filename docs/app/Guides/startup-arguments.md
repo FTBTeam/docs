@@ -14,7 +14,7 @@ Startup arguments are additional arguments that can be passed to the Java Virtua
 
 ## Adding/Changing Startup Arguments
 
-:::tip Terminology
+:::tip[Terminology]
 The word `Instance` is typically used to relate to a Modpack that you have installed to the FTB App
 :::
 

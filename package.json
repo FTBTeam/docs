@@ -16,11 +16,12 @@
     "mod-version": "docusaurus docs:version:mods"
   },
   "dependencies": {
-    "@docusaurus/core": "3.10.0",
-    "@docusaurus/plugin-client-redirects": "3.10.0",
-    "@docusaurus/plugin-content-docs": "3.10.0",
-    "@docusaurus/preset-classic": "3.10.0",
-    "@docusaurus/theme-common": "3.10.0",
+    "@docusaurus/core": "3.10.1",
+    "@docusaurus/plugin-client-redirects": "3.10.1",
+    "@docusaurus/plugin-content-docs": "3.10.1",
+    "@docusaurus/preset-classic": "3.10.1",
+    "@docusaurus/theme-common": "3.10.1",
+    "@docusaurus/faster": "3.10.1",
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-brands-svg-icons": "^7.2.0",
     "@fortawesome/free-regular-svg-icons": "^7.2.0",
@@ -30,7 +31,7 @@
     "autoprefixer": "^10.4.19",
     "clsx": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.5",
-    "postcss": "^8.4.38",
+    "postcss": "8.5.10",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -38,12 +39,12 @@
     "sass": "^1.72.0",
     "tailwindcss": "^3.4.19",
     "unist-util-visit": "^5.0.0",
-    "yaml": "^2.8.1"
+    "yaml": "^2.8.4"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.10.0",
-    "@docusaurus/tsconfig": "3.10.0",
-    "@docusaurus/types": "3.10.0",
+    "@docusaurus/module-type-aliases": "3.10.1",
+    "@docusaurus/tsconfig": "3.10.1",
+    "@docusaurus/types": "3.10.1",
     "@types/react": "^19.0.0",
     "typescript": "~6.0.2"
   },

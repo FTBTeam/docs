@@ -21,14 +21,14 @@ Removing a Modpack from the FTB App will remove all data from that Modpack. This
 
 ## FAQ
 
-:::info Can I get it back?
+:::info[Can I get it back?]
 No! After deleting a modpack, it's gone. All you can do is reinstall the same modpack. This will not copy over any old worlds, mods, configs, player data, etc.
 :::
 
-:::info I accidentally removed a modpack
+:::info[I accidentally removed a modpack]
 Unfortunately there is nothing we can do here. See the above question for the reasons why.
 :::
 
-:::info If I uninstall the FTB App, will my instances / Modpacks be removed
+:::info[If I uninstall the FTB App, will my instances / Modpacks be removed]
 No! The FTB app will only ever remove Modpacks when you follow the guide above. If you remove the app from Overwolf, the instances will not be deleted. If you have specifically deleted our `.ftba` folder from your system then the Modpacks will have been deleted.
 :::
