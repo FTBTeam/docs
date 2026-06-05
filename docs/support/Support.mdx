@@ -7,7 +7,6 @@ import { useDocsSidebar } from '@docusaurus/plugin-content-docs/client';
 
 export const SupportList = () => {
     const sidebar = useDocsSidebar();
-    console.log(sidebar.items);
     const supportItems = sidebar.items.filter((item) => item.type === 'category');
     return (
        <div>
