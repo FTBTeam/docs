@@ -1,0 +1,29 @@
+---
+title: Support
+sidebar_position: 1
+---
+
+import { useDocsSidebar } from '@docusaurus/plugin-content-docs/client';
+
+export const SupportList = () => {
+    const sidebar = useDocsSidebar();
+    const supportItems = sidebar.items.filter((item) => item.type === 'category');
+    return (
+       <div>
+        {supportItems.map((item) => (
+            <div key={item.label}>
+                <h2>{item.label}</h2>
+                <ul>
+                    {item.items.map((subItem) => (
+                        <li key={subItem.label}>
+                            <a href={subItem.href}>{subItem.label}</a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        ))}
+       </div>
+    );
+};
+
+<SupportList />
