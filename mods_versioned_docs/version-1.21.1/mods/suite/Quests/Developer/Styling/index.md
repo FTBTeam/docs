@@ -142,16 +142,20 @@ You may have noticed a `[*]` line at the very top of the `ftb_quests_theme.txt` 
 
 You can add more `[...]` lines if you like. Between the `[]` brackets, put either a quest ID (the long hex ID you can get by right-clicking a quest and selecting "Copy ID"), or a quest _tag_. Quest tags are just free form strings, which you can add to quests via the "Edit" context menu action - see the "Tags" list property in the edit screen.
 
+:::note
+Please note that tags should be prefixed with a `#` see the example below.
+:::
+
 Example:
 ```
-[bluequests]
+[#bluequests]
 quest_not_started_color: #FF0000FF
 
-[redquests]
+[#redquests]
 quest_not_started_color: #FFFF0000
 ```
 
-Now, adding the "bluequests" tag to any quest will make it render blue when it hasn't yet been started, and similarly for the "redquests" tag. Every other theming property is inherited from the `[*]` defaults.
+Now, adding the "#bluequests" tag to any quest will make it render blue when it hasn't yet been started, and similarly for the "#redquests" tag. Every other theming property is inherited from the `[*]` defaults.
 
 In general, it's better to use tags than literal quest ID's, just because tags are a lot more flexible.
 
