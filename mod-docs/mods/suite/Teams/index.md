@@ -54,3 +54,5 @@ command.ftbteams.party.join
 command.ftbteams.party.invite
 command.ftbteams.party.leave
 ```
+
+It is also possible to override the Teams behavior via API. For example, [FTB Team Bases](/mod-docs/1.21.1/mods/suite/Team_Bases) used in FTB Oceanblock 2 does this to manage the creation of teams and their base.
