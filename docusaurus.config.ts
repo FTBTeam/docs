@@ -88,10 +88,10 @@ const config: Config = {
       routeBasePath: 'mod-docs',
       sidebarPath: './sidebarsMods.ts',
       // includeCurrentVersion: isDev, // Only include the current version in development
-      lastVersion: '1.21.1', // Preferred version to show when visiting the base route
+      lastVersion: 'current', // Preferred version to show when visiting the base route
       versions: {
         current: {
-          label: '26.1.x (Next)' // Label for the current (next) version
+          label: '26.1.x' // Label for the current (next) version
         },
       }
     }],
