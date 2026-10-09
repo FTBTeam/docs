@@ -32,14 +32,18 @@ FTB Teams is our all in one solution for team management. It allows you to creat
 
 ## Commands
 
-| Command | Description | Requires OP |
-| --- | --- | --- |
-| `/ftbteams list [team-type]` | Lists all teams | `N` |
-| `/ftbteams party <party_options>` | Command based team management | `N` |
-| `/ftbteams msg <message>` | Sends a message to your team | `N` |
-| `/ftbteams info [team]` | Shows information about a team | `N` |
-| `/ftbteams server <create\|delete\|settings>` | Server team management | `Y` |
-| `/ftbteams force-disband <team>` | Forces a team to disband | `Y` |
+| Command                                           | Description                                                             | Requires OP |
+|---------------------------------------------------|-------------------------------------------------------------------------|-------------|
+| `/ftbteams list [parties\|players\|server_teams]` | Lists all teams, optionally filter by the team type                     | `N`         |
+| `/ftbteams party <party_options>`                 | Command based team management                                           | `N`         |
+| `/ftbteams msg <message>`                         | Sends a message to your team                                            | `N`         |
+| `/ftbteams info [team]`                           | Shows information about a team                                          | `N`         |
+| `/ftbteams server <create\|delete\|settings>`     | Server team management                                                  | `Y`         |
+| `/ftbteams force disband <team>`                  | Forces a team to disband                                                | `Y`         |
+| `/ftbteams force add <team> <players>`            | Forces listed played onto a team                                        | `Y`         |
+| `/ftbteams force remove <team> <players>`         | Forcefully remove listed played from a team                             | `Y`         |
+| `/ftbteams nbtedit [team]`                        | Edit the NBT data of a team                                             | `Y`         |
+| `/ftbteams redirect_chat`                         | Toggle the chatbox between sending messages to your team or server chat | `N`         |
 
 ## What is a server team?
 
@@ -53,6 +57,7 @@ command.ftbteams.party.create
 command.ftbteams.party.join
 command.ftbteams.party.invite
 command.ftbteams.party.leave
+ftbteams.party.allies.add
 ```
 
 It is also possible to override the Teams behavior via API. For example, [FTB Team Bases](/mod-docs/mods/suite/Team_Bases) used in FTB Oceanblock 2 does this to manage the creation of teams and their base.
