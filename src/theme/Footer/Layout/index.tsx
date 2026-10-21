@@ -83,9 +83,6 @@ export default function FooterLayout({style, links, logo, copyright,}: Props): R
                               <Link href="/modpacks/server-files">Server Files</Link>
                           </li>
                           <li>
-                              <a href="https://go.ftb.team/wiki">Wiki</a>
-                          </li>
-                          <li>
                               <Link href="/mods">Mods</Link>
                           </li>
                           <li>
